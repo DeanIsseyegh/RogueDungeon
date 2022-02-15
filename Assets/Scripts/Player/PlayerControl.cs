@@ -8,6 +8,8 @@ using Random = System.Random;
 public class PlayerControl : MonoBehaviour
 {
     private static readonly int BasicSpell = Animator.StringToHash("BasicSpell");
+    private static readonly int ColorId = Shader.PropertyToID("_Color");
+
 
     [SerializeField] private GameObject clickIndicator;
     [SerializeField] private GameObject basicSpell;
@@ -28,10 +30,6 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        if (_hasSpellBeenCast)
-        {
-            _hasSpellBeenCast = false;
-        }
         HandleCoolDowns();
         HandleMove();
         HandleSpell();
@@ -53,7 +51,7 @@ public class PlayerControl : MonoBehaviour
 
     private void HandleMove()
     {
-        if (_timeSinceLastSpell > _spellCooldown && Input.GetKeyDown(KeyCode.Mouse0))
+        if (_timeSinceLastSpell > _spellCooldown && Input.GetKey(KeyCode.Mouse0))
         {
             RaycastHit hit;
             Ray screenPointToRay = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -89,8 +87,6 @@ public class PlayerControl : MonoBehaviour
         }
     }
     
-    private bool _hasSpellBeenCast = false;
-
     private IEnumerator CreateSpell()
     {
         yield return new WaitForSeconds(0.4f);
@@ -99,11 +95,20 @@ public class PlayerControl : MonoBehaviour
         Instantiate(basicSpell, 
             spellPos, 
             transform.rotation);
-        _hasSpellBeenCast = true;
     }
 
     void DrawRay(Ray ray)
     {
         Debug.DrawRay(ray.origin, ray.direction * 20, Color.magenta);
+    }
+
+    public void TakeDamage()
+    {
+        SkinnedMeshRenderer skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+        Material[] materials = skinnedMeshRenderer.sharedMaterials;
+        foreach (var material in materials)
+        {
+            material.SetColor(ColorId, Color.red);
+        }
     }
 }
