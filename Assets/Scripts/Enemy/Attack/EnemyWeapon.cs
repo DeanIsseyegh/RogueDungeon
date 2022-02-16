@@ -1,9 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class EnemyWeapon : MonoBehaviour
 {
     public bool IsActive { private get; set; }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         if (IsActive && other.CompareTag("Player"))
@@ -12,6 +14,4 @@ public class EnemyAttack : MonoBehaviour
             playerControl.TakeDamage();
         }
     }
-    
-
 }

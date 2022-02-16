@@ -1,58 +1,45 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.AI;
-using Debug = UnityEngine.Debug;
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject player;
+    [SerializeField] private float attackCooldown = 2;
+    [SerializeField] private float attackDistance = 2;
     private EnemyAttack _enemyAttack;
     private NavMeshAgent _navMeshAgent;
-    private Animator _animator;
-    private float _attackCooldown = 2;
-    private float _timeSinceLastAttack = 0;
-    private static readonly int Attack = Animator.StringToHash("Attack");
+    private float _timeSinceLastAttackFinished = 0;
 
     void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        _animator = GetComponent<Animator>();
         _enemyAttack = GetComponentInChildren<EnemyAttack>();
     }
 
     void Update()
     {
-        AnimatorStateInfo currentAnimatorStateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-        bool isAttacking = currentAnimatorStateInfo.IsName("Attack");
-        _enemyAttack.IsActive = isAttacking;
+        bool isAttacking = _enemyAttack.IsAttacking();
+        RotateTowardsPlayer();
+
         if (isAttacking)
         {
-            RotateTowardsPlayer();
-            _timeSinceLastAttack = 0;
-            float normalizedTime = currentAnimatorStateInfo.normalizedTime;
-            if (normalizedTime >= 1)
-            {
-                isAttacking = false;
-            }
-            else
+            _timeSinceLastAttackFinished = 0;
+            if (_enemyAttack.IsAttacking())
             {
                 _navMeshAgent.ResetPath();
             }
         }
-
-        float distToPlayer = Vector3.Distance(player.transform.position, transform.position);
-        if (!isAttacking)
+        else
         {
-            _timeSinceLastAttack += Time.deltaTime;
-            bool isAttackCooldownDone = _timeSinceLastAttack > _attackCooldown;
-            if (distToPlayer < 2 && isAttackCooldownDone)
+            _timeSinceLastAttackFinished += Time.deltaTime;
+            bool isAttackCooldownDone = _timeSinceLastAttackFinished > attackCooldown;
+            
+            float distToPlayer = Vector3.Distance(player.transform.position, transform.position);
+            if (distToPlayer < attackDistance && isAttackCooldownDone)
             {
                 _navMeshAgent.ResetPath();
-                _animator.SetTrigger(Attack);
-                _timeSinceLastAttack = 0;
+                _enemyAttack.DoAttack();
+                _timeSinceLastAttackFinished = 0;
             }
             else
             {

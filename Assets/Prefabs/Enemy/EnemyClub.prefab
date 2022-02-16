@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7527454605927381314}
   - component: {fileID: 7527454605928348546}
   - component: {fileID: 7527454605926441983}
-  - component: {fileID: 6709051190447511788}
+  - component: {fileID: 3316111815929644721}
   m_Layer: 0
   m_Name: EnemyClub
   m_TagString: Untagged
@@ -98,7 +98,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: ce4c5fc198020384ba557a5af1264c9b, type: 3}
---- !u!114 &6709051190447511788
+--- !u!114 &3316111815929644721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7527454605926344002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae163a6fbbfb33c47b7676d304c3a968, type: 3}
+  m_Script: {fileID: 11500000, guid: 146d4dbc73fd9904992d2d4f591bfc1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerControl: {fileID: 7065091505709721371, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
