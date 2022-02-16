@@ -264,6 +264,8 @@ GameObject:
   - component: {fileID: 7065091505709721364}
   - component: {fileID: 3194580983879557854}
   - component: {fileID: 2322320037186382931}
+  - component: {fileID: -6036844872246731012}
+  - component: {fileID: 2322320037186382932}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -340,10 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ec8182653c02441b401a34ad3b1351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
   clickIndicator: {fileID: 0}
-  basicSpell: {fileID: 6029342343211582914, guid: 1ecb3e6c9b4d8aa4c9a916d0869e1149, type: 3}
-  spellHeight: 1
-  spellForwardOffset: 0.5
 --- !u!114 &7065091505709721364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +385,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6036844872246731012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4771201582977937585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83bc07796bfdad644b28dd6488c0dfa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicSpell: {fileID: 6029342343211582914, guid: 1ecb3e6c9b4d8aa4c9a916d0869e1149, type: 3}
+  spellHeightOffset: 1.1
+  spellForwardOffset: 1.2
+  spellRightOffset: 0
+  mainCamera: {fileID: 0}
+--- !u!114 &2322320037186382932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4771201582977937585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b17f5dc2c17081428958f4fda5e1cf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isInvincible: 0
 --- !u!1 &4771201582977937587
 GameObject:
   m_ObjectHideFlags: 0

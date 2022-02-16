@@ -9,7 +9,7 @@ using Debug = UnityEngine.Debug;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private Weapon weapon;
+    private EnemyAttack _enemyAttack;
     private NavMeshAgent _navMeshAgent;
     private Animator _animator;
     private float _attackCooldown = 2;
@@ -20,14 +20,14 @@ public class Enemy : MonoBehaviour
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
+        _enemyAttack = GetComponentInChildren<EnemyAttack>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         AnimatorStateInfo currentAnimatorStateInfo = _animator.GetCurrentAnimatorStateInfo(0);
         bool isAttacking = currentAnimatorStateInfo.IsName("Attack");
-        weapon.IsActive = isAttacking;
+        _enemyAttack.IsActive = isAttacking;
         if (isAttacking)
         {
             RotateTowardsPlayer();

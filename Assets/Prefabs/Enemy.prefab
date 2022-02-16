@@ -287,7 +287,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3837416230039146291}
   - component: {fileID: 3837416230027419159}
-  - component: {fileID: 1000157042}
   m_Layer: 0
   m_Name: giant_Rig
   m_TagString: Untagged
@@ -386,19 +385,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0018906593, y: -0.015723884, z: 0.04864116}
     m_Extent: {x: 1.0594932, y: 1.0390072, z: 0.30298185}
   m_DirtyAABB: 0
---- !u!65 &1000157042
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837416230038983443}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.59, y: 3.0954835, z: 0.91762793}
-  m_Center: {x: -0.00000030943193, y: 1.3411639, z: 0.0445671}
 --- !u!1 &3837416230038983445
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,9 +397,10 @@ GameObject:
   - component: {fileID: 3837416230031696087}
   - component: {fileID: 6452332955923063332}
   - component: {fileID: 6452332955923063334}
+  - component: {fileID: 7113952429325209133}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -466,7 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4771201582977937585, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
-  weapon: {fileID: 4344953302220556280}
+  enemyAttack: {fileID: 6709051190447511788, guid: 122913854bab03d4fb3c62cfcd8af317, type: 3}
 --- !u!195 &6452332955923063334
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -489,6 +476,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &7113952429325209133
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837416230038983445}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.59, y: 3.0954835, z: 0.91762793}
+  m_Center: {x: -0.00000030943193, y: 1.3411639, z: 0.0445671}
 --- !u!1 &3837416230038983447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,14 +1154,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7527454605926054242, guid: 122913854bab03d4fb3c62cfcd8af317, type: 3}
   m_PrefabInstance: {fileID: 7014134872231730964}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4344953302220556280 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6709051190447511788, guid: 122913854bab03d4fb3c62cfcd8af317, type: 3}
-  m_PrefabInstance: {fileID: 7014134872231730964}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae163a6fbbfb33c47b7676d304c3a968, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

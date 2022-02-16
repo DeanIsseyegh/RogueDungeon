@@ -1,17 +1,15 @@
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
-
-    [SerializeField] private PlayerControl _playerControl;
-    
     public bool IsActive { private get; set; }
 
     private void OnTriggerEnter(Collider other)
     {
         if (IsActive && other.CompareTag("Player"))
         {
-            _playerControl.TakeDamage();
+            PlayerHealth playerControl = other.gameObject.GetComponent<PlayerHealth>();
+            playerControl.TakeDamage();
         }
     }
     
