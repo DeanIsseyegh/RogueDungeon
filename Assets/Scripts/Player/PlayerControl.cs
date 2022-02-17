@@ -10,19 +10,19 @@ public class PlayerControl : MonoBehaviour
     private PlayerAnimation _playerAnimation;
     private bool _canPlayerMove = true;
     private PlayerMovement _playerMovement;
-    private PlayerSpellCast _playerSpellCast;
+    private PlayerSpellManager _playerSpellManager;
 
     private void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _playerAnimation = GetComponent<PlayerAnimation>();
-        _playerSpellCast = GetComponent<PlayerSpellCast>();
+        _playerSpellManager = GetComponent<PlayerSpellManager>();
         _playerMovement = new PlayerMovement(mainCamera, _navMeshAgent, clickIndicator);
     }
 
     void Update()
     {
-        _canPlayerMove = _playerSpellCast.IsNotCastingSpell();
+        _canPlayerMove = _playerSpellManager.IsNotCastingSpell();
         _playerAnimation.CanMove = _canPlayerMove;
         HandleMove();
         HandleSpell();
@@ -38,9 +38,9 @@ public class PlayerControl : MonoBehaviour
 
     private void HandleSpell()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.anyKeyDown)
         {
-            _playerSpellCast.CastSpell(transform);
+            _playerSpellManager.HandleSpell(transform);
         }
     }
 
