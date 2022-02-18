@@ -9,7 +9,6 @@ public class PlayerSpellManager : MonoBehaviour
 {
     [SerializeField] private List<Spell> spellPrefabs;
     [SerializeField] private SpellObjManager spellObjManager;
-
     [SerializeField] protected float spellHeightOffset;
     [SerializeField] protected float spellForwardOffset;
     [SerializeField] protected float spellRightOffset;
@@ -17,6 +16,7 @@ public class PlayerSpellManager : MonoBehaviour
     private Camera _mainCamera;
     private NavMeshAgent _playerNavMeshAgent;
     private PlayerAnimation _playerAnimation;
+    private PlayerInventory _inventory;
     private float _spellCooldown = 1;
     private float _timeSinceLastSpell = 999;
     private Dictionary<KeyCode, Spell> _spellInputsMap;
@@ -38,6 +38,7 @@ public class PlayerSpellManager : MonoBehaviour
         _mainCamera = Camera.main;
         _playerNavMeshAgent = GetComponent<NavMeshAgent>();
         _playerAnimation = GetComponent<PlayerAnimation>();
+        _inventory = GetComponent<PlayerInventory>();
     }
 
     private void Update()
@@ -82,8 +83,9 @@ public class PlayerSpellManager : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         var yOffset = new Vector3(0, spellHeightOffset, 0);
         var spellPos = this.transform.position + (this.transform.forward * spellForwardOffset) + (this.transform.right * spellRightOffset) + yOffset;
-        Instantiate(spellPrefab,
+        Spell spell = Instantiate(spellPrefab,
             spellPos,
             transform.rotation);
+        _inventory.Items.ForEach(item => item.ApplyEffects(spell));
     }
 }

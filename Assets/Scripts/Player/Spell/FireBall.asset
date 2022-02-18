@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27aee48896609a4699e9658bb489b0e, type: 3}
   m_Name: FireBall
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 8

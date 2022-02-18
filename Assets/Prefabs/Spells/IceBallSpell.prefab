@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3448789343867037101}
   - component: {fileID: -7139116195683614569}
   m_Layer: 0
-  m_Name: FireBallSpell
+  m_Name: IceBallSpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0901bd31274b7c24a907731fa5e16f5f, type: 2}
+  - {fileID: 2100000, guid: 4ea8e2de4ac6b564c98a36f67a2ad64f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,9 +134,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6029342343211582914}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6275f3d0a9a4fc141ae52321d89bbff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellAttributes: {fileID: 11400000, guid: cb524d09ef2d4344b875ef755c6d16fa, type: 2}
+  SpellAttributes: {fileID: 11400000, guid: bde6e46d292d31f4fa3e40f7e241e443, type: 2}

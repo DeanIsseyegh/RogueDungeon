@@ -397,11 +397,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83bc07796bfdad644b28dd6488c0dfa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicSpell: {fileID: 6029342343211582914, guid: 1ecb3e6c9b4d8aa4c9a916d0869e1149, type: 3}
+  SpellPrefabs:
+  - {fileID: -7139116195683614569, guid: 1ecb3e6c9b4d8aa4c9a916d0869e1149, type: 3}
+  - {fileID: -7139116195683614569, guid: 6561d5a2541643f48b6c81dd92ad6195, type: 3}
+  spellObjManager: {fileID: 0}
   spellHeightOffset: 1.1
   spellForwardOffset: 1.2
   spellRightOffset: 0
-  mainCamera: {fileID: 0}
 --- !u!114 &2322320037186382932
 MonoBehaviour:
   m_ObjectHideFlags: 0
