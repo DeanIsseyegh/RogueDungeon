@@ -3,26 +3,23 @@ using UnityEngine.AI;
 
 public class PlayerMovement
 {
-    private Camera camera;
     private NavMeshAgent _playerNavMeshAgent;
     private GameObject clickIndicator;
+    private int _rotateSpeedOnClick;
 
-    public PlayerMovement(Camera camera, NavMeshAgent playerNavMeshAgent, GameObject clickIndicator)
+    public PlayerMovement(NavMeshAgent playerNavMeshAgent, GameObject clickIndicator)
     {
-        this.camera = camera;
         _playerNavMeshAgent = playerNavMeshAgent;
         this.clickIndicator = clickIndicator;
     }
 
     public void MovePlayer(Vector3 mousePosition)
     {
-        RaycastHit hit;
-        Ray screenPointToRay = camera.ScreenPointToRay(mousePosition);
-        bool isRaycast = Physics.Raycast(screenPointToRay, out hit, 100);
-        if (isRaycast)
-        {
-            _playerNavMeshAgent.SetDestination(hit.point);
-            clickIndicator.transform.position = hit.point;
-        }
+        var direction = (mousePosition - _playerNavMeshAgent.transform.position).normalized;
+        var lookRotation = Quaternion.LookRotation(direction);
+        _rotateSpeedOnClick = 20;
+        _playerNavMeshAgent.transform.rotation = Quaternion.Lerp(_playerNavMeshAgent.transform.rotation, lookRotation, Time.deltaTime * _rotateSpeedOnClick);
+        _playerNavMeshAgent.SetDestination(mousePosition);
+        clickIndicator.transform.position = mousePosition;
     }
 }

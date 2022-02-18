@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7228009879382835958}
   - component: {fileID: -7209402208892642906}
   - component: {fileID: 3448789343867037101}
-  - component: {fileID: -7139116195683614569}
+  - component: {fileID: 8398048927901789840}
   m_Layer: 0
-  m_Name: FireBallSpell
+  m_Name: FireBallSpellPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
---- !u!114 &-7139116195683614569
+--- !u!114 &8398048927901789840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,7 +136,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6029342343211582914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6275f3d0a9a4fc141ae52321d89bbff8, type: 3}
+  m_Script: {fileID: 11500000, guid: 95d6cf35c52ab9e4c8348d9ce69d78d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellAttributes: {fileID: 11400000, guid: cb524d09ef2d4344b875ef755c6d16fa, type: 2}

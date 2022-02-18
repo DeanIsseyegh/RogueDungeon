@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private float attackCooldown = 2;

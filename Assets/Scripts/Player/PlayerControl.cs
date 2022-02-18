@@ -3,7 +3,6 @@ using UnityEngine.AI;
 
 public class PlayerControl : MonoBehaviour
 {
-    [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject clickIndicator;
 
     private NavMeshAgent _navMeshAgent;
@@ -11,13 +10,14 @@ public class PlayerControl : MonoBehaviour
     private bool _canPlayerMove = true;
     private PlayerMovement _playerMovement;
     private PlayerSpellManager _playerSpellManager;
+    [SerializeField] private MousePositionTracker mousePositionTracker;
 
     private void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _playerAnimation = GetComponent<PlayerAnimation>();
         _playerSpellManager = GetComponent<PlayerSpellManager>();
-        _playerMovement = new PlayerMovement(mainCamera, _navMeshAgent, clickIndicator);
+        _playerMovement = new PlayerMovement(_navMeshAgent, clickIndicator);
     }
 
     void Update()
@@ -32,7 +32,8 @@ public class PlayerControl : MonoBehaviour
     {
         if (_canPlayerMove && Input.GetKey(KeyCode.Mouse0))
         {
-            _playerMovement.MovePlayer(Input.mousePosition);
+            Vector3 mousePosOnFloor = mousePositionTracker.MousePosOnFloor();
+            _playerMovement.MovePlayer(mousePosOnFloor);
         }
     }
 
@@ -40,7 +41,7 @@ public class PlayerControl : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            _playerSpellManager.HandleSpell(transform);
+            _playerSpellManager.HandleSpell();
         }
     }
 

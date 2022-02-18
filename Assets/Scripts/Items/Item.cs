@@ -11,7 +11,7 @@ public abstract class Item : MonoBehaviour
     public abstract void ApplyEffects(PlayerSpellManager playerSpellManager);
     public abstract void ApplyEffects(NavMeshAgent playerNavMeshAgent);
 
-    public abstract void ApplyEffects(Spell spell);
+    public abstract void ApplyEffects(GameObject spellPrefab);
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

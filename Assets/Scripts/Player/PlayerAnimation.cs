@@ -32,6 +32,7 @@ public class PlayerAnimation : MonoBehaviour
         Vector3 velocity = _navMeshAgent.velocity;
         if (Math.Abs(velocity.x) + Math.Abs(velocity.z) > 0.2)
         {
+            _animator.ResetTrigger(BasicSpell);
             _animator.SetBool(Running, true);
         }
         else

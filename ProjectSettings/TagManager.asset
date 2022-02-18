@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EnemyAttack
   - Enemy
+  - Powerup
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Floor
   - 
   - 
   - 

@@ -397,8 +397,8 @@ GameObject:
   - component: {fileID: 3837416230031696087}
   - component: {fileID: 6452332955923063334}
   - component: {fileID: 7113952429325209133}
-  - component: {fileID: 6452332955923063332}
   - component: {fileID: 3924375296744455168}
+  - component: {fileID: 3782272034005839528}
   m_Layer: 0
   m_Name: EnemyOgre
   m_TagString: Enemy
@@ -476,7 +476,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.59, y: 3.0954835, z: 0.91762793}
   m_Center: {x: -0.00000030943193, y: 1.3411639, z: 0.0445671}
---- !u!114 &6452332955923063332
+--- !u!114 &3924375296744455168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837416230038983445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc66c5b6f236cec4596557081bdf61dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3782272034005839528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -491,19 +503,6 @@ MonoBehaviour:
   player: {fileID: 4771201582977937585, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
   attackCooldown: 2
   attackDistance: 2
---- !u!114 &3924375296744455168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837416230038983445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc66c5b6f236cec4596557081bdf61dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyWeapon: {fileID: 3316111815929644721, guid: 122913854bab03d4fb3c62cfcd8af317, type: 3}
 --- !u!1 &3837416230038983447
 GameObject:
   m_ObjectHideFlags: 0

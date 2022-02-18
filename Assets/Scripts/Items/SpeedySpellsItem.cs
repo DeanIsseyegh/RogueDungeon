@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.AI;
 
 public class SpeedySpellsItem : Item
@@ -10,9 +11,10 @@ public class SpeedySpellsItem : Item
 
     public override void ApplyEffects(NavMeshAgent playerNavMeshAgent) { }
 
-    public override void ApplyEffects(Spell spell)
+    public override void ApplyEffects(GameObject spellPrefab)
     {
-        spell.ModifySpeed((speed) => speed * 2);
+        MoveForward moveForward = spellPrefab.GetComponent<MoveForward>();
+        moveForward.ModifySpeed((speed) => speed * 2);
     }
 
 }

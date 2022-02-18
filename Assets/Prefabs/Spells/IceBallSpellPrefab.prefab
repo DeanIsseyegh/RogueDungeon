@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7228009879382835958}
   - component: {fileID: -7209402208892642906}
   - component: {fileID: 3448789343867037101}
-  - component: {fileID: -7139116195683614569}
+  - component: {fileID: 5947675319654192121}
   m_Layer: 0
-  m_Name: IceBallSpell
+  m_Name: IceBallSpellPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
---- !u!114 &-7139116195683614569
+--- !u!114 &5947675319654192121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,7 +136,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6029342343211582914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6275f3d0a9a4fc141ae52321d89bbff8, type: 3}
+  m_Script: {fileID: 11500000, guid: 95d6cf35c52ab9e4c8348d9ce69d78d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellAttributes: {fileID: 11400000, guid: bde6e46d292d31f4fa3e40f7e241e443, type: 2}
