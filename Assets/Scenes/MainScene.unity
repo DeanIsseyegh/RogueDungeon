@@ -1192,18 +1192,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 418370333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6275f3d0a9a4fc141ae52321d89bbff8, type: 3}
+  m_Script: {fileID: 11500000, guid: da3321bbd82f9eb4ea9d664279687d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spellPrefab: {fileID: 6029342343211582914, guid: 6561d5a2541643f48b6c81dd92ad6195, type: 3}
-  spellHeightOffset: 1.1
-  spellForwardOffset: 1.2
-  spellRightOffset: 0.2
+  spellPrefab: {fileID: 6029342343211582914, guid: 6561d5a2541643f48b6c81dd92ad6195, type: 3}
+  spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
   spellLifeTime: 2
-  _player: {fileID: 2322320037186382925}
-  mousePositionTracker: {fileID: 874079592}
+  spellStartUp: 0.4
+  animationName: BasicSpell
   SpellAttributes: {fileID: 11400000, guid: bde6e46d292d31f4fa3e40f7e241e443, type: 2}
-  IsCastingSpell: 0
+  mousePositionTracker: {fileID: 874079592}
 --- !u!1001 &419484397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1552,6 +1550,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3782272034005839528, guid: 3f2a432df3201af4093152cc9a26a7f3, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2322320037186382925}
     - target: {fileID: 3837416230038983445, guid: 3f2a432df3201af4093152cc9a26a7f3, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -1852,18 +1854,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 582543089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6275f3d0a9a4fc141ae52321d89bbff8, type: 3}
+  m_Script: {fileID: 11500000, guid: da3321bbd82f9eb4ea9d664279687d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spellPrefab: {fileID: 6029342343211582914, guid: 1ecb3e6c9b4d8aa4c9a916d0869e1149, type: 3}
-  spellHeightOffset: 1.1
-  spellForwardOffset: 1.2
-  spellRightOffset: 0.2
+  spellPrefab: {fileID: 6029342343211582914, guid: 1ecb3e6c9b4d8aa4c9a916d0869e1149, type: 3}
+  spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
   spellLifeTime: 2
-  _player: {fileID: 2322320037186382925}
-  mousePositionTracker: {fileID: 874079592}
+  spellStartUp: 0.4
+  animationName: BasicSpell
   SpellAttributes: {fileID: 11400000, guid: cb524d09ef2d4344b875ef755c6d16fa, type: 2}
-  IsCastingSpell: 0
+  mousePositionTracker: {fileID: 874079592}
 --- !u!1001 &607820218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2940,7 +2940,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &897308419 stripped
 GameObject:
@@ -3445,7 +3445,7 @@ GameObject:
   - component: {fileID: 1037716826}
   - component: {fileID: 1037716825}
   m_Layer: 0
-  m_Name: SpellObjManager
+  m_Name: PlayerSpellObjManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3480,7 +3480,7 @@ Transform:
   - {fileID: 582543090}
   - {fileID: 418370334}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1041677394 stripped
 GameObject:
@@ -5276,10 +5276,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1533437213609016049, guid: ec9d7d80a3ced5c47994bff028b5b46d, type: 3}
+      propertyPath: spell
+      value: 
+      objectReference: {fileID: 1764247475}
+    - target: {fileID: 1533437213609016049, guid: ec9d7d80a3ced5c47994bff028b5b46d, type: 3}
+      propertyPath: attackStartup
+      value: 2.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8971009757011418294, guid: ec9d7d80a3ced5c47994bff028b5b46d, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2322320037186382925}
+    - target: {fileID: 8971009757011418294, guid: ec9d7d80a3ced5c47994bff028b5b46d, type: 3}
+      propertyPath: attackCooldown
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8987352417259645370, guid: ec9d7d80a3ced5c47994bff028b5b46d, type: 3}
       propertyPath: m_Name
       value: EnemyCult
@@ -5328,7 +5340,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -4465585606071977715, guid: ec9d7d80a3ced5c47994bff028b5b46d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ec9d7d80a3ced5c47994bff028b5b46d, type: 3}
 --- !u!4 &1506430870 stripped
 Transform:
@@ -5443,6 +5456,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!1 &1520719598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1520719600}
+  m_Layer: 0
+  m_Name: EnemySpellObjManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1520719600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520719598}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1764247474}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1523073288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6068,6 +6112,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4493048135532490, guid: 2e9bb0112b1a3428f94ba8550d668f2f, type: 3}
   m_PrefabInstance: {fileID: 2112822718}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1764247473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 7906035905421215705, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+  m_PrefabInstance: {fileID: 4983262337147422066}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1764247474}
+  - component: {fileID: 1764247475}
+  m_Layer: 0
+  m_Name: EyeBallSpell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1764247474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1476057517752608790, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+  m_PrefabInstance: {fileID: 4983262337147422066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764247473}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1520719600}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1764247475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4565257653064333016, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+  m_PrefabInstance: {fileID: 4983262337147422066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764247473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba6c55f643f0c54d9ca9fcf9acae55d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellPrefab: {fileID: 1558510988610266, guid: 9fd6919c6e21fed429290a0f10ca4548, type: 3}
+  spellSpawnOffset: {x: 0.2, y: 1.2, z: 0.2}
+  spellLifeTime: 3
+  spellStartUp: 2.6
+  animationName: Attack
+  SpellAttributes: {fileID: 0}
 --- !u!1001 &1768141234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6517,6 +6610,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4222296821985314, guid: 5812f95c175b34e7a8e5a7566a43a0ef, type: 3}
   m_PrefabInstance: {fileID: 1944398736}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1980002183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8987352417259645370, guid: ec9d7d80a3ced5c47994bff028b5b46d, type: 3}
+  m_PrefabInstance: {fileID: 1493886794}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1980002184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980002183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ebf79797a78e5342b6e6e72bf11fb3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationTriggersToResetOnMove: []
 --- !u!4 &1994629344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4493048135532490, guid: 2e9bb0112b1a3428f94ba8550d668f2f, type: 3}
@@ -7184,6 +7295,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49a068f3abdc6864db02527e15f51b65, type: 3}
+--- !u!1001 &4983262337147422066
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1520719600}
+    m_Modifications:
+    - target: {fileID: 1476057517752608790, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476057517752608790, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476057517752608790, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476057517752608790, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476057517752608790, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476057517752608790, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476057517752608790, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476057517752608790, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476057517752608790, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476057517752608790, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476057517752608790, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565257653064333016, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: spellStartUp
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565257653064333016, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: animationName
+      value: Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565257653064333016, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: spellLifeTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565257653064333016, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: spellSpawnOffset.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565257653064333016, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: spellSpawnOffset.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906035905421215705, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
+      propertyPath: m_Name
+      value: EyeBallSpell
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6de3e01dfc6a7f44685c9fa202986e69, type: 3}
 --- !u!1001 &7065091505021148412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7226,11 +7414,11 @@ PrefabInstance:
     - target: {fileID: -6036844872246731012, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
       propertyPath: spellPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 582543091}
+      objectReference: {fileID: 0}
     - target: {fileID: -6036844872246731012, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
       propertyPath: spellPrefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 418370335}
+      objectReference: {fileID: 0}
     - target: {fileID: 4771201582977641619, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -7279,6 +7467,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7065091505709721364, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
+      propertyPath: _animationTriggersToResetOnMove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065091505709721364, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
+      propertyPath: _animationTriggersToResetOnMove.Array.data[0]
+      value: BasicSpell
+      objectReference: {fileID: 0}
     - target: {fileID: 7065091505709721370, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
       propertyPath: m_Acceleration
       value: 999
@@ -7304,6 +7500,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3782272034005839528, guid: 3f2a432df3201af4093152cc9a26a7f3, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2322320037186382925}
     - target: {fileID: 3837416230038983445, guid: 3f2a432df3201af4093152cc9a26a7f3, type: 3}
       propertyPath: m_Name
       value: Enemy

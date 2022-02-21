@@ -2,15 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerSpellManager : MonoBehaviour
 {
     [SerializeField] private SpellObjManager spellObjManager;
     private PlayerInventory _inventory;
-    private float _spellCooldown = 1;
-    private float _timeSinceLastSpell = 999;
     private Dictionary<KeyCode, Spell> _spellInputsMap;
 
+    private NavMeshAgent _navMeshAgent;
+    private AnimationHandler _animationHandler;
+    private PlayerInventory _playerInventory;
+
+
+    private void Awake()
+    {
+        _inventory = GetComponent<PlayerInventory>();
+        _navMeshAgent = GetComponent<NavMeshAgent>();
+        _animationHandler = GetComponent<AnimationHandler>();
+        _playerInventory = GetComponent<PlayerInventory>();
+    }
 
     private void Start()
     {
@@ -23,17 +34,10 @@ public class PlayerSpellManager : MonoBehaviour
             var spellKeyCode = spellInputs[index];
             return new {spellKeyCode, spell};
         }).ToDictionary(e => e.spellKeyCode, e => e.spell);
-        _inventory = GetComponent<PlayerInventory>();
-    }
-
-    private void Update()
-    {
-        _timeSinceLastSpell += Time.deltaTime;
     }
 
     public bool IsNotCastingSpell()
     {
-        // return _timeSinceLastSpell > _spellCooldown;
         return !spellObjManager.Spells.Any(spell => spell.IsCastingSpell);
     }
 
@@ -47,7 +51,7 @@ public class PlayerSpellManager : MonoBehaviour
             bool isASpellInProgress = spellObjManager.Spells.Any(spell => spell.IsCastingSpell);
             if (!isASpellInProgress)
             {
-                spell.Cast();
+                spell.Cast(_navMeshAgent, _animationHandler, _playerInventory);
             }
         }
     }

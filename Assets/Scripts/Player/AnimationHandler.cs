@@ -1,16 +1,14 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PlayerAnimation : MonoBehaviour
+public class AnimationHandler : MonoBehaviour
 {
     private NavMeshAgent _navMeshAgent;
     private Animator _animator;
     private static readonly int Running = Animator.StringToHash("running");
-    private static readonly int BasicSpell = Animator.StringToHash("BasicSpell");
+    [SerializeField] private List<string> _animationTriggersToResetOnMove;
     public bool CanMove { private get; set; }
 
     void Start()
@@ -29,10 +27,14 @@ public class PlayerAnimation : MonoBehaviour
 
     private void HandleMoveAnimation()
     {
+        if (gameObject.name.Equals("EnemyCult"))
+        {
+            Debug.Log("enemy Cult Handle Move");
+        }
         Vector3 velocity = _navMeshAgent.velocity;
         if (Math.Abs(velocity.x) + Math.Abs(velocity.z) > 0.2)
         {
-            _animator.ResetTrigger(BasicSpell);
+            _animationTriggersToResetOnMove.ForEach(_animator.ResetTrigger);
             _animator.SetBool(Running, true);
         }
         else
@@ -41,8 +43,8 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
-    public void StartBasicSpellAnimation()
+    public void SetTriggerAnimation(String triggerAnimation)
     {
-        _animator.SetTrigger(BasicSpell);
+        _animator.SetTrigger(triggerAnimation);
     }
 }

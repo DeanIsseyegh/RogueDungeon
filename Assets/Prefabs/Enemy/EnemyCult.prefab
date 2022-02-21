@@ -507,9 +507,10 @@ GameObject:
   - component: {fileID: 4890237721613600858}
   - component: {fileID: 8971009757011418294}
   - component: {fileID: 1533437213609016049}
+  - component: {fileID: -4465585606071977715}
   m_Layer: 0
   m_Name: EnemyCult
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -540,7 +541,7 @@ Animator:
   m_GameObject: {fileID: 8987352417259645370}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0ce2a6ed8ed260041ac494879b5982ae, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56c611b7e33d1ed4699312175e549625, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -557,7 +558,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8987352417259645370}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.66, y: 1.8039204, z: 0.25}
@@ -597,8 +598,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4771201582977937585, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
-  attackCooldown: 2
-  attackDistance: 2
+  attackCooldown: 4
+  attackDistance: 9
 --- !u!114 &1533437213609016049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,6 +610,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c26774cebc05aa40adc5512146df866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: {fileID: 0}
+--- !u!114 &-4465585606071977715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8987352417259645370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ebf79797a78e5342b6e6e72bf11fb3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8987352417259645372

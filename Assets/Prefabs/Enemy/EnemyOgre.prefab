@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 7113952429325209133}
   - component: {fileID: 3924375296744455168}
   - component: {fileID: 3782272034005839528}
+  - component: {fileID: -5509844052563012299}
   m_Layer: 0
   m_Name: EnemyOgre
   m_TagString: Enemy
@@ -471,7 +472,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3837416230038983445}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.59, y: 3.0954835, z: 0.91762793}
@@ -500,9 +501,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b343576a1bb2142a0803406c6e0e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4771201582977937585, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
   attackCooldown: 2
   attackDistance: 2
+--- !u!114 &-5509844052563012299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837416230038983445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ebf79797a78e5342b6e6e72bf11fb3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationTriggersToResetOnMove: []
 --- !u!1 &3837416230038983447
 GameObject:
   m_ObjectHideFlags: 0

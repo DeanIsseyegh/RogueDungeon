@@ -1,19 +1,23 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyControl : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
     [SerializeField] private float attackCooldown = 2;
     [SerializeField] private float attackDistance = 2;
+
+    private GameObject _player;
     private EnemyAttack _enemyAttack;
     private NavMeshAgent _navMeshAgent;
     private float _timeSinceLastAttackFinished = 0;
+    private AnimationHandler _animationHandler;
 
     void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _enemyAttack = GetComponentInChildren<EnemyAttack>();
+        _animationHandler = GetComponent<AnimationHandler>();
+        _player = GameObject.FindWithTag("Player");
     }
 
     void Update()
@@ -23,18 +27,16 @@ public class EnemyMovement : MonoBehaviour
 
         if (isAttacking)
         {
+            _animationHandler.CanMove = false;
             _timeSinceLastAttackFinished = 0;
-            if (_enemyAttack.IsAttacking())
-            {
-                _navMeshAgent.ResetPath();
-            }
+            _navMeshAgent.ResetPath();
         }
         else
         {
             _timeSinceLastAttackFinished += Time.deltaTime;
             bool isAttackCooldownDone = _timeSinceLastAttackFinished > attackCooldown;
-            
-            float distToPlayer = Vector3.Distance(player.transform.position, transform.position);
+            _animationHandler.CanMove = true;
+            float distToPlayer = Vector3.Distance(_player.transform.position, transform.position);
             if (distToPlayer < attackDistance && isAttackCooldownDone)
             {
                 _navMeshAgent.ResetPath();
@@ -43,14 +45,14 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
-                _navMeshAgent.SetDestination(player.transform.position);
+                _navMeshAgent.SetDestination(_player.transform.position);
             }
         }
     }
 
     private void RotateTowardsPlayer()
     {
-        var direction = (player.transform.position - transform.position).normalized;
+        var direction = (_player.transform.position - transform.position).normalized;
         var lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime);
     }

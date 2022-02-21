@@ -6,7 +6,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private GameObject clickIndicator;
 
     private NavMeshAgent _navMeshAgent;
-    private PlayerAnimation _playerAnimation;
+    private AnimationHandler _animationHandler;
     private bool _canPlayerMove = true;
     private PlayerMovement _playerMovement;
     private PlayerSpellManager _playerSpellManager;
@@ -15,7 +15,7 @@ public class PlayerControl : MonoBehaviour
     private void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        _playerAnimation = GetComponent<PlayerAnimation>();
+        _animationHandler = GetComponent<AnimationHandler>();
         _playerSpellManager = GetComponent<PlayerSpellManager>();
         _playerMovement = new PlayerMovement(_navMeshAgent, clickIndicator);
     }
@@ -23,7 +23,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         _canPlayerMove = _playerSpellManager.IsNotCastingSpell();
-        _playerAnimation.CanMove = _canPlayerMove;
+        _animationHandler.CanMove = _canPlayerMove;
         HandleMove();
         HandleSpell();
     }
