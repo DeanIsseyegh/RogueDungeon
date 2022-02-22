@@ -9,7 +9,7 @@ public abstract class Spell : MonoBehaviour
     [SerializeField] protected Vector3 spellSpawnOffset;
     [SerializeField] protected float spellLifeTime;
     [SerializeField] protected float spellStartUp = 0.4f;
-    [SerializeField] protected string animationName = "BasicSpell";
+    [SerializeField] public string animationName = "BasicSpell";
 
     public SpellScriptableObj SpellAttributes;
 
@@ -28,12 +28,12 @@ public abstract class Spell : MonoBehaviour
         return _timeSinceLastSpell < _spellCooldown;
     }
 
-    public virtual void Cast(NavMeshAgent navMeshAgent, AnimationHandler animationHandler, 
+    public virtual void Cast(NavMeshAgent navMeshAgent, Animator animator, 
         PlayerInventory playerInventory)
     {
         if (IsOnCooldown()) return;
         navMeshAgent.ResetPath();
-        animationHandler.SetTriggerAnimation(animationName);
+        animator.SetTrigger(animationName);
         navMeshAgent.velocity = new Vector3(0, 0, 0);
         _timeSinceLastSpell = 0;
         IsCastingSpell = true;
@@ -43,6 +43,7 @@ public abstract class Spell : MonoBehaviour
     private IEnumerator CreateSpell(GameObject spellPrefab, PlayerInventory playerInventory, GameObject agent)
     {
         yield return new WaitForSeconds(spellStartUp);
+        if (agent == null) yield break;
         var yOffset = new Vector3(0, spellSpawnOffset.y, 0);
         var spellPos = agent.transform.position + (agent.transform.forward * spellSpawnOffset.z) 
                                                   + (agent.transform.right * spellSpawnOffset.x) + yOffset;

@@ -398,8 +398,7 @@ GameObject:
   - component: {fileID: 6452332955923063334}
   - component: {fileID: 7113952429325209133}
   - component: {fileID: 3924375296744455168}
-  - component: {fileID: 3782272034005839528}
-  - component: {fileID: -5509844052563012299}
+  - component: {fileID: 780340270}
   m_Layer: 0
   m_Name: EnemyOgre
   m_TagString: Enemy
@@ -433,7 +432,7 @@ Animator:
   m_GameObject: {fileID: 3837416230038983445}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 854d7d9e0856a014fb5c17258d9a3ad1, type: 3}
-  m_Controller: {fileID: 9100000, guid: 17b6951ab8d42d94c9c370885c4a2828, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6a6a758247bfb2442916bedac0460a33, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -456,7 +455,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 360
-  m_StoppingDistance: 1
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
@@ -489,21 +488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc66c5b6f236cec4596557081bdf61dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3782272034005839528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837416230038983445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58b343576a1bb2142a0803406c6e0e0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackCooldown: 2
   attackDistance: 2
---- !u!114 &-5509844052563012299
+--- !u!114 &780340270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -512,10 +498,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3837416230038983445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ebf79797a78e5342b6e6e72bf11fb3c, type: 3}
+  m_Script: {fileID: 11500000, guid: 61491b2266d848a99e9ae9eadd57bdac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animationTriggersToResetOnMove: []
 --- !u!1 &3837416230038983447
 GameObject:
   m_ObjectHideFlags: 0

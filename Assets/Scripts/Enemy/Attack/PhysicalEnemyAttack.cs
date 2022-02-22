@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class PhysicalEnemyAttack : MonoBehaviour, EnemyAttack
 {
-    private static readonly int Attack1 = Animator.StringToHash("Attack");
+    [SerializeField] private float attackDistance;
+    
+    private static readonly int Attack = Animator.StringToHash("Attack");
     private EnemyWeapon _enemyWeapon;
     private AnimatorStateInfo _currentAnimatorStateInfo;
     private Animator _animator;
+    private bool _isAttackStarting;
 
     private void Start()
     {
@@ -16,16 +19,25 @@ public class PhysicalEnemyAttack : MonoBehaviour, EnemyAttack
     private void Update()
     {
         _currentAnimatorStateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-        if (_enemyWeapon != null) _enemyWeapon.IsActive = IsAttacking();
+        if (_isAttackStarting && _currentAnimatorStateInfo.IsName("Attack")) 
+            _isAttackStarting = false;
+        if (_enemyWeapon != null) 
+            _enemyWeapon.IsActive = IsAttacking();
     }
     
     public void DoAttack()
     {
-        _animator.SetTrigger(Attack1);
+        _animator.SetTrigger(Attack);
+        _isAttackStarting = true;
     }
     
     public bool IsAttacking()
     {
-        return _currentAnimatorStateInfo.IsName("Attack");
+        return _isAttackStarting || _currentAnimatorStateInfo.IsName("Attack");
+    }
+    
+    public float AttackDistance()
+    {
+        return attackDistance;
     }
 }

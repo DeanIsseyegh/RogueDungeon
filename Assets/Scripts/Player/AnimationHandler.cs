@@ -43,8 +43,4 @@ public class AnimationHandler : MonoBehaviour
         }
     }
 
-    public void SetTriggerAnimation(String triggerAnimation)
-    {
-        _animator.SetTrigger(triggerAnimation);
-    }
 }

@@ -11,15 +11,15 @@ public class PlayerSpellManager : MonoBehaviour
     private Dictionary<KeyCode, Spell> _spellInputsMap;
 
     private NavMeshAgent _navMeshAgent;
-    private AnimationHandler _animationHandler;
     private PlayerInventory _playerInventory;
+    private Animator _animator;
 
 
     private void Awake()
     {
         _inventory = GetComponent<PlayerInventory>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        _animationHandler = GetComponent<AnimationHandler>();
+        _animator = GetComponent<Animator>();
         _playerInventory = GetComponent<PlayerInventory>();
     }
 
@@ -51,7 +51,7 @@ public class PlayerSpellManager : MonoBehaviour
             bool isASpellInProgress = spellObjManager.Spells.Any(spell => spell.IsCastingSpell);
             if (!isASpellInProgress)
             {
-                spell.Cast(_navMeshAgent, _animationHandler, _playerInventory);
+                spell.Cast(_navMeshAgent, _animator, _playerInventory);
             }
         }
     }

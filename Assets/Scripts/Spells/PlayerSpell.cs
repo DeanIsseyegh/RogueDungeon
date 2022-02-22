@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.PlayerLoop;
 
 public class PlayerSpell : Spell
 {
@@ -11,10 +10,10 @@ public class PlayerSpell : Spell
         base.Update();
     }
 
-    public override void Cast(NavMeshAgent navMeshAgent, AnimationHandler animationHandler, 
+    public override void Cast(NavMeshAgent navMeshAgent, Animator animator, 
         PlayerInventory playerInventory)
     {
-        base.Cast(navMeshAgent, animationHandler, playerInventory);
+        base.Cast(navMeshAgent, animator, playerInventory);
         navMeshAgent.gameObject.transform.LookAt(mousePositionTracker.MousePosOnFloor());
     }
 }
