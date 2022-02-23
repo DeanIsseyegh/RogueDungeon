@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 8750879653020905858}
   - component: {fileID: 34033122866242375}
   - component: {fileID: 3969818417978583484}
-  - component: {fileID: -433179569973087438}
   m_Layer: 0
-  m_Name: SpeedyShot
+  m_Name: SpeedySpell
   m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,15 +95,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.67489624, y: 0.95568633, z: 0.20007594}
   m_Center: {x: 0, y: -0.00000011920929, z: 0.000000007450581}
---- !u!114 &-433179569973087438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8313592296404006749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94de38a693afd3740a079bdf59449b42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -1195,12 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3321bbd82f9eb4ea9d664279687d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 6029342343211582914, guid: 6561d5a2541643f48b6c81dd92ad6195, type: 3}
-  spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
-  spellLifeTime: 2
-  spellStartUp: 0.4
-  animationName: BasicSpell
-  SpellAttributes: {fileID: 11400000, guid: bde6e46d292d31f4fa3e40f7e241e443, type: 2}
+  data: {fileID: 11400000, guid: bde6e46d292d31f4fa3e40f7e241e443, type: 2}
   mousePositionTracker: {fileID: 874079592}
 --- !u!1001 &419484397
 PrefabInstance:
@@ -1792,12 +1787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3321bbd82f9eb4ea9d664279687d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 6029342343211582914, guid: 1ecb3e6c9b4d8aa4c9a916d0869e1149, type: 3}
-  spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
-  spellLifeTime: 2
-  spellStartUp: 0.4
-  animationName: BasicSpell
-  SpellAttributes: {fileID: 11400000, guid: cb524d09ef2d4344b875ef755c6d16fa, type: 2}
+  data: {fileID: 11400000, guid: cb524d09ef2d4344b875ef755c6d16fa, type: 2}
   mousePositionTracker: {fileID: 874079592}
 --- !u!1001 &607820218
 PrefabInstance:
@@ -6134,12 +6124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba6c55f643f0c54d9ca9fcf9acae55d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 1558510988610266, guid: 9fd6919c6e21fed429290a0f10ca4548, type: 3}
-  spellSpawnOffset: {x: 0.2, y: 1.2, z: 0.2}
-  spellLifeTime: 3
-  spellStartUp: 2.6
-  animationName: Attack
-  SpellAttributes: {fileID: 0}
+  data: {fileID: 11400000, guid: 278d1bfcce4ecbf44a6746e4cc9b64a8, type: 2}
 --- !u!1001 &1768141234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7256,6 +7241,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49a068f3abdc6864db02527e15f51b65, type: 3}
+--- !u!1001 &4022301376073047237
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1579830263647762568, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579830263647762568, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.93454
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579830263647762568, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -33.139065
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579830263647762568, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 32.336815
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579830263647762568, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579830263647762568, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579830263647762568, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579830263647762568, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579830263647762568, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579830263647762568, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579830263647762568, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366735426321672135, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_Name
+      value: IceBallSpellPickup
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
 --- !u!1001 &4983262337147422066
 PrefabInstance:
   m_ObjectHideFlags: 0

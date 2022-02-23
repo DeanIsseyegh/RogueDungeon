@@ -26,7 +26,7 @@ public class RangedEnemyAttack : MonoBehaviour, EnemyAttack
     public bool IsAttacking()
     {
         var currentAnimatorStateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-        bool isSpellCastAnim = currentAnimatorStateInfo.IsName(spell.animationName);
+        bool isSpellCastAnim = currentAnimatorStateInfo.IsName(spell.data.animationName);
         return spell.IsCastingSpell || isSpellCastAnim;
     }
 

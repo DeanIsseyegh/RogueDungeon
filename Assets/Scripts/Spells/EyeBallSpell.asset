@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b27aee48896609a4699e9658bb489b0e, type: 3}
-  m_Name: IceBall
+  m_Name: EyeBallSpell
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 6029342343211582914, guid: 6561d5a2541643f48b6c81dd92ad6195, type: 3}
+  spellPrefab: {fileID: 1558510988610266, guid: 9fd6919c6e21fed429290a0f10ca4548, type: 3}
   spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
-  spellLifeTime: 2
-  spellStartUp: 0.4
-  animationName: BasicSpell
+  spellLifeTime: 3
+  spellStartUp: 2.6
+  animationName: Attack
   spellCooldown: 1

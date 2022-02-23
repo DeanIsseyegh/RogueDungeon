@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public List<Item> Items { get; private set; }
+    public List<Collectible> Items { get; private set; }
     private PlayerHealth _playerHealth;
     private PlayerSpellManager _playerSpellManager;
     private NavMeshAgent _playerNavMeshAgent;
@@ -16,15 +16,15 @@ public class PlayerInventory : MonoBehaviour
         _playerHealth = GetComponent<PlayerHealth>();
         _playerSpellManager = GetComponent<PlayerSpellManager>();
         _playerNavMeshAgent = GetComponent<NavMeshAgent>();
-        Items = new List<Item>();
+        Items = new List<Collectible>();
     }
 
-    public void PickupItem(Item item)
+    public void PickupItem(Collectible collectible)
     {
-        Items.Add(item);
-        item.ApplyEffects(_playerHealth);
-        item.ApplyEffects(_playerSpellManager);
-        item.ApplyEffects(_playerNavMeshAgent);
+        Items.Add(collectible);
+        collectible.ApplyEffects(_playerHealth);
+        collectible.ApplyEffects(_playerSpellManager);
+        collectible.ApplyEffects(_playerNavMeshAgent);
     }
 
 }
