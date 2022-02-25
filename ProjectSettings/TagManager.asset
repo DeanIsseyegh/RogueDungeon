@@ -8,6 +8,10 @@ TagManager:
   - Enemy
   - Powerup
   - MousePositionTracker
+  - HealthBar
+  - HealthBarText
+  - ManaBar
+  - ManaBarText
   layers:
   - Default
   - TransparentFX

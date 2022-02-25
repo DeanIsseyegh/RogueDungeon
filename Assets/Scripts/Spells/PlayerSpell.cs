@@ -8,7 +8,8 @@ public class PlayerSpell : Spell
 
     private void Start()
     {
-        _mousePositionTracker = GameObject.FindWithTag("MousePositionTracker").GetComponent<MousePositionTracker>();
+        _mousePositionTracker =
+            GameObject.FindWithTag("MousePositionTracker").GetComponent<MousePositionTracker>();
     }
 
     protected override void Update()
@@ -16,10 +17,14 @@ public class PlayerSpell : Spell
         base.Update();
     }
 
-    public override void Cast(NavMeshAgent navMeshAgent, Animator animator, 
-        PlayerInventory playerInventory)
+    public override void Cast(NavMeshAgent navMeshAgent, Animator animator,
+        PlayerInventory playerInventory, PlayerMana playerMana)
     {
+        if (!IsOnCooldown())
+        {
+            playerMana.UseMana(data.manaCost);
+            navMeshAgent.gameObject.transform.LookAt(_mousePositionTracker.MousePosOnFloor());
+        }
         base.Cast(navMeshAgent, animator, playerInventory);
-        navMeshAgent.gameObject.transform.LookAt(_mousePositionTracker.MousePosOnFloor());
     }
 }

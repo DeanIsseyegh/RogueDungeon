@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2b5320935d04d02874b3d5db33ccb68, type: 3}
   m_Name: OgreClub
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 30

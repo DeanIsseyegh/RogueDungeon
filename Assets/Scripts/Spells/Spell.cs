@@ -19,6 +19,12 @@ public abstract class Spell : MonoBehaviour
     {
         return _timeSinceLastSpell < data.spellCooldown;
     }
+    
+    public virtual void Cast(NavMeshAgent navMeshAgent, Animator animator, 
+        PlayerInventory playerInventory, PlayerMana playerMana)
+    {
+        Cast(navMeshAgent, animator, playerInventory);
+    }
 
     public virtual void Cast(NavMeshAgent navMeshAgent, Animator animator, 
         PlayerInventory playerInventory)
@@ -42,8 +48,7 @@ public abstract class Spell : MonoBehaviour
         GameObject createdSpell = Instantiate(spellPrefab,
             spellPos,
             agent.transform.rotation);
-        DamagingAttack damagingAttack = createdSpell.GetComponent<DamagingAttack>();
-        if (damagingAttack != null) damagingAttack.Damage = data.damage;
+        createdSpell.GetComponent<DamagingAttack>().Damage = data.damage;
         playerInventory.Items.ForEach(item => item.ApplyEffects(createdSpell));
         IsCastingSpell = false;
         Destroy(createdSpell, data.spellLifeTime);

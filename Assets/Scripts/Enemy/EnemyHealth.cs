@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour, Health
 {
     [SerializeField] private float maxHealth = 100;
-    private EnemyHealthBar _healthBar;
+    private HealthBar _healthBar;
 
     private float _currentHealth;
 
     private void Awake()
     {
         _currentHealth = maxHealth;
-        _healthBar = GetComponent<EnemyHealthBar>();
+        _healthBar = GetComponent<HealthBar>();
         _healthBar.MaxHealth = maxHealth;
         _healthBar.CurrentHealth = _currentHealth;
     }

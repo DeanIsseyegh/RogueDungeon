@@ -12,6 +12,7 @@ public class PlayerSpellManager : MonoBehaviour
 
     private NavMeshAgent _navMeshAgent;
     private PlayerInventory _playerInventory;
+    private PlayerMana _playerMana;
     private Animator _animator;
 
     private void Awake()
@@ -20,6 +21,7 @@ public class PlayerSpellManager : MonoBehaviour
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
         _playerInventory = GetComponent<PlayerInventory>();
+        _playerMana = GetComponent<PlayerMana>();
     }
 
     private void Start()
@@ -49,7 +51,7 @@ public class PlayerSpellManager : MonoBehaviour
             KeyCode spellKeyPressed = _spellInputsMap.Keys.FirstOrDefault(Input.GetKeyDown);
             if (spellKeyPressed == KeyCode.None) return;
             Spell spell = _spellInputsMap[spellKeyPressed];
-            spell.Cast(_navMeshAgent, _animator, _playerInventory);
+            spell.Cast(_navMeshAgent, _animator, _playerInventory, _playerMana);
         }
     }
 }
