@@ -6,14 +6,13 @@ using UnityEngine.AI;
 
 public class PlayerSpellManager : MonoBehaviour
 {
-    [SerializeField] private SpellObjManager spellObjManager;
     private PlayerInventory _inventory;
     private Dictionary<KeyCode, Spell> _spellInputsMap;
+    private List<KeyCode> _spellInputs;
 
     private NavMeshAgent _navMeshAgent;
     private PlayerInventory _playerInventory;
     private Animator _animator;
-
 
     private void Awake()
     {
@@ -25,35 +24,32 @@ public class PlayerSpellManager : MonoBehaviour
 
     private void Start()
     {
-        List<KeyCode> spellInputs = new List<KeyCode>()
+        _spellInputs = new List<KeyCode>()
         {
             KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4
         };
-        _spellInputsMap = spellObjManager.Spells.Select((spell, index) =>
-        {
-            var spellKeyCode = spellInputs[index];
-            return new {spellKeyCode, spell};
-        }).ToDictionary(e => e.spellKeyCode, e => e.spell);
+        _spellInputsMap = new Dictionary<KeyCode, Spell>();
     }
 
-    public bool IsNotCastingSpell()
+    public void AddSpell(Spell spell)
     {
-        return !spellObjManager.Spells.Any(spell => spell.IsCastingSpell);
+        int numOfSpells = _spellInputsMap.Count;
+        _spellInputsMap[_spellInputs[numOfSpells]] = spell;
+    }
+
+    public bool IsCastingSpell()
+    {
+        return _spellInputs.Count > 0 && _spellInputsMap.Values.Any(spell => spell.IsCastingSpell);
     }
 
     public void HandleSpell()
     {
-        if (IsNotCastingSpell())
+        if (!IsCastingSpell())
         {
             KeyCode spellKeyPressed = _spellInputsMap.Keys.FirstOrDefault(Input.GetKeyDown);
             if (spellKeyPressed == KeyCode.None) return;
             Spell spell = _spellInputsMap[spellKeyPressed];
-            bool isASpellInProgress = spellObjManager.Spells.Any(spell => spell.IsCastingSpell);
-            if (!isASpellInProgress)
-            {
-                spell.Cast(_navMeshAgent, _animator, _playerInventory);
-            }
+            spell.Cast(_navMeshAgent, _animator, _playerInventory);
         }
     }
-
 }

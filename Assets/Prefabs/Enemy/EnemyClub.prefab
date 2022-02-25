@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7527454605928348546}
   - component: {fileID: 7527454605926441983}
   - component: {fileID: 3316111815929644721}
+  - component: {fileID: 8232301347755842221}
   m_Layer: 0
   m_Name: EnemyClub
   m_TagString: Untagged
@@ -110,3 +111,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146d4dbc73fd9904992d2d4f591bfc1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 44e3b5b7e7a85dd499f8e16e792e97dc, type: 2}
+--- !u!114 &8232301347755842221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7527454605926344002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6dc6e39bc548648ed5a1567e943d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Damage>k__BackingField: 10

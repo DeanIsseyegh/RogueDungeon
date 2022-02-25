@@ -4,13 +4,13 @@ using UnityEngine.AI;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private GameObject clickIndicator;
+    [SerializeField] private MousePositionTracker mousePositionTracker;
 
     private NavMeshAgent _navMeshAgent;
     private AnimationHandler _animationHandler;
     private bool _canPlayerMove = true;
     private PlayerMovement _playerMovement;
     private PlayerSpellManager _playerSpellManager;
-    [SerializeField] private MousePositionTracker mousePositionTracker;
 
     private void Start()
     {
@@ -22,7 +22,7 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        _canPlayerMove = _playerSpellManager.IsNotCastingSpell();
+        _canPlayerMove = !_playerSpellManager.IsCastingSpell();
         _animationHandler.CanMove = _canPlayerMove;
         HandleMove();
         HandleSpell();

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spin : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 200;
 
     // Update is called once per frame
     void Update()

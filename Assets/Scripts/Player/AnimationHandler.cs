@@ -27,10 +27,6 @@ public class AnimationHandler : MonoBehaviour
 
     private void HandleMoveAnimation()
     {
-        if (gameObject.name.Equals("EnemyCult"))
-        {
-            Debug.Log("enemy Cult Handle Move");
-        }
         Vector3 velocity = _navMeshAgent.velocity;
         if (Math.Abs(velocity.x) + Math.Abs(velocity.z) > 0.2)
         {

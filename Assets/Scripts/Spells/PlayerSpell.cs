@@ -1,9 +1,15 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class PlayerSpell : Spell
 {
-    [SerializeField] protected MousePositionTracker mousePositionTracker;
+    private MousePositionTracker _mousePositionTracker;
+
+    private void Start()
+    {
+        _mousePositionTracker = GameObject.FindWithTag("MousePositionTracker").GetComponent<MousePositionTracker>();
+    }
 
     protected override void Update()
     {
@@ -14,6 +20,6 @@ public class PlayerSpell : Spell
         PlayerInventory playerInventory)
     {
         base.Cast(navMeshAgent, animator, playerInventory);
-        navMeshAgent.gameObject.transform.LookAt(mousePositionTracker.MousePosOnFloor());
+        navMeshAgent.gameObject.transform.LookAt(_mousePositionTracker.MousePosOnFloor());
     }
 }

@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MousePositionTracker : MonoBehaviour
 {
-    private Camera _camera;
     [SerializeField] private LayerMask floorLayerMask;
+    private Camera _camera;
 
     private void Awake()
     {

@@ -7,6 +7,7 @@ TagManager:
   - EnemyAttack
   - Enemy
   - Powerup
+  - MousePositionTracker
   layers:
   - Default
   - TransparentFX
