@@ -20,11 +20,11 @@ public class PlayerSpell : Spell
     public override void Cast(NavMeshAgent navMeshAgent, Animator animator,
         PlayerInventory playerInventory, PlayerMana playerMana)
     {
-        if (!IsOnCooldown())
+        if (!IsOnCooldown() && playerMana.CurrentMana >= data.manaCost)
         {
             playerMana.UseMana(data.manaCost);
             navMeshAgent.gameObject.transform.LookAt(_mousePositionTracker.MousePosOnFloor());
+            base.Cast(navMeshAgent, animator, playerInventory);
         }
-        base.Cast(navMeshAgent, animator, playerInventory);
     }
 }

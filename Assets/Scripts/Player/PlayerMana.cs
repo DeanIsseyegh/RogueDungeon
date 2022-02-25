@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,26 +6,33 @@ using UnityEngine;
 public class PlayerMana : MonoBehaviour
 {
     [SerializeField] private float maxMana = 100;
-    private float _currentMana;
-    private ManaBar _manaBar;
-    private ManaBarText _manaBarText;
+    [SerializeField] private float manaRegenRate = 5;
+    public float CurrentMana { get; private set; }
+    private UIManager _uiManager;
 
     private void Start()
     {
-        _currentMana = maxMana;
-        _manaBar = GetComponent<ManaBar>();
-        _manaBarText = GetComponent<ManaBarText>();
+        CurrentMana = maxMana;
+        _uiManager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
+        
+        _uiManager.SetMaxMana(maxMana);
+        _uiManager.SetCurrentMana(CurrentMana);
+    }
 
-        _manaBar.MaxMana = maxMana;
-        _manaBar.CurrentMana = _currentMana;
-        _manaBarText.MaxMana = maxMana;
-        _manaBarText.CurrentMana = _currentMana;
+    private void Update()
+    {
+        SetMana(CurrentMana + manaRegenRate * Time.deltaTime);
+        if (CurrentMana > maxMana) SetMana(maxMana);
     }
 
     public void UseMana(float manaToUse)
     {
-        _currentMana -= manaToUse;
-        _manaBar.CurrentMana = _currentMana;
-        _manaBarText.CurrentMana = _currentMana;
+        SetMana(CurrentMana - manaToUse);
+    }
+
+    private void SetMana(float value)
+    {
+        CurrentMana = value;
+        _uiManager.SetCurrentMana(CurrentMana);
     }
 }

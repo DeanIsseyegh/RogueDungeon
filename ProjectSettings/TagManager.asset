@@ -12,6 +12,7 @@ TagManager:
   - HealthBarText
   - ManaBar
   - ManaBarText
+  - UIManager
   layers:
   - Default
   - TransparentFX
