@@ -12,12 +12,12 @@ public class RoomGenerator : MonoBehaviour
     [SerializeField] private int xSize;
     [SerializeField] private int zSize;
 
-    private List<GameObject> generatedFloor;
+    private List<NavMeshSurface> generatedFloor;
 
     // Start is called before the first frame update
     void Start()
     {
-        generatedFloor = new List<GameObject>();
+        generatedFloor = new List<NavMeshSurface>();
         MeshRenderer floorRenderer = floorTile.GetComponent<MeshRenderer>();
         Vector3 floorSize = floorRenderer.bounds.size;
         Vector3 xOffset = new Vector3(floorSize.x, 0, 0);
@@ -33,13 +33,12 @@ public class RoomGenerator : MonoBehaviour
             {
                 GameObject createdFloor = Instantiate(floorTile, currentPos, Quaternion.identity);
                 NavMeshSurface navMeshSurface = createdFloor.GetComponent<NavMeshSurface>();
-                generatedFloor.Add(createdFloor);
+                generatedFloor.Add(navMeshSurface);
                 currentPos += zOffset;
             }
         }
 
-        generatedFloor.Select(it => it.GetComponent<NavMeshSurface>()).ToList()
-            .ForEach(it => it.BuildNavMesh());
+        generatedFloor.ForEach(it => it.BuildNavMesh());
     }
 
     // Update is called once per frame
