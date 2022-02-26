@@ -14,9 +14,10 @@ public class SpellIcon : MonoBehaviour
     private void Awake()
     {
         const string iconTagPrefix = "SpellIcon";
-        ;
+        
         var iconTag = iconTagPrefix + SpellIconPosition;
         _iconImage = GameObject.FindWithTag(iconTag).GetComponent<Image>();
+        
         var iconCooldownTag = iconTag + "Cooldown";
         _iconCooldownImage = GameObject.FindWithTag(iconCooldownTag).GetComponent<Image>();
     }

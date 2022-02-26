@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -12,7 +13,7 @@ public class UIManager : MonoBehaviour
     private ManaBarText _manaBarText;
     private List<SpellIcon> _spellIcons;
 
-    private void Start()
+    private void Awake()
     {
         _healthBar = GetComponent<HealthBar>();
         _healthBarText = GetComponent<HealthBarText>();
@@ -21,8 +22,12 @@ public class UIManager : MonoBehaviour
         _manaBarText = GetComponent<ManaBarText>();
 
         List<SpellIcon> spellIcons = GetComponents<SpellIcon>().ToList();
-        spellIcons.ForEach(it => it.UpdateIcon(defaultSpellIcon));
         _spellIcons = spellIcons.OrderBy(it => it.SpellIconPosition).ToList();
+    }
+
+    private void Start()
+    {
+        _spellIcons.ForEach(it => it.UpdateIcon(defaultSpellIcon));
     }
 
     public void SetMaxHealth(float value)
