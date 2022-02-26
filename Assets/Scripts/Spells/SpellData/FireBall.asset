@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: FireBall
   m_EditorClassIdentifier: 
   spellPrefab: {fileID: 6029342343211582914, guid: 1ecb3e6c9b4d8aa4c9a916d0869e1149, type: 3}
+  damage: 10
+  manaCost: 10
   spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
   spellLifeTime: 2
   spellStartUp: 0.4
   animationName: BasicSpell
   spellCooldown: 1
+  spellIcon: {fileID: 21300000, guid: dd3885098198d104888439be4c590aba, type: 3}

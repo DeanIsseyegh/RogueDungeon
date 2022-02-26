@@ -6,17 +6,21 @@ using UnityEngine.AI;
 
 public class PlayerSpellManager : MonoBehaviour
 {
+    private UIManager _uiManager;
     private PlayerInventory _inventory;
     private Dictionary<KeyCode, Spell> _spellInputsMap;
     private List<KeyCode> _spellInputs;
 
     private NavMeshAgent _navMeshAgent;
     private PlayerInventory _playerInventory;
+
     private PlayerMana _playerMana;
+
     private Animator _animator;
 
     private void Awake()
     {
+        _uiManager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
         _inventory = GetComponent<PlayerInventory>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
@@ -33,10 +37,16 @@ public class PlayerSpellManager : MonoBehaviour
         _spellInputsMap = new Dictionary<KeyCode, Spell>();
     }
 
+    private void Update()
+    {
+        UpdateCooldownUI();
+    }
+
     public void AddSpell(Spell spell)
     {
-        int numOfSpells = _spellInputsMap.Count;
-        _spellInputsMap[_spellInputs[numOfSpells]] = spell;
+        int currentSpellIndex = _spellInputsMap.Count;
+        _spellInputsMap[_spellInputs[currentSpellIndex]] = spell;
+        _uiManager.UpdateSpellIcon(spell.data.spellIcon, currentSpellIndex);
     }
 
     public bool IsCastingSpell()
@@ -52,6 +62,16 @@ public class PlayerSpellManager : MonoBehaviour
             if (spellKeyPressed == KeyCode.None) return;
             Spell spell = _spellInputsMap[spellKeyPressed];
             spell.Cast(_navMeshAgent, _animator, _playerInventory, _playerMana);
+        }
+    }
+
+    private void UpdateCooldownUI()
+    {
+        List<Spell> spells = _spellInputsMap.Values.ToList();
+        for (int i = 0; i < spells.Count; i++)
+        {
+            Spell spell = spells[i];
+            _uiManager.UpdateSpellCooldown(spell.data.spellCooldown, spell.data.spellCooldown - spell.TimeSinceLastSpell, i);
         }
     }
 }

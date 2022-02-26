@@ -6,18 +6,18 @@ using UnityEngine.AI;
 public abstract class Spell : MonoBehaviour
 {
     public SpellData data;
-    private float _timeSinceLastSpell = 999;
+    public float TimeSinceLastSpell { get; private set; } = 999;
 
     public bool IsCastingSpell { get; private set; }
 
     protected virtual void Update()
     {
-        _timeSinceLastSpell += Time.deltaTime;
+        TimeSinceLastSpell += Time.deltaTime;
     }
 
     public bool IsOnCooldown()
     {
-        return _timeSinceLastSpell < data.spellCooldown;
+        return TimeSinceLastSpell < data.spellCooldown;
     }
     
     public virtual void Cast(NavMeshAgent navMeshAgent, Animator animator, 
@@ -33,7 +33,7 @@ public abstract class Spell : MonoBehaviour
         navMeshAgent.ResetPath();
         animator.SetTrigger(data.animationName);
         navMeshAgent.velocity = new Vector3(0, 0, 0);
-        _timeSinceLastSpell = 0;
+        TimeSinceLastSpell = 0;
         IsCastingSpell = true;
         StartCoroutine(CreateSpell(data.spellPrefab, playerInventory, navMeshAgent.gameObject));
     }

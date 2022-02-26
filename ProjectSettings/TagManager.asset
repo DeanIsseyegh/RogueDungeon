@@ -13,6 +13,10 @@ TagManager:
   - ManaBar
   - ManaBarText
   - UIManager
+  - SpellIcon1
+  - SpellIcon2
+  - SpellIcon1Cooldown
+  - SpellIcon2Cooldown
   layers:
   - Default
   - TransparentFX
