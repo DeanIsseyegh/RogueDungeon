@@ -9,7 +9,8 @@ public class RandomItemGenerator : MonoBehaviour
     public void Generate(Vector3 posToGenerate)
     {
         int randomIndex = Random.Range(0, collectibleItems.Count);
-        GameObject collectibleSpell = collectibleItems[randomIndex];
-        Instantiate(collectibleSpell, posToGenerate, Quaternion.identity);
+        GameObject collectibleItem = collectibleItems[randomIndex];
+        Instantiate(collectibleItem, posToGenerate, Quaternion.identity);
+        collectibleItems.Remove(collectibleItem);
     }
 }

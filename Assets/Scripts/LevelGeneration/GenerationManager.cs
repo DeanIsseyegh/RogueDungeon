@@ -6,20 +6,20 @@ public class GenerationManager : MonoBehaviour
 {
     [SerializeField] private RandomSpellGenerator randomSpellGenerator;
     [SerializeField] private RandomItemGenerator randomItemGenerator;
-    [SerializeField] private GameObject playerSpawnPoint;
+    [SerializeField] private GameObject player;
 
     void Start()
     {
-        GenerateStartingSpell();
+        GenerateRandomSpell();
         GenerateStartingItem();
     }
 
-    private void GenerateStartingSpell()
+    private void GenerateRandomSpell()
     {
         Vector3 startingSpellForwardOffset = Vector3.forward * -1 * 3;
         Vector3 startingSpellHeightOffset = Vector3.up * 1.5f;
         Vector3 startingSpellRightOffset = Vector3.right;
-        randomSpellGenerator.Generate(playerSpawnPoint.transform.position + startingSpellForwardOffset +
+        randomSpellGenerator.Generate(player.transform.position + startingSpellForwardOffset +
                                       startingSpellHeightOffset + startingSpellRightOffset);
     }
 
@@ -28,7 +28,7 @@ public class GenerationManager : MonoBehaviour
         Vector3 startingItemForwardOffset = Vector3.forward * -1 * 3;
         Vector3 startingItemHeightOffset = Vector3.up * 1.5f;
         Vector3 startingItemRightOffset = Vector3.right * -1;
-        randomItemGenerator.Generate(playerSpawnPoint.transform.position + startingItemForwardOffset +
+        randomItemGenerator.Generate(player.transform.position + startingItemForwardOffset +
                                      startingItemHeightOffset + startingItemRightOffset);
     }
 

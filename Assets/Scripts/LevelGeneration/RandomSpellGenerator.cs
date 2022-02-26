@@ -10,5 +10,6 @@ public class RandomSpellGenerator : MonoBehaviour
         int randomIndex = Random.Range(0, collectibleSpells.Count);
         GameObject collectibleSpell = collectibleSpells[randomIndex];
         Instantiate(collectibleSpell, posToGenerate, Quaternion.identity);
+        collectibleSpells.Remove(collectibleSpell);
     }
 }
