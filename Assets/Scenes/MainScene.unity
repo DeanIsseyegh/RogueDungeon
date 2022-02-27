@@ -6934,6 +6934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomSpellGenerator: {fileID: 1180619859}
   randomItemGenerator: {fileID: 1243814138}
+  roomGenerator: {fileID: 16494836}
   player: {fileID: 2322320037186382925}
 --- !u!4 &1161685704
 Transform:

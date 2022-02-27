@@ -6,10 +6,12 @@ public class GenerationManager : MonoBehaviour
 {
     [SerializeField] private RandomSpellGenerator randomSpellGenerator;
     [SerializeField] private RandomItemGenerator randomItemGenerator;
+    [SerializeField] private RoomGenerator roomGenerator;
     [SerializeField] private GameObject player;
 
     void Start()
     {
+        roomGenerator.GenerateFloor();
         GenerateRandomSpell();
         GenerateStartingItem();
     }
