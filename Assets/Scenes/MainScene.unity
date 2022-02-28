@@ -255,9 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorTile: {fileID: 1112197981072686, guid: 5812f95c175b34e7a8e5a7566a43a0ef, type: 3}
   wallTile: {fileID: 1135327754445724, guid: 2e9bb0112b1a3428f94ba8550d668f2f, type: 3}
-  startingPos: {x: -4, y: 0, z: -4}
-  xSize: 10
-  zSize: 10
+  doorTile: {fileID: 1781130428969628, guid: 17462986d76284d599dd3f87e1100aea, type: 3}
 --- !u!4 &32743587 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4493048135532490, guid: 2e9bb0112b1a3428f94ba8550d668f2f, type: 3}
@@ -688,7 +686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &127917631
 Transform:
   m_ObjectHideFlags: 0
@@ -697,7 +695,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127917630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 43}
+  m_LocalPosition: {x: 0, y: 0, z: 137.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 630484744}
@@ -1308,7 +1306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &195175410
 Transform:
   m_ObjectHideFlags: 0
@@ -1317,7 +1315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195175409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9458017, y: -10.6149845, z: -1.675924}
+  m_LocalPosition: {x: -0.9458017, y: -6.8649845, z: 86.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1980002190}
@@ -4930,7 +4928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &833158681
 Transform:
   m_ObjectHideFlags: 0
@@ -4939,7 +4937,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833158680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 94.600006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 68922253}
@@ -6932,10 +6930,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683acfe32e96aa742a855bbbcb676ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingPos: {x: -4, y: 0, z: -4}
   randomSpellGenerator: {fileID: 1180619859}
   randomItemGenerator: {fileID: 1243814138}
   roomGenerator: {fileID: 16494836}
   player: {fileID: 2322320037186382925}
+  roomsData:
+  - {fileID: 11400000, guid: a8a8f1d67e8e2574eb79aa51222b498d, type: 2}
+  - {fileID: 11400000, guid: 64327f1bd6d77c742ab95ad03c2adce5, type: 2}
+  - {fileID: 11400000, guid: 9d1bc06533c57bf4abd51460dde8266a, type: 2}
 --- !u!4 &1161685704
 Transform:
   m_ObjectHideFlags: 0
@@ -9186,7 +9189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1600765467
 Transform:
   m_ObjectHideFlags: 0
@@ -9195,7 +9198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600765466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4000001, y: -10.6149845, z: 19.08}
+  m_LocalPosition: {x: -0.05, y: -7.9, z: 113.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1619736560}
@@ -11988,6 +11991,10 @@ PrefabInstance:
     - target: {fileID: -6036844872246731012, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
       propertyPath: spellPrefabs.Array.data[1]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771201582977641617, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.1
       objectReference: {fileID: 0}
     - target: {fileID: 4771201582977641619, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
       propertyPath: m_RootOrder

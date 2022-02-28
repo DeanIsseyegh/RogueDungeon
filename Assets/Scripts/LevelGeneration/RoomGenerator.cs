@@ -9,30 +9,39 @@ public class RoomGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject floorTile;
     [SerializeField] private GameObject wallTile;
-    [SerializeField] private Vector3 startingPos;
-    [SerializeField] private int xSize;
-    [SerializeField] private int zSize;
+    [SerializeField] private GameObject doorTile;
 
-    private List<NavMeshSurface> generatedFloor;
-
-    public void GenerateFloor()
+    public GeneratedRoom GenerateFloor(Vector3 startingPos, RoomData roomData)
     {
-        generatedFloor = new List<NavMeshSurface>();
+        float xSize = roomData.xSize;
+        float zSize = roomData.zSize;
         MeshRenderer floorRenderer = floorTile.GetComponent<MeshRenderer>();
         Vector3 floorSize = floorRenderer.bounds.size;
-        Vector3 xOffset = new Vector3(floorSize.x, 0, 0);
-        Vector3 zOffset = new Vector3(0, 0, floorSize.z);
+        Vector3 xTileSize = new Vector3(floorSize.x, 0, 0);
+        Vector3 zTileSize = new Vector3(0, 0, floorSize.z);
 
-        List<List<Vector3>> mapLayout = new List<List<Vector3>>();
-
-        CreateGround(mapLayout, xOffset, zOffset);
-        CreateWalls(mapLayout, zOffset, xOffset);
-
-        generatedFloor.ForEach(it => it.BuildNavMesh());
+        List<List<Vector3>> mapLayout = CreateMapLayout(startingPos, xSize, zSize, xTileSize, zTileSize);
+        List<NavMeshSurface> generatedFloor = CreateFloor(mapLayout);
+        Vector3 entranceLocation = CalculateEntranceLocation(mapLayout);
+        Vector3 exitLocation = CalculateExitLocation(mapLayout);
+        CreateExit(exitLocation, zTileSize);
+        CreateExit(entranceLocation, zTileSize);
+        CreateWalls(mapLayout, zTileSize, xTileSize, exitLocation, entranceLocation);
+        return new GeneratedRoom(mapLayout, exitLocation, generatedFloor, floorSize.x, floorSize.z, startingPos);
     }
 
-    private void CreateGround(List<List<Vector3>> mapLayout, Vector3 xOffset, Vector3 zOffset)
+    public Vector3 CalculateStartPosBasedOnPrevRoom(GeneratedRoom prevRoom, RoomData nextRoom)
     {
+        var xOffset = (prevRoom.StartPos.x + (prevRoom.XSize - nextRoom.xSize)/2*4);
+        Vector3 newRoomStartPos = prevRoom.ExitLocation + new Vector3(xOffset, 0, 4);
+        return newRoomStartPos;
+    }
+
+    private List<List<Vector3>> CreateMapLayout(Vector3 startingPos, float xSize, float zSize, Vector3 tileXSize,
+        Vector3 tileZSize)
+    {
+        List<List<Vector3>> mapLayout = new List<List<Vector3>>();
+
         Vector3 currentPos = startingPos;
         for (int z = 0; z < zSize; z++)
         {
@@ -40,13 +49,32 @@ public class RoomGenerator : MonoBehaviour
             for (int x = 0; x < xSize; x++)
             {
                 mapLayout[z].Add(currentPos);
-                currentPos += xOffset;
+                currentPos += tileXSize;
             }
 
-            currentPos += zOffset;
+            currentPos += tileZSize;
             currentPos.x = startingPos.x;
         }
 
+        return mapLayout;
+    }
+    
+    private Vector3 CalculateEntranceLocation(List<List<Vector3>> mapLayout)
+    {
+        List<Vector3> firstRow = mapLayout.First();
+        Vector3 entranceLocation = firstRow[firstRow.Count / 2];
+        return entranceLocation;
+    }
+    
+    private Vector3 CalculateExitLocation(List<List<Vector3>> mapLayout)
+    {
+        List<Vector3> lastRow = mapLayout.Last();
+        Vector3 exitLocation = lastRow[lastRow.Count / 2];
+        return exitLocation;
+    }
+    private List<NavMeshSurface> CreateFloor(List<List<Vector3>> mapLayout)
+    {
+        List<NavMeshSurface> generatedFloor = new List<NavMeshSurface>();
         mapLayout.ForEach(rowList =>
         {
             rowList.ForEach(posInRow =>
@@ -56,26 +84,37 @@ public class RoomGenerator : MonoBehaviour
                 generatedFloor.Add(navMeshSurface);
             });
         });
+        return generatedFloor;
     }
 
-    private void CreateWalls(List<List<Vector3>> mapLayout, Vector3 zOffset, Vector3 xOffset)
+    private void CreateExit(Vector3 exitLocation, Vector3 zOffset)
+    {
+        // GameObject createdExit = Instantiate(doorTile, exitLocation + zOffset / 2, Quaternion.Euler(0f, 180, 0f));
+    }
+    
+    private void CreateWalls(List<List<Vector3>> mapLayout, Vector3 zTileSize, Vector3 xTileSize,
+        Vector3 exitLocation, Vector3 entranceLocation)
     {
         List<Vector3> firstRow = mapLayout.First();
         List<Vector3> lastRow = mapLayout.Last();
         List<Vector3> rightColumn = mapLayout.Select(row => row.First()).ToList();
         List<Vector3> leftColumn = mapLayout.Select(row => row.Last()).ToList();
 
-        firstRow.ForEach(CreateWall(-zOffset / 2, Quaternion.Euler(0f, 0, 0f)));
-        lastRow.ForEach(CreateWall(zOffset / 2, Quaternion.Euler(0f, 180, 0f)));
-        rightColumn.ForEach(CreateWall(-xOffset / 2, Quaternion.Euler(0f, 90f, 0f)));
-        leftColumn.ForEach(CreateWall(xOffset / 2, Quaternion.Euler(0f, 270f, 0f)));
+        firstRow.ForEach(CreateWall(-zTileSize / 2, Quaternion.Euler(0f, 0, 0f), exitLocation, entranceLocation));
+        lastRow.ForEach(CreateWall(zTileSize / 2, Quaternion.Euler(0f, 180, 0f), exitLocation, entranceLocation));
+        rightColumn.ForEach(CreateWall(-xTileSize / 2, Quaternion.Euler(0f, 90f, 0f), exitLocation, entranceLocation));
+        leftColumn.ForEach(CreateWall(xTileSize / 2, Quaternion.Euler(0f, 270f, 0f), exitLocation, entranceLocation));
     }
 
-    private Action<Vector3> CreateWall(Vector3 offset, Quaternion rotation)
+    private Action<Vector3> CreateWall(Vector3 offset, Quaternion rotation, Vector3 exitLocation, Vector3 entranceLocation)
     {
         return pos =>
         {
-            Instantiate(wallTile, pos + offset, rotation);
+            if (!exitLocation.Equals(pos) && !entranceLocation.Equals(pos))
+            {
+                Instantiate(wallTile, pos + offset, rotation);
+            }
         };
     }
+    
 }
