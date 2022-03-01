@@ -10,18 +10,22 @@ public class GeneratedRoom
     private readonly List<NavMeshSurface> _navMeshSurfaces;
     private readonly float _xTileSize;
     private readonly float _zTileSize;
+    public GameObject Entrance { get; }
+    public GameObject Exit { get; }
     public Vector3 StartPos { get; }
     public int XSize { get; }
     public int ZSize { get; }
 
     public GeneratedRoom(List<List<Vector3>> mapLayout, Vector3 exitLocation, List<NavMeshSurface> navMeshSurfaces,
-        float xTileSize, float zTileSize, Vector3 startPos)
+        float xTileSize, float zTileSize, Vector3 startPos,  GameObject entrance, GameObject exit)
     {
         ExitLocation = exitLocation;
         _mapLayout = mapLayout;
         _navMeshSurfaces = navMeshSurfaces;
         _xTileSize = xTileSize;
         _zTileSize = zTileSize;
+        Entrance = entrance;
+        Exit = exit;
         StartPos = startPos;
         XSize = _mapLayout.First().Count;
         ZSize = _mapLayout.Count;

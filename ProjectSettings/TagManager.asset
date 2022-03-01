@@ -17,6 +17,7 @@ TagManager:
   - SpellIcon2
   - SpellIcon1Cooldown
   - SpellIcon2Cooldown
+  - Openable
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - Water
   - UI
   - Floor
-  - 
-  - 
+  - Door
+  - Wall
   - 
   - 
   - 

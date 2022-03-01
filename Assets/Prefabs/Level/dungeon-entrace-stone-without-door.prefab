@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 33798536694203572}
   - component: {fileID: 23959334469996066}
   - component: {fileID: 64298171510093400}
-  m_Layer: 11
-  m_Name: dungeon-door-stone
+  m_Layer: 7
+  m_Name: dungeon-entrace-stone-without-door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1781130428969628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

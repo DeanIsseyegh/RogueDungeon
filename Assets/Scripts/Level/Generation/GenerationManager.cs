@@ -15,8 +15,8 @@ public class GenerationManager : MonoBehaviour
     void Start()
     {
         GenerateRooms();
-        GenerateRandomSpell();
-        GenerateStartingItem();
+        // GenerateRandomSpell();
+        // GenerateRandomItem();
     }
 
     public void GenerateRooms()
@@ -47,7 +47,7 @@ public class GenerationManager : MonoBehaviour
                                       startingSpellHeightOffset + startingSpellRightOffset);
     }
 
-    private void GenerateStartingItem()
+    private void GenerateRandomItem()
     {
         Vector3 startingItemForwardOffset = Vector3.forward * -1 * 3;
         Vector3 startingItemHeightOffset = Vector3.up * 1.5f;
