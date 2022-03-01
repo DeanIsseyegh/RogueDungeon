@@ -6,7 +6,7 @@ using UnityEngine;
 public class RoomSpellStartEvent : MonoBehaviour
 {
     private Vector3 _startingSpellHeightOffset;
-    public RandomSpellGenerator SpellGenerator { private get; set;  }
+    public RandomCollectibleGenerator SpellGenerator { private get; set;  }
     public Vector3 MiddleOfRoomPos { private get; set; }
 
     public bool isSpellCreated;
@@ -16,7 +16,7 @@ public class RoomSpellStartEvent : MonoBehaviour
 
     private void Awake()
     {
-        SpellGenerator = FindObjectOfType<RandomSpellGenerator>();
+        SpellGenerator = GameObject.FindWithTag("RandomSpellGenerator").GetComponent<RandomCollectibleGenerator>();
         _startingSpellHeightOffset = Vector3.up * 1.5f;
     }
 
@@ -24,7 +24,6 @@ public class RoomSpellStartEvent : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("RoomStartTrigger entered");
             createdSpell = SpellGenerator.Generate(MiddleOfRoomPos + _startingSpellHeightOffset);
             isSpellCreated = true;
             GetComponent<BoxCollider>().enabled = false;
