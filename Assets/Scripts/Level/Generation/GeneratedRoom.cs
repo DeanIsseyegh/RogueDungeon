@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class GeneratedRoom
 {
-    public Vector3 ExitLocation { get; }
+    public RoomGenerator.ExitLocation ExitLocation { get; }
     private readonly List<List<Vector3>> _mapLayout;
     private readonly List<NavMeshSurface> _navMeshSurfaces;
     private readonly float _xTileSize;
@@ -16,10 +16,9 @@ public class GeneratedRoom
     public int XSize { get; }
     public int ZSize { get; }
 
-    public GeneratedRoom(List<List<Vector3>> mapLayout, Vector3 exitLocation, List<NavMeshSurface> navMeshSurfaces,
+    public GeneratedRoom(List<List<Vector3>> mapLayout, RoomGenerator.ExitLocation exitLocation, List<NavMeshSurface> navMeshSurfaces,
         float xTileSize, float zTileSize, Vector3 startPos,  GameObject entrance, GameObject exit)
     {
-        ExitLocation = exitLocation;
         _mapLayout = mapLayout;
         _navMeshSurfaces = navMeshSurfaces;
         _xTileSize = xTileSize;
@@ -30,11 +29,6 @@ public class GeneratedRoom
         XSize = _mapLayout.First().Count;
         ZSize = _mapLayout.Count;
         ExitLocation = exitLocation;
-    }
-
-    public Vector3 ExitLocationWithOffset()
-    {
-        return ExitLocation + new Vector3(-_xTileSize, 0, _zTileSize);
     }
 
     public void BuildNavmesh()

@@ -3,15 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomEndTrigger : MonoBehaviour
+public class RoomItemEndEvent : MonoBehaviour
 {
     public Func<bool> isRoomComplete;
     public Action onRoomComplete;
-
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

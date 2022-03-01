@@ -6,18 +6,20 @@ public class RandomItemGenerator : MonoBehaviour
 {
     [SerializeField] private List<GameObject> collectibleItems;
 
-    public void Generate(Vector3 posToGenerate)
+    public GameObject Generate(Vector3 posToGenerate)
     {
         if (collectibleItems.Count == 0)
         {
             Debug.Log("No items left to generate!");
+            return null;
         }
         else
         {
             int randomIndex = Random.Range(0, collectibleItems.Count);
             GameObject collectibleItem = collectibleItems[randomIndex];
-            Instantiate(collectibleItem, posToGenerate, Quaternion.identity);
-            collectibleItems.Remove(collectibleItem);
+            collectibleItems.RemoveAt(randomIndex);
+            GameObject createdCollectible = Instantiate(collectibleItem, posToGenerate, Quaternion.identity);
+            return createdCollectible;
         }
     }
 }

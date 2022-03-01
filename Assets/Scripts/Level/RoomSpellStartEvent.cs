@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomStartTrigger : MonoBehaviour
+public class RoomSpellStartEvent : MonoBehaviour
 {
     private Vector3 _startingSpellHeightOffset;
-    public RandomItemGenerator ItemGenerator { private get; set;  }
     public RandomSpellGenerator SpellGenerator { private get; set;  }
     public Vector3 MiddleOfRoomPos { private get; set; }
 
@@ -17,7 +16,6 @@ public class RoomStartTrigger : MonoBehaviour
 
     private void Awake()
     {
-        ItemGenerator = FindObjectOfType<RandomItemGenerator>();
         SpellGenerator = FindObjectOfType<RandomSpellGenerator>();
         _startingSpellHeightOffset = Vector3.up * 1.5f;
     }
@@ -33,7 +31,7 @@ public class RoomStartTrigger : MonoBehaviour
         }
     }
 
-    public bool HasSpellBeenPickedUp()
+    public bool HasEventFinished()
     {
         return isSpellCreated && createdSpell == null;
     }

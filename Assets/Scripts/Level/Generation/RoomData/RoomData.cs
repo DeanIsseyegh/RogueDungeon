@@ -7,6 +7,8 @@ public class RoomData : ScriptableObject
 {
     public float xSize;
     public float zSize;
-    public bool hasItems;
+    public bool hasSpell;
+    public bool hasItem;
     public bool hasEnemies;
+    public RoomEvent roomEvent;
 }

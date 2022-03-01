@@ -11,8 +11,10 @@ public class RoomGenerator : MonoBehaviour
     [SerializeField] private GameObject wallTile;
     [SerializeField] private GameObject entranceTileWithDoor;
     [SerializeField] private GameObject entranceTileWithoutDoor;
-    [SerializeField] private GameObject roomParent;
+    [SerializeField] private GameObject levelParent;
+    [SerializeField] private EventGenerator eventGenerator;
     [SerializeField] private GameObject roomStartTriggerPrefab;
+    
     private Vector3 _xTileSize;
     private Vector3 _zTileSize;
     private Vector3 _tileSize;
@@ -28,48 +30,33 @@ public class RoomGenerator : MonoBehaviour
 
     public GeneratedRoom GenerateFloor(Vector3 startingPos, RoomData roomData)
     {
+        GameObject roomObj = new GameObject(roomData.name);
+        GameObject roomParent = Instantiate(roomObj, levelParent.transform);
+        Destroy(roomObj);
+        
         float xSize = roomData.xSize;
         float zSize = roomData.zSize;
 
         List<List<Vector3>> mapLayout = CreateMapLayout(startingPos, xSize, zSize);
-        List<NavMeshSurface> generatedFloor = CreateFloor(mapLayout);
-        // Vector3 entranceLocation = CalculateEntranceLocation(mapLayout);
+        List<NavMeshSurface> generatedFloor = CreateFloor(mapLayout, roomParent);
         EntranceLocation entranceLocation = new EntranceLocation(mapLayout, _zTileSize);
         ExitLocation exitLocation = new ExitLocation(mapLayout, _zTileSize);
-        GameObject entrance = CreateEntrance(entranceLocation);
-        GameObject exit = CreateExit(exitLocation);
-        CreateWalls(mapLayout, _zTileSize, _xTileSize, exitLocation, entranceLocation);
-
-        if (roomData.hasItems)
-        {
-            GameObject newObj = new GameObject("RoomTriggerGenerated");
-            Vector3 roomZLength = new Vector3(0, 0, zSize * _tileSize.z / 2);
-            Vector3 middleOfRoom = entranceLocation.WithoutOffset + roomZLength;
-            GameObject emptyGameObj = Instantiate(newObj, Vector3.zero, Quaternion.identity);
-            BoxCollider boxCollider = emptyGameObj.AddComponent<BoxCollider>();
-            boxCollider.isTrigger = true;
-            boxCollider.center = middleOfRoom;
-            boxCollider.size = new Vector3(xSize * _tileSize.x, 1, (zSize - 1) * _tileSize.z);
-            RoomStartTrigger roomStartTrigger = emptyGameObj.AddComponent<RoomStartTrigger>();
-            RoomEndTrigger roomEndTrigger = emptyGameObj.AddComponent<RoomEndTrigger>();
-            roomEndTrigger.isRoomComplete = () => roomStartTrigger.HasSpellBeenPickedUp();
-            roomEndTrigger.onRoomComplete = () =>
-            {
-                exit.GetComponentInChildren<Open>().enabled = true;
-                roomStartTrigger.enabled = false;
-                roomEndTrigger.enabled = false;
-            };
-        }
-
-        return new GeneratedRoom(mapLayout, exitLocation.WithoutOffset, generatedFloor, _tileSize.x, _tileSize.z,
-            startingPos,
-            entrance, exit);
+        GameObject entrance = CreateEntrance(entranceLocation, roomParent);
+        GameObject exit = CreateExit(exitLocation, roomParent);
+        CreateWalls(mapLayout, _zTileSize, _xTileSize, exitLocation, entranceLocation, roomParent);
+        
+        GeneratedRoom generatedRoom = new GeneratedRoom(mapLayout, exitLocation, generatedFloor, 
+            _tileSize.x, _tileSize.z, startingPos, entrance, exit);
+        
+        eventGenerator.GenerateEvent(roomData, roomParent, entranceLocation, exit, _tileSize);
+        
+        return generatedRoom;
     }
 
     public Vector3 CalculateStartPosBasedOnPrevRoom(GeneratedRoom prevRoom, RoomData nextRoom)
     {
         var xOffset = (prevRoom.StartPos.x + (prevRoom.XSize - nextRoom.xSize) / 2 * _tileSize.x);
-        Vector3 newRoomStartPos = prevRoom.ExitLocation + new Vector3(xOffset, 0, 4);
+        Vector3 newRoomStartPos = prevRoom.ExitLocation.WithoutOffset + new Vector3(xOffset, 0, _tileSize.z);
         return newRoomStartPos;
     }
 
@@ -93,7 +80,7 @@ public class RoomGenerator : MonoBehaviour
         return mapLayout;
     }
 
-    private List<NavMeshSurface> CreateFloor(List<List<Vector3>> mapLayout)
+    private List<NavMeshSurface> CreateFloor(List<List<Vector3>> mapLayout, GameObject roomParent)
     {
         List<NavMeshSurface> generatedFloor = new List<NavMeshSurface>();
         mapLayout.ForEach(rowList =>
@@ -109,14 +96,14 @@ public class RoomGenerator : MonoBehaviour
         return generatedFloor;
     }
 
-    private GameObject CreateExit(ExitLocation exitLocation)
+    private GameObject CreateExit(ExitLocation exitLocation, GameObject roomParent)
     {
         GameObject createdExit = Instantiate(entranceTileWithDoor, exitLocation.WithOffset,
             Quaternion.Euler(0f, 180, 0f), roomParent.transform);
         return createdExit;
     }
 
-    private GameObject CreateEntrance(EntranceLocation entranceLocation)
+    private GameObject CreateEntrance(EntranceLocation entranceLocation, GameObject roomParent)
     {
         GameObject createdEntrance = Instantiate(entranceTileWithoutDoor, entranceLocation.WithOffset,
             Quaternion.Euler(0f, 0, 0f), roomParent.transform);
@@ -124,7 +111,7 @@ public class RoomGenerator : MonoBehaviour
     }
 
     private void CreateWalls(List<List<Vector3>> mapLayout, Vector3 zTileSize, Vector3 xTileSize,
-        ExitLocation exitLocation, EntranceLocation entranceLocation)
+        ExitLocation exitLocation, EntranceLocation entranceLocation, GameObject roomParent)
     {
         List<Vector3> firstRow = mapLayout.First();
         List<Vector3> lastRow = mapLayout.Last();
@@ -132,17 +119,17 @@ public class RoomGenerator : MonoBehaviour
         List<Vector3> leftColumn = mapLayout.Select(row => row.Last()).ToList();
 
         firstRow.ForEach(CreateWall(-zTileSize / 2, Quaternion.Euler(0f, 0, 0f), exitLocation.WithoutOffset,
-            entranceLocation.WithoutOffset));
+            entranceLocation.WithoutOffset, roomParent));
         lastRow.ForEach(CreateWall(zTileSize / 2, Quaternion.Euler(0f, 180, 0f), exitLocation.WithoutOffset,
-            entranceLocation.WithoutOffset));
+            entranceLocation.WithoutOffset, roomParent));
         rightColumn.ForEach(CreateWall(-xTileSize / 2, Quaternion.Euler(0f, 90f, 0f), exitLocation.WithoutOffset,
-            entranceLocation.WithoutOffset));
+            entranceLocation.WithoutOffset, roomParent));
         leftColumn.ForEach(CreateWall(xTileSize / 2, Quaternion.Euler(0f, 270f, 0f), exitLocation.WithoutOffset,
-            entranceLocation.WithoutOffset));
+            entranceLocation.WithoutOffset, roomParent));
     }
 
     private Action<Vector3> CreateWall(Vector3 offset, Quaternion rotation, Vector3 exitLocation,
-        Vector3 entranceLocation)
+        Vector3 entranceLocation, GameObject roomParent)
     {
         return pos =>
         {
@@ -153,7 +140,7 @@ public class RoomGenerator : MonoBehaviour
         };
     }
 
-    private class EntranceLocation
+    public class EntranceLocation
     {
         public Vector3 WithOffset { get; }
         public Vector3 WithoutOffset { get; }
@@ -167,7 +154,7 @@ public class RoomGenerator : MonoBehaviour
         }
     }
 
-    private class ExitLocation
+    public class ExitLocation
     {
         public Vector3 WithOffset { get; }
         public Vector3 WithoutOffset { get; }

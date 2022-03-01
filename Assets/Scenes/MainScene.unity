@@ -257,7 +257,8 @@ MonoBehaviour:
   wallTile: {fileID: 1135327754445724, guid: 2e9bb0112b1a3428f94ba8550d668f2f, type: 3}
   entranceTileWithDoor: {fileID: 1781130428969628, guid: 17462986d76284d599dd3f87e1100aea, type: 3}
   entranceTileWithoutDoor: {fileID: 1781130428969628, guid: 321d00ad13ca51844bdf3131fcdc51c7, type: 3}
-  roomParent: {fileID: 404336167}
+  levelParent: {fileID: 404336167}
+  eventGenerator: {fileID: 550668414}
   roomStartTriggerPrefab: {fileID: 488837421150353957, guid: fe0c986cb6e601945852529daffd16e7, type: 3}
 --- !u!4 &32743587 stripped
 Transform:
@@ -2274,7 +2275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 404336168}
   m_Layer: 0
-  m_Name: RoomParent
+  m_Name: LevelParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3138,6 +3139,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e9bb0112b1a3428f94ba8550d668f2f, type: 3}
+--- !u!1 &550668413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 550668415}
+  - component: {fileID: 550668414}
+  m_Layer: 0
+  m_Name: EventGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &550668414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550668413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60fdf8cd00d48dd83f88e9392a1b1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &550668415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550668413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1161685704}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &554600444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7052,6 +7096,7 @@ Transform:
   - {fileID: 188391048}
   - {fileID: 1243814137}
   - {fileID: 16494835}
+  - {fileID: 550668415}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
