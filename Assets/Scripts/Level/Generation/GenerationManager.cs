@@ -34,8 +34,4 @@ public class GenerationManager : MonoBehaviour
         generatedRooms.ForEach(room => room.BuildNavmesh());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 }

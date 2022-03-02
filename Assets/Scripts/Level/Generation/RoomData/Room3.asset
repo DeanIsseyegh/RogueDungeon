@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSize: 3
   zSize: 5
-  hasItems: 0
-  hasEnemies: 0
+  hasSpell: 0
+  hasItem: 0
+  hasEnemies: 1
+  numberOfEnemies: 3

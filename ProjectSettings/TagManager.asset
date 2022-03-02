@@ -18,6 +18,9 @@ TagManager:
   - SpellIcon1Cooldown
   - SpellIcon2Cooldown
   - Openable
+  - RandomItemGenerator
+  - RandomSpellGenerator
+  - RandomEnemyGenerator
   layers:
   - Default
   - TransparentFX

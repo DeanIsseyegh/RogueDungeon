@@ -6,28 +6,31 @@ using UnityEngine.AI;
 public class GeneratedRoom
 {
     public RoomGenerator.ExitLocation ExitLocation { get; }
-    private readonly List<List<Vector3>> _mapLayout;
+    public List<List<Vector3>> MapLayout { get; }
+    public RoomGenerator.EntranceLocation EntranceLocation { get; }
     private readonly List<NavMeshSurface> _navMeshSurfaces;
-    private readonly float _xTileSize;
-    private readonly float _zTileSize;
+    public float XTileSize { get; }
+    public float ZTileSize { get; }
     public GameObject Entrance { get; }
     public GameObject Exit { get; }
     public Vector3 StartPos { get; }
     public int XSize { get; }
     public int ZSize { get; }
 
-    public GeneratedRoom(List<List<Vector3>> mapLayout, RoomGenerator.ExitLocation exitLocation, List<NavMeshSurface> navMeshSurfaces,
-        float xTileSize, float zTileSize, Vector3 startPos,  GameObject entrance, GameObject exit)
+    public GeneratedRoom(List<List<Vector3>> mapLayout, RoomGenerator.ExitLocation exitLocation,
+        RoomGenerator.EntranceLocation entranceLocation, List<NavMeshSurface> navMeshSurfaces, float xTileSize,
+        float zTileSize, Vector3 startPos, GameObject entrance, GameObject exit)
     {
-        _mapLayout = mapLayout;
+        MapLayout = mapLayout;
+        EntranceLocation = entranceLocation;
         _navMeshSurfaces = navMeshSurfaces;
-        _xTileSize = xTileSize;
-        _zTileSize = zTileSize;
+        XTileSize = xTileSize;
+        ZTileSize = zTileSize;
         Entrance = entrance;
         Exit = exit;
         StartPos = startPos;
-        XSize = _mapLayout.First().Count;
-        ZSize = _mapLayout.Count;
+        XSize = MapLayout.First().Count;
+        ZSize = MapLayout.Count;
         ExitLocation = exitLocation;
     }
 

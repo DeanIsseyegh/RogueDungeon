@@ -45,10 +45,10 @@ public class RoomGenerator : MonoBehaviour
         GameObject exit = CreateExit(exitLocation, roomParent);
         CreateWalls(mapLayout, _zTileSize, _xTileSize, exitLocation, entranceLocation, roomParent);
         
-        GeneratedRoom generatedRoom = new GeneratedRoom(mapLayout, exitLocation, generatedFloor, 
+        GeneratedRoom generatedRoom = new GeneratedRoom(mapLayout, exitLocation, entranceLocation, generatedFloor, 
             _tileSize.x, _tileSize.z, startingPos, entrance, exit);
         
-        eventGenerator.GenerateEvent(roomData, roomParent, entranceLocation, exit, _tileSize);
+        eventGenerator.GenerateEvent(roomData, roomParent, entranceLocation, generatedRoom);
         
         return generatedRoom;
     }

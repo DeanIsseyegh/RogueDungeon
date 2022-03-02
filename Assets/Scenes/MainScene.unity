@@ -1232,7 +1232,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1161685704}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &193331416
 PrefabInstance:
@@ -3394,6 +3394,52 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!1 &569799547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569799548}
+  - component: {fileID: 569799549}
+  m_Layer: 0
+  m_Name: RandomEnemyGenerator
+  m_TagString: RandomEnemyGenerator
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &569799548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569799547}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1161685704}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &569799549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569799547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e91537b250f7294580f5501c3bec0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPool:
+  - {fileID: 8987352417259645370, guid: ec9d7d80a3ced5c47994bff028b5b46d, type: 3}
+  - {fileID: 3837416230038983445, guid: 3f2a432df3201af4093152cc9a26a7f3, type: 3}
 --- !u!4 &570629221 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4493048135532490, guid: 2e9bb0112b1a3428f94ba8550d668f2f, type: 3}
@@ -7073,8 +7119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingPos: {x: -4, y: 0, z: -4}
-  randomSpellGenerator: {fileID: 1180619859}
-  randomItemGenerator: {fileID: 1243814138}
   roomGenerator: {fileID: 16494836}
   player: {fileID: 2322320037186382925}
   roomsData:
@@ -7092,11 +7136,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1180619858}
   - {fileID: 188391048}
+  - {fileID: 1180619858}
   - {fileID: 1243814137}
   - {fileID: 16494835}
   - {fileID: 550668415}
+  - {fileID: 569799548}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7289,10 +7334,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1180619858}
-  - component: {fileID: 1180619859}
+  - component: {fileID: 1180619860}
   m_Layer: 0
   m_Name: RandomSpellGenerator
-  m_TagString: Untagged
+  m_TagString: RandomSpellGenerator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7309,9 +7354,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1161685704}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1180619859
+--- !u!114 &1180619860
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7320,12 +7365,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1180619857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a96ab20f9cfe014482759f2844eaf9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e91537b250f7294580f5501c3bec0f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectibleSpells:
-  - {fileID: 7366735426321672135, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+  objectPool:
   - {fileID: 4983356458070408958, guid: 5bbaaecb48d1f1c4a940bcd3a005344a, type: 3}
+  - {fileID: 7366735426321672135, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
 --- !u!4 &1180972695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4493048135532490, guid: 2e9bb0112b1a3428f94ba8550d668f2f, type: 3}
@@ -7534,7 +7579,7 @@ GameObject:
   - component: {fileID: 1243814138}
   m_Layer: 0
   m_Name: RandomItemGenerator
-  m_TagString: Untagged
+  m_TagString: RandomItemGenerator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7562,10 +7607,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1243814136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163224ee6a398bf43ab624859e2d96f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e91537b250f7294580f5501c3bec0f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectibleItems:
+  objectPool:
   - {fileID: 1700748677866044398, guid: d451af3a43df3fb459176844ed938c51, type: 3}
 --- !u!1001 &1262346826
 PrefabInstance:

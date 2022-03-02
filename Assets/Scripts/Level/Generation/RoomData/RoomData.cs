@@ -10,5 +10,5 @@ public class RoomData : ScriptableObject
     public bool hasSpell;
     public bool hasItem;
     public bool hasEnemies;
-    public RoomEvent roomEvent;
+    public int numberOfEnemies = 0;
 }
