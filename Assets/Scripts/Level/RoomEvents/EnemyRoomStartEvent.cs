@@ -1,18 +1,14 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class EnemyRoomStartEvent : MonoBehaviour
 {
-
     private RandomGameObjGenerator _enemyGenerator;
-    public List<Vector3> EnemyPositions  { private get; set; }
+    public List<Vector3> EnemyPositions { private get; set; }
 
     private bool isEnemiesSpawned;
-    
+
     private List<GameObject> _createdEnemies;
 
     protected virtual void Awake()
@@ -24,11 +20,7 @@ public class EnemyRoomStartEvent : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            EnemyPositions.ForEach(enemyPosition =>
-            {
-                var createdEnemy = _enemyGenerator.Generate(enemyPosition);
-                _createdEnemies.Add(createdEnemy);
-            });
+            _createdEnemies = EnemyPositions.Select(pos => _enemyGenerator.Generate(pos)).ToList();
             isEnemiesSpawned = true;
             GetComponent<BoxCollider>().enabled = false;
         }
