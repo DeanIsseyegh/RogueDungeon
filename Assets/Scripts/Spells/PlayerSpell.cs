@@ -27,4 +27,9 @@ public class PlayerSpell : Spell
             base.Cast(navMeshAgent, animator, playerInventory);
         }
     }
+
+    protected override void ApplyEffectsToSpell(GameObject spellPrefab, PlayerInventory playerInventory)
+    {
+        playerInventory.Items.ForEach(item => item.ApplyEffects(spellPrefab));
+    }
 }

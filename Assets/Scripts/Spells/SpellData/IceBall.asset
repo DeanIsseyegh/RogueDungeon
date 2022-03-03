@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IceBall
   m_EditorClassIdentifier: 
   spellPrefab: {fileID: 6029342343211582914, guid: 6561d5a2541643f48b6c81dd92ad6195, type: 3}
-  damage: 10
+  damage: 50
   manaCost: 10
   spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
   spellLifeTime: 2

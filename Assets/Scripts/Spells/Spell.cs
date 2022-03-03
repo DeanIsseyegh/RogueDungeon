@@ -48,9 +48,14 @@ public abstract class Spell : MonoBehaviour
         GameObject createdSpell = Instantiate(spellPrefab,
             spellPos,
             agent.transform.rotation);
+        ApplyEffectsToSpell(createdSpell, playerInventory);
         createdSpell.GetComponent<DamagingAttack>().Damage = data.damage;
-        playerInventory.Items.ForEach(item => item.ApplyEffects(createdSpell));
         IsCastingSpell = false;
         Destroy(createdSpell, data.spellLifeTime);
+    }
+
+    protected virtual void ApplyEffectsToSpell(GameObject spellPrefab, PlayerInventory playerInventory)
+    {
+        
     }
 }

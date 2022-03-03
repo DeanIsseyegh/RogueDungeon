@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     private ManaBar _manaBar;
     private ManaBarText _manaBarText;
     private List<SpellIcon> _spellIcons;
+    private ItemIcons _itemIcons;
 
     private void Awake()
     {
@@ -23,6 +24,8 @@ public class UIManager : MonoBehaviour
 
         List<SpellIcon> spellIcons = GetComponents<SpellIcon>().ToList();
         _spellIcons = spellIcons.OrderBy(it => it.SpellIconPosition).ToList();
+        
+        _itemIcons = GetComponent<ItemIcons>();
     }
 
     private void Start()
@@ -62,6 +65,11 @@ public class UIManager : MonoBehaviour
     public void UpdateSpellCooldown(float cooldown, float timeLeft, int spellPos)
     {
         _spellIcons[spellPos].UpdateCooldown(cooldown, timeLeft);
+    }
+
+    public void AddItemIcon(Sprite newIcon)
+    {
+        _itemIcons.AddIcon(newIcon);
     }
 
 

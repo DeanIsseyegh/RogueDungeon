@@ -15,6 +15,6 @@ MonoBehaviour:
   xSize: 3
   zSize: 5
   hasSpell: 0
-  hasItem: 0
-  hasEnemies: 1
-  numberOfEnemies: 3
+  hasItem: 1
+  hasEnemies: 0
+  numberOfEnemies: 0

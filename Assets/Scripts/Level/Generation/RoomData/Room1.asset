@@ -17,4 +17,4 @@ MonoBehaviour:
   hasSpell: 1
   hasItem: 0
   hasEnemies: 0
-  roomEvent: {fileID: 11400000, guid: 300044be7c08779429f153e556d35d20, type: 2}
+  numberOfEnemies: 0

@@ -21,6 +21,7 @@ TagManager:
   - RandomItemGenerator
   - RandomSpellGenerator
   - RandomEnemyGenerator
+  - ItemIcon
   layers:
   - Default
   - TransparentFX

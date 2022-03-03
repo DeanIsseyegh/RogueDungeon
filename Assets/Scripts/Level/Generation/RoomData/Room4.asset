@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2270c0193232447a7121f4f4f41efa, type: 3}
   m_Name: Room4
   m_EditorClassIdentifier: 
-  xSize: 0
-  zSize: 0
+  xSize: 5
+  zSize: 7
   hasSpell: 0
   hasItem: 0
-  hasEnemies: 0
-  numberOfEnemies: 0
+  hasEnemies: 1
+  numberOfEnemies: 4

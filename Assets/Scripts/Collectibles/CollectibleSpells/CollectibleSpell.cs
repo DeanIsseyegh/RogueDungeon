@@ -11,4 +11,5 @@ public class CollectibleSpell : Collectible
         var spellToLearn = Instantiate(spell);
         playerSpellManager.AddSpell(spellToLearn);
     }
+
 }

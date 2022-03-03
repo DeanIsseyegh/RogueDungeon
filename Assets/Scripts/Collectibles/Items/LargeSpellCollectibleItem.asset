@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a2270c0193232447a7121f4f4f41efa, type: 3}
-  m_Name: Room2
+  m_Script: {fileID: 11500000, guid: 487ec525e9a0c9f459dc830e75bff4b3, type: 3}
+  m_Name: LargeSpellCollectibleItem
   m_EditorClassIdentifier: 
-  xSize: 5
-  zSize: 5
-  hasSpell: 0
-  hasItem: 1
-  hasEnemies: 0
-  numberOfEnemies: 2
+  icon: {fileID: 21300000, guid: 1faf67f77db38454aa1c6dc1331139dc, type: 3}
+  playerSpellSpeedModifier: 1
+  playerSpellSizeModifier: 1

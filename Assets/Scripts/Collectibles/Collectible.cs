@@ -26,4 +26,9 @@ public class Collectible : ScriptableObject
         
     }
 
+    public virtual void ApplyEffects(UIManager uiManager)
+    {
+        
+    }
+
 }
