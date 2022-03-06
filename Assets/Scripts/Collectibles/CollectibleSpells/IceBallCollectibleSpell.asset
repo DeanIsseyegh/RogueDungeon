@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34873c5f4adf4dfc85def31b30945c0a, type: 3}
   m_Name: IceBallCollectibleSpell
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 2bccd332882fcd14b9e4c377e432c587, type: 3}
+  info: {fileID: 11400000, guid: c0ea61eda2408744fb89095c2dfe652e, type: 2}
   spell: {fileID: 647140171295167874, guid: a53001e73a8afed4eb52dc35091a90c0, type: 3}

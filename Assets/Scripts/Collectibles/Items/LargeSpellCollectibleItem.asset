@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: LargeSpellCollectibleItem
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 1faf67f77db38454aa1c6dc1331139dc, type: 3}
+  info: {fileID: 11400000, guid: e8e383929606d2f4f8f55c393a52a5fa, type: 2}
   playerSpellSpeedModifier: 1
   playerSpellSizeModifier: 1

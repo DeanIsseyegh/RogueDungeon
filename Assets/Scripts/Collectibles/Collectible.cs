@@ -3,9 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 public class Collectible : ScriptableObject
 {
+    public Sprite icon;
+    [FormerlySerializedAs("collectibleInfo")] public CollectibleInfo info;
+
     public virtual void ApplyEffects(PlayerHealth playerHealth)
     {
         

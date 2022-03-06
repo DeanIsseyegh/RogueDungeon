@@ -42,11 +42,11 @@ public class PlayerSpellManager : MonoBehaviour
         UpdateCooldownUI();
     }
 
-    public void AddSpell(Spell spell)
+    public void AddSpell(Spell spell, Sprite spellIcon)
     {
         int currentSpellIndex = _spellInputsMap.Count;
         _spellInputsMap[_spellInputs[currentSpellIndex]] = spell;
-        _uiManager.UpdateSpellIcon(spell.data.spellIcon, currentSpellIndex);
+        _uiManager.UpdateSpellIcon(spellIcon, currentSpellIndex);
     }
 
     public bool IsCastingSpell()

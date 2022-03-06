@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: SpeedySpellCollectibleItem
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 2289d373cd38f4344b9e7f82632863f5, type: 3}
+  info: {fileID: 11400000, guid: 9296acaa46db8384fac3826774f0c08c, type: 2}
   playerSpellSpeedModifier: 2
   playerSpellSizeModifier: 1

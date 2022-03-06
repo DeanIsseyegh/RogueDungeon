@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
 
 public class EventGenerator : MonoBehaviour
 {
@@ -56,8 +55,10 @@ public class EventGenerator : MonoBehaviour
         roomEndEvent.isRoomComplete = () => startEvent.HasEventFinished();
         roomEndEvent.onRoomComplete = () =>
         {
-            generatedRoom.Exit.GetComponentInChildren<Open>().enabled = true;
+            startEvent.RemoveCollectibles();
+            startEvent.HideChoiceUi();
             startEvent.enabled = false;
+            generatedRoom.Exit.GetComponentInChildren<Open>().enabled = true;
             roomEndEvent.enabled = false;
         };
     }

@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24d24ce4d5f55946a6ade03448415cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectible: {fileID: 11400000, guid: b99b23b62831e154e85dfcbb5655350f, type: 2}
+  <Collectible>k__BackingField: {fileID: 11400000, guid: b99b23b62831e154e85dfcbb5655350f, type: 2}
 --- !u!1 &6397421752356313115
 GameObject:
   m_ObjectHideFlags: 0

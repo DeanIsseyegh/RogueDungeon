@@ -13,7 +13,5 @@ public class SpellData : ScriptableObject
     public float spellStartUp = 0.4f;
     public string animationName = "BasicSpell";
     public float spellCooldown = 1;
-    public Sprite spellIcon;
-    
 
 }

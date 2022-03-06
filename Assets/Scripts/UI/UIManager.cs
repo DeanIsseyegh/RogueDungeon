@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     private ManaBarText _manaBarText;
     private List<SpellIcon> _spellIcons;
     private ItemIcons _itemIcons;
+    private GameObject _choiceUi;
 
     private void Awake()
     {
@@ -26,7 +27,9 @@ public class UIManager : MonoBehaviour
         _spellIcons = spellIcons.OrderBy(it => it.SpellIconPosition).ToList();
         
         _itemIcons = GetComponent<ItemIcons>();
+        _choiceUi = GameObject.FindWithTag("SpellChoiceUI");
     }
+
 
     private void Start()
     {
@@ -73,4 +76,24 @@ public class UIManager : MonoBehaviour
     }
 
 
+    public void ShowChoices(List<Collectible> collectibles)
+    {
+        for (int i = 0; i < collectibles.Count; i++)
+        {
+            GameObject choice = _choiceUi.transform.GetChild(i).gameObject;
+            choice.SetActive(true);
+            Collectible collectible = collectibles[i];
+            choice.GetComponentInChildren<ChoiceIcon>().SetIcon(collectible.icon);
+            choice.GetComponentInChildren<ChoiceTitle>().SetTitle(collectible.info.name);
+            choice.GetComponentInChildren<ChoiceDescription>().SetDescription(collectible.info.description);
+        }
+    }
+
+    public void HideChoices()
+    {
+        foreach (Transform child in _choiceUi.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+    }
 }

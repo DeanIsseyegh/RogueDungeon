@@ -3,7 +3,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Items")]
 public class Item : Collectible
 {
-    public Sprite icon;
     public float playerSpellSpeedModifier = 1;
     public float playerSpellSizeModifier = 0;
 

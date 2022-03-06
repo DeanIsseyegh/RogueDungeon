@@ -5,11 +5,11 @@ public class CollectibleSpell : Collectible
 {
 
     public Spell spell;
-    
+
     public override void ApplyEffects(PlayerSpellManager playerSpellManager)
     {
         var spellToLearn = Instantiate(spell);
-        playerSpellManager.AddSpell(spellToLearn);
+        playerSpellManager.AddSpell(spellToLearn, icon);
     }
 
 }

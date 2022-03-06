@@ -23,4 +23,9 @@ public class RandomGameObjGenerator : MonoBehaviour
             return createdCollectible;
         }
     }
+
+    public int ObjectsLeft()
+    {
+        return objectPool.Count;
+    }
 }

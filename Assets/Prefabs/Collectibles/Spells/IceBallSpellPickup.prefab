@@ -4975,4 +4975,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24d24ce4d5f55946a6ade03448415cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectible: {fileID: 11400000, guid: 467436209e8af1b479b378225340d849, type: 2}
+  <Collectible>k__BackingField: {fileID: 11400000, guid: 467436209e8af1b479b378225340d849, type: 2}

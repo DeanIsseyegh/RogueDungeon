@@ -22,6 +22,7 @@ TagManager:
   - RandomSpellGenerator
   - RandomEnemyGenerator
   - ItemIcon
+  - SpellChoiceUI
   layers:
   - Default
   - TransparentFX

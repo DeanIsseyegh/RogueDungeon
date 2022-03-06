@@ -4,4 +4,5 @@ public class ItemRoomStartEvent : CollectibleRoomStartEvent
     {
         return "RandomItemGenerator";
     }
+
 }
