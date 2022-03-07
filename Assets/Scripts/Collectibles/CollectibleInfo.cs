@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Collectible Info", menuName = "Collectible Info")]
-public class CollectibleInfo : ScriptableObject
+[InlineEditor()]
+public abstract class CollectibleInfo : ScriptableObject
 {
 
     public string name;
-
     public string description;
+    [MultiLineProperty(5)]
+    public string stats;
 
 }

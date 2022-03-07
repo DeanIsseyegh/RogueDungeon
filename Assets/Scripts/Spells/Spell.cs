@@ -49,7 +49,6 @@ public abstract class Spell : MonoBehaviour
             spellPos,
             agent.transform.rotation);
         ApplyEffectsToSpell(createdSpell, playerInventory);
-        createdSpell.GetComponent<DamagingAttack>().Damage = data.damage;
         IsCastingSpell = false;
         Destroy(createdSpell, data.spellLifeTime);
     }

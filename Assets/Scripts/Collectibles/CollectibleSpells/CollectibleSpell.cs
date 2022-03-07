@@ -1,23 +1,29 @@
 ﻿using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Spell Collectible", menuName = "SpellCollectible")]
 public class CollectibleSpell : Collectible
 {
-
     public SpellData spellData;
-    private GameObject _spellObj;
+    public SpellInfo info;
 
     private void OnEnable()
     {
-        _spellObj = new GameObject(spellData.name);
+        info.GenerateStats(this);
     }
 
     public override void ApplyEffects(PlayerSpellManager playerSpellManager)
     {
-        Spell spellToLearn = _spellObj.AddComponent<PlayerSpell>();
+        GameObject spellObj = new GameObject(spellData.name);
+        Spell spellToLearn = spellObj.AddComponent<PlayerSpell>();
         spellToLearn.data = spellData;
         playerSpellManager.AddSpell(spellToLearn, icon);
     }
 
+    public override CollectibleInfo Info()
+    {
+        return info;
+    }
+    
 }

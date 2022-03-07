@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487ec525e9a0c9f459dc830e75bff4b3, type: 3}
+  m_Name: SpeedySpellCollectibleItem
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 2289d373cd38f4344b9e7f82632863f5, type: 3}
+  playerSpellSpeedModifier: 2
+  playerSpellSizeModifier: 1
+  info: {fileID: 11400000, guid: 768ea7e01d4fd2349b05ebd8ab58e603, type: 2}

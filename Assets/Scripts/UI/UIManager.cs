@@ -84,8 +84,9 @@ public class UIManager : MonoBehaviour
             choice.SetActive(true);
             Collectible collectible = collectibles[i];
             choice.GetComponentInChildren<ChoiceIcon>().SetIcon(collectible.icon);
-            choice.GetComponentInChildren<ChoiceTitle>().SetTitle(collectible.info.name);
-            choice.GetComponentInChildren<ChoiceDescription>().SetDescription(collectible.info.description);
+            choice.GetComponentInChildren<ChoiceTitle>().SetTitle(collectible.Info().name);
+            choice.GetComponentInChildren<ChoiceDescription>().SetDescription(collectible.Info().description);
+            choice.GetComponentInChildren<ChoiceStats>().SetStats(collectible.Info().stats);
         }
     }
 

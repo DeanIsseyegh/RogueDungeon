@@ -13,9 +13,7 @@ GameObject:
   - component: {fileID: 6051212913564999294}
   - component: {fileID: 7228009879382835958}
   - component: {fileID: -7209402208892642906}
-  - component: {fileID: 3448789343867037101}
   - component: {fileID: 6297804303827351200}
-  - component: {fileID: 8363404856796916681}
   m_Layer: 0
   m_Name: FireBallSpell
   m_TagString: Untagged
@@ -115,19 +113,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.44, y: 0.57, z: 0.60583395}
   m_Center: {x: -0.008584201, y: 0.003146544, z: 0.0234797}
---- !u!114 &3448789343867037101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6029342343211582914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e74b46256c06b3d4d92f6923b97a188f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
 --- !u!114 &6297804303827351200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,16 +125,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c16d744e19dbee4dad9fafc3bddb344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8363404856796916681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6029342343211582914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e87a2260ae5d44e48b33ccf7973fad25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Damage>k__BackingField: 0

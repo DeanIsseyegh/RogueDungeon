@@ -23,13 +23,14 @@ public class PlayerSpell : Spell
         if (!IsOnCooldown() && playerMana.CurrentMana >= data.manaCost)
         {
             playerMana.UseMana(data.manaCost);
-            navMeshAgent.gameObject.transform.LookAt(_mousePositionTracker.MousePosOnFloor());
+            navMeshAgent.gameObject.transform.LookAt(_mousePositionTracker.MousePos());
             base.Cast(navMeshAgent, animator, playerInventory);
         }
     }
 
     protected override void ApplyEffectsToSpell(GameObject spellPrefab, PlayerInventory playerInventory)
     {
+        data.spellTraits.ForEach(trait => trait.ApplyEffects(spellPrefab));
         playerInventory.Items.ForEach(item => item.ApplyEffects(spellPrefab));
     }
 }

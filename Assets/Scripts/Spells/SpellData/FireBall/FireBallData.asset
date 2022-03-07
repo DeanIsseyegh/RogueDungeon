@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27aee48896609a4699e9658bb489b0e, type: 3}
+  m_Name: FireBallData
+  m_EditorClassIdentifier: 
+  spellPrefab: {fileID: 6029342343211582914, guid: 1ecb3e6c9b4d8aa4c9a916d0869e1149, type: 3}
+  spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
+  animationName: BasicSpell
+  manaCost: 10
+  spellLifeTime: 2
+  spellStartUp: 0.4
+  spellCooldown: 1
+  spellTraits:
+  - {fileID: 11400000, guid: 930f6cf28dc9ad341a13234ef79878a1, type: 2}
+  - {fileID: 11400000, guid: c3605f47b8f293842852d912832624c3, type: 2}

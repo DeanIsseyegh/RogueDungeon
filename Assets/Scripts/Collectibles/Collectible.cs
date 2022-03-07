@@ -1,14 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
 
-public class Collectible : ScriptableObject
+[InlineEditor()]
+public abstract class Collectible : ScriptableObject
 {
+    [PreviewField(60)]
+    [HorizontalGroup("Split", 60)]
     public Sprite icon;
-    [FormerlySerializedAs("collectibleInfo")] public CollectibleInfo info;
 
     public virtual void ApplyEffects(PlayerHealth playerHealth)
     {
@@ -34,5 +37,7 @@ public class Collectible : ScriptableObject
     {
         
     }
+
+    public abstract CollectibleInfo Info();
 
 }
