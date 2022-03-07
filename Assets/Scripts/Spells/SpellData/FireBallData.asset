@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b27aee48896609a4699e9658bb489b0e, type: 3}
-  m_Name: FireBall
+  m_Name: FireBallData
   m_EditorClassIdentifier: 
   spellPrefab: {fileID: 6029342343211582914, guid: 1ecb3e6c9b4d8aa4c9a916d0869e1149, type: 3}
   damage: 50

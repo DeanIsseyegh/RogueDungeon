@@ -509,6 +509,7 @@ GameObject:
   - component: {fileID: 1980002185}
   - component: {fileID: -6680476594075440400}
   - component: {fileID: 2069204640666761081}
+  - component: {fileID: -1079250989017897255}
   m_Layer: 0
   m_Name: EnemyCult
   m_TagString: Enemy
@@ -599,7 +600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c26774cebc05aa40adc5512146df866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spell: {fileID: 873170197290096942, guid: 19ff83831ea63304faf24ec23af44db9, type: 3}
   attackDistance: 5
 --- !u!114 &1980002185
 MonoBehaviour:
@@ -639,6 +639,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarImage: {fileID: 7925870111646711603}
+--- !u!114 &-1079250989017897255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8987352417259645370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba6c55f643f0c54d9ca9fcf9acae55d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 278d1bfcce4ecbf44a6746e4cc9b64a8, type: 2}
 --- !u!1 &8987352417259645372
 GameObject:
   m_ObjectHideFlags: 0
