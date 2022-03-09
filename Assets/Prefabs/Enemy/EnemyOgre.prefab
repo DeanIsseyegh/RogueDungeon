@@ -1188,7 +1188,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: club-zulu
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8232301347755842221, guid: 122913854bab03d4fb3c62cfcd8af317, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 122913854bab03d4fb3c62cfcd8af317, type: 3}
 --- !u!4 &658038553721497206 stripped
 Transform:

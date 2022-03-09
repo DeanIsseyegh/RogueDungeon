@@ -53,8 +53,5 @@ public abstract class Spell : MonoBehaviour
         Destroy(createdSpell, data.spellLifeTime);
     }
 
-    protected virtual void ApplyEffectsToSpell(GameObject spellPrefab, PlayerInventory playerInventory)
-    {
-        
-    }
+    protected abstract void ApplyEffectsToSpell(GameObject spellPrefab, PlayerInventory playerInventory);
 }

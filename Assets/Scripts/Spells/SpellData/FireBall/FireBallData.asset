@@ -20,5 +20,6 @@ MonoBehaviour:
   spellStartUp: 0.4
   spellCooldown: 1
   spellTraits:
-  - {fileID: 11400000, guid: 930f6cf28dc9ad341a13234ef79878a1, type: 2}
   - {fileID: 11400000, guid: c3605f47b8f293842852d912832624c3, type: 2}
+  - {fileID: 11400000, guid: 930f6cf28dc9ad341a13234ef79878a1, type: 2}
+  - {fileID: 11400000, guid: 76422da555e1b1f4f94c1171f8f23bf9, type: 2}

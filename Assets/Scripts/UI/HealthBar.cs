@@ -10,6 +10,7 @@ public class HealthBar : MonoBehaviour
     public Image HealthBarImage
     {
         set => healthBarImage = value;
+        get => healthBarImage;
     }
     public float MaxHealth { private get; set; }
 

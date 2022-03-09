@@ -8,8 +8,9 @@ public class EnemyWeapon : MonoBehaviour
 
     private void Awake()
     {
-        _damagingAttack = GetComponent<DamagingAttack>();
+        _damagingAttack = gameObject.AddComponent<DamagingAttack>();
         _damagingAttack.Damage = weaponData.damage;
+        _damagingAttack.TriggersOnTag = "Player";
         _damagingAttack.enabled = false;
     }
 

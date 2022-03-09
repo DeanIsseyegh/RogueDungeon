@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a2270c0193232447a7121f4f4f41efa, type: 3}
-  m_Name: Room2
+  m_Script: {fileID: 11500000, guid: 7b9ad9bb78a116c4cac48ee5892bd815, type: 3}
+  m_Name: DOT
   m_EditorClassIdentifier: 
-  xSize: 5
-  zSize: 5
-  hasSpell: 0
-  hasItem: 0
-  hasEnemies: 1
-  numberOfEnemies: 4
+  damagePerSecond: 5
+  lifetime: 5
+  flashEffectColor: {r: 1, g: 0, b: 0, a: 0}
+  flashEffectFrequency: 0.25
