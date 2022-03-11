@@ -20,13 +20,13 @@ public class GenerationManager : MonoBehaviour
         List<GeneratedRoom> generatedRooms = new List<GeneratedRoom>();
         
         GeneratedRoom firstRoom = roomGenerator
-            .GenerateFloor(startingPos, roomsData[0]);
+            .GenerateFloor(startingPos, roomsData[0], null);
         generatedRooms.Add(firstRoom);
         GeneratedRoom prevRoom = firstRoom;
         for (var i = 1; i < roomsData.Count; i++)
         {
             var newRoomStartPos = roomGenerator.CalculateStartPosBasedOnPrevRoom(prevRoom, roomsData[i]);
-            var newRoom = roomGenerator.GenerateFloor(newRoomStartPos, roomsData[i]);
+            var newRoom = roomGenerator.GenerateFloor(newRoomStartPos, roomsData[i], prevRoom);
             generatedRooms.Add(newRoom);
             prevRoom = newRoom;
         }

@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beee3a9e7a47af140ac9a11946313a4f, type: 3}
-  m_Name: Damaging
+  m_Script: {fileID: 11500000, guid: 3057e8c201b05e64d90ccf79d553a7e1, type: 3}
+  m_Name: FreezeTrait
   m_EditorClassIdentifier: 
-  damage: 35
+  freezeLength: 5
+  freezeColor: {r: 0.21791564, g: 0.21791564, b: 0.7830189, a: 1}

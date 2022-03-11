@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public abstract class CollectibleRoomStartEvent : MonoBehaviour
@@ -9,6 +10,9 @@ public abstract class CollectibleRoomStartEvent : MonoBehaviour
     private Vector3 _collectibleXOffset;
     private RandomGameObjGenerator CollectibleGenerator { get; set; }
     public Vector3 MiddleOfRoomPos { private get; set; }
+    public Vector3 EntrancePos { private get; set; }
+    public GameObject ClosedEntranceTile { private get; set; }
+    public GameObject EntranceRoomDoor { get; set; }
 
     private bool _isCollectiblesSpawned;
 
@@ -33,6 +37,7 @@ public abstract class CollectibleRoomStartEvent : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            CloseEntrance();
             SpawnCollectibles();
             _isCollectiblesSpawned = true;
             List<Collectible> collectibles = _createdCollectibles
@@ -41,6 +46,15 @@ public abstract class CollectibleRoomStartEvent : MonoBehaviour
                 .ToList();
             _uiManager.ShowChoices(collectibles);
             GetComponent<BoxCollider>().enabled = false;
+        }
+    }
+
+    private void CloseEntrance()
+    {
+        if (EntranceRoomDoor != null)
+        {
+            Instantiate(ClosedEntranceTile, EntrancePos, Quaternion.identity);
+            Destroy(EntranceRoomDoor);
         }
     }
 

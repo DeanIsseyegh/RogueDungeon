@@ -1,8 +1,10 @@
-public interface EnemyAttack
-{
-    public void DoAttack();
+using UnityEngine;
 
-    public bool IsAttacking();
+public abstract class EnemyAttack : MonoBehaviour
+{
+    public abstract void DoAttack();
+
+    public abstract bool IsAttacking();
     
-    public float AttackDistance();
+    public abstract float AttackDistance();
 }

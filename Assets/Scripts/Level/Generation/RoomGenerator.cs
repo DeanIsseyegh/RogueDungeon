@@ -28,7 +28,7 @@ public class RoomGenerator : MonoBehaviour
         _tileSize = new Vector3(floorSize.x, 0, floorSize.z);
     }
 
-    public GeneratedRoom GenerateFloor(Vector3 startingPos, RoomData roomData)
+    public GeneratedRoom GenerateFloor(Vector3 startingPos, RoomData roomData, GeneratedRoom previousRoom)
     {
         GameObject roomObj = new GameObject(roomData.name);
         GameObject roomParent = Instantiate(roomObj, levelParent.transform);
@@ -48,7 +48,7 @@ public class RoomGenerator : MonoBehaviour
         GeneratedRoom generatedRoom = new GeneratedRoom(mapLayout, exitLocation, entranceLocation, generatedFloor, 
             _tileSize.x, _tileSize.z, startingPos, entrance, exit);
         
-        eventGenerator.GenerateEvent(roomData, roomParent, entranceLocation, generatedRoom);
+        eventGenerator.GenerateEvent(roomData, roomParent, entranceLocation, generatedRoom, previousRoom);
         
         return generatedRoom;
     }

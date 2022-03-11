@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PhysicalEnemyAttack : MonoBehaviour, EnemyAttack
+public class PhysicalEnemyAttack : EnemyAttack
 {
     [SerializeField] private float attackDistance;
     
@@ -25,18 +25,18 @@ public class PhysicalEnemyAttack : MonoBehaviour, EnemyAttack
             _enemyWeapon.IsActive = IsAttacking();
     }
     
-    public void DoAttack()
+    public override void DoAttack()
     {
         _animator.SetTrigger(Attack);
         _isAttackStarting = true;
     }
     
-    public bool IsAttacking()
+    public override bool IsAttacking()
     {
         return _isAttackStarting || _currentAnimatorStateInfo.IsName("Attack");
     }
     
-    public float AttackDistance()
+    public override float AttackDistance()
     {
         return attackDistance;
     }

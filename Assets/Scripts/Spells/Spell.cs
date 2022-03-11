@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public abstract class Spell : MonoBehaviour
 {
     public SpellData data;
+    private Coroutine _spellCoroutine;
     public float TimeSinceLastSpell { get; private set; } = 999;
 
     public bool IsCastingSpell { get; private set; }
@@ -35,7 +36,7 @@ public abstract class Spell : MonoBehaviour
         navMeshAgent.velocity = new Vector3(0, 0, 0);
         TimeSinceLastSpell = 0;
         IsCastingSpell = true;
-        StartCoroutine(CreateSpell(data.spellPrefab, playerInventory, navMeshAgent.gameObject));
+        _spellCoroutine = StartCoroutine(CreateSpell(data.spellPrefab, playerInventory, navMeshAgent.gameObject));
     }
 
     private IEnumerator CreateSpell(GameObject spellPrefab, PlayerInventory playerInventory, GameObject agent)
@@ -54,4 +55,15 @@ public abstract class Spell : MonoBehaviour
     }
 
     protected abstract void ApplyEffectsToSpell(GameObject spellPrefab, PlayerInventory playerInventory);
+
+    private void OnDisable()
+    {
+        if (_spellCoroutine != null)
+        {
+            StopCoroutine(_spellCoroutine);
+            IsCastingSpell = false;
+            TimeSinceLastSpell = 0;
+        }
+    }
+
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class RangedEnemyAttack : MonoBehaviour, EnemyAttack
+public class RangedEnemyAttack : EnemyAttack
 {
     [SerializeField] private float attackDistance;
     
@@ -18,19 +18,19 @@ public class RangedEnemyAttack : MonoBehaviour, EnemyAttack
         _spell = gameObject.GetComponent<EnemySpell>();
     }
 
-    public void DoAttack()
+    public override void DoAttack()
     {
         _spell.Cast(_navMeshAgent, _animator, _playerInventory);
     }
 
-    public bool IsAttacking()
+    public override bool IsAttacking()
     {
         var currentAnimatorStateInfo = _animator.GetCurrentAnimatorStateInfo(0);
         bool isSpellCastAnim = currentAnimatorStateInfo.IsName(_spell.data.animationName);
         return _spell.IsCastingSpell || isSpellCastAnim;
     }
 
-    public float AttackDistance()
+    public override float AttackDistance()
     {
         return attackDistance;
     }
