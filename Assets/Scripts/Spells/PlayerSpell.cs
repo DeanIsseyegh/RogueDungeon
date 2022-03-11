@@ -23,7 +23,7 @@ public class PlayerSpell : Spell
         if (!IsOnCooldown() && playerMana.CurrentMana >= data.manaCost)
         {
             playerMana.UseMana(data.manaCost);
-            navMeshAgent.gameObject.transform.LookAt(_mousePositionTracker.MousePos());
+            // navMeshAgent.gameObject.transform.LookAt(_mousePositionTracker.MousePos());
             base.Cast(navMeshAgent, animator, playerInventory);
         }
     }

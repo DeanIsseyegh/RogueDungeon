@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class AnimationHandler : MonoBehaviour
 {
-    private NavMeshAgent _navMeshAgent;
+    private Rigidbody _rb;
     private Animator _animator;
     private static readonly int Running = Animator.StringToHash("running");
     [SerializeField] private List<string> _animationTriggersToResetOnMove;
@@ -13,7 +13,7 @@ public class AnimationHandler : MonoBehaviour
 
     void Start()
     {
-        _navMeshAgent = GetComponent<NavMeshAgent>();
+        _rb = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
     }
 
@@ -27,7 +27,7 @@ public class AnimationHandler : MonoBehaviour
 
     private void HandleMoveAnimation()
     {
-        Vector3 velocity = _navMeshAgent.velocity;
+        Vector3 velocity = _rb.velocity;
         if (Math.Abs(velocity.x) + Math.Abs(velocity.z) > 0.2)
         {
             _animationTriggersToResetOnMove.ForEach(_animator.ResetTrigger);

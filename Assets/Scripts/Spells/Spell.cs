@@ -20,23 +20,27 @@ public abstract class Spell : MonoBehaviour
     {
         return TimeSinceLastSpell < data.spellCooldown;
     }
-    
-    public virtual void Cast(NavMeshAgent navMeshAgent, Animator animator, 
+
+    public virtual void Cast(NavMeshAgent navMeshAgent, Animator animator,
         PlayerInventory playerInventory, PlayerMana playerMana)
     {
         Cast(navMeshAgent, animator, playerInventory);
     }
 
-    public virtual void Cast(NavMeshAgent navMeshAgent, Animator animator, 
+    public virtual void Cast(NavMeshAgent navMeshAgent, Animator animator,
         PlayerInventory playerInventory)
     {
         if (IsOnCooldown()) return;
-        navMeshAgent.ResetPath();
+        if (navMeshAgent != null && navMeshAgent.enabled)
+        {
+            navMeshAgent.ResetPath();
+            navMeshAgent.velocity = new Vector3(0, 0, 0);
+        }
+
         animator.SetTrigger(data.animationName);
-        navMeshAgent.velocity = new Vector3(0, 0, 0);
         TimeSinceLastSpell = 0;
         IsCastingSpell = true;
-        _spellCoroutine = StartCoroutine(CreateSpell(data.spellPrefab, playerInventory, navMeshAgent.gameObject));
+        _spellCoroutine = StartCoroutine(CreateSpell(data.spellPrefab, playerInventory, animator.gameObject));
     }
 
     private IEnumerator CreateSpell(GameObject spellPrefab, PlayerInventory playerInventory, GameObject agent)
@@ -44,8 +48,8 @@ public abstract class Spell : MonoBehaviour
         yield return new WaitForSeconds(data.spellStartUp);
         if (agent == null) yield break;
         var yOffset = new Vector3(0, data.spellSpawnOffset.y, 0);
-        var spellPos = agent.transform.position + (agent.transform.forward * data.spellSpawnOffset.z) 
-                                                  + (agent.transform.right * data.spellSpawnOffset.x) + yOffset;
+        var spellPos = agent.transform.position + (agent.transform.forward * data.spellSpawnOffset.z)
+                                                + (agent.transform.right * data.spellSpawnOffset.x) + yOffset;
         GameObject createdSpell = Instantiate(spellPrefab,
             spellPos,
             agent.transform.rotation);
@@ -65,5 +69,4 @@ public abstract class Spell : MonoBehaviour
             TimeSinceLastSpell = 0;
         }
     }
-
 }
