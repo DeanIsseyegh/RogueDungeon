@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem;
 
 public class PlayerSpellManager : MonoBehaviour
 {
@@ -58,8 +59,28 @@ public class PlayerSpellManager : MonoBehaviour
     {
         if (!IsCastingSpell())
         {
-            KeyCode spellKeyPressed = _spellInputsMap.Keys.FirstOrDefault(Input.GetKeyDown);
-            if (spellKeyPressed == KeyCode.None) return;
+            KeyCode spellKeyPressed;
+            if (Keyboard.current.digit1Key.wasPressedThisFrame)
+            {
+                Debug.Log("1 pressed");
+                spellKeyPressed = KeyCode.Alpha1;
+            } else if (Keyboard.current.digit2Key.wasPressedThisFrame)
+            {
+                spellKeyPressed = KeyCode.Alpha2;
+            } else if (Keyboard.current.digit3Key.wasPressedThisFrame)
+            {
+                spellKeyPressed = KeyCode.Alpha3;
+            } else if (Keyboard.current.digit3Key.wasPressedThisFrame)
+            {
+                spellKeyPressed = KeyCode.Alpha3;
+            }
+            else
+            {
+                return;
+            }
+            // KeyCode spellKeyPressed = _spellInputsMap.Keys.FirstOrDefault(Input.GetKeyDown);
+            // if (spellKeyPressed == KeyCode.None) return;]
+            
             Spell spell = _spellInputsMap[spellKeyPressed];
             spell.Cast(_navMeshAgent, _animator, _playerInventory, _playerMana);
         }

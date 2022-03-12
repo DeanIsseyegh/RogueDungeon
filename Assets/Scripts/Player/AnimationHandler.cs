@@ -28,7 +28,7 @@ public class AnimationHandler : MonoBehaviour
     private void HandleMoveAnimation()
     {
         Vector3 velocity = _rb.velocity;
-        if (Math.Abs(velocity.x) + Math.Abs(velocity.z) > 0.2)
+        if (Math.Abs(velocity.x) + Math.Abs(velocity.z) > 0.4)
         {
             _animationTriggersToResetOnMove.ForEach(_animator.ResetTrigger);
             _animator.SetBool(Running, true);
