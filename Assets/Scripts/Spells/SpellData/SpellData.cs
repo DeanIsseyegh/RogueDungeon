@@ -12,7 +12,9 @@ public class SpellData : ScriptableObject
     [BoxGroup("General")]
     public Vector3 spellSpawnOffset = new Vector3(0.2f, 1.1f, 0.2f);
     [BoxGroup("General")]
-    public string animationName = "BasicSpell";
+    public string animationName = "BasicSpell";    
+    [BoxGroup("General")]
+    public string spellIndicator = "Line";
     
     [BoxGroup("Basic Stats")]
     public float manaCost = 10;

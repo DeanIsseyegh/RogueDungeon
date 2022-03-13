@@ -5965,7 +5965,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 29.5
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -5990,8 +5990,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 1.72, z: -9.29}
+  m_LocalRotation: {x: 0, y: 0.9202523, z: -0.39132547, w: 0}
+  m_LocalPosition: {x: 0, y: 7.202364, z: 0.93728733}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6350,7 +6350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1103046726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10603,12 +10603,12 @@ GameObject:
   - component: {fileID: 1778418403}
   - component: {fileID: 1778418402}
   m_Layer: 0
-  m_Name: CM vcam1 (1)
+  m_Name: ThirdPersonCMCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1778418402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12563,6 +12563,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda3dcf67c4ec1c46ba5c08cbcaeb2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2322320037186382936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322320037186382925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4dce3687bc4f96419c4c475889035e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aim: 0
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  ignoreHeight: 1
+  aimedTransform: {fileID: 0}
+  laserRenderer: {fileID: 0}
+  laserMask:
+    serializedVersion: 2
+    m_Bits: 0
+  laserLength: 0
+  projectilePrefab: {fileID: 0}
+  prefabSpawn: {fileID: 0}
+  gizmo_cameraRay: 0
+  gizmo_ground: 0
+  gizmo_target: 0
+  gizmo_ignoredHeightTarget: 0
 --- !u!1001 &2928219574305424335
 PrefabInstance:
   m_ObjectHideFlags: 0
