@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ColorFreezeEffect : MonoBehaviour
 {
-    private SkinnedMeshRenderer _skinnedMeshRenderer;
+    private Renderer _renderer;
     private Material[] _materials;
     private List<Color> _originalColours;
     private bool _shouldStartColorFreeze;
@@ -15,8 +15,8 @@ public class ColorFreezeEffect : MonoBehaviour
 
     void Awake()
     {
-        _skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
-        _materials = _skinnedMeshRenderer.materials;
+        _renderer = GetComponentInChildren<Renderer>();
+        _materials = _renderer.materials;
         _originalColours = _materials.Select(material => material.color).ToList();
     }
 
@@ -27,10 +27,10 @@ public class ColorFreezeEffect : MonoBehaviour
             _freezeTimer -= Time.deltaTime;
             float lerp = Mathf.Clamp(_freezeTimer / _freezeDuration, 0, 2.5f);
             float colorIntensity = (lerp * 4) + 1.0f;
-            _skinnedMeshRenderer.material.color = (_freezeColor * colorIntensity);
+            _renderer.material.color = (_freezeColor * colorIntensity);
             if (_freezeTimer < 0)
             {
-                _skinnedMeshRenderer.material.color = _originalColours[0];
+                _renderer.material.color = _originalColours[0];
                 _shouldStartColorFreeze = false;
                 Destroy(this);
             }

@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27aee48896609a4699e9658bb489b0e, type: 3}
   m_Name: IceBallData
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 6029342343211582914, guid: 6561d5a2541643f48b6c81dd92ad6195, type: 3}
+  spellPrefab: {fileID: 8357042805450777661, guid: 21f3719e175b205428f379cf8ec843a7, type: 3}
   spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
   animationName: BasicSpell
+  spellIndicator: LineBlue
   manaCost: 10
-  spellLifeTime: 2
+  spellLifeTime: 1.5
   spellStartUp: 0.4
   spellCooldown: 1
   spellTraits:

@@ -42,7 +42,6 @@ public class PlayerSpell : Spell
         return () =>
         {
             playerMana.UseMana(data.manaCost);
-            navMeshAgent.gameObject.transform.LookAt(_mousePositionTracker.MousePos());
             base.Cast(navMeshAgent, animator, playerInventory);
         };
     }

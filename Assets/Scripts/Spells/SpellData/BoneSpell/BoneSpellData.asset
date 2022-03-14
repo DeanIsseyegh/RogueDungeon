@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b27aee48896609a4699e9658bb489b0e, type: 3}
-  m_Name: EyeBallSpellData
+  m_Name: BoneSpellData
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 1558510988610266, guid: 9fd6919c6e21fed429290a0f10ca4548, type: 3}
-  spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
+  spellPrefab: {fileID: 157538, guid: da65f4598bcf4db4fb33660cd86e8974, type: 3}
+  spellSpawnOffset: {x: -1.1, y: 1.1, z: 0.2}
   animationName: Attack
   spellIndicator: Line
   manaCost: 10
-  spellLifeTime: 3
-  spellStartUp: 2.6
+  spellLifeTime: 4
+  spellStartUp: 0.5
   spellCooldown: 1
   spellTraits:
-  - {fileID: 11400000, guid: 45addd400b2e94d42b9cf45673f467fc, type: 2}
-  - {fileID: 11400000, guid: 2cf43373d5a3c2a48a9f9639a92f8f83, type: 2}
+  - {fileID: 11400000, guid: d9a0ce5b17c033d4e8ecceb79401f3d4, type: 2}
+  - {fileID: 11400000, guid: 6d1b442eb21aac749a545509221011a6, type: 2}
+  - {fileID: 11400000, guid: 6c04629e159fbb74b80b03c3f2f2fb2b, type: 2}

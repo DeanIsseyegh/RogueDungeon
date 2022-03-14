@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Movement Speed Spell Trait", menuName = "Movement Speed Spell Trait", order = 51)]
-public class MovementSpeedTrait : SpellTrait
+[CreateAssetMenu(fileName = "New Move Forward Spell Trait", menuName = "Move Forward Spell Trait", order = 51)]
+public class MoveForwardTrait : SpellTrait
 {
     public float speed;
     

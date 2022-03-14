@@ -2,17 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using Level.RoomEvents;
 using UnityEngine;
 
-public abstract class CollectibleRoomStartEvent : MonoBehaviour
+public abstract class CollectibleRoomStartEvent : RoomStartEvent
 {
     private Vector3 _collectibleYOffset;
     private Vector3 _collectibleXOffset;
     private RandomGameObjGenerator CollectibleGenerator { get; set; }
     public Vector3 MiddleOfRoomPos { private get; set; }
-    public Vector3 EntrancePos { private get; set; }
-    public GameObject ClosedEntranceTile { private get; set; }
-    public GameObject EntranceRoomDoor { get; set; }
 
     private bool _isCollectiblesSpawned;
 
@@ -49,24 +47,17 @@ public abstract class CollectibleRoomStartEvent : MonoBehaviour
         }
     }
 
-    private void CloseEntrance()
-    {
-        if (EntranceRoomDoor != null)
-        {
-            Instantiate(ClosedEntranceTile, EntrancePos, Quaternion.identity);
-            Destroy(EntranceRoomDoor);
-        }
-    }
-
     private void SpawnCollectibles()
     {
         Vector3 spawnPos = MiddleOfRoomPos + _collectibleYOffset + _collectibleXOffset;
+        GameObject lastCreatedObj = null;
         for (int i = 0; i < numOfCollectibles; i++)
         {
             if (CollectibleGenerator.ObjectsLeft() == 0) break;
-            GameObject createdCollectible = CollectibleGenerator.Generate(spawnPos);
+            GameObject createdCollectible = CollectibleGenerator.Generate(spawnPos, lastCreatedObj);
             spawnPos -= _collectibleXOffset * 2;
             _createdCollectibles.Add(createdCollectible);
+            lastCreatedObj = createdCollectible;
         }
     }
 
