@@ -22,10 +22,28 @@ public class PlayerSpell : Spell
     {
         if (!IsOnCooldown() && playerMana.CurrentMana >= data.manaCost)
         {
-            playerMana.UseMana(data.manaCost);
-            // navMeshAgent.gameObject.transform.LookAt(_mousePositionTracker.MousePos());
-            base.Cast(navMeshAgent, animator, playerInventory);
+            IsCastingSpell = true;
+            PlayerAiming playerAiming = animator.GetComponent<PlayerAiming>();
+            playerAiming.StartAiming(
+                FinishAimingCallback(navMeshAgent, animator, playerInventory, playerMana),
+                CancelAimingCallback(),
+                data);
         }
+    }
+
+    private Action CancelAimingCallback()
+    {
+        return () => IsCastingSpell = false;
+    }
+
+    private Action FinishAimingCallback(NavMeshAgent navMeshAgent, Animator animator,
+        PlayerInventory playerInventory, PlayerMana playerMana)
+    {
+        return () =>
+        {
+            playerMana.UseMana(data.manaCost);
+            base.Cast(navMeshAgent, animator, playerInventory);
+        };
     }
 
     protected override void ApplyEffectsToSpell(GameObject spellPrefab, PlayerInventory playerInventory)

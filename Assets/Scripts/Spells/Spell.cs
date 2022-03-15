@@ -9,7 +9,7 @@ public abstract class Spell : MonoBehaviour
     private Coroutine _spellCoroutine;
     public float TimeSinceLastSpell { get; private set; } = 999;
 
-    public bool IsCastingSpell { get; private set; }
+    public bool IsCastingSpell { get; protected set; }
 
     protected virtual void Update()
     {

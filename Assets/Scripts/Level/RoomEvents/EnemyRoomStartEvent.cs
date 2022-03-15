@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
+using Level.RoomEvents;
 using UnityEngine;
 
-public class EnemyRoomStartEvent : MonoBehaviour
+public class EnemyRoomStartEvent : RoomStartEvent
 {
     private RandomGameObjGenerator _enemyGenerator;
     public List<Vector3> EnemyPositions { private get; set; }
-    public GameObject ClosedEntranceTile { get; set; }
-    public Vector3 EntrancePos { get; set; }
 
     private bool _isEnemiesSpawned;
 
@@ -22,7 +21,7 @@ public class EnemyRoomStartEvent : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Instantiate(ClosedEntranceTile, EntrancePos, Quaternion.identity);
+            CloseEntrance();
             _createdEnemies = EnemyPositions.Select(pos => _enemyGenerator.Generate(pos)).ToList();
             _isEnemiesSpawned = true;
             GetComponent<BoxCollider>().enabled = false;

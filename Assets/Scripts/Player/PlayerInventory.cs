@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class PlayerInventory : MonoBehaviour
 {
+    [ShowInInspector]
     public List<Collectible> Items { get; private set; }
     private PlayerHealth _playerHealth;
     private PlayerSpellManager _playerSpellManager;

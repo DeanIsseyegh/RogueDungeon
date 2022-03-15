@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27aee48896609a4699e9658bb489b0e, type: 3}
   m_Name: FireBallData
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 6029342343211582914, guid: 1ecb3e6c9b4d8aa4c9a916d0869e1149, type: 3}
+  spellPrefab: {fileID: 1485987801625442810, guid: ab60117b53294804c9881e4cc70881f8, type: 3}
   spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
   animationName: BasicSpell
+  spellIndicator: Line
   manaCost: 10
-  spellLifeTime: 2
+  spellLifeTime: 1.5
   spellStartUp: 0.4
   spellCooldown: 1
   spellTraits:
