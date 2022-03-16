@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64298171510093400}
   m_Layer: 7
   m_Name: dungeon-entrace-stone-with-door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

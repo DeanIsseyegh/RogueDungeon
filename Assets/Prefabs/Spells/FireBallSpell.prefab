@@ -4832,7 +4832,6 @@ GameObject:
   - component: {fileID: 1485987801625442813}
   - component: {fileID: 7492767874365172936}
   - component: {fileID: 5728044031467041077}
-  - component: {fileID: 245376288123368487}
   - component: {fileID: 6304831411042112730}
   m_Layer: 0
   m_Name: FireBallSpell
@@ -9665,22 +9664,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &245376288123368487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485987801625442810}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0856037d17322498c07284406b38e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExplosionPrefab: {fileID: 7156317333231045241, guid: fb8d8f6d8dd5fe247a08487a0dbf3943, type: 3}
-  DestroyExplosion: 5
-  DestroyChildren: 3
-  Velocity: {x: -15, y: 0}
 --- !u!114 &6304831411042112730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9693,6 +9676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c16d744e19dbee4dad9fafc3bddb344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spellExplosionPrefab: {fileID: 7156317333231045241, guid: 8e66544dbebd71941bf16fa92e867008, type: 3}
 --- !u!1 &5099559516360549319
 GameObject:
   m_ObjectHideFlags: 0

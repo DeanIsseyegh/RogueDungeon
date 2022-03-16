@@ -23,8 +23,11 @@ namespace Player.State
             {
                 var attackKeyPressed = AttackKeyPressed();
                 Spell spellToCast = Ctx.SpellManager.RetrieveSpell(attackKeyPressed);
-                NextState = new Attacking(Ctx, spellToCast);
-                Stage = EVENT.EXIT;
+                if (spellToCast != null)
+                {
+                    NextState = new Attacking(Ctx, spellToCast);
+                    Stage = EVENT.EXIT;
+                }
             }
             else if (Math.Abs(velocity.x) + Math.Abs(velocity.z) <= 0.4)
             {

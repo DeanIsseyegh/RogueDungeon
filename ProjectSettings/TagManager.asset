@@ -23,6 +23,9 @@ TagManager:
   - RandomEnemyGenerator
   - ItemIcon
   - SpellChoiceUI
+  - CinemachineTarget
+  - Wall
+  - Door
   layers:
   - Default
   - TransparentFX
