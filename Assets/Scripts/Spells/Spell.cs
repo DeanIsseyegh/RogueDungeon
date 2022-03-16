@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -21,14 +22,17 @@ public abstract class Spell : MonoBehaviour
         return TimeSinceLastSpell < data.spellCooldown;
     }
 
-    public virtual void Cast(NavMeshAgent navMeshAgent, Animator animator,
-        PlayerInventory playerInventory, PlayerMana playerMana)
+    public void Cast(Animator animator, PlayerInventory playerInventory, PlayerMana playerMana)
     {
-        Cast(navMeshAgent, animator, playerInventory);
+        if (!IsOnCooldown() && playerMana.CurrentMana >= data.manaCost)
+        {
+            IsCastingSpell = true;
+            playerMana.UseMana(data.manaCost);
+            Cast(null, animator, playerInventory);
+        }
     }
 
-    public virtual void Cast(NavMeshAgent navMeshAgent, Animator animator,
-        PlayerInventory playerInventory)
+    public void Cast(NavMeshAgent navMeshAgent, Animator animator, PlayerInventory playerInventory)
     {
         if (IsOnCooldown()) return;
         if (navMeshAgent != null && navMeshAgent.enabled)
@@ -42,7 +46,7 @@ public abstract class Spell : MonoBehaviour
         IsCastingSpell = true;
         _spellCoroutine = StartCoroutine(CreateSpell(data.spellPrefab, playerInventory, animator.gameObject));
     }
-
+    
     private IEnumerator CreateSpell(GameObject spellPrefab, PlayerInventory playerInventory, GameObject agent)
     {
         yield return new WaitForSeconds(data.spellStartUp);
@@ -54,8 +58,9 @@ public abstract class Spell : MonoBehaviour
             spellPos,
             agent.transform.rotation);
         ApplyEffectsToSpell(createdSpell, playerInventory);
-        IsCastingSpell = false;
         Destroy(createdSpell, data.spellLifeTime);
+        yield return new WaitForSeconds(0.2f);
+        IsCastingSpell = false;
     }
 
     protected abstract void ApplyEffectsToSpell(GameObject spellPrefab, PlayerInventory playerInventory);

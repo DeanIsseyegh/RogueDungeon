@@ -9,12 +9,14 @@ public class AnimationHandler : MonoBehaviour
     private Animator _animator;
     private static readonly int Running = Animator.StringToHash("running");
     [SerializeField] private List<string> _animationTriggersToResetOnMove;
+    private CharacterController _characterController;
     public bool CanMove { private get; set; }
 
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
+        _characterController = GetComponent<CharacterController>();
     }
 
     void Update()
@@ -27,7 +29,7 @@ public class AnimationHandler : MonoBehaviour
 
     private void HandleMoveAnimation()
     {
-        Vector3 velocity = _rb.velocity;
+        Vector3 velocity = _characterController.velocity;
         if (Math.Abs(velocity.x) + Math.Abs(velocity.z) > 0.4)
         {
             _animationTriggersToResetOnMove.ForEach(_animator.ResetTrigger);

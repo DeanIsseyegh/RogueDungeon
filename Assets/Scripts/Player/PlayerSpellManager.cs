@@ -55,35 +55,12 @@ public class PlayerSpellManager : MonoBehaviour
         return _spellInputs.Count > 0 && _spellInputsMap.Values.Any(spell => spell.IsCastingSpell);
     }
 
-    public void HandleSpell()
+    public Spell RetrieveSpell(KeyCode spellKeyPressed)
     {
-        if (!IsCastingSpell())
-        {
-            KeyCode spellKeyPressed;
-            if (Keyboard.current.digit1Key.wasPressedThisFrame)
-            {
-                Debug.Log("1 pressed");
-                spellKeyPressed = KeyCode.Alpha1;
-            } else if (Keyboard.current.digit2Key.wasPressedThisFrame)
-            {
-                spellKeyPressed = KeyCode.Alpha2;
-            } else if (Keyboard.current.digit3Key.wasPressedThisFrame)
-            {
-                spellKeyPressed = KeyCode.Alpha3;
-            } else if (Keyboard.current.digit3Key.wasPressedThisFrame)
-            {
-                spellKeyPressed = KeyCode.Alpha3;
-            }
-            else
-            {
-                return;
-            }
-            // KeyCode spellKeyPressed = _spellInputsMap.Keys.FirstOrDefault(Input.GetKeyDown);
-            // if (spellKeyPressed == KeyCode.None) return;]
-            
-            Spell spell = _spellInputsMap[spellKeyPressed];
-            spell.Cast(_navMeshAgent, _animator, _playerInventory, _playerMana);
-        }
+        KeyCode mappedSpellKey = _spellInputsMap.Keys.FirstOrDefault(x => x == spellKeyPressed);
+        if (mappedSpellKey == KeyCode.None) return null;
+        Spell spell = _spellInputsMap[mappedSpellKey];
+        return spell;
     }
 
     private void UpdateCooldownUI()
@@ -92,7 +69,8 @@ public class PlayerSpellManager : MonoBehaviour
         for (int i = 0; i < spells.Count; i++)
         {
             Spell spell = spells[i];
-            _uiManager.UpdateSpellCooldown(spell.data.spellCooldown, spell.data.spellCooldown - spell.TimeSinceLastSpell, i);
+            _uiManager.UpdateSpellCooldown(spell.data.spellCooldown,
+                spell.data.spellCooldown - spell.TimeSinceLastSpell, i);
         }
     }
 }

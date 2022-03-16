@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8fdaf576df4fb4f4c85c0e578f855882
+guid: 169c06e60bb5fe442b107b30c9480a3b
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -16,7 +16,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -26,7 +26,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -75,22 +75,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - 04d135a227391e24f8ee527ae0ba14f6
-  - 313def9820cea964db093ff7462c7829
-  - 2e8c69ba69bfe6c44a621aaf7e61983c
-  - 91a7909f98e8c964bb63084b6170a627
-  - b00c1fe4cf6430a4192bbcfd018e9514
-  - eba1fcc2f6c5dec458532c746e437b65
-  - 8e5cdcc57b4f91d41a293e68b007e8ed
-  - d2327a2b0c1904a4f908f5afa61cc498
-  - ab725b4ab1436c440ad8bc06f9069c3d
-  - 761709722fb386b44bc8b559587d8c38
-  - f5d86a3db0a63104baf4212bc38d8ce1
-  - 0a6bbdd230bde474b8f57b3dbe799819
-  - 9dba96d0155fe104499b7337c63bcae2
-  - 854c808da076c834a8956147b4082937
-  - f927048ce77a4bd4487bf59f21970fa4
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -106,13 +91,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
