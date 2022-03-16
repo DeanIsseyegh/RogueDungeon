@@ -17,4 +17,10 @@ MonoBehaviour:
   hasSpell: 0
   hasItem: 0
   hasEnemies: 1
-  numberOfEnemies: 4
+  numberOfEnemies: 1
+  hasEntrance: 1
+  hasExit: 1
+  hasRightSideRoom: 1
+  rightSideRoomData: {fileID: 11400000, guid: a5d7310705a030443803bff8e1526b44, type: 2}
+  hasLeftSideRoom: 1
+  leftSideRoomData: {fileID: 11400000, guid: e1769f4b3e749b249b033591c72711bc, type: 2}

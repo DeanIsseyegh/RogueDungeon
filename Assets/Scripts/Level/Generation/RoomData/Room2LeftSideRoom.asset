@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a2270c0193232447a7121f4f4f41efa, type: 3}
-  m_Name: Room4
+  m_Name: Room2LeftSideRoom
   m_EditorClassIdentifier: 
   xSize: 5
-  zSize: 7
+  zSize: 3
   hasSpell: 0
   hasItem: 0
-  hasEnemies: 1
-  numberOfEnemies: 4
+  hasEnemies: 0
+  numberOfEnemies: 0
   hasEntrance: 1
-  hasExit: 0
-  hasSideRoom: 1
-  sideRoomData: {fileID: 11400000, guid: 9c785bb005c2ddb4d8bdb92636a558b4, type: 2}
+  hasExit: 1
+  hasRightSideRoom: 0
+  rightSideRoomData: {fileID: 0}
+  hasLeftSideRoom: 0
+  leftSideRoomData: {fileID: 0}

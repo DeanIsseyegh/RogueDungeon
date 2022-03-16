@@ -6,28 +6,25 @@ public class EventGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject closedEntranceTile;
 
-    public void GenerateEvent(RoomData roomData, GameObject roomParent,
-        RoomGenerator.EntranceLocation entranceLocation, GeneratedRoom generatedRoom, GeneratedRoom previousRoom)
+    public void GenerateEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom)
     {
+        RoomData roomData = generatedRoom.RoomData;
         if (roomData.hasItem | roomData.hasSpell)
-            GenerateCollectibleEvent(roomData, roomParent, entranceLocation, generatedRoom, previousRoom);
+            GenerateCollectibleEvent(generatedRoom, previousRoom);
         else if (roomData.hasEnemies)
-            GenerateEnemyEvent(roomData, generatedRoom, roomParent, entranceLocation, previousRoom);
+            GenerateEnemyEvent(generatedRoom, previousRoom);
     }
 
-    private void GenerateEnemyEvent(RoomData roomData, GeneratedRoom generatedRoom, GameObject roomParent,
-        RoomGenerator.EntranceLocation entranceLocation, GeneratedRoom previousRoom)
+    private void GenerateEnemyEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom)
     {
-        Vector3 middleOfRoom = CalculateMiddleOfRoom(roomData, entranceLocation, generatedRoom);
-        var emptyGameObj =
-            CreateTriggerInRoom(roomData, generatedRoom, roomParent, middleOfRoom);
+        var emptyGameObj = CreateTriggerInRoom(generatedRoom);
         List<List<Vector3>> mapLayout = generatedRoom.MapLayout;
 
-        int enemiesToGenerate = roomData.numberOfEnemies;
+        int enemiesToGenerate = generatedRoom.RoomData.numberOfEnemies;
         List<Vector3> spawnPositions = GenerateEnemySpawnPos(generatedRoom, enemiesToGenerate, mapLayout);
         EnemyRoomStartEvent startEvent = emptyGameObj.AddComponent<EnemyRoomStartEvent>();
         startEvent.EnemyPositions = spawnPositions;
-        ShutEntrance(entranceLocation, previousRoom, startEvent);
+        ShutEntrance(generatedRoom.EntranceLocation, previousRoom, startEvent);
 
         RoomEndEvent roomEndEvent = emptyGameObj.AddComponent<RoomEndEvent>();
         roomEndEvent.isRoomComplete = () => startEvent.HasEventFinished();
@@ -53,16 +50,13 @@ public class EventGenerator : MonoBehaviour
         return spawnPositions;
     }
 
-    private void GenerateCollectibleEvent(RoomData roomData, GameObject roomParent,
-        RoomGenerator.EntranceLocation entranceLocation, GeneratedRoom generatedRoom, GeneratedRoom previousRoom)
+    private void GenerateCollectibleEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom)
     {
-        Vector3 middleOfRoom = CalculateMiddleOfRoom(roomData, entranceLocation, generatedRoom);
-        var emptyGameObj =
-            CreateTriggerInRoom(roomData, generatedRoom, roomParent, middleOfRoom);
+        var emptyGameObj = CreateTriggerInRoom(generatedRoom);
 
-        CollectibleRoomStartEvent startEvent = AddRoomStartEvent(roomData, emptyGameObj);
-        ShutEntrance(entranceLocation, previousRoom, startEvent);
-        startEvent.MiddleOfRoomPos = middleOfRoom;
+        CollectibleRoomStartEvent startEvent = AddRoomStartEvent(generatedRoom.RoomData, emptyGameObj);
+        ShutEntrance(generatedRoom.EntranceLocation, previousRoom, startEvent);
+        startEvent.MiddleOfRoomPos = generatedRoom.MiddleOfRoom;
 
         RoomEndEvent roomEndEvent = emptyGameObj.AddComponent<RoomEndEvent>();
         roomEndEvent.isRoomComplete = () => startEvent.HasEventFinished();
@@ -87,27 +81,17 @@ public class EventGenerator : MonoBehaviour
         }
     }
 
-    private static Vector3 CalculateMiddleOfRoom(RoomData roomData,
-        RoomGenerator.EntranceLocation entranceLocation,
-        GeneratedRoom generatedRoom)
-    {
-        Vector3 roomZLength = new Vector3(0, 0, roomData.zSize * generatedRoom.ZTileSize / 2);
-        Vector3 middleOfRoom = entranceLocation.WithoutOffset + roomZLength;
-        return middleOfRoom;
-    }
-
-    private GameObject CreateTriggerInRoom(RoomData roomData, GeneratedRoom generatedRoom,
-        GameObject roomParent, Vector3 middleOfRoom)
+    private GameObject CreateTriggerInRoom(GeneratedRoom generatedRoom)
     {
         GameObject newObj = new GameObject("RoomTriggerGenerated");
-        GameObject emptyGameObj = Instantiate(newObj, Vector3.zero, Quaternion.identity, roomParent.transform);
+        GameObject emptyGameObj = Instantiate(newObj, Vector3.zero, Quaternion.identity, generatedRoom.RoomParent.transform);
         Destroy(newObj);
 
         BoxCollider boxCollider = emptyGameObj.AddComponent<BoxCollider>();
         boxCollider.isTrigger = true;
-        boxCollider.center = middleOfRoom;
-        boxCollider.size = new Vector3(roomData.xSize * generatedRoom.XTileSize, 1,
-            (roomData.zSize - 1) * generatedRoom.ZTileSize);
+        boxCollider.center = generatedRoom.MiddleOfRoom;
+        boxCollider.size = new Vector3(generatedRoom.XSize * generatedRoom.XTileSize, 1,
+            (generatedRoom.ZSize - 1) * generatedRoom.ZTileSize);
         return emptyGameObj;
     }
 
