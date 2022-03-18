@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Info
   m_EditorClassIdentifier: 
   name: Ice Ball
-  description: Cast a damaing ice ball
+  description: Cast a damaging ice ball
