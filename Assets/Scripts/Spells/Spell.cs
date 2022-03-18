@@ -46,17 +46,20 @@ public abstract class Spell : MonoBehaviour
         IsCastingSpell = true;
         _spellCoroutine = StartCoroutine(CreateSpell(data.spellPrefab, playerInventory, animator.gameObject));
     }
-    
-    private IEnumerator CreateSpell(GameObject spellPrefab, PlayerInventory playerInventory, GameObject agent)
+
+    private IEnumerator CreateSpell(GameObject spellPrefab, PlayerInventory playerInventory, GameObject caster)
     {
         yield return new WaitForSeconds(data.spellStartUp);
-        if (agent == null) yield break;
+        if (caster == null) yield break;
         var yOffset = new Vector3(0, data.spellSpawnOffset.y, 0);
-        var spellPos = agent.transform.position + (agent.transform.forward * data.spellSpawnOffset.z)
-                                                + (agent.transform.right * data.spellSpawnOffset.x) + yOffset;
+        var spellPos = caster.transform.position + (caster.transform.forward * data.spellSpawnOffset.z)
+                                                 + (caster.transform.right * data.spellSpawnOffset.x) + yOffset;
+        
+        var spellRotation = CalculateSpellRotation(caster, spellPos);
         GameObject createdSpell = Instantiate(spellPrefab,
             spellPos,
-            agent.transform.rotation);
+            spellRotation);
+
         ApplyEffectsToSpell(createdSpell, playerInventory);
         Destroy(createdSpell, data.spellLifeTime);
         yield return new WaitForSeconds(0.2f);
@@ -64,6 +67,8 @@ public abstract class Spell : MonoBehaviour
     }
 
     protected abstract void ApplyEffectsToSpell(GameObject spellPrefab, PlayerInventory playerInventory);
+
+    protected abstract Quaternion CalculateSpellRotation(GameObject caster, Vector3 spellPos);
 
     private void OnDisable()
     {

@@ -12,4 +12,9 @@ public class EnemySpell : Spell
     {
         data.spellTraits.ForEach(trait => trait.ApplyEffects(spellPrefab, false));
     }
+
+    protected override Quaternion CalculateSpellRotation(GameObject caster, Vector3 spellPos)
+    {
+        return caster.transform.rotation;
+    }
 }

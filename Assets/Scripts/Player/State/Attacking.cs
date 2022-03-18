@@ -23,25 +23,24 @@ namespace Player.State
 
         public override void Update()
         {
-            if (!_currentSpell.IsCastingSpell)
+            if (_currentSpell.IsCastingSpell) return;
+            Ctx.ThirdPersonController.CanMove = true;
+            Vector3 velocity = Ctx.CharController.velocity;
+
+            if (Ctx.InputsController.AnyAttack())
             {
-                Ctx.ThirdPersonController.CanMove = true;
-                Vector3 velocity = Ctx.CharController.velocity;
-                if (Ctx.InputsController.AnyAttack())
+                var attackKeyPressed = AttackKeyPressed();
+                Spell spellToCast = Ctx.SpellManager.RetrieveSpell(attackKeyPressed);
+                if (spellToCast != null)
                 {
-                    var attackKeyPressed = AttackKeyPressed();
-                    Spell spellToCast = Ctx.SpellManager.RetrieveSpell(attackKeyPressed);
-                    if (spellToCast != null)
-                    {
-                        NextState = new Attacking(Ctx, spellToCast);
-                        Stage = EVENT.EXIT;
-                    }
-                }
-                else if (Math.Abs(velocity.x) + Math.Abs(velocity.z) > 0.4)
-                {
-                    NextState = new Running(Ctx);
+                    NextState = new Attacking(Ctx, spellToCast);
                     Stage = EVENT.EXIT;
                 }
+            }
+            else if (IsMoving(velocity))
+            {
+                NextState = new Running(Ctx);
+                Stage = EVENT.EXIT;
             }
         }
 

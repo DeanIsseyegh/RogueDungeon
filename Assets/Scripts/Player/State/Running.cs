@@ -29,9 +29,8 @@ namespace Player.State
                     Stage = EVENT.EXIT;
                 }
             }
-            else if (Math.Abs(velocity.x) + Math.Abs(velocity.z) <= 0.4)
+            else if (!IsMoving(velocity))
             {
-                // _animationTriggersToResetOnMove.ForEach(Ctx.Animator.ResetTrigger);
                 NextState = new Idle(Ctx);
                 Stage = EVENT.EXIT;
             }

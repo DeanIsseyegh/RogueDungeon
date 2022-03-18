@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,7 @@ namespace Player.State
     public class PlayerState
     {
         protected static readonly int Running = Animator.StringToHash("running");
-        
+
         public STATE Name;
         protected EVENT Stage;
         protected PlayerState NextState;
@@ -68,7 +69,7 @@ namespace Player.State
         {
             Ctx.Animator.gameObject.transform.rotation = Ctx.MainCamera.transform.rotation;
         }
-        
+
         protected KeyCode AttackKeyPressed()
         {
             KeyCode attackKeyPressed = KeyCode.None;
@@ -90,6 +91,11 @@ namespace Player.State
             }
 
             return attackKeyPressed;
+        }
+
+        protected static bool IsMoving(Vector3 velocity)
+        {
+            return Math.Abs(velocity.x) + Math.Abs(velocity.z) > 0.4;
         }
     }
 }

@@ -11,7 +11,7 @@ public abstract class CollidingSpell : MonoBehaviour
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(CollidesWith()) || other.CompareTag("Door") || other.CompareTag("Wall"))
+        if (other.CompareTag(CollidesWith()) || other.CompareTag("Door") || other.CompareTag("Wall") || other.CompareTag("Floor"))
         {
             Destroy(this.gameObject);
             if (spellExplosionPrefab != null)
