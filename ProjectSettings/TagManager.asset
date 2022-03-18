@@ -27,6 +27,7 @@ TagManager:
   - Wall
   - Door
   - PlayerHand
+  - Floor
   layers:
   - Default
   - TransparentFX
