@@ -6,16 +6,18 @@ public class EventGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject closedEntranceTile;
 
-    public void GenerateEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom)
+    public void GenerateEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom,
+        List<GameObject> sideExits)
     {
         RoomData roomData = generatedRoom.RoomData;
         if (roomData.hasItem | roomData.hasSpell)
-            GenerateCollectibleEvent(generatedRoom, previousRoom);
+            GenerateCollectibleEvent(generatedRoom, previousRoom, sideExits);
         else if (roomData.hasEnemies)
-            GenerateEnemyEvent(generatedRoom, previousRoom);
+            GenerateEnemyEvent(generatedRoom, previousRoom, sideExits);
     }
 
-    private void GenerateEnemyEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom)
+    private void GenerateEnemyEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom,
+        List<GameObject> sideExits)
     {
         var emptyGameObj = CreateTriggerInRoom(generatedRoom);
         List<List<Vector3>> mapLayout = generatedRoom.MapLayout;
@@ -31,6 +33,7 @@ public class EventGenerator : MonoBehaviour
         roomEndEvent.onRoomComplete = () =>
         {
             generatedRoom.Exit.GetComponentInChildren<Open>().enabled = true;
+            sideExits.ForEach( it => it.GetComponentInChildren<Open>().enabled = true);
             startEvent.enabled = false;
             roomEndEvent.enabled = false;
         };
@@ -50,7 +53,8 @@ public class EventGenerator : MonoBehaviour
         return spawnPositions;
     }
 
-    private void GenerateCollectibleEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom)
+    private void GenerateCollectibleEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom,
+        List<GameObject> sideExits)
     {
         var emptyGameObj = CreateTriggerInRoom(generatedRoom);
 
@@ -66,6 +70,7 @@ public class EventGenerator : MonoBehaviour
             startEvent.HideChoiceUi();
             startEvent.enabled = false;
             generatedRoom.Exit.GetComponentInChildren<Open>().enabled = true;
+            sideExits.ForEach( it => it.GetComponentInChildren<Open>().enabled = true);
             roomEndEvent.enabled = false;
         };
     }

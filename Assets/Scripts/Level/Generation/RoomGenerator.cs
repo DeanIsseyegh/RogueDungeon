@@ -55,20 +55,36 @@ public class RoomGenerator : MonoBehaviour
             exit = CreateExit(exitLocation, roomParent);
         }
 
+        List<GameObject> sideExits = new List<GameObject>();
+
         RightSideExitLocation rightSideExitLocation = RightSideExitLocation.None();
+        GeneratedRoom rightSideRoom = null;
         GameObject rightSideExit = null;
         if (roomData.hasRightSideRoom)
         {
             rightSideExitLocation = new RightSideExitLocation(mapLayout, _xTileSize);
             rightSideExit = CreateRightSideExit(rightSideExitLocation, roomParent);
+            sideExits.Add(rightSideExit);
+            Vector3 sideRoomStartingPos = rightSideExitLocation.WithoutOffset +
+                                          -(roomData.rightSideRoomData.xSize * _xTileSize) +
+                                          -(roomData.rightSideRoomData.zSize * _zTileSize / 2) + _zTileSize / 2;
+            rightSideRoom = GenerateSideRoom(sideRoomStartingPos, roomData.rightSideRoomData,
+                rightSideExitLocation.WithoutOffset, true);
         }
 
         LeftSideExitLocation leftSideExitLocation = LeftSideExitLocation.None();
+        GeneratedRoom leftSideRoom = null;
         GameObject leftSideExit = null;
         if (roomData.hasLeftSideRoom)
         {
             leftSideExitLocation = new LeftSideExitLocation(mapLayout, _xTileSize);
             leftSideExit = CreateLeftSideExit(leftSideExitLocation, roomParent);
+            sideExits.Add(leftSideExit);
+            Vector3 sideRoomStartingPos = leftSideExitLocation.WithoutOffset +
+                                          (_xTileSize) +
+                                          -(roomData.leftSideRoomData.zSize * _zTileSize / 2) + _zTileSize / 2;
+            leftSideRoom = GenerateSideRoom(sideRoomStartingPos, roomData.leftSideRoomData,
+                leftSideExitLocation.WithoutOffset, false);
         }
 
         List<Vector3> noWallPositions = new List<Vector3>()
@@ -77,30 +93,12 @@ public class RoomGenerator : MonoBehaviour
             rightSideExitLocation.WithoutOffset, leftSideExitLocation.WithoutOffset
         };
         CreateWalls(mapLayout, _zTileSize, _xTileSize, noWallPositions, roomParent);
-
+        
         Vector3 middleOfRoom = CalculateMiddleOfRoom(roomData, startingPos, _tileSize);
         GeneratedRoom generatedRoom = new GeneratedRoom(mapLayout, startingPos, exitLocation, entranceLocation,
             generatedFloor, _tileSize.x, _tileSize.z, entrance, exit, roomParent, roomData, middleOfRoom);
 
-        eventGenerator.GenerateEvent(generatedRoom, previousRoom);
-
-        if (roomData.hasRightSideRoom)
-        {
-            Vector3 sideRoomStartingPos = rightSideExitLocation.WithoutOffset +
-                                          -(roomData.rightSideRoomData.xSize * _xTileSize) +
-                                          -(roomData.rightSideRoomData.zSize * _zTileSize / 2) + _zTileSize / 2;
-            GenerateSideRoom(sideRoomStartingPos, roomData.rightSideRoomData,
-                rightSideExitLocation.WithoutOffset, true);
-        }
-
-        if (roomData.hasLeftSideRoom)
-        {
-            Vector3 sideRoomStartingPos = leftSideExitLocation.WithoutOffset +
-                                          (_xTileSize) +
-                                          -(roomData.leftSideRoomData.zSize * _zTileSize / 2) + _zTileSize / 2;
-            GenerateSideRoom(sideRoomStartingPos, roomData.leftSideRoomData,
-                leftSideExitLocation.WithoutOffset, false);
-        }
+        eventGenerator.GenerateEvent(generatedRoom, previousRoom, sideExits);
 
         return generatedRoom;
     }
