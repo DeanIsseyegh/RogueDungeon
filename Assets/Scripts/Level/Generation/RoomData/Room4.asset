@@ -16,9 +16,13 @@ MonoBehaviour:
   zSize: 7
   hasSpell: 0
   hasItem: 0
-  hasEnemies: 1
+  hasEnemies: 0
   numberOfEnemies: 4
-  hasEntrance: 1
+  hasEntrance: 0
   hasExit: 0
-  hasSideRoom: 1
-  sideRoomData: {fileID: 11400000, guid: 9c785bb005c2ddb4d8bdb92636a558b4, type: 2}
+  hasRightSideRoom: 0
+  rightSideRoomData: {fileID: 0}
+  hasLeftSideRoom: 1
+  leftSideRoomData: {fileID: 11400000, guid: 9c785bb005c2ddb4d8bdb92636a558b4, type: 2}
+  isPuzzleRoom: 0
+  isBalloonRoom: 0

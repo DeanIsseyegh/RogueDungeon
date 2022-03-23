@@ -5,6 +5,8 @@ using UnityEngine;
 public class EventGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject closedEntranceTile;
+    [SerializeField] private GameObject balloonEventWall;
+    [SerializeField] private GameObject balloon;
 
     public void GenerateEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom,
         List<GameObject> sideExits)
@@ -14,6 +16,34 @@ public class EventGenerator : MonoBehaviour
             GenerateCollectibleEvent(generatedRoom, previousRoom, sideExits);
         else if (roomData.hasEnemies)
             GenerateEnemyEvent(generatedRoom, previousRoom, sideExits);
+    }
+
+    public void GenerateSideEvent(GeneratedRoom generatedRoom, bool isRightSideRoom)
+    {
+        RoomData roomData = generatedRoom.RoomData;
+        if (roomData.isPuzzleRoom && roomData.isBalloonRoom)
+        {
+            GeneratePuzzleEvent(generatedRoom, isRightSideRoom);
+        }
+    }
+
+    private void GeneratePuzzleEvent(GeneratedRoom generatedRoom, bool isRightSideRoom)
+    {
+        Vector3 zTile = new Vector3(generatedRoom.ZTileSize, 0, 0);
+        Vector3 startPuzzleWall = generatedRoom.MiddleOfRoom + (zTile * generatedRoom.XSize);
+        
+        for (var i = 0; i <  generatedRoom.ZSize; i++)
+        {
+            Vector3 tile =  generatedRoom.MapLayout[i][generatedRoom.ZSize/2];
+            Instantiate(balloonEventWall, tile, balloonEventWall.transform.rotation);
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            Vector3 balloonsSpawnPos = generatedRoom.MapLayout[i][1];
+            Instantiate(balloon, balloonsSpawnPos + Vector3.up * (2 + i), balloon.transform.localRotation);
+        }
+        
     }
 
     private void GenerateEnemyEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom,

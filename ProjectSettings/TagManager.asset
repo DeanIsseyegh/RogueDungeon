@@ -28,6 +28,8 @@ TagManager:
   - Door
   - PlayerHand
   - Floor
+  - Balloon
+  - Spell
   layers:
   - Default
   - TransparentFX

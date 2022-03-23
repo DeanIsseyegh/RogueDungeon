@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a2270c0193232447a7121f4f4f41efa, type: 3}
-  m_Name: Room4SideRoom
+  m_Name: Room4LeftSideRoom
   m_EditorClassIdentifier: 
   xSize: 5
   zSize: 5
@@ -20,5 +20,9 @@ MonoBehaviour:
   numberOfEnemies: 1
   hasEntrance: 0
   hasExit: 0
-  hasSideRoom: 0
-  sideRoomData: {fileID: 0}
+  hasRightSideRoom: 0
+  rightSideRoomData: {fileID: 0}
+  hasLeftSideRoom: 0
+  leftSideRoomData: {fileID: 0}
+  isPuzzleRoom: 1
+  isBalloonRoom: 1

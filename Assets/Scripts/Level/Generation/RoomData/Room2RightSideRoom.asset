@@ -20,5 +20,9 @@ MonoBehaviour:
   numberOfEnemies: 1
   hasEntrance: 0
   hasExit: 0
-  hasSideRoom: 0
-  sideRoomData: {fileID: 0}
+  hasRightSideRoom: 0
+  rightSideRoomData: {fileID: 0}
+  hasLeftSideRoom: 0
+  leftSideRoomData: {fileID: 0}
+  isPuzzleRoom: 1
+  isBalloonRoom: 1

@@ -125,14 +125,13 @@ public class RoomGenerator : MonoBehaviour
         {
             noWallPositions.Add(previousRoomEntrance + _xTileSize);
         }
-        Debug.Log("ignoring : " + noWallPositions[0]);
         CreateWalls(mapLayout, _zTileSize, _xTileSize, noWallPositions, roomParent);
 
         Vector3 middleOfRoom = CalculateMiddleOfRoom(roomData, startingPos, _tileSize);
         GeneratedRoom generatedRoom = new GeneratedRoom(mapLayout, startingPos, null, null,
             generatedFloor, _tileSize.x, _tileSize.z, null, null, roomParent, roomData, middleOfRoom);
 
-        // eventGenerator.GenerateEvent(generatedRoom, previousRoom);
+        eventGenerator.GenerateSideEvent(generatedRoom, isRightSideRoom);
 
         return generatedRoom;
     }

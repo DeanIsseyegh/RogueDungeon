@@ -9753,8 +9753,8 @@ GameObject:
   - component: {fileID: 1068756314392069193}
   - component: {fileID: -2363320825089374043}
   m_Layer: 0
-  m_Name: EyeBallProjectile
-  m_TagString: Untagged
+  m_Name: EyeBallSpell
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14596,3 +14596,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 874c632532e204d4b977d684a2d17fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spellExplosionPrefab: {fileID: 0}

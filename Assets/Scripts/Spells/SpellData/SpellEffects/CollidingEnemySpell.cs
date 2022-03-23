@@ -1,12 +1,16 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CollidingEnemySpell : CollidingSpell
 {
-    protected override string CollidesWith()
+    private List<string> collidesWith;
+    private void Awake()
     {
-        return "Player";
+        collidesWith = new List<string> {"Player"};
+    }
+    protected override List<string> CollidesWith()
+    {
+        return collidesWith;
     }
     
     protected override void OnTriggerEnter(Collider other)

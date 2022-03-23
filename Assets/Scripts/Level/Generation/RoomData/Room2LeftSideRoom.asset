@@ -24,3 +24,5 @@ MonoBehaviour:
   rightSideRoomData: {fileID: 0}
   hasLeftSideRoom: 0
   leftSideRoomData: {fileID: 0}
+  isPuzzleRoom: 1
+  isBalloonRoom: 1
