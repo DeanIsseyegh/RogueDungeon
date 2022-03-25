@@ -7,7 +7,6 @@ public class GenerationManager : MonoBehaviour
 {
     [SerializeField] private Vector3 startingPos;
     [SerializeField] private RoomGenerator roomGenerator;
-    [SerializeField] private GameObject player;
 
     [SerializeField] private List<RoomData> roomsData;
 

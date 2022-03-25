@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1676111786}
   - component: {fileID: 1676111790}
   m_Layer: 0
-  m_Name: Balloon
+  m_Name: PuzzleBalloon
   m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,5 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48531da715c5a9947b57702824676033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   dir: 1

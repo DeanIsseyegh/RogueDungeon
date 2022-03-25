@@ -1,11 +1,12 @@
 using System.Collections;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour, Health
 {
     [SerializeField] private float maxHealth = 100;
-    private float _currentHealth;
+    [ShowInInspector] private float _currentHealth;
     private SkinnedMeshRenderer _skinnedMeshRenderer;
     private bool _isInvincible;
     private UIManager _uiManager;

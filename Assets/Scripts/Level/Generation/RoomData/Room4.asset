@@ -16,7 +16,7 @@ MonoBehaviour:
   zSize: 7
   hasSpell: 0
   hasItem: 0
-  hasEnemies: 0
+  hasEnemies: 1
   numberOfEnemies: 4
   hasEntrance: 1
   hasExit: 0

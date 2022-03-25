@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Level.Generation;
+using Level.RoomEvents;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -11,7 +13,7 @@ public class RoomGenerator : MonoBehaviour
     [SerializeField] private GameObject entranceTileWithDoor;
     [SerializeField] private GameObject entranceTileWithoutDoor;
     [SerializeField] private GameObject levelParent;
-    [SerializeField] private EventGenerator eventGenerator;
+    [SerializeField] private EventGenerationManager eventGenerationManager;
     [SerializeField] private GameObject roomStartTriggerPrefab;
 
     private Vector3 _xTileSize;
@@ -98,7 +100,7 @@ public class RoomGenerator : MonoBehaviour
         GeneratedRoom generatedRoom = new GeneratedRoom(mapLayout, startingPos, exitLocation, entranceLocation,
             generatedFloor, _tileSize.x, _tileSize.z, entrance, exit, roomParent, roomData, middleOfRoom);
 
-        eventGenerator.GenerateEvent(generatedRoom, previousRoom, sideExits);
+        eventGenerationManager.GenerateEvent(generatedRoom, previousRoom, sideExits);
 
         return generatedRoom;
     }
@@ -131,7 +133,7 @@ public class RoomGenerator : MonoBehaviour
         GeneratedRoom generatedRoom = new GeneratedRoom(mapLayout, startingPos, null, null,
             generatedFloor, _tileSize.x, _tileSize.z, null, null, roomParent, roomData, middleOfRoom);
 
-        eventGenerator.GenerateSideEvent(generatedRoom, isRightSideRoom);
+        eventGenerationManager.GenerateSideEvent(generatedRoom, isRightSideRoom);
 
         return generatedRoom;
     }
