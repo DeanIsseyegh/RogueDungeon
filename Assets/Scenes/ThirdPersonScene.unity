@@ -3624,6 +3624,7 @@ MonoBehaviour:
   closedEntranceTile: {fileID: 1768021477997006, guid: 234d2a5a371bded4daec77deceff0f9b, type: 3}
   balloonEventWall: {fileID: 1135327754445724, guid: d32be3c705e0b714c923aa3dab9676f2, type: 3}
   balloon: {fileID: 1672443178567878, guid: 6d955d69bf0831f4abee5ea9cd433bd4, type: 3}
+  puzzleRewardGenerator: {fileID: 1586050134}
 --- !u!4 &550668415
 Transform:
   m_ObjectHideFlags: 0
@@ -8217,6 +8218,7 @@ Transform:
   - {fileID: 16494835}
   - {fileID: 550668415}
   - {fileID: 569799548}
+  - {fileID: 1586050133}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10181,6 +10183,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1676111788, guid: 6d955d69bf0831f4abee5ea9cd433bd4, type: 3}
+      propertyPath: m_Size.y
+      value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676111788, guid: 6d955d69bf0831f4abee5ea9cd433bd4, type: 3}
+      propertyPath: m_Center.y
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1672443178567878, guid: 6d955d69bf0831f4abee5ea9cd433bd4, type: 3}
       propertyPath: m_Name
       value: Balloon
@@ -11038,6 +11048,53 @@ Transform:
   m_Father: {fileID: 68922253}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1586050132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1586050133}
+  - component: {fileID: 1586050134}
+  m_Layer: 0
+  m_Name: RandomPuzzleRewardGenerator
+  m_TagString: RandomSpellGenerator
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1586050133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586050132}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1161685704}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1586050134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586050132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e91537b250f7294580f5501c3bec0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPool:
+  - {fileID: 6448552892010714933, guid: 4b187d863cb9af74a9f0b3b7c9d0066d, type: 3}
+  - {fileID: 6448552892010714933, guid: ee18daba2110b80448fa8b3c69057c65, type: 3}
+  doesDeplete: 0
 --- !u!4 &1588463819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4493048135532490, guid: 2e9bb0112b1a3428f94ba8550d668f2f, type: 3}

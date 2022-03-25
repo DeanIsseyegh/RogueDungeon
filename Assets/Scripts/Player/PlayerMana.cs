@@ -35,4 +35,16 @@ public class PlayerMana : MonoBehaviour
         CurrentMana = value;
         _uiManager.SetCurrentMana(CurrentMana);
     }
+
+    public void AddMaxMana(float manaToAdd)
+    {
+        maxMana += manaToAdd;
+        CurrentMana += manaToAdd;
+        if (CurrentMana > maxMana)
+        {
+            CurrentMana = maxMana;
+        }
+        _uiManager.SetMaxMana(maxMana);
+        _uiManager.SetCurrentMana(CurrentMana);
+    }
 }

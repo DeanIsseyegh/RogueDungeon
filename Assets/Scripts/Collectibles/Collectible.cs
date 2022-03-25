@@ -17,6 +17,11 @@ public abstract class Collectible : ScriptableObject
     {
         
     }
+    
+    public virtual void ApplyEffects(PlayerMana playerMana)
+    {
+        
+    }
 
     public virtual void ApplyEffects(PlayerSpellManager playerSpellManager)
     {

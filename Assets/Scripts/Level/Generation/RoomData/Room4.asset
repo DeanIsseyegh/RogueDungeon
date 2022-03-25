@@ -18,7 +18,7 @@ MonoBehaviour:
   hasItem: 0
   hasEnemies: 0
   numberOfEnemies: 4
-  hasEntrance: 0
+  hasEntrance: 1
   hasExit: 0
   hasRightSideRoom: 0
   rightSideRoomData: {fileID: 0}

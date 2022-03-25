@@ -30,6 +30,18 @@ public class PlayerHealth : MonoBehaviour, Health
         }
     }
 
+    public void AddMaxHp(float hpToAdd)
+    {
+        maxHealth += hpToAdd;
+        _currentHealth += hpToAdd;
+        if (_currentHealth > maxHealth)
+        {
+            _currentHealth = maxHealth;
+        }
+        _uiManager.SetMaxHealth(maxHealth);
+        _uiManager.SetCurrentHealth(_currentHealth);
+    }
+
     private IEnumerator HitFlashEffect(int numOfTimes)
     {
         for (int i = 0; i < numOfTimes; i++)

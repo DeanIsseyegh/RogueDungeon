@@ -7,6 +7,8 @@ public class EventGenerator : MonoBehaviour
     [SerializeField] private GameObject closedEntranceTile;
     [SerializeField] private GameObject balloonEventWall;
     [SerializeField] private GameObject balloon;
+    [SerializeField] private RandomGameObjGenerator puzzleRewardGenerator;
+    private static readonly Vector3 PuzzleRewardHeightOffset = Vector3.up * 1.5f;
 
     public void GenerateEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom,
         List<GameObject> sideExits)
@@ -29,21 +31,31 @@ public class EventGenerator : MonoBehaviour
 
     private void GeneratePuzzleEvent(GeneratedRoom generatedRoom, bool isRightSideRoom)
     {
-        Vector3 zTile = new Vector3(generatedRoom.ZTileSize, 0, 0);
-        Vector3 startPuzzleWall = generatedRoom.MiddleOfRoom + (zTile * generatedRoom.XSize);
-        
+        List<GameObject> balloonEventWalls = new List<GameObject>();
         for (var i = 0; i <  generatedRoom.ZSize; i++)
         {
             Vector3 tile =  generatedRoom.MapLayout[i][generatedRoom.ZSize/2];
-            Instantiate(balloonEventWall, tile, balloonEventWall.transform.rotation);
+            GameObject wall = Instantiate(balloonEventWall, tile, balloonEventWall.transform.rotation);
+            balloonEventWalls.Add(wall);
         }
 
+        BalloonManager balloonManager = generatedRoom.RoomParent.AddComponent<BalloonManager>();
+        int balloonSpawnColumn = isRightSideRoom ? 1 : generatedRoom.XSize - 1;
         for (int i = 0; i < 3; i++)
         {
-            Vector3 balloonsSpawnPos = generatedRoom.MapLayout[i][1];
-            Instantiate(balloon, balloonsSpawnPos + Vector3.up * (2 + i), balloon.transform.localRotation);
+            Vector3 balloonsSpawnPos = generatedRoom.MapLayout[i][balloonSpawnColumn];
+            GameObject createdBalloon = Instantiate(balloon, balloonsSpawnPos + Vector3.up * (1 + i), balloon.transform.localRotation);
+            balloonManager.Register(createdBalloon);
         }
-        
+
+        RoomEndEvent roomEndEvent = generatedRoom.RoomParent.AddComponent<RoomEndEvent>();
+        roomEndEvent.isRoomComplete = () => balloonManager.AreAllBalloonsDestroyed();
+        roomEndEvent.onRoomComplete = () =>
+        {
+            balloonEventWalls.ForEach(Destroy);
+            puzzleRewardGenerator.Generate(generatedRoom.MiddleOfRoom + PuzzleRewardHeightOffset);
+            roomEndEvent.enabled = false;
+        };
     }
 
     private void GenerateEnemyEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom,

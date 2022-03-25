@@ -13,10 +13,12 @@ public class PlayerInventory : MonoBehaviour
     private PlayerSpellManager _playerSpellManager;
     private NavMeshAgent _playerNavMeshAgent;
     private UIManager _uiManager;
+    private PlayerMana _playerMana;
 
     private void Start()
     {
         _playerHealth = GetComponent<PlayerHealth>();
+        _playerMana = GetComponent<PlayerMana>();
         _playerSpellManager = GetComponent<PlayerSpellManager>();
         _playerNavMeshAgent = GetComponent<NavMeshAgent>();
         _uiManager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
@@ -28,6 +30,7 @@ public class PlayerInventory : MonoBehaviour
         Items.Add(collectible);
         collectible.ApplyEffects(_uiManager);
         collectible.ApplyEffects(_playerHealth);
+        collectible.ApplyEffects(_playerMana);
         collectible.ApplyEffects(_playerSpellManager);
         collectible.ApplyEffects(_playerNavMeshAgent);
     }
