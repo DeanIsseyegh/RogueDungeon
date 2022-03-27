@@ -17,7 +17,7 @@ namespace Level.RoomEvents
             for (var i = 0; i <  generatedRoom.ZSize; i++)
             {
                 Vector3 tile =  generatedRoom.MapLayout[i][generatedRoom.ZSize/2];
-                GameObject wall = Instantiate(shortWall, tile, shortWall.transform.rotation);
+                GameObject wall = Instantiate(shortWall, tile, shortWall.transform.rotation, generatedRoom.RoomParent.transform);
                 balloonEventWalls.Add(wall);
             }
 
@@ -26,7 +26,7 @@ namespace Level.RoomEvents
             for (int i = 0; i < 3; i++)
             {
                 Vector3 balloonsSpawnPos = generatedRoom.MapLayout[i][balloonSpawnColumn];
-                GameObject createdBalloon = Instantiate(balloon, balloonsSpawnPos + Vector3.up * (1 + i), balloon.transform.localRotation);
+                GameObject createdBalloon = Instantiate(balloon, balloonsSpawnPos + Vector3.up * (1 + i), balloon.transform.localRotation, generatedRoom.RoomParent.transform);
                 balloonManager.Register(createdBalloon);
             }
 
