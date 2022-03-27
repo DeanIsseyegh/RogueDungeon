@@ -38,16 +38,16 @@ public class MemorizationPuzzleManager : MonoBehaviour
     {
         _skulls = new List<GameObject>();
         Vector3 currentPos = startPosition.transform.position;
-        for (int z = 0; z < numOfColumns; z++)
+        for (int y = 0; y < numOfColumns; y++)
         {
             for (int x = 0; x < skullsPerRow; x++)
             {
-                GameObject createdSkull = Instantiate(skullPrefab, currentPos, Quaternion.identity);
+                GameObject createdSkull = Instantiate(skullPrefab, currentPos, transform.localRotation, transform);
                 _skulls.Add(createdSkull);
-                currentPos -= new Vector3(spacingInRow, 0, 0);
+                currentPos -= transform.right * spacingInRow;
             }
-            currentPos -= new Vector3(0, spacingInColumn, 0);
-            currentPos.x = startPosition.transform.position.x;
+            currentPos = startPosition.transform.position;
+            currentPos -= Vector3.up * spacingInColumn * (y + 1);
         }
 
         _state = State.STARTING;
@@ -58,7 +58,6 @@ public class MemorizationPuzzleManager : MonoBehaviour
         switch (_state)
         {
             case State.STARTING:
-                Debug.Log("Starting");
                 MarkAllSkullsNotReady();
                 DecideSkullsToBeHit();
                 LightSkullsUp(_skullsPartOfGame);
@@ -66,7 +65,6 @@ public class MemorizationPuzzleManager : MonoBehaviour
                 break;
             
             case State.SKULS_LIGHTING_UP:
-                Debug.Log("Skulls lighting up");
                 bool isAllSkullsLitUp = _skullsPartOfGame.All(it => it.HasLitUp);
                 if (isAllSkullsLitUp)
                 {
@@ -86,7 +84,6 @@ public class MemorizationPuzzleManager : MonoBehaviour
                 break;
             
             case State.FAILED:
-                Debug.Log("Failed");
                 _skullsPartOfGame.Clear();
                 MarkAllSkullsNotReady();
                 UnmarkAllSkulls();

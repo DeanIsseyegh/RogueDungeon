@@ -22,4 +22,5 @@ public class RoomData : ScriptableObject
     public RoomData leftSideRoomData;
     public bool isPuzzleRoom;
     public bool isBalloonRoom;
+    public bool isSkullRoom;
 }

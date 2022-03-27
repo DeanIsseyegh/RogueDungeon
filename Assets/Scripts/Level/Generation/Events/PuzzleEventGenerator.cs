@@ -10,7 +10,8 @@ namespace Level.RoomEvents
         [SerializeField] protected GameObject shortWall;
         [SerializeField] protected GameObject balloon;
         [SerializeField] protected RandomGameObjGenerator puzzleRewardGenerator;
-        public void GeneratePuzzleEvent(GeneratedRoom generatedRoom, bool isRightSideRoom)
+        [SerializeField] protected MemorizationPuzzleManager memorizationPuzzleManager;
+        public void GenerateBalloonEvent(GeneratedRoom generatedRoom, bool isRightSideRoom)
         {
             List<GameObject> balloonEventWalls = new List<GameObject>();
             for (var i = 0; i <  generatedRoom.ZSize; i++)
@@ -21,7 +22,7 @@ namespace Level.RoomEvents
             }
 
             BalloonManager balloonManager = generatedRoom.RoomParent.AddComponent<BalloonManager>();
-            int balloonSpawnColumn = isRightSideRoom ? 1 : generatedRoom.XSize - 1;
+            int balloonSpawnColumn = isRightSideRoom ? 0 : generatedRoom.XSize - 1;
             for (int i = 0; i < 3; i++)
             {
                 Vector3 balloonsSpawnPos = generatedRoom.MapLayout[i][balloonSpawnColumn];
@@ -34,6 +35,22 @@ namespace Level.RoomEvents
             roomEndEvent.onRoomComplete = () =>
             {
                 balloonEventWalls.ForEach(Destroy);
+                puzzleRewardGenerator.Generate(generatedRoom.MiddleOfRoom + PuzzleRewardHeightOffset);
+                roomEndEvent.enabled = false;
+            };
+        }
+
+        public void GenerateSkullEvent(GeneratedRoom generatedRoom, bool isRightSideRoom)
+        {
+            Quaternion rotation = isRightSideRoom ? Quaternion.Euler(0, 90, 0) : Quaternion.Euler(0, -90, 0);
+            int startingRow = (generatedRoom.ZSize / 2) + 1;
+            int startingColumn = isRightSideRoom ? 0 : generatedRoom.XSize - 1;
+            Vector3 startingPos = generatedRoom.MapLayout[startingRow][startingColumn];
+            MemorizationPuzzleManager memoryPuzzleManager = Instantiate(memorizationPuzzleManager, startingPos, rotation, generatedRoom.RoomParent.transform);
+            RoomEndEvent roomEndEvent = generatedRoom.RoomParent.AddComponent<RoomEndEvent>();
+            roomEndEvent.isRoomComplete = () => memoryPuzzleManager.IsGameWon;
+            roomEndEvent.onRoomComplete = () =>
+            {
                 puzzleRewardGenerator.Generate(generatedRoom.MiddleOfRoom + PuzzleRewardHeightOffset);
                 roomEndEvent.enabled = false;
             };

@@ -9,7 +9,7 @@ namespace Level.Generation
         [SerializeField] private PuzzleEventGenerator puzzleEventGenerator;
         [SerializeField] private EnemyEventGenerator enemyEventGenerator;
         [SerializeField] private CollectibleEventGenerator collectibleEventGenerator;
-        
+
         public void GenerateEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom,
             List<GameObject> sideExits)
         {
@@ -23,9 +23,15 @@ namespace Level.Generation
         public void GenerateSideEvent(GeneratedRoom generatedRoom, bool isRightSideRoom)
         {
             RoomData roomData = generatedRoom.RoomData;
-            if (roomData.isPuzzleRoom && roomData.isBalloonRoom)
+            if (roomData.isPuzzleRoom)
             {
-                puzzleEventGenerator.GeneratePuzzleEvent(generatedRoom, isRightSideRoom);
+                if (roomData.isBalloonRoom)
+                {
+                    puzzleEventGenerator.GenerateBalloonEvent(generatedRoom, isRightSideRoom);
+                } else if (roomData.isSkullRoom)
+                {
+                    puzzleEventGenerator.GenerateSkullEvent(generatedRoom, isRightSideRoom);
+                }
             }
         }
     }
