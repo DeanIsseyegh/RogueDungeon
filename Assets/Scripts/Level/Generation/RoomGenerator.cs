@@ -61,11 +61,10 @@ public class RoomGenerator : MonoBehaviour
 
         RightSideExitLocation rightSideExitLocation = RightSideExitLocation.None();
         GeneratedRoom rightSideRoom = null;
-        GameObject rightSideExit = null;
         if (roomData.hasRightSideRoom)
         {
             rightSideExitLocation = new RightSideExitLocation(mapLayout, _xTileSize);
-            rightSideExit = CreateRightSideExit(rightSideExitLocation, roomParent);
+            GameObject rightSideExit = CreateRightSideExit(rightSideExitLocation, roomParent);
             sideExits.Add(rightSideExit);
             Vector3 sideRoomStartingPos = rightSideExitLocation.WithoutOffset +
                                           -(roomData.rightSideRoomData.xSize * _xTileSize) +
@@ -76,11 +75,10 @@ public class RoomGenerator : MonoBehaviour
 
         LeftSideExitLocation leftSideExitLocation = LeftSideExitLocation.None();
         GeneratedRoom leftSideRoom = null;
-        GameObject leftSideExit = null;
         if (roomData.hasLeftSideRoom)
         {
             leftSideExitLocation = new LeftSideExitLocation(mapLayout, _xTileSize);
-            leftSideExit = CreateLeftSideExit(leftSideExitLocation, roomParent);
+            GameObject leftSideExit = CreateLeftSideExit(leftSideExitLocation, roomParent);
             sideExits.Add(leftSideExit);
             Vector3 sideRoomStartingPos = leftSideExitLocation.WithoutOffset +
                                           (_xTileSize) +
