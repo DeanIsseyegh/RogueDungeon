@@ -10,8 +10,8 @@ public class EnemyAI : MonoBehaviour
         var player = GameObject.FindWithTag("Player");
         var navMeshAgent = GetComponent<NavMeshAgent>();
         var animator = GetComponent<Animator>();
-        var enemyAttack = GetComponent<EnemyAttack>();
-        var enemyStateCtx = new EnemyStateCtx(gameObject, navMeshAgent, animator, player, enemyAttack);
+        var enemyAttacks = GetComponents<EnemyAttack>();
+        var enemyStateCtx = new EnemyStateCtx(gameObject, navMeshAgent, animator, player, enemyAttacks);
         _currentState = new Idle(enemyStateCtx);
     }
 

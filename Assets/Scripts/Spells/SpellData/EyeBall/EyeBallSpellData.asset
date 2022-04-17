@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellPrefab: {fileID: 6140006693554785414, guid: ecb53fb248e062c4a88ce8b3033d48b7, type: 3}
   spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
-  animationName: Attack
+  animationName: EyeBallSpellAttack
   spellIndicator: Line
   manaCost: 10
   spellLifeTime: 3

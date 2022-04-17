@@ -64,12 +64,6 @@ public class EnemyState
         return distance < visDistance;
     }
 
-    protected bool CanAttackPlayer()
-    {
-        float distance = Vector3.Distance(Ctx.Player.transform.position, Ctx.Enemy.transform.position);
-        return distance < Ctx.EnemyAttack.AttackDistance();
-    }
-
     protected void RotateTowardsPlayer()
     {
         var direction = (Ctx.Player.transform.position - Ctx.Enemy.transform.position).normalized;

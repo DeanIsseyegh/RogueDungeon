@@ -7,15 +7,15 @@ public class EnemyStateCtx
     public NavMeshAgent MeshAgent { get; }
     public Animator Animator { get; }
     public GameObject Player { get; }
-    public EnemyAttack EnemyAttack { get; }
+    public EnemyAttack[] EnemyAttacks { get; }
 
     public EnemyStateCtx(GameObject enemy, NavMeshAgent navMeshAgent, Animator animator, GameObject player,
-        EnemyAttack enemyEnemyAttack)
+        EnemyAttack[] enemyEnemyAttacks)
     {
         Enemy = enemy;
         MeshAgent = navMeshAgent;
         Animator = animator;
         Player = player;
-        EnemyAttack = enemyEnemyAttack;
+        EnemyAttacks = enemyEnemyAttacks;
     }
 }

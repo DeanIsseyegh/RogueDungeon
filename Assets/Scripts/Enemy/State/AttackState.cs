@@ -1,22 +1,25 @@
-﻿public class AttackState : EnemyState
-{
+﻿using UnityEngine;
 
-    public AttackState(EnemyStateCtx ctx) : base(ctx)
+public class AttackState : EnemyState
+{
+    private readonly EnemyAttack _attack;
+    public AttackState(EnemyStateCtx ctx, EnemyAttack nextChosenAttack) : base(ctx)
     {
         Name = STATE.ATTACK;
+        _attack = nextChosenAttack;
     }
 
     public override void Enter()
     {
         Ctx.MeshAgent.ResetPath();
-        Ctx.EnemyAttack.DoAttack();
+        _attack.DoAttack();
         base.Enter();
     }
 
     public override void Update()
     {
         RotateTowardsPlayer();
-        if (!Ctx.EnemyAttack.IsAttacking())
+        if (!_attack.IsAttacking())
         {
             NextState = new PursueState(Ctx);
             Stage = EVENT.EXIT;

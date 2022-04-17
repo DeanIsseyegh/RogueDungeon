@@ -6,8 +6,8 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(fileName = "New Room", menuName = "Room Data")]
 public class RoomData : ScriptableObject
 {
-    public float xSize;
-    public float zSize;
+    public int xSize;
+    public int zSize;
     public bool hasSpell;
     public bool hasItem;
     public bool hasEnemies;

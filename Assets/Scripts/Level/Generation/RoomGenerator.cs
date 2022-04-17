@@ -93,7 +93,7 @@ public class RoomGenerator : MonoBehaviour
             rightSideExitLocation.WithoutOffset, leftSideExitLocation.WithoutOffset
         };
         CreateWalls(mapLayout, _zTileSize, _xTileSize, noWallPositions, roomParent);
-        
+
         Vector3 middleOfRoom = CalculateMiddleOfRoom(roomData, startingPos, _tileSize);
         GeneratedRoom generatedRoom = new GeneratedRoom(mapLayout, startingPos, exitLocation, entranceLocation,
             generatedFloor, _tileSize.x, _tileSize.z, entrance, exit, roomParent, roomData, middleOfRoom);
@@ -103,7 +103,8 @@ public class RoomGenerator : MonoBehaviour
         return generatedRoom;
     }
 
-    public GeneratedRoom GenerateSideRoom(Vector3 startingPos, RoomData roomData, Vector3 previousRoomEntrance, bool isRightSideRoom)
+    public GeneratedRoom GenerateSideRoom(Vector3 startingPos, RoomData roomData, Vector3 previousRoomEntrance,
+        bool isRightSideRoom)
     {
         GameObject roomObj = new GameObject(roomData.name);
         GameObject roomParent = Instantiate(roomObj, levelParent.transform);
@@ -125,6 +126,7 @@ public class RoomGenerator : MonoBehaviour
         {
             noWallPositions.Add(previousRoomEntrance + _xTileSize);
         }
+
         CreateWalls(mapLayout, _zTileSize, _xTileSize, noWallPositions, roomParent);
 
         Vector3 middleOfRoom = CalculateMiddleOfRoom(roomData, startingPos, _tileSize);
@@ -136,10 +138,10 @@ public class RoomGenerator : MonoBehaviour
         return generatedRoom;
     }
 
-    public Vector3 CalculateStartPosBasedOnPrevRoom(GeneratedRoom prevRoom, RoomData nextRoom)
+    public Vector3 CalculateStartPosBasedOnPrevRoom(GeneratedRoom prevRoom, RoomData newRoom)
     {
-        var xOffset = (prevRoom.StartPos.x + (prevRoom.XSize - nextRoom.xSize) / 2 * _tileSize.x);
-        Vector3 newRoomStartPos = prevRoom.ExitLocation.WithoutOffset + new Vector3(xOffset, 0, _tileSize.z);
+        var xOffset = newRoom.xSize / 2 * _tileSize.x;
+        Vector3 newRoomStartPos = prevRoom.ExitLocation.WithoutOffset + new Vector3(-xOffset, 0, _tileSize.z);
         return newRoomStartPos;
     }
 
