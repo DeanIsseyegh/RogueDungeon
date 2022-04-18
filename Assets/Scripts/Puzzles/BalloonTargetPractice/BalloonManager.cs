@@ -9,7 +9,11 @@ public class BalloonManager : MonoBehaviour
     private readonly List<GameObject> balloons = new List<GameObject>();
     private bool _isAllBalloonsDestroyed;
 
-    // Update is called once per frame
+    public void StartGame()
+    {
+        balloons.ForEach( it => it.GetComponent<MoveRight>().enabled = true );
+    }
+    
     void Update()
     {
         if (_isAllBalloonsDestroyed) return;

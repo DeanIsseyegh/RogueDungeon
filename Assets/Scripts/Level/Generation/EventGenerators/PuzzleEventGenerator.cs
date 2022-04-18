@@ -13,6 +13,7 @@ namespace Level.RoomEvents
         [SerializeField] protected MemorizationPuzzleManager memorizationPuzzleManager;
         public void GenerateBalloonEvent(GeneratedRoom generatedRoom, bool isRightSideRoom)
         {
+            var emptyGameObj = CreateTriggerInRoom(generatedRoom);
             List<GameObject> balloonEventWalls = new List<GameObject>();
             for (var i = 0; i <  generatedRoom.ZSize; i++)
             {
@@ -30,6 +31,8 @@ namespace Level.RoomEvents
                 balloonManager.Register(createdBalloon);
             }
 
+            PuzzleRoomStartEvent puzzleRoomStartEvent = emptyGameObj.AddComponent<PuzzleRoomStartEvent>();
+            puzzleRoomStartEvent.OnRoomStart = () => balloonManager.StartGame();
             RoomEndEvent roomEndEvent = generatedRoom.RoomParent.AddComponent<RoomEndEvent>();
             roomEndEvent.IsRoomComplete = () => balloonManager.AreAllBalloonsDestroyed();
             roomEndEvent.OnRoomComplete = () =>
