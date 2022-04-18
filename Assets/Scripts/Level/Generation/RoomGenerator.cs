@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Level.Generation;
-using Level.RoomEvents;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -14,7 +13,6 @@ public class RoomGenerator : MonoBehaviour
     [SerializeField] private GameObject entranceTileWithoutDoor;
     [SerializeField] private GameObject levelParent;
     [SerializeField] private EventGenerationManager eventGenerationManager;
-    [SerializeField] private GameObject roomStartTriggerPrefab;
 
     private Vector3 _xTileSize;
     private Vector3 _zTileSize;
@@ -92,11 +90,11 @@ public class RoomGenerator : MonoBehaviour
             entranceLocation.WithoutOffset, exitLocation.WithoutOffset,
             rightSideExitLocation.WithoutOffset, leftSideExitLocation.WithoutOffset
         };
-        CreateWalls(mapLayout, _zTileSize, _xTileSize, noWallPositions, roomParent);
+        GeneratedWalls generatedWalls = CreateWalls(mapLayout, _zTileSize, _xTileSize, noWallPositions, roomParent);
 
         Vector3 middleOfRoom = CalculateMiddleOfRoom(roomData, startingPos, _tileSize);
         GeneratedRoom generatedRoom = new GeneratedRoom(mapLayout, startingPos, exitLocation, entranceLocation,
-            generatedFloor, _tileSize.x, _tileSize.z, entrance, exit, roomParent, roomData, middleOfRoom);
+            generatedFloor, _tileSize.x, _tileSize.z, entrance, exit, roomParent, roomData, middleOfRoom, generatedWalls);
 
         eventGenerationManager.GenerateEvent(generatedRoom, previousRoom, sideExits);
 
@@ -127,11 +125,11 @@ public class RoomGenerator : MonoBehaviour
             noWallPositions.Add(previousRoomEntrance + _xTileSize);
         }
 
-        CreateWalls(mapLayout, _zTileSize, _xTileSize, noWallPositions, roomParent);
+        GeneratedWalls generatedWalls = CreateWalls(mapLayout, _zTileSize, _xTileSize, noWallPositions, roomParent);
 
         Vector3 middleOfRoom = CalculateMiddleOfRoom(roomData, startingPos, _tileSize);
         GeneratedRoom generatedRoom = new GeneratedRoom(mapLayout, startingPos, null, null,
-            generatedFloor, _tileSize.x, _tileSize.z, null, null, roomParent, roomData, middleOfRoom);
+            generatedFloor, _tileSize.x, _tileSize.z, null, null, roomParent, roomData, middleOfRoom, generatedWalls);
 
         eventGenerationManager.GenerateSideEvent(generatedRoom, isRightSideRoom);
 
@@ -209,7 +207,7 @@ public class RoomGenerator : MonoBehaviour
         return createdExit;
     }
 
-    private void CreateWalls(List<List<Vector3>> mapLayout, Vector3 zTileSize, Vector3 xTileSize,
+    private GeneratedWalls CreateWalls(List<List<Vector3>> mapLayout, Vector3 zTileSize, Vector3 xTileSize,
         List<Vector3> ignorePositions, GameObject roomParent)
     {
         List<Vector3> firstRow = mapLayout.First().Where(pos => !ignorePositions.Contains(pos)).ToList();
@@ -219,15 +217,16 @@ public class RoomGenerator : MonoBehaviour
         List<Vector3> leftColumn = mapLayout.Select(row => row.Last()).Where(pos => !ignorePositions.Contains(pos))
             .ToList();
 
-        firstRow.ForEach(CreateWall(-zTileSize / 2, Quaternion.Euler(0f, 0, 0f), roomParent));
-        lastRow.ForEach(CreateWall(zTileSize / 2, Quaternion.Euler(0f, 180, 0f), roomParent));
-        rightColumn.ForEach(CreateWall(-xTileSize / 2, Quaternion.Euler(0f, 90f, 0f), roomParent));
-        leftColumn.ForEach(CreateWall(xTileSize / 2, Quaternion.Euler(0f, 270f, 0f), roomParent));
+        List<GameObject> firstRowWalls = firstRow.Select(CreateWall(-zTileSize / 2, Quaternion.Euler(0f, 0, 0f), roomParent)).ToList();
+        List<GameObject> lastRowWalls = lastRow.Select(CreateWall(zTileSize / 2, Quaternion.Euler(0f, 180, 0f), roomParent)).ToList();
+        List<GameObject> rightColumnWalls = rightColumn.Select(CreateWall(-xTileSize / 2, Quaternion.Euler(0f, 90f, 0f), roomParent)).ToList();
+        List<GameObject> leftColumnWalls = leftColumn.Select(CreateWall(xTileSize / 2, Quaternion.Euler(0f, 270f, 0f), roomParent)).ToList();
+        return new GeneratedWalls(firstRowWalls, lastRowWalls, rightColumnWalls, leftColumnWalls);
     }
 
-    private Action<Vector3> CreateWall(Vector3 offset, Quaternion rotation, GameObject roomParent)
+    private Func<Vector3, GameObject> CreateWall(Vector3 offset, Quaternion rotation, GameObject roomParent)
     {
-        return pos => { Instantiate(wallTile, pos + offset, rotation, roomParent.transform); };
+        return pos => Instantiate(wallTile, pos + offset, rotation, roomParent.transform);
     }
 
     private static Vector3 CalculateMiddleOfRoom(RoomData roomData, Vector3 startingPos, Vector3 tileSize)

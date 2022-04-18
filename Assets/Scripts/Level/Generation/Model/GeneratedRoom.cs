@@ -19,10 +19,12 @@ public class GeneratedRoom
     public int XSize { get; }
     public int ZSize { get; }
     public Vector3 MiddleOfRoom { get; }
+    public GeneratedWalls GeneratedWalls { get; }
 
     public GeneratedRoom(List<List<Vector3>> mapLayout, Vector3 startPos, RoomGenerator.ExitLocation exitLocation,
         RoomGenerator.EntranceLocation entranceLocation, List<NavMeshSurface> navMeshSurfaces, float xTileSize,
-        float zTileSize, GameObject entrance, GameObject exit, GameObject roomParent, RoomData roomData, Vector3 middleOfRoom)
+        float zTileSize, GameObject entrance, GameObject exit, GameObject roomParent, RoomData roomData, Vector3 middleOfRoom,
+        GeneratedWalls generatedWalls)
     {
         MapLayout = mapLayout;
         EntranceLocation = entranceLocation;
@@ -38,6 +40,7 @@ public class GeneratedRoom
         RoomParent = roomParent;
         RoomData = roomData;
         MiddleOfRoom = middleOfRoom;
+        GeneratedWalls = generatedWalls;
     }
 
     public void BuildNavmesh()
