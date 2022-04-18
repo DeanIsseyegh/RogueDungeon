@@ -12791,7 +12791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bb3162066845a8b51f6ece510ffabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallDeco: {fileID: 0}
+  wallDeco: {fileID: 11400000, guid: d2a704c66a1effe4085f0d84196da8cf, type: 2}
 --- !u!4 &1563280681
 Transform:
   m_ObjectHideFlags: 0
