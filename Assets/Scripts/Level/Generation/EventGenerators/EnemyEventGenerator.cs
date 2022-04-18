@@ -35,10 +35,11 @@ namespace Level.RoomEvents
         private static List<Vector3> GenerateEnemySpawnPos(GeneratedRoom generatedRoom, int enemiesToGenerate, List<List<Vector3>> mapLayout)
         {
             List<Vector3> spawnPositions = new List<Vector3>();
+            int awayFromWallOffset = 1;
             for (int i = 0; i < enemiesToGenerate; i++)
             {
-                int randomXPos = Random.Range(0, generatedRoom.XSize);
-                int randomZPos = Random.Range(0, generatedRoom.ZSize);
+                int randomXPos = Random.Range(awayFromWallOffset, generatedRoom.XSize - awayFromWallOffset);
+                int randomZPos = Random.Range(awayFromWallOffset, generatedRoom.ZSize - awayFromWallOffset);
 
                 Vector3 spawnPos = mapLayout[randomZPos][randomXPos];
                 spawnPositions.Add(spawnPos);

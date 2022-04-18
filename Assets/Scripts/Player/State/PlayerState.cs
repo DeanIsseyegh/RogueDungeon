@@ -12,10 +12,6 @@ namespace Player.State
         protected EVENT Stage;
         protected PlayerState NextState;
         protected PlayerStateCtx Ctx;
-        protected List<string> _animationTriggersToResetOnMove;
-
-        private float visDistance = 10f;
-        private float rotateSpeed = 10f;
 
         public enum STATE
         {
@@ -34,7 +30,7 @@ namespace Player.State
         public PlayerState(PlayerStateCtx ctx)
         {
             Ctx = ctx;
-            _animationTriggersToResetOnMove = new List<string> {"BasicSpell"};
+            new List<string> {"BasicSpell"};
         }
 
         public virtual void Enter()
