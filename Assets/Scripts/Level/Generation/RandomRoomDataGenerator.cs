@@ -19,6 +19,10 @@ public class RandomRoomDataGenerator : MonoBehaviour
     [SerializeField] private int[] puzzleRoomXSizes = {5, 7};
     [SerializeField] private int[] puzzleRoomZSizes = {3, 5};
 
+    [SerializeField] private int[] numOfMainRoomSizes = {5,6,7};
+    [SerializeField] private int initialEnemyCounter = 2;
+    [SerializeField] private int enemyCounterIncreasePerRoom = 2;
+
     private static int GenerateRandomValue(int[] possibleValues)
     {
         int randomIndex = Random.Range(0, possibleValues.Length);
@@ -27,10 +31,7 @@ public class RandomRoomDataGenerator : MonoBehaviour
 
     public List<RoomData> GenerateRoomData()
     {
-        int numOfMainRooms = Random.Range(5, 9);
-        int initialEnemyCounter = 2;
-        int enemyCounterIncreasePerRoom = 2;
-
+        int numOfMainRooms = GenerateRandomValue(numOfMainRoomSizes);
         List<RoomData> roomData = new List<RoomData>();
 
         Func<int> xSizeRangeHallwayRoom = () => GenerateRandomValue(hallWayXSizes);
