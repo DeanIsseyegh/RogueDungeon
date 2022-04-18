@@ -18,8 +18,8 @@ namespace Level.RoomEvents
             ShutEntrance(generatedRoom.EntranceLocation, previousRoom, startEvent);
 
             RoomEndEvent roomEndEvent = emptyGameObj.AddComponent<RoomEndEvent>();
-            roomEndEvent.isRoomComplete = () => startEvent.HasEventFinished();
-            roomEndEvent.onRoomComplete = () =>
+            roomEndEvent.IsRoomComplete = () => startEvent.HasEventFinished();
+            roomEndEvent.OnRoomComplete = () =>
             {
                 startEvent.enabled = false;
 

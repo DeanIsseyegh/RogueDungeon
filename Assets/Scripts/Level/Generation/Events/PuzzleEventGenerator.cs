@@ -31,8 +31,8 @@ namespace Level.RoomEvents
             }
 
             RoomEndEvent roomEndEvent = generatedRoom.RoomParent.AddComponent<RoomEndEvent>();
-            roomEndEvent.isRoomComplete = () => balloonManager.AreAllBalloonsDestroyed();
-            roomEndEvent.onRoomComplete = () =>
+            roomEndEvent.IsRoomComplete = () => balloonManager.AreAllBalloonsDestroyed();
+            roomEndEvent.OnRoomComplete = () =>
             {
                 balloonEventWalls.ForEach(Destroy);
                 puzzleRewardGenerator.Generate(generatedRoom.MiddleOfRoom + PuzzleRewardHeightOffset);
@@ -50,11 +50,11 @@ namespace Level.RoomEvents
             MemorizationPuzzleManager memoryPuzzleManager = Instantiate(memorizationPuzzleManager, startingPos, rotation, generatedRoom.RoomParent.transform);
             
             PuzzleRoomStartEvent puzzleRoomStartEvent = emptyGameObj.AddComponent<PuzzleRoomStartEvent>();
-            puzzleRoomStartEvent.StartAction = () => memoryPuzzleManager.StartGame();
+            puzzleRoomStartEvent.OnRoomStart = () => memoryPuzzleManager.StartGame();
             
             RoomEndEvent roomEndEvent = generatedRoom.RoomParent.AddComponent<RoomEndEvent>();
-            roomEndEvent.isRoomComplete = () => memoryPuzzleManager.IsGameWon;
-            roomEndEvent.onRoomComplete = () =>
+            roomEndEvent.IsRoomComplete = () => memoryPuzzleManager.IsGameWon;
+            roomEndEvent.OnRoomComplete = () =>
             {
                 puzzleRewardGenerator.Generate(generatedRoom.MiddleOfRoom + PuzzleRewardHeightOffset);
                 roomEndEvent.enabled = false;

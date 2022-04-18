@@ -3,16 +3,16 @@ using UnityEngine;
 
 public class RoomEndEvent : MonoBehaviour
 {
-    public Func<bool> isRoomComplete;
-    public Action onRoomComplete;
+    public Func<bool> IsRoomComplete { private get; set; }
+    public Action OnRoomComplete { private get; set; }
 
     void Update()
     {
-        if (isRoomComplete != null)
+        if (IsRoomComplete != null)
         {
-            if (isRoomComplete.Invoke())
+            if (IsRoomComplete.Invoke())
             {
-                onRoomComplete.Invoke();
+                OnRoomComplete.Invoke();
             }
         }
     }

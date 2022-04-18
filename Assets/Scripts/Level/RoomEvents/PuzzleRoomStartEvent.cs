@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PuzzleRoomStartEvent : RoomStartEvent
 {
-    public Action StartAction { private get; set; }
+    public Action OnRoomStart { private get; set; }
 
     protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            StartAction.Invoke();
+            OnRoomStart.Invoke();
             GetComponent<BoxCollider>().enabled = false;
         }
     }
