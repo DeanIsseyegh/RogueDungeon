@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -508,6 +509,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      white_zoom_14: 21300028
+      white_zoom_13: 21300026
+      white_zoom_4: 21300008
+      white_zoom_3: 21300006
+      white_zoom_0: 21300000
+      white_zoom_5: 21300010
+      white_zoom_7: 21300014
+      white_zoom_10: 21300020
+      white_zoom_15: 21300030
+      white_zoom_12: 21300024
+      white_zoom_1: 21300002
+      white_zoom_2: 21300004
+      white_zoom_6: 21300012
+      white_zoom_11: 21300022
+      white_zoom_9: 21300018
+      white_zoom_8: 21300016
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

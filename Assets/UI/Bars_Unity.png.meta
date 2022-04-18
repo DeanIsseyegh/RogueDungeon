@@ -141,6 +141,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1072,6 +1073,46 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Bars_Unity_37: 21300074
+      Bars_Unity_0: 21300000
+      Bars_Unity_17: 21300034
+      Bars_Unity_22: 21300044
+      Bars_Unity_30: 21300060
+      Bars_Unity_4: 21300008
+      Bars_Unity_38: 21300076
+      Bars_Unity_16: 21300032
+      Bars_Unity_13: 21300026
+      Bars_Unity_24: 21300048
+      Bars_Unity_31: 21300062
+      Bars_Unity_9: 21300018
+      Bars_Unity_35: 21300070
+      Bars_Unity_11: 21300022
+      Bars_Unity_7: 21300014
+      Bars_Unity_34: 21300068
+      Bars_Unity_18: 21300036
+      Bars_Unity_2: 21300004
+      Bars_Unity_32: 21300064
+      Bars_Unity_23: 21300046
+      Bars_Unity_14: 21300028
+      Bars_Unity_29: 21300058
+      Bars_Unity_26: 21300052
+      Bars_Unity_8: 21300016
+      Bars_Unity_28: 21300056
+      Bars_Unity_6: 21300012
+      Bars_Unity_19: 21300038
+      Bars_Unity_10: 21300020
+      Bars_Unity_27: 21300054
+      Bars_Unity_21: 21300042
+      Bars_Unity_3: 21300006
+      Bars_Unity_15: 21300030
+      Bars_Unity_25: 21300050
+      Bars_Unity_1: 21300002
+      Bars_Unity_36: 21300072
+      Bars_Unity_20: 21300040
+      Bars_Unity_33: 21300066
+      Bars_Unity_5: 21300010
+      Bars_Unity_12: 21300024
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
