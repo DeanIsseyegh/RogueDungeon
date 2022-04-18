@@ -265,6 +265,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4493048135532490, guid: 2e9bb0112b1a3428f94ba8550d668f2f, type: 3}
   m_PrefabInstance: {fileID: 767045700}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &35075874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 35075876}
+  - component: {fileID: 35075875}
+  m_Layer: 0
+  m_Name: RandomRoomDataGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &35075875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35075874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6245bb4fbeb44b5bbb247bf1b7288ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hallWayXSizes: 0300000005000000
+  hallWayZSizes: 0300000005000000
+  enemyRoomXSizes: 050000000700000009000000
+  enemyRoomZSizes: 050000000700000009000000
+  puzzleRoomXSizes: 0500000007000000
+  puzzleRoomZSizes: 0300000005000000
+  numOfMainRoomSizes: 050000000600000007000000
+  initialEnemyCounter: 2
+  enemyCounterIncreasePerRoom: 2
+--- !u!4 &35075876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35075874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1161685704}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &42192294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1112197981072686, guid: 5812f95c175b34e7a8e5a7566a43a0ef, type: 3}
@@ -8925,12 +8977,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingPos: {x: -4, y: 0, z: -4}
+  randomRoomDataGenerator: {fileID: 35075875}
   roomGenerator: {fileID: 16494836}
-  roomsData:
+  testRoomData:
   - {fileID: 11400000, guid: a8a8f1d67e8e2574eb79aa51222b498d, type: 2}
   - {fileID: 11400000, guid: 64327f1bd6d77c742ab95ad03c2adce5, type: 2}
   - {fileID: 11400000, guid: 9d1bc06533c57bf4abd51460dde8266a, type: 2}
   - {fileID: 11400000, guid: 820794a6c1f3c11498be59675029b8ba, type: 2}
+  useTestData: 1
 --- !u!4 &1161685704
 Transform:
   m_ObjectHideFlags: 0
@@ -8946,6 +9000,7 @@ Transform:
   - {fileID: 16494835}
   - {fileID: 550668415}
   - {fileID: 334442569}
+  - {fileID: 35075876}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

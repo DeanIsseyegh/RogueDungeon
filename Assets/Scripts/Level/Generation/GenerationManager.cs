@@ -8,11 +8,19 @@ public class GenerationManager : MonoBehaviour
     [SerializeField] private RandomRoomDataGenerator randomRoomDataGenerator;
     [SerializeField] private RoomGenerator roomGenerator;
     [SerializeField] private List<RoomData> testRoomData;
+    [SerializeField] private bool useTestData = false;
 
     void Start()
     {
-        List<RoomData> roomData = randomRoomDataGenerator.GenerateRoomData();
-        GenerateRooms(roomData);
+        if (useTestData)
+        {
+            GenerateRooms(testRoomData);
+        }
+        else
+        {
+            List<RoomData> roomData = randomRoomDataGenerator.GenerateRoomData();
+            GenerateRooms(roomData);
+        }
     }
 
     public void GenerateRooms(List<RoomData> roomsData)
