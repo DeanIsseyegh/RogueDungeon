@@ -26,6 +26,7 @@ public class MemorizationPuzzleManager : MonoBehaviour
 
     private enum State
     {
+        NOT_STARTED,
         STARTING,
         SKULS_LIGHTING_UP,
         PLAYING,
@@ -50,6 +51,11 @@ public class MemorizationPuzzleManager : MonoBehaviour
             currentPos -= Vector3.up * spacingInColumn * (y + 1);
         }
 
+        _state = State.NOT_STARTED;
+    }
+
+    public void StartGame()
+    {
         _state = State.STARTING;
     }
 

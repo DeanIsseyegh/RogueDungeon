@@ -42,11 +42,16 @@ namespace Level.RoomEvents
 
         public void GenerateSkullEvent(GeneratedRoom generatedRoom, bool isRightSideRoom)
         {
+            var emptyGameObj = CreateTriggerInRoom(generatedRoom);
             Quaternion rotation = isRightSideRoom ? Quaternion.Euler(0, 90, 0) : Quaternion.Euler(0, -90, 0);
             int startingRow = isRightSideRoom ? (generatedRoom.ZSize / 2) + 1 : (generatedRoom.ZSize / 2) - 1;
             int startingColumn = isRightSideRoom ? 0 : generatedRoom.XSize - 1;
             Vector3 startingPos = generatedRoom.MapLayout[startingRow][startingColumn];
             MemorizationPuzzleManager memoryPuzzleManager = Instantiate(memorizationPuzzleManager, startingPos, rotation, generatedRoom.RoomParent.transform);
+            
+            PuzzleRoomStartEvent puzzleRoomStartEvent = emptyGameObj.AddComponent<PuzzleRoomStartEvent>();
+            puzzleRoomStartEvent.StartAction = () => memoryPuzzleManager.StartGame();
+            
             RoomEndEvent roomEndEvent = generatedRoom.RoomParent.AddComponent<RoomEndEvent>();
             roomEndEvent.isRoomComplete = () => memoryPuzzleManager.IsGameWon;
             roomEndEvent.onRoomComplete = () =>
