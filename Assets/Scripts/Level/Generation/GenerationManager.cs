@@ -38,6 +38,6 @@ public class GenerationManager : MonoBehaviour
             prevRoom = newRoom;
         }
 
-        generatedRooms.ForEach(room => room.BuildNavmesh());
+        generatedRooms.Last().BuildNavmesh();
     }
 }
