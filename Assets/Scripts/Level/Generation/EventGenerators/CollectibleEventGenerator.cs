@@ -30,5 +30,17 @@ namespace Level.RoomEvents
                 roomEndEvent.enabled = false;
             };
         }
+
+        private static CollectibleRoomStartEvent AddRoomStartEvent(RoomData roomData, GameObject emptyGameObj)
+        {
+            if (roomData.hasSpell)
+            {
+                return emptyGameObj.AddComponent<SpellRoomStartEvent>();
+            }
+            else
+            {
+                return emptyGameObj.AddComponent<ItemRoomStartEvent>();
+            }
+        }
     }
 }

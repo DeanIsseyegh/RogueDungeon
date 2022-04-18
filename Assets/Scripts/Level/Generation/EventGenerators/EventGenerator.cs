@@ -1,26 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using Level.RoomEvents;
+﻿using Level.RoomEvents;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public abstract class EventGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject closedEntranceTile;
-
-    protected static List<Vector3> GenerateEnemySpawnPos(GeneratedRoom generatedRoom, int enemiesToGenerate, List<List<Vector3>> mapLayout)
-    {
-        List<Vector3> spawnPositions = new List<Vector3>();
-        for (int i = 0; i < enemiesToGenerate; i++)
-        {
-            int randomXPos = Random.Range(0, generatedRoom.XSize);
-            int randomZPos = Random.Range(0, generatedRoom.ZSize);
-
-            Vector3 spawnPos = mapLayout[randomZPos][randomXPos];
-            spawnPositions.Add(spawnPos);
-        }
-        return spawnPositions;
-    }
 
     protected void ShutEntrance(RoomGenerator.EntranceLocation entranceLocation, GeneratedRoom previousRoom,
         RoomStartEvent startEvent)
@@ -47,15 +30,4 @@ public abstract class EventGenerator : MonoBehaviour
         return emptyGameObj;
     }
 
-    protected static CollectibleRoomStartEvent AddRoomStartEvent(RoomData roomData, GameObject emptyGameObj)
-    {
-        if (roomData.hasSpell)
-        {
-            return emptyGameObj.AddComponent<SpellRoomStartEvent>();
-        }
-        else
-        {
-            return emptyGameObj.AddComponent<ItemRoomStartEvent>();
-        }
-    }
 }

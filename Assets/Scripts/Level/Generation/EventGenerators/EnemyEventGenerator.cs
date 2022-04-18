@@ -31,5 +31,19 @@ namespace Level.RoomEvents
                 roomEndEvent.enabled = false;
             };
         }
+        
+        private static List<Vector3> GenerateEnemySpawnPos(GeneratedRoom generatedRoom, int enemiesToGenerate, List<List<Vector3>> mapLayout)
+        {
+            List<Vector3> spawnPositions = new List<Vector3>();
+            for (int i = 0; i < enemiesToGenerate; i++)
+            {
+                int randomXPos = Random.Range(0, generatedRoom.XSize);
+                int randomZPos = Random.Range(0, generatedRoom.ZSize);
+
+                Vector3 spawnPos = mapLayout[randomZPos][randomXPos];
+                spawnPositions.Add(spawnPos);
+            }
+            return spawnPositions;
+        }
     }
 }
