@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 2, z: 0.25}
   prefab: {fileID: 2259097188338854203, guid: 9a1f9494f13714e4c97beaaedfe181ef, type: 3}
+  rngWeighting: 4

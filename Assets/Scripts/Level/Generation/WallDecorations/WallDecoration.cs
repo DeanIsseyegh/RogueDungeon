@@ -7,4 +7,5 @@ public class WallDecoration : ScriptableObject
 {
     public Vector3 offset;
     public GameObject prefab;
+    public int rngWeighting;
 }
