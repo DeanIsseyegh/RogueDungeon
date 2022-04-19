@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f61568514c19624ea737d70a9c3fdfa, type: 3}
+  m_Name: SBS Space 5
+  m_EditorClassIdentifier: 
+  sBSSkybox:
+    baseSphere:
+      showBaseSphereSettings: 0
+      color: {r: 0, g: 0, b: 0, a: 1}
+      skyType: 0
+    starSphere:
+      showStarSphereSettings: 0
+      showStars: 1
+      starTexture: {fileID: 2800000, guid: 148420f5c3572a645a254bb8a8eb8b14, type: 3}
+      colorMask: {fileID: 2800000, guid: ebf1faeb73b48284f8ec99a560d12fc4, type: 3}
+      starAmount: 2.06
+      colorStars: 0
+      colorTint: {r: 1, g: 1, b: 1, a: 1}
+    sparkleSphere:
+      showSparkle: 0
+      sparkleTexture: {fileID: 2800000, guid: 93f0b5ff9a468bd4ba74560d41f9cee0, type: 3}
+      colorMask: {fileID: 2800000, guid: ebf1faeb73b48284f8ec99a560d12fc4, type: 3}
+      sparkleAmount: 2.5
+      colorSparkles: 0
+      colorTint: {r: 1, g: 1, b: 1, a: 1}
+    showNebulaeSettings: 0
+    nebulae: []
+    showSunSettings: 0
+    suns:
+    - showSun: 1
+      sunTexture: {fileID: 2800000, guid: e456d4ac96f863b4a85db35a3dcee903, type: 3}
+      mainColor: {r: 1, g: 1, b: 1, a: 1}
+      rayColor: {r: 1, g: 1, b: 0.5, a: 1}
+      rayDampening: 1.39
+      sunScale: 0.1
+      angle: 12
+      azimuth: -164
+      rotation: 0
+      showGlow: 1
+      glowColor: {r: 0.13207549, g: 0.13207549, b: 0.06666075, a: 1}
+      nimbusColor: {r: 0.1981132, g: 0.17954788, b: 0.058873262, a: 1}
+      glowDampening: 2.86
+      glowScaleX: 2
+      glowScaleY: 2
+      glowRotation: 0
+      addDirectionalLight: 1
+      lightColor: {r: 1, g: 0.98262167, b: 0.8820755, a: 1}
+      lightIntensity: 2
+    showPlanetSettings: 1
+    planets:
+    - showPlanet: 1
+      angle: -12
+      azimuth: 86
+      planetRotation: {x: -31.56, y: 10.58, z: 0}
+      planetScale: 11.5
+      planetTexture: {fileID: 2800000, guid: 76dcea164c04232428b48b0fc5852352, type: 3}
+      planetMapping: 0
+      planetTextureTiling: 1
+      colorTint: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
+      fresnelScale: 0.9
+      fresnelPower: 0.8
+      ambientLight: 0.46
+      useColorMap: 0
+      colorMap: {fileID: 2800000, guid: ebf1faeb73b48284f8ec99a560d12fc4, type: 3}
+      colorMapTiling: 1
+      primaryColor: {r: 1, g: 1, b: 1, a: 1}
+      secondaryColor: {r: 1, g: 1, b: 1, a: 1}
+      tertiaryColor: {r: 1, g: 1, b: 1, a: 1}
+      exposure: 0.15
+      showRings: 0
+      ringScale: 2
+      ringRotation: {x: 0, y: 0}
+      ringTexture: {fileID: 2800000, guid: b1ab6ec9ae4d45a4abba4e8b9c7b077e, type: 3}
+      radialScale: 1
+      ringStartRadius: 0.75
+      dissolve: 0
+      ringsColorMap: {fileID: 2800000, guid: ebf1faeb73b48284f8ec99a560d12fc4, type: 3}
+      primaryRingColor: {r: 1, g: 1, b: 1, a: 1}
+      secondaryRingColor: {r: 1, g: 1, b: 1, a: 1}
+      tertiaryRingColor: {r: 1, g: 1, b: 1, a: 1}
+      normalStrength: 3
+      specular: 0.2
+      gloss: 0.2
+      atmosphericOcclusion: 0.2
+    - showPlanet: 1
+      angle: 23
+      azimuth: -62
+      planetRotation: {x: 0, y: 29.7, z: 0}
+      planetScale: 0.65
+      planetTexture: {fileID: 2800000, guid: aafbba6c1fca3fd4b98ae54346b60fe2, type: 3}
+      planetMapping: 0
+      planetTextureTiling: 1
+      colorTint: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
+      fresnelScale: 0.2
+      fresnelPower: 11.9
+      ambientLight: 0
+      useColorMap: 0
+      colorMap: {fileID: 2800000, guid: ebf1faeb73b48284f8ec99a560d12fc4, type: 3}
+      colorMapTiling: 1
+      primaryColor: {r: 1, g: 1, b: 1, a: 1}
+      secondaryColor: {r: 1, g: 1, b: 1, a: 1}
+      tertiaryColor: {r: 1, g: 1, b: 1, a: 1}
+      exposure: 0.08
+      showRings: 0
+      ringScale: 2
+      ringRotation: {x: 0, y: 0}
+      ringTexture: {fileID: 2800000, guid: b1ab6ec9ae4d45a4abba4e8b9c7b077e, type: 3}
+      radialScale: 1
+      ringStartRadius: 0.75
+      dissolve: 0
+      ringsColorMap: {fileID: 2800000, guid: ebf1faeb73b48284f8ec99a560d12fc4, type: 3}
+      primaryRingColor: {r: 1, g: 1, b: 1, a: 1}
+      secondaryRingColor: {r: 1, g: 1, b: 1, a: 1}
+      tertiaryRingColor: {r: 1, g: 1, b: 1, a: 1}
+      normalStrength: 3
+      specular: 0.2
+      gloss: 0.2
+      atmosphericOcclusion: 0.2
+    showHorizonSettings: 0
+    horizon:
+      showHorizon: 0
+      atmosphericDensity: 0.75
+      horizonHeight: 0.5
+      horizonColor: {r: 1, g: 1, b: 1, a: 1}
+      groundHeight: 0
+      groundColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    showCloudSettings: 0
+    cloudLayers: []
+    showTerrainSettings: 0
+    terrain:
+      showTerrain: 0
+      terrainLevel: -0.02
+      terrainRotation: 0
+      heightMap: {fileID: 2800000, guid: aa7c627592625794186bed39f34d3432, type: 3}
+      heightMapTiling: 1
+      displacement: 4
+      normalStrength: 80
+      startDistance: 0.4
+      startStrength: 1.5
+      detailNormals: {fileID: 2800000, guid: 0dc7ba8b7fe9fff49892e188400d1bab, type: 3}
+      detailNormalTiling: 10
+      detailNormalStrength: 5
+      terrainMask: 0
+      maskRotation: 0
+      enableScattering: 1
+      scatteringColor: {r: 1, g: 1, b: 1, a: 1}
+      scatteringSharpness: 0.7
+      enableFog: 0
+      fogColor: {r: 1, g: 1, b: 1, a: 1}
+      fogStart: 0.5
+      fogFalloff: 1.5
+      highFogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      fogHeightThreshold: 1.5
+      fogHeightFalloff: 1
+      textureTiling: 50
+      valleyTexture: {fileID: 2800000, guid: 3238df00fd2165f40890e6fe94f0d3f8, type: 3}
+      desaturateValleyTexture: 0
+      valleyTextureColor: {r: 1, g: 1, b: 1, a: 1}
+      midLevelTexture: {fileID: 2800000, guid: 75f7728d81c4e15499dad4027b395d59, type: 3}
+      desaturateMidLevelTexture: 0
+      midLevelTextureColor: {r: 1, g: 1, b: 1, a: 1}
+      midLevel: 0.1
+      midLevelFalloff: 5
+      peakTexture: {fileID: 2800000, guid: 1d76776345e7ef44fb8cb79d54ea8d3c, type: 3}
+      desaturatePeakTexture: 0
+      peakTextureColor: {r: 1, g: 1, b: 1, a: 1}
+      peakLevel: 1
+      peakLevelFalloff: 5
+      slopeTexture: {fileID: 2800000, guid: a1d1b3a69a0b14244a1b31ac6ef9d04b, type: 3}
+      desaturateSlopeTexture: 0
+      slopeTextureColor: {r: 1, g: 1, b: 1, a: 1}
+      slopeTextureFalloff: 5
+      slopeCutoff: 0.25
+      noiseTiling: 200
+      noiseFalloff: 4
+  destroy: 1
+  initialize: 0
