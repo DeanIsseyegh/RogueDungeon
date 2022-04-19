@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9803600998c48b140b2f7038d0fc2eb1, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.096991785, g: 0.18686467, b: 0.27646858, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5747,14 +5747,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.60656583, y: 0.2014241, z: 0.1625288, w: -0.75172514}
   m_LocalPosition: {x: 0, y: 8.134, z: -7.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 282.2, y: -30, z: 0}
 --- !u!1001 &708635753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9548,7 +9548,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 64327f1bd6d77c742ab95ad03c2adce5, type: 2}
   - {fileID: 11400000, guid: 9d1bc06533c57bf4abd51460dde8266a, type: 2}
   - {fileID: 11400000, guid: 820794a6c1f3c11498be59675029b8ba, type: 2}
-  useTestData: 0
+  useTestData: 1
 --- !u!4 &1161685704
 Transform:
   m_ObjectHideFlags: 0
@@ -12443,6 +12443,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 72e2544c9cd6a6a459da10ae44d536c0, type: 2}
   - {fileID: 11400000, guid: b2dcaca9d1912ad4a95c49f3e24e0955, type: 2}
   - {fileID: 11400000, guid: e3ced178ce7da0d48aeec89cb330a245, type: 2}
+  defaultDeco: {fileID: 11400000, guid: d2a704c66a1effe4085f0d84196da8cf, type: 2}
 --- !u!4 &1563280681
 Transform:
   m_ObjectHideFlags: 0
@@ -16282,7 +16283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2084435899
 Transform:
   m_ObjectHideFlags: 0

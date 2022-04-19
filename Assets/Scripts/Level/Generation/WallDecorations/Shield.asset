@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f15c4cc7d8e05409c0ddd7270c133a, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
+  decoWallDecoName: 5
   offset: {x: 0, y: 3.25, z: 0}
   prefab: {fileID: 1000012110502624, guid: d00f54dd5ac89cc41ae74656a6343a33, type: 3}
   rngWeighting: 1
+  allowedNeighbours: 000000000700000002000000
