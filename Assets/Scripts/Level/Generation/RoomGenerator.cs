@@ -2,12 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Level.Generation;
+using Level.Generation.Floor;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class RoomGenerator : MonoBehaviour
 {
-    [SerializeField] private GameObject floorTile;
+    [SerializeField] private FloorTilePicker floorTilePicker;
     [SerializeField] private GameObject wallTile;
     [SerializeField] private GameObject entranceTileWithDoor;
     [SerializeField] private GameObject entranceTileWithoutDoor;
@@ -20,7 +21,7 @@ public class RoomGenerator : MonoBehaviour
 
     private void Awake()
     {
-        MeshRenderer floorRenderer = floorTile.GetComponent<MeshRenderer>();
+        MeshRenderer floorRenderer = floorTilePicker.PickFloorTile().GetComponent<MeshRenderer>();
         Vector3 floorSize = floorRenderer.bounds.size;
         _xTileSize = new Vector3(floorSize.x, 0, 0);
         _zTileSize = new Vector3(0, 0, floorSize.z);
@@ -171,7 +172,7 @@ public class RoomGenerator : MonoBehaviour
             rowList.ForEach(posInRow =>
             {
                 GameObject createdFloor =
-                    Instantiate(floorTile, posInRow, Quaternion.identity, roomParent.transform);
+                    Instantiate(floorTilePicker.PickFloorTile(), posInRow, Quaternion.identity, roomParent.transform);
                 NavMeshSurface navMeshSurface = createdFloor.GetComponent<NavMeshSurface>();
                 generatedFloor.Add(navMeshSurface);
             });
