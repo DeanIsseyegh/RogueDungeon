@@ -11,6 +11,7 @@
         DEAD_SOLDIER,
         FaunaCollection1,
         FaunaCollection2,
+        FaunaCollection3,
         ANYTHING
     }
 }

@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: FaunaCollection3
   m_EditorClassIdentifier: 
   decoName: 0
-  offset: {x: 0, y: 0, z: 0}
-  prefab: {fileID: 1054358180893262074, guid: 958fc0391edaea549895a0697def8816, type: 3}
+  prefab: {fileID: 1054358180893262074, guid: 5195dca136f9e464291f206a95a71ad4, type: 3}
   rngWeighting: 1
-  limit: 999
-  allowedNeighbours: 07000000
+  allowedNeighbours: 00000000

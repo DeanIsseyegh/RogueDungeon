@@ -44,6 +44,7 @@ public class RandomRoomDataGenerator : MonoBehaviour
         Func<int> zSizePuzzleRoom = () => GenerateRandomValue(puzzleRoomZSizes);
 
         RoomData firstRoom = ScriptableObject.CreateInstance<RoomData>();
+        firstRoom.name = "Room0";
         firstRoom.hasEntrance = false;
         firstRoom.hasExit = true;
         firstRoom.hasSpell = true;
@@ -58,6 +59,7 @@ public class RandomRoomDataGenerator : MonoBehaviour
         {
             // Main Rooms
             RoomData newRoom = ScriptableObject.CreateInstance<RoomData>();
+            newRoom.name = $"Room{i}";
             roomData.Add(newRoom);
             newRoom.hasEntrance = true;
             newRoom.hasExit = i != numOfMainRooms - 1;
@@ -93,12 +95,14 @@ public class RandomRoomDataGenerator : MonoBehaviour
                 {
                     newRoom.hasLeftSideRoom = true;
                     newRoom.leftSideRoomData = GenerateRandomSideRoom(xSizePuzzleRoom, zSizePuzzleRoom);
+                    newRoom.leftSideRoomData.name = $"{newRoom.name}-LeftSideRoom";
                 }
             
                 if (doesHaveRightSideRoom)
                 {
                     newRoom.hasRightSideRoom = true;
                     newRoom.rightSideRoomData = GenerateRandomSideRoom(xSizePuzzleRoom, zSizePuzzleRoom);
+                    newRoom.rightSideRoomData.name = $"{newRoom.name}-RightSideRoom";
                 }
             }
             

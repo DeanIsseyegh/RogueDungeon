@@ -9,6 +9,7 @@ namespace Level.Generation
     {
         [SerializeField] private List<WallDecoration> wallDecos;
         [SerializeField] private WallDecoration defaultDeco;
+        [SerializeField] private WallDecoPrefabFactory wallDecoPrefabFactory;
 
         public void Generate(GeneratedRoom generatedRoom)
         {
@@ -74,9 +75,9 @@ namespace Level.Generation
             }
         }
 
-        private static void IterateAndCollapse(List<WfcGrid> wfcCollection)
+        private void IterateAndCollapse(List<WfcGrid> wfcCollection)
         {
-            for (var i = 0; i < wfcCollection.Count; i++)
+            for (var i = 0; i < wfcCollection.Count; i++)   
             {
                 wfcCollection[i].Collapse();
             }
@@ -89,10 +90,9 @@ namespace Level.Generation
             }
         }
 
-        private static void GenerateDeco(WallDecoration wallDeco, GameObject wall)
+        private void GenerateDeco(WallDecoration wallDeco, GameObject wall)
         {
-            GameObject createdDeco = Instantiate(wallDeco.prefab, wall.transform);
-            createdDeco.transform.localPosition += wallDeco.offset;
+            var decoPrefab = wallDecoPrefabFactory.Create(wallDeco, wall.transform);
         }
     }
 

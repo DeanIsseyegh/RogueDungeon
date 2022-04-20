@@ -8,9 +8,11 @@ namespace Level.Generation.FloorDecorations.WaveFunctionCollapse
     {
         [SerializeField] private List<FloorDecoration> floorDecos;
         [SerializeField] private FloorDecoration defaultDeco;
+        [SerializeField] private CarpetGenerator carpetGenerator;
         
         public void Generate(GeneratedRoom generatedRoom)
         {
+            carpetGenerator.Generate(generatedRoom);
             List<FloorDecoration> weightedDecos = new List<FloorDecoration>();
             for (var i = floorDecos.Count - 1; i >= 0; i--)
             {
@@ -24,10 +26,14 @@ namespace Level.Generation.FloorDecorations.WaveFunctionCollapse
             List<List<Vector3>> floorLayout = generatedRoom.MapLayout;
 
             ////Wave Function Collapse prototype
-            ApplyWfc(floorLayout, weightedDecos);
+            GameObject newObj = new GameObject("FloorDecorations");
+            GameObject floorDecoParent = Instantiate(newObj, Vector3.zero, Quaternion.identity, generatedRoom.RoomParent.transform);
+            Destroy(newObj);
+            ApplyWfc(floorLayout, weightedDecos, floorDecoParent);
         }
 
-        private void ApplyWfc(List<List<Vector3>> floorLayout, List<FloorDecoration> weightedDecos)
+        private void ApplyWfc(List<List<Vector3>> floorLayout, List<FloorDecoration> weightedDecos,
+            GameObject floorDecoParent)
         {
              //1. Create uncollapsed WFC collection
             var wfcCollection = new List<List<WfcGrid>>();
@@ -88,7 +94,7 @@ namespace Level.Generation.FloorDecorations.WaveFunctionCollapse
             {
                 for (int x = 0; x < wfcCollection[z].Count; x++)
                 {
-                    GenerateDeco(wfcCollection[z][x].CollapsedValue, floorLayout[z][x]);
+                    GenerateDeco(wfcCollection[z][x].CollapsedValue, floorLayout[z][x], floorDecoParent);
                 }
             }
         }
@@ -109,10 +115,11 @@ namespace Level.Generation.FloorDecorations.WaveFunctionCollapse
             }
         }
         
-        private static void GenerateDeco(FloorDecoration wallDeco, Vector3 pos)
+        private static void GenerateDeco(FloorDecoration wallDeco, Vector3 pos, GameObject floorDecoParent)
         {
-            GameObject createdDeco = Instantiate(wallDeco.prefab, pos, Quaternion.identity);
-            // createdDeco.transform.localPosition += wallDeco.offset;
+            GameObject createdDeco = Instantiate(wallDeco.prefab, floorDecoParent.transform);
+            createdDeco.transform.localPosition += pos;
+            createdDeco.transform.Rotate(new Vector3(0, Random.Range(0, 360), 0), Space.Self);
         }
     }
 }

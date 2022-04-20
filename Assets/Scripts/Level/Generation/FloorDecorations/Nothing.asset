@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Nothing
   m_EditorClassIdentifier: 
   decoName: 0
-  offset: {x: 0, y: 0, z: 0}
   prefab: {fileID: 7913427049368099370, guid: 28689c82510aec046af4e43e07ccbcac, type: 3}
   rngWeighting: 30
-  limit: 999
-  allowedNeighbours: 09000000
+  allowedNeighbours: 0a000000

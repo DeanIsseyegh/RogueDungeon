@@ -248,10 +248,15 @@ public class RoomGenerator : MonoBehaviour
         public Vector3 WithOffset { get; }
         public Vector3 WithoutOffset { get; }
 
+        public int ZGridPos { get; }
+        public int XGridPos { get; }
+
         public EntranceLocation(List<List<Vector3>> mapLayout, Vector3 zTileSize)
         {
-            List<Vector3> firstRow = mapLayout.First();
-            Vector3 entranceLocation = firstRow[firstRow.Count / 2];
+            ZGridPos = 0;
+            List<Vector3> firstRow = mapLayout[XGridPos];
+            XGridPos = firstRow.Count / 2;
+            Vector3 entranceLocation = firstRow[XGridPos];
             WithOffset = entranceLocation - zTileSize / 2;
             WithoutOffset = entranceLocation;
         }
