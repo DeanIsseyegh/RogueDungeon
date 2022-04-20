@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(fileName = "New Wall Decoration", menuName = "Wall Decorations")]
 public class WallDecoration : ScriptableObject
 {
-    [FormerlySerializedAs("decoName")] public WallDecoName decoWallDecoName;
+    [FormerlySerializedAs("decoWallDecoName")] public WallDecoName decoName;
     public Vector3 offset;
     public GameObject prefab;
     

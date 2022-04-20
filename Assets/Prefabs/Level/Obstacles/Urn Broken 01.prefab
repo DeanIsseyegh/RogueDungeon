@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 993428623847029608}
   - component: {fileID: 1004134962610270066}
   - component: {fileID: 891137824018676148}
+  - component: {fileID: -6192266133073933375}
   m_Layer: 0
   m_Name: Urn Broken 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &985730419395591944
 Transform:
   m_ObjectHideFlags: 0
@@ -98,3 +99,19 @@ CapsuleCollider:
   m_Height: 0.4423207
   m_Direction: 1
   m_Center: {x: 0.03083387, y: 0.19483423, z: -0.076429784}
+--- !u!208 &-6192266133073933375
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989203233933407590}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.38200003, y: 0.22100002, z: 0.49300003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.031000001, y: 0.19500001, z: -0.076000005}
+  m_TimeToStationary: 0.5

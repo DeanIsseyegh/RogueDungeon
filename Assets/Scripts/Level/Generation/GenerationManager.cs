@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Level.Generation;
+using Level.Generation.FloorDecorations.WaveFunctionCollapse;
 using UnityEngine;
 
 public class GenerationManager : MonoBehaviour
@@ -8,6 +9,7 @@ public class GenerationManager : MonoBehaviour
     [SerializeField] private Vector3 startingPos;
     [SerializeField] private RandomRoomDataGenerator randomRoomDataGenerator;
     [SerializeField] private WallDecorationsGenerator wallDecorationsGenerator;
+    [SerializeField] private FloorDecorationsGenerator floorDecorationsGenerator;
     [SerializeField] private RoomGenerator roomGenerator;
     [SerializeField] private List<RoomData> testRoomData;
     [SerializeField] private bool useTestData = false;
@@ -37,6 +39,7 @@ public class GenerationManager : MonoBehaviour
             var newRoomStartPos = roomGenerator.CalculateStartPosBasedOnPrevRoom(prevRoom, roomsData[i]);
             var newRoom = roomGenerator.GenerateRoom(newRoomStartPos, roomsData[i], prevRoom);
             wallDecorationsGenerator.Generate(newRoom);
+            floorDecorationsGenerator.Generate(newRoom);
             generatedRooms.Add(newRoom);
             prevRoom = newRoom;
         }

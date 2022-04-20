@@ -9532,13 +9532,14 @@ MonoBehaviour:
   startingPos: {x: -4, y: 0, z: -4}
   randomRoomDataGenerator: {fileID: 35075875}
   wallDecorationsGenerator: {fileID: 1563280680}
+  floorDecorationsGenerator: {fileID: 1559825006}
   roomGenerator: {fileID: 16494836}
   testRoomData:
   - {fileID: 11400000, guid: a8a8f1d67e8e2574eb79aa51222b498d, type: 2}
   - {fileID: 11400000, guid: 64327f1bd6d77c742ab95ad03c2adce5, type: 2}
   - {fileID: 11400000, guid: 9d1bc06533c57bf4abd51460dde8266a, type: 2}
   - {fileID: 11400000, guid: 820794a6c1f3c11498be59675029b8ba, type: 2}
-  useTestData: 1
+  useTestData: 0
 --- !u!4 &1161685704
 Transform:
   m_ObjectHideFlags: 0
@@ -9558,6 +9559,7 @@ Transform:
   - {fileID: 35075876}
   - {fileID: 1563280681}
   - {fileID: 1065909406}
+  - {fileID: 1559825005}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12344,6 +12346,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4493048135532490, guid: 2e9bb0112b1a3428f94ba8550d668f2f, type: 3}
   m_PrefabInstance: {fileID: 815913692}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1559825004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559825005}
+  - component: {fileID: 1559825006}
+  m_Layer: 0
+  m_Name: FloorDecorationsGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1559825005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559825004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1161685704}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1559825006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559825004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5ce5b0494f430a83e48e987e381b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorDecos:
+  - {fileID: 11400000, guid: 08ceea86b8196ad459cffcca8d873951, type: 2}
+  - {fileID: 11400000, guid: 048469fb1f9f3ad4880ed5354320eb42, type: 2}
+  - {fileID: 11400000, guid: 3a4a6e262c5a04e41a73ed3b20c4c0a2, type: 2}
+  defaultDeco: {fileID: 11400000, guid: 3a4a6e262c5a04e41a73ed3b20c4c0a2, type: 2}
 --- !u!1 &1562109698 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1112197981072686, guid: 5812f95c175b34e7a8e5a7566a43a0ef, type: 3}
