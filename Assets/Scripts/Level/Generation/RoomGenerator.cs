@@ -19,7 +19,7 @@ public class RoomGenerator : MonoBehaviour
     private Vector3 _zTileSize;
     private Vector3 _tileSize;
 
-    private void Awake()
+    private void Start()
     {
         MeshRenderer floorRenderer = floorTilePicker.PickFloorTile().GetComponent<MeshRenderer>();
         Vector3 floorSize = floorRenderer.bounds.size;
