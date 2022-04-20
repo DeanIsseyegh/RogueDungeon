@@ -12611,6 +12611,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 72e2544c9cd6a6a459da10ae44d536c0, type: 2}
   - {fileID: 11400000, guid: b2dcaca9d1912ad4a95c49f3e24e0955, type: 2}
   - {fileID: 11400000, guid: e3ced178ce7da0d48aeec89cb330a245, type: 2}
+  - {fileID: 11400000, guid: 9fbdc7bf940ed1c4480db6a5b5913082, type: 2}
   defaultDeco: {fileID: 11400000, guid: d2a704c66a1effe4085f0d84196da8cf, type: 2}
   wallDecoPrefabFactory: {fileID: 717718649}
 --- !u!4 &1563280681

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f15c4cc7d8e05409c0ddd7270c133a, type: 3}
   m_Name: BooksOnBench
   m_EditorClassIdentifier: 
-  decoWallDecoName: 1
+  decoName: 1
   offset: {x: 0, y: 2, z: 0.5}
   prefab: {fileID: 1982522862169239344, guid: 58b96680f0ca3db428889b5943ed8955, type: 3}
-  rngWeighting: 1
+  rngWeighting: 10
   allowedNeighbours: 0700000000000000050000000600000002000000

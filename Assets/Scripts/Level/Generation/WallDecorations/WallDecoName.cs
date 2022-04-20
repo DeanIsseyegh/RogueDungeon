@@ -9,6 +9,7 @@
         SHELVES_WITH_BOOKS,
         SHIELD,
         SWORD,
+        DEAD_BODY,
         TORCH,
         ANYTHING
     }

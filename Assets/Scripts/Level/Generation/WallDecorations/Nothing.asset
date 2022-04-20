@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f15c4cc7d8e05409c0ddd7270c133a, type: 3}
   m_Name: Nothing
   m_EditorClassIdentifier: 
-  decoWallDecoName: 0
+  decoName: 0
   offset: {x: 0, y: 0, z: 0}
   prefab: {fileID: 7913427049368099370, guid: 9c4c9d9e347b8c044ad44ffd6c11b12b, type: 3}
-  rngWeighting: 1
+  rngWeighting: 10
   allowedNeighbours: 08000000

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f15c4cc7d8e05409c0ddd7270c133a, type: 3}
   m_Name: ShelvesEmpty
   m_EditorClassIdentifier: 
-  decoWallDecoName: 3
+  decoName: 3
   offset: {x: 0, y: 0, z: 0.5}
   prefab: {fileID: 1232658025438918327, guid: 4ba0d4f4693f43844b4c71fb12e39939, type: 3}
-  rngWeighting: 1
+  rngWeighting: 10
   allowedNeighbours: 070000000000000004000000
