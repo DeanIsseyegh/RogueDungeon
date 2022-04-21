@@ -14,4 +14,6 @@ public class FloorDecoration : ScriptableObject
     public int rngWeighting;
 
     public List<FloorDecoName> allowedNeighbours;
+    public float rotationRange = 360;
+
 }

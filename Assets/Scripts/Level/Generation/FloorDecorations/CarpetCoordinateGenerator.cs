@@ -1,23 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Level.Generation.FloorDecorations
 {
-    public class CarpetGenerator : MonoBehaviour
+    public class CarpetCoordinateGenerator : MonoBehaviour
     {
-
-        [SerializeField] private GameObject carpet;
-        
-        public void Generate(GeneratedRoom room)
+        public List<Tuple<int, int>> Generate(GeneratedRoom room)
         {
             List<List<Vector3>> floorLayout = room.MapLayout;
-
             int zStart = room.EntranceLocation.ZGridPos;
             int xPos = room.EntranceLocation.XGridPos;
+
+            List<Tuple<int, int>> carpetPositions = new List<Tuple<int, int>>();
             for (int i = zStart; i < floorLayout.Count; i++)
             {
-                Instantiate(carpet, floorLayout[i][xPos], Quaternion.identity);
+                carpetPositions.Add(new Tuple<int, int>(i, xPos));
             }
+
+            return carpetPositions;
         }
     }
 }

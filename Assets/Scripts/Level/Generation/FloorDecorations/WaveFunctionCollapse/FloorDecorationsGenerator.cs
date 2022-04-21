@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Level.Generation.FloorDecorations.WaveFunctionCollapse
 {
@@ -8,11 +10,12 @@ namespace Level.Generation.FloorDecorations.WaveFunctionCollapse
     {
         [SerializeField] private List<FloorDecoration> floorDecos;
         [SerializeField] private FloorDecoration defaultDeco;
-        [SerializeField] private CarpetGenerator carpetGenerator;
+        [SerializeField] private CarpetCoordinateGenerator carpetCoordinateGenerator;
         
         public void Generate(GeneratedRoom generatedRoom)
         {
-            carpetGenerator.Generate(generatedRoom);
+            List<Tuple<int,int>> carpetCoordinates = carpetCoordinateGenerator.Generate(generatedRoom);
+
             List<FloorDecoration> weightedDecos = new List<FloorDecoration>();
             for (var i = floorDecos.Count - 1; i >= 0; i--)
             {
@@ -29,11 +32,11 @@ namespace Level.Generation.FloorDecorations.WaveFunctionCollapse
             GameObject newObj = new GameObject("FloorDecorations");
             GameObject floorDecoParent = Instantiate(newObj, Vector3.zero, Quaternion.identity, generatedRoom.RoomParent.transform);
             Destroy(newObj);
-            ApplyWfc(floorLayout, weightedDecos, floorDecoParent);
+            ApplyWfc(floorLayout, weightedDecos, floorDecoParent, carpetCoordinates);
         }
 
         private void ApplyWfc(List<List<Vector3>> floorLayout, List<FloorDecoration> weightedDecos,
-            GameObject floorDecoParent)
+            GameObject floorDecoParent, List<Tuple<int,int>> carpetCoordinates)
         {
              //1. Create uncollapsed WFC collection
             var wfcCollection = new List<List<WfcGrid>>();
@@ -79,17 +82,25 @@ namespace Level.Generation.FloorDecorations.WaveFunctionCollapse
                     }
                 }
             }
+            
+            //2. Force grids with coordinates to generate anything on them
+            for (int i = 0; i < carpetCoordinates.Count; i++)
+            {
+                Tuple<int,int> carpetCoordinate = carpetCoordinates[i];
+                WfcGrid wfcGrid = wfcCollection[carpetCoordinate.Item1][carpetCoordinate.Item2];
+                wfcGrid.ForceCollapseTo(FloorDecoName.Z_CARPET);
+            }
 
-            //2. Collapse a random grid randomly
+            //3. Collapse a random grid randomly
             int randomZIndex = Random.Range(0, wfcCollection.Count);
             int randomXIndex = Random.Range(0, wfcCollection[0].Count);
             WfcGrid randomGrid = wfcCollection[randomZIndex][randomXIndex];
             randomGrid.RandomCollapse();
 
-            //3. Iterate and Collapse
+            //4. Iterate and Collapse
             IterateAndCollapse(wfcCollection);
 
-            //4. Create decos based on WFC algo
+            //5. Create decos based on WFC algo
             for (int z = 0; z < wfcCollection.Count; z++)
             {
                 for (int x = 0; x < wfcCollection[z].Count; x++)
@@ -119,7 +130,7 @@ namespace Level.Generation.FloorDecorations.WaveFunctionCollapse
         {
             GameObject createdDeco = Instantiate(wallDeco.prefab, floorDecoParent.transform);
             createdDeco.transform.localPosition += pos;
-            createdDeco.transform.Rotate(new Vector3(0, Random.Range(0, 360), 0), Space.Self);
+            createdDeco.transform.Rotate(new Vector3(0, Random.Range(0, wallDeco.rotationRange), 0), Space.Self);
         }
     }
 }

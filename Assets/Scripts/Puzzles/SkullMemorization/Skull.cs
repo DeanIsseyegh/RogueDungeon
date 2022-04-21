@@ -5,11 +5,11 @@ using UnityEngine.Serialization;
 
 public class Skull : MonoBehaviour
 {
-    [FormerlySerializedAs("light")] [SerializeField] private GameObject lightUpFx;
+    [SerializeField] private GameObject lightUpFx;
     [SerializeField] private float lightUpDuration;
     [SerializeField] private GameObject candle;
-    [FormerlySerializedAs("NotReadyLight")] [SerializeField] private GameObject notReadyLight;
-    [FormerlySerializedAs("ReadyLight")] [SerializeField] private GameObject readyLight;
+    [SerializeField] private GameObject notReadyLight;
+    [SerializeField] private GameObject readyLight;
 
     private MemorizationPuzzleManager _puzzleManager;
     private bool _isSkullHittable;

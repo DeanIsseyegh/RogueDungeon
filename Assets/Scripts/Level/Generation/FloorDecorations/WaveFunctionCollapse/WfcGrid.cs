@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Level.Generation.WallDecorations;
 using Sirenix.Utilities;
 using UnityEngine;
 
 namespace Level.Generation.FloorDecorations.WaveFunctionCollapse
 {
-public class WfcGrid
+    public class WfcGrid
     {
-        public List<FloorDecoration> WeightedDecos { get; }
+        public List<FloorDecoration> WeightedDecos { get; private set; }
         public List<FloorDecoration> UnweightedDecos { get; private set; }
         public FloorDecoration DefaultDeco { get; }
 
@@ -37,12 +36,12 @@ public class WfcGrid
         {
             _rightNeighbour = neighbour;
         }
-        
+
         public void LinkUpNeighbour(WfcGrid neighbour)
         {
             _upNeighbour = neighbour;
         }
-        
+
         public void LinkDownNeighbour(WfcGrid neighbour)
         {
             _downNeighbour = neighbour;
@@ -50,6 +49,7 @@ public class WfcGrid
 
         public void RandomCollapse()
         {
+            if (IsCollapsed) return;
             CollapseBasedOnNeighbour(_leftNeighbour);
             CollapseBasedOnNeighbour(_rightNeighbour);
             CollapseBasedOnNeighbour(_upNeighbour);
@@ -119,12 +119,26 @@ public class WfcGrid
             for (var i = 0; i < UnweightedDecos.Count; i++)
             {
                 var deco = UnweightedDecos[i];
+                if (deco == null)
+                {
+                    Debug.Log("Deco is null");
+                }
                 List<FloorDecoName> allowedNeighbours = deco.allowedNeighbours;
                 bool isAllowed = allowedNeighbours.First() == FloorDecoName.ANYTHING ||
                                  allowedNeighbours.Contains(neighbourDeco.decoName);
                 if (isAllowed) return true;
             }
+
             return false;
+        }
+
+        public void ForceCollapseTo(FloorDecoName floorDecoName)
+        {
+            FloorDecoration decoToForceCollapseTo = UnweightedDecos.Find(it => it.decoName == floorDecoName);
+            IsCollapsed = true;
+            WeightedDecos = new List<FloorDecoration> {decoToForceCollapseTo};
+            UnweightedDecos = new List<FloorDecoration> {decoToForceCollapseTo};
+            CollapsedValue = decoToForceCollapseTo;
         }
     }
 }

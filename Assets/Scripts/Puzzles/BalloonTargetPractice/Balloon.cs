@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 public class Balloon : MonoBehaviour
 {
-    [FormerlySerializedAs("collidesWith")] [SerializeField] private string destroyedBy;
+    [SerializeField] private string destroyedBy;
     [SerializeField] private List<GameObject> destructionEffects;
 
     private void OnTriggerEnter(Collider other)

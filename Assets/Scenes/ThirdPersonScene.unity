@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.05439405, g: 0.035082106, b: 0.15503418, a: 1}
+  m_IndirectSpecularColor: {r: 0.059115313, g: 0.038135175, b: 0.16500393, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2754,7 +2754,6 @@ GameObject:
   m_Component:
   - component: {fileID: 353074466}
   - component: {fileID: 353074465}
-  - component: {fileID: 353074464}
   - component: {fileID: 353074467}
   m_Layer: 0
   m_Name: SkyBoxCam
@@ -2763,14 +2762,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &353074464
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353074463}
-  m_Enabled: 1
 --- !u!20 &353074465
 Camera:
   m_ObjectHideFlags: 0
@@ -12617,6 +12608,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 08ceea86b8196ad459cffcca8d873951, type: 2}
   - {fileID: 11400000, guid: 048469fb1f9f3ad4880ed5354320eb42, type: 2}
   - {fileID: 11400000, guid: 3a4a6e262c5a04e41a73ed3b20c4c0a2, type: 2}
+  - {fileID: 11400000, guid: 06729fbee4d4e794c980c0deca65f6d9, type: 2}
   defaultDeco: {fileID: 11400000, guid: 3a4a6e262c5a04e41a73ed3b20c4c0a2, type: 2}
   carpetGenerator: {fileID: 578254253}
 --- !u!1 &1562109698 stripped
