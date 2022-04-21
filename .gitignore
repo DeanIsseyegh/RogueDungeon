@@ -9,6 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/WebGL\ [Bb]uilds/ 
 /Assets/AssetStore/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
