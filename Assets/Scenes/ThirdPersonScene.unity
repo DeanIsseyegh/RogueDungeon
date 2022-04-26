@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.059115313, g: 0.038135175, b: 0.16500393, a: 1}
+  m_IndirectSpecularColor: {r: 0.040154718, g: 0.026504068, b: 0.12467516, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4834,7 +4834,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b435fd11e846418c495df60de2a93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carpet: {fileID: 8229263361911069864, guid: abfcbb9d8685c8b45aedd76443b34569, type: 3}
 --- !u!1 &596171418
 GameObject:
   m_ObjectHideFlags: 0
@@ -12610,7 +12609,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3a4a6e262c5a04e41a73ed3b20c4c0a2, type: 2}
   - {fileID: 11400000, guid: 06729fbee4d4e794c980c0deca65f6d9, type: 2}
   defaultDeco: {fileID: 11400000, guid: 3a4a6e262c5a04e41a73ed3b20c4c0a2, type: 2}
-  carpetGenerator: {fileID: 578254253}
+  carpetCoordinateGenerator: {fileID: 578254253}
 --- !u!1 &1562109698 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1112197981072686, guid: 5812f95c175b34e7a8e5a7566a43a0ef, type: 3}
