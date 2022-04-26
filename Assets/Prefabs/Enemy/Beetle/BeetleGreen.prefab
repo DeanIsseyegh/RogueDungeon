@@ -1150,10 +1150,10 @@ GameObject:
   - component: {fileID: 95319451835724688}
   - component: {fileID: 1391816946177647042}
   - component: {fileID: -7542985552046963566}
-  - component: {fileID: -4596288760717609957}
   - component: {fileID: -7073987961700624948}
   - component: {fileID: 1185579922067332436}
   - component: {fileID: 2591761158554896338}
+  - component: {fileID: -4596288760717609957}
   - component: {fileID: 7663187626637621281}
   - component: {fileID: 2521980847918592960}
   m_Layer: 0
@@ -1253,19 +1253,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.24, y: 1.3196249, z: 3.0126724}
   m_Center: {x: 0, y: 0.7851875, z: -0.09366375}
---- !u!114 &-4596288760717609957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783563462218004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc66c5b6f236cec4596557081bdf61dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDistance: 3
 --- !u!114 &-7073987961700624948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1305,6 +1292,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarImage: {fileID: 1502010331662797191}
+--- !u!114 &-4596288760717609957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783563462218004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc66c5b6f236cec4596557081bdf61dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDistance: 3
+  attackAnimationName: Attack
 --- !u!114 &7663187626637621281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1318,6 +1319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDistance: 7
+  spell: {fileID: 2521980847918592960}
 --- !u!114 &2521980847918592960
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,17 +1,19 @@
+﻿using Spells.SpellData.SpellEffects;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Damaging Spell Trait", menuName = "Damaging Spell Trait", order = 51)]
-public class DamagingTrait : SpellTrait
+[CreateAssetMenu(fileName = "New Intermittent Damaging Spell Trait", menuName = "Intermittent Damaging Spell Trait", order = 51)]
+public class IntermittentDamagingTrait : SpellTrait
 {
     public float damage;
     public float damageFrequency = 0;
 
     public override void ApplyEffects(GameObject spell, bool isFromPlayer)
     {
-        DamagingAttack damagingAttack = spell.AddComponent<DamagingAttack>();
+        IntermittentDamagingAttack damagingAttack = spell.AddComponent<IntermittentDamagingAttack>();
         damagingAttack.Damage = damage;
         string triggersOn = isFromPlayer ? "Enemy" : "Player";
         damagingAttack.TriggersOnTag = triggersOn;
+        damagingAttack.DamageFrequency = damageFrequency;
     }
 
     public override string Name()
@@ -21,6 +23,6 @@ public class DamagingTrait : SpellTrait
 
     public override string Value()
     {
-        return $"{damage}";
+        return $"{damage} per {damageFrequency}s";
     }
 }

@@ -505,6 +505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDistance: 2
+  attackAnimationName: Attack
 --- !u!114 &780340270
 MonoBehaviour:
   m_ObjectHideFlags: 0

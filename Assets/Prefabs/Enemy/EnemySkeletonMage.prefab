@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDistance: 3
+  spell: {fileID: -3002929459980276033}
 --- !u!114 &1038175716270267648
 MonoBehaviour:
   m_ObjectHideFlags: 0

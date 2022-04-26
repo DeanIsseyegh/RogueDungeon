@@ -3,8 +3,8 @@ using UnityEngine;
 public class PhysicalEnemyAttack : EnemyAttack
 {
     [SerializeField] private float attackDistance;
+    [SerializeField] private string attackAnimationName;
     
-    private static readonly int Attack = Animator.StringToHash("Attack");
     private EnemyWeapon _enemyWeapon;
     private AnimatorStateInfo _currentAnimatorStateInfo;
     private Animator _animator;
@@ -19,7 +19,7 @@ public class PhysicalEnemyAttack : EnemyAttack
     private void Update()
     {
         _currentAnimatorStateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-        if (_isAttackStarting && _currentAnimatorStateInfo.IsName("Attack")) 
+        if (_isAttackStarting && _currentAnimatorStateInfo.IsName(attackAnimationName)) 
             _isAttackStarting = false;
         if (_enemyWeapon != null) 
             _enemyWeapon.IsActive = IsAttacking();
@@ -27,13 +27,13 @@ public class PhysicalEnemyAttack : EnemyAttack
     
     public override void DoAttack()
     {
-        _animator.SetTrigger(Attack);
+        _animator.SetTrigger(attackAnimationName);
         _isAttackStarting = true;
     }
     
     public override bool IsAttacking()
     {
-        return _isAttackStarting || _currentAnimatorStateInfo.IsName("Attack");
+        return _isAttackStarting || _currentAnimatorStateInfo.IsName(attackAnimationName);
     }
     
     public override float AttackDistance()

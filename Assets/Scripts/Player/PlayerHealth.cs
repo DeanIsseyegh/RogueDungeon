@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour, Health
 {
     [SerializeField] private float maxHealth = 100;
     [ShowInInspector] private float _currentHealth;
+    [SerializeField] private float invincibilityAfterHitTimer = 0.25f;
     private SkinnedMeshRenderer _skinnedMeshRenderer;
     private bool _isInvincible;
     private UIManager _uiManager;
@@ -48,7 +49,7 @@ public class PlayerHealth : MonoBehaviour, Health
         for (int i = 0; i < numOfTimes; i++)
         {
             _skinnedMeshRenderer.enabled = !_skinnedMeshRenderer.enabled;
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(invincibilityAfterHitTimer / numOfTimes);
         }
 
         _skinnedMeshRenderer.enabled = true;
