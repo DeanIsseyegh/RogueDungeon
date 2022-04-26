@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    [SerializeField] private float visDistance = 10f;
     private EnemyState _currentState;
 
     private void Start()
@@ -11,7 +12,7 @@ public class EnemyAI : MonoBehaviour
         var navMeshAgent = GetComponent<NavMeshAgent>();
         var animator = GetComponent<Animator>();
         var enemyAttacks = GetComponents<EnemyAttack>();
-        var enemyStateCtx = new EnemyStateCtx(gameObject, navMeshAgent, animator, player, enemyAttacks);
+        var enemyStateCtx = new EnemyStateCtx(gameObject, navMeshAgent, animator, player, enemyAttacks, visDistance);
         _currentState = new Idle(enemyStateCtx);
     }
 

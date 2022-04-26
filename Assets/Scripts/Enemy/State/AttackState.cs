@@ -21,6 +21,7 @@ public class AttackState : EnemyState
         RotateTowardsPlayer();
         if (!_attack.IsAttacking())
         {
+            Debug.Log("Not attacking anymore - going to PurseState!");
             NextState = new PursueState(Ctx);
             Stage = EVENT.EXIT;
         }

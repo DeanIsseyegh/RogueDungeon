@@ -28,19 +28,13 @@ public abstract class Spell : MonoBehaviour
         {
             IsCastingSpell = true;
             playerMana.UseMana(data.manaCost);
-            Cast(null, animator, playerInventory);
+            Cast(animator, playerInventory);
         }
     }
 
-    public void Cast(NavMeshAgent navMeshAgent, Animator animator, PlayerInventory playerInventory)
+    public void Cast(Animator animator, PlayerInventory playerInventory)
     {
         if (IsOnCooldown()) return;
-        if (navMeshAgent != null && navMeshAgent.enabled)
-        {
-            navMeshAgent.ResetPath();
-            navMeshAgent.velocity = new Vector3(0, 0, 0);
-        }
-
         animator.SetTrigger(data.animationName);
         TimeSinceLastSpell = 0;
         IsCastingSpell = true;

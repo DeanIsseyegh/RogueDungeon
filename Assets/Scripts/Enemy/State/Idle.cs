@@ -21,11 +21,11 @@ public class Idle : EnemyState
             NextState = new PursueState(Ctx);
             Stage = EVENT.EXIT;
         }
-        else if (Random.Range(0, 500) < 10)
-        {
-            NextState = new Patrol(Ctx);
-            Stage = EVENT.EXIT;
-        }
+        // else if (Random.Range(0, 500) < 10)
+        // {
+        //     NextState = new Patrol(Ctx);
+        //     Stage = EVENT.EXIT;
+        // }
     }
 
     public override void Exit()

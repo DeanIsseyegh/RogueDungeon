@@ -8,14 +8,16 @@ public class EnemyStateCtx
     public Animator Animator { get; }
     public GameObject Player { get; }
     public EnemyAttack[] EnemyAttacks { get; }
+    public float VisDistance { get; }
 
     public EnemyStateCtx(GameObject enemy, NavMeshAgent navMeshAgent, Animator animator, GameObject player,
-        EnemyAttack[] enemyEnemyAttacks)
+        EnemyAttack[] enemyEnemyAttacks, float visDistance)
     {
         Enemy = enemy;
         MeshAgent = navMeshAgent;
         Animator = animator;
         Player = player;
         EnemyAttacks = enemyEnemyAttacks;
+        VisDistance = visDistance;
     }
 }

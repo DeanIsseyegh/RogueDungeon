@@ -7,7 +7,6 @@ public class EnemyState
     protected EnemyState NextState;
     protected EnemyStateCtx Ctx;
 
-    private float visDistance = 10f;
     private float rotateSpeed = 10f;
 
     public enum STATE
@@ -61,7 +60,7 @@ public class EnemyState
     protected bool CanSeePlayer()
     {
         float distance = Vector3.Distance(Ctx.Player.transform.position, Ctx.Enemy.transform.position);
-        return distance < visDistance;
+        return distance < Ctx.VisDistance;
     }
 
     protected void RotateTowardsPlayer()
