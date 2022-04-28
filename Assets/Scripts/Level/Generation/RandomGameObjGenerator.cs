@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class RandomGameObjGenerator : MonoBehaviour
 {
@@ -13,23 +11,23 @@ public class RandomGameObjGenerator : MonoBehaviour
     {
         if (objectPool.Count == 0)
         {
-            Debug.Log("No collectibles left to generate!");
+            Debug.Log("No objects left to generate!");
             return null;
         }
 
         int randomIndex = Random.Range(0, objectPool.Count);
-        GameObject collectibleItem = objectPool[randomIndex];
-        GameObject createdCollectible = Instantiate(collectibleItem, posToGenerate, Quaternion.identity);
+        GameObject objToCreate = objectPool[randomIndex];
+        GameObject createdObj = CreateObj(posToGenerate, objToCreate, objToCreate.transform.rotation);
         if (doesDeplete)
             objectPool.RemoveAt(randomIndex);
-        return createdCollectible;
+        return createdObj;
     }
 
     public GameObject Generate(Vector3 posToGenerate, GameObject toNotSpawn)
     {
         if (objectPool.Count == 0)
         {
-            Debug.Log("No collectibles left to generate!");
+            Debug.Log("No objects left to generate!");
             return null;
         }
 
@@ -43,11 +41,16 @@ public class RandomGameObjGenerator : MonoBehaviour
         }
 
         int randomIndex = Random.Range(0, newObjectPool.Count);
-        GameObject collectibleItem = newObjectPool[randomIndex];
-        GameObject createdCollectible = Instantiate(collectibleItem, posToGenerate, Quaternion.identity);
+        GameObject objToCreate = newObjectPool[randomIndex];
+        GameObject createdObj = CreateObj(posToGenerate, objToCreate, objToCreate.transform.rotation);
         if (doesDeplete)
             objectPool.RemoveAt(randomIndex);
-        return createdCollectible;
+        return createdObj;
+    }
+    
+    protected virtual GameObject CreateObj(Vector3 posToGenerate, GameObject objToCreate, Quaternion quaternion)
+    {
+        return Instantiate(objToCreate, posToGenerate, quaternion);
     }
 
     public int ObjectsLeft()

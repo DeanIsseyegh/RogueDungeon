@@ -16,4 +16,4 @@ MonoBehaviour:
   offset: {x: 0, y: 2, z: 0.25}
   prefab: {fileID: 2259097188338854203, guid: 9a1f9494f13714e4c97beaaedfe181ef, type: 3}
   rngWeighting: 10
-  allowedNeighbours: 08000000
+  allowedNeighbours: 0100000000000000020000000300000004000000050000000600000007000000
