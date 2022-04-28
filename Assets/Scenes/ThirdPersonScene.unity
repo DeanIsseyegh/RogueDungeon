@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.05052045, g: 0.033131815, b: 0.14862084, a: 1}
+  m_IndirectSpecularColor: {r: 0.04280711, g: 0.028203925, b: 0.13041961, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4159,6 +4159,10 @@ PrefabInstance:
     - target: {fileID: 7366735426321672135, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
       propertyPath: m_Name
       value: IceBallSpellPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366735426321672135, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e36426c371155a46ab13cc2035dc079, type: 3}
