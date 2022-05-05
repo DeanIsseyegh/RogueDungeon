@@ -7,4 +7,6 @@ public interface Status
 
     void Apply();
 
+    void Remove();
+
 }

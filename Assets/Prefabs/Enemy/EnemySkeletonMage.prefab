@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -3002929459980276033}
   - component: {fileID: 5907801223712750982}
   - component: {fileID: 2271211683912447395}
+  - component: {fileID: 9001331228193470185}
   m_Layer: 0
   m_Name: EnemySkeletonMage
   m_TagString: Enemy
@@ -179,6 +180,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: 1.5
   attackAnimationName: PhysicalAttack
+--- !u!114 &9001331228193470185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210025198125800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270fc28867566a5408e264a0952f4855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3370971231555382682
 GameObject:
   m_ObjectHideFlags: 0

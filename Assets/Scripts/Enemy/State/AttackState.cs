@@ -18,6 +18,7 @@ public class AttackState : EnemyState
 
     public override void Update()
     {
+        base.Update();
         RotateTowardsPlayer();
         if (!_attack.IsAttacking())
         {

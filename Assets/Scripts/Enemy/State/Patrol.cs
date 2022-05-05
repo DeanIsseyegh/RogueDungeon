@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Enemy.State;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -32,6 +33,8 @@ public class Patrol : EnemyState
 
     public override void Update()
     {
+        base.Update();
+
         if (Ctx.MeshAgent.remainingDistance < 1)
         {
             if (_currentIndex >= _patrolTargets.Count - 1)

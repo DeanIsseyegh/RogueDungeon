@@ -1,3 +1,4 @@
+using Enemy.State;
 using UnityEngine;
 
 public class EnemyState
@@ -14,7 +15,8 @@ public class EnemyState
         IDLE,
         PATROL,
         PURSUE,
-        ATTACK
+        ATTACK,
+        DYING
     }
 
     public enum EVENT
@@ -36,6 +38,12 @@ public class EnemyState
 
     public virtual void Update()
     {
+        if (IsDead())
+        {
+            NextState = new Dying(Ctx);
+            Stage = EVENT.EXIT;
+            return;
+        }
         Stage = EVENT.UPDATE;
     }
 
@@ -69,5 +77,10 @@ public class EnemyState
         var lookRotation = Quaternion.LookRotation(direction);
         Ctx.Enemy.transform.rotation =
             Quaternion.Lerp(Ctx.Enemy.transform.rotation, lookRotation, Time.deltaTime * rotateSpeed);
+    }
+
+    protected bool IsDead()
+    {
+        return Ctx.Health.IsDepleted();
     }
 }

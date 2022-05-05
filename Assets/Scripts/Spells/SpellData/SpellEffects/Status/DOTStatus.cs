@@ -26,7 +26,12 @@ public class DOTStatus : MonoBehaviour, Status
         LifeTime -= Time.deltaTime;
         if (LifeTime <= 0)
         {
-            Destroy(this);
+            Remove();
         }
+    }
+
+    public void Remove()
+    {
+        Destroy(this);
     }
 }

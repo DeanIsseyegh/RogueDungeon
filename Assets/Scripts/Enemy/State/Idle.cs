@@ -1,4 +1,5 @@
 ﻿
+using Enemy.State;
 using UnityEngine;
 
 public class Idle : EnemyState
@@ -16,16 +17,13 @@ public class Idle : EnemyState
 
     public override void Update()
     {
+        base.Update();
+        
         if (CanSeePlayer())
         {
             NextState = new PursueState(Ctx);
             Stage = EVENT.EXIT;
         }
-        // else if (Random.Range(0, 500) < 10)
-        // {
-        //     NextState = new Patrol(Ctx);
-        //     Stage = EVENT.EXIT;
-        // }
     }
 
     public override void Exit()

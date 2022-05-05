@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 780340270}
   - component: {fileID: -5774802011849911391}
   - component: {fileID: 5017468084270570754}
+  - component: {fileID: 9114290579327607897}
   m_Layer: 0
   m_Name: EnemyGoblin
   m_TagString: Enemy
@@ -547,6 +548,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarImage: {fileID: 8579294175594735092}
+--- !u!114 &9114290579327607897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837416230038983445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270fc28867566a5408e264a0952f4855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3837416230038983447
 GameObject:
   m_ObjectHideFlags: 0

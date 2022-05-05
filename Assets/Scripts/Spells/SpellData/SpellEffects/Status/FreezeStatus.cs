@@ -32,9 +32,14 @@ public class FreezeStatus : MonoBehaviour, Status
         LifeTime -= Time.deltaTime;
         if (LifeTime <= 0)
         {
-            EnableComponents(true);
-            Destroy(this);
+            Remove();
         }
+    }
+
+    public void Remove()
+    {
+        EnableComponents(true);
+        Destroy(this);
     }
 
     private void EnableComponents(bool isEnabled)

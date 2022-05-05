@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour, Health
 {
@@ -9,6 +6,7 @@ public class EnemyHealth : MonoBehaviour, Health
     private HealthBar _healthBar;
 
     private float _currentHealth;
+    private Collider _collider;
 
     private void Awake()
     {
@@ -16,6 +14,7 @@ public class EnemyHealth : MonoBehaviour, Health
         _healthBar = GetComponent<HealthBar>();
         _healthBar.MaxHealth = maxHealth;
         _healthBar.CurrentHealth = _currentHealth;
+        _collider = GetComponent<Collider>();
     }
 
 
@@ -23,9 +22,29 @@ public class EnemyHealth : MonoBehaviour, Health
     {
         _currentHealth -= damage;
         _healthBar.CurrentHealth = _currentHealth;
-        if (_currentHealth <= 0)
+        if (IsDepleted())
         {
-            Destroy(this.gameObject);
+            RemoveStatuses();
+            RemoveHitBox();
+        }
+    }
+
+    public bool IsDepleted()
+    {
+        return _currentHealth <= 0;
+    }
+    
+    private void RemoveHitBox()
+    {
+        _collider.enabled = false;
+    }
+    
+    private void RemoveStatuses()
+    {
+        Status[] statusArray = GetComponents<Status>();
+        foreach (Status status in statusArray)
+        {
+            status.Remove();
         }
     }
 }

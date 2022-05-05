@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Enemy.State;
+using UnityEngine;
 using UnityEngine.AI;
 
 public class PursueState : EnemyState
@@ -18,6 +19,7 @@ public class PursueState : EnemyState
 
     public override void Update()
     {
+        base.Update();
         Ctx.MeshAgent.SetDestination(Ctx.Player.transform.position);
         if (CanAttackPlayer())
         {

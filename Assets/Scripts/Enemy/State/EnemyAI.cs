@@ -12,7 +12,9 @@ public class EnemyAI : MonoBehaviour
         var navMeshAgent = GetComponent<NavMeshAgent>();
         var animator = GetComponent<Animator>();
         var enemyAttacks = GetComponents<EnemyAttack>();
-        var enemyStateCtx = new EnemyStateCtx(gameObject, navMeshAgent, animator, player, enemyAttacks, visDistance);
+        var health = GetComponent<Health>();
+        var despawner = GetComponent<Despawner>();
+        var enemyStateCtx = new EnemyStateCtx(gameObject, navMeshAgent, animator, player, health, despawner, enemyAttacks, visDistance);
         _currentState = new Idle(enemyStateCtx);
     }
 

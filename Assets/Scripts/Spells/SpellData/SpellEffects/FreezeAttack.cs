@@ -18,7 +18,6 @@ public class FreezeAttack : MonoBehaviour
             FreezeStatus freezeStatus = other.gameObject.AddComponent<FreezeStatus>();
             freezeStatus.LifeTime = LifeTime;
 
-
             ColorFreezeEffect colorFreezeEffect = other.gameObject.AddComponent<ColorFreezeEffect>();
             colorFreezeEffect.StartColorFreeze(FreezeEffectColor, LifeTime);
         }

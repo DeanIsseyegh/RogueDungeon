@@ -32,6 +32,11 @@ public class PlayerHealth : MonoBehaviour, Health
         }
     }
 
+    public bool IsDepleted()
+    {
+        return _currentHealth <= 0;
+    }
+
     public void AddMaxHp(float hpToAdd)
     {
         maxHealth += hpToAdd;
