@@ -1156,6 +1156,7 @@ GameObject:
   - component: {fileID: -4596288760717609957}
   - component: {fileID: 7663187626637621281}
   - component: {fileID: 2521980847918592960}
+  - component: {fileID: 251845354751176365}
   m_Layer: 0
   m_Name: BeetleGreen
   m_TagString: Enemy
@@ -1333,6 +1334,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 633bce69f3955114599b3ad0e495e326, type: 2}
+--- !u!114 &251845354751176365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783563462218004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270fc28867566a5408e264a0952f4855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1804318802084684
 GameObject:
   m_ObjectHideFlags: 0
