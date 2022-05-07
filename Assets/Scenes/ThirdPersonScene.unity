@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.043891415, g: 0.02922173, b: 0.133425, a: 1}
+  m_IndirectSpecularColor: {r: 0.030022591, g: 0.022172354, b: 0.10043698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -300,9 +300,9 @@ MonoBehaviour:
   enemyRoomZSizes: 050000000700000009000000
   puzzleRoomXSizes: 0500000007000000
   puzzleRoomZSizes: 0300000005000000
-  numOfMainRoomSizes: 050000000600000007000000
-  initialEnemyCounter: 2
-  enemyCounterIncreasePerRoom: 2
+  numOfMainRoomSizes: 0a000000
+  initialEnemyCounter: 1
+  enemyCounterIncreasePerRoom: 1
 --- !u!4 &35075876
 Transform:
   m_ObjectHideFlags: 0
