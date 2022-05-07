@@ -24,8 +24,7 @@ public class CollectibleItem : Collectible
         MoveForward moveForward = spellPrefab.GetComponent<MoveForward>();
         moveForward.ModifySpeed((speed) => speed * playerSpellSpeedModifier);
 
-        Vector3 scaleChange = new Vector3(playerSpellSizeModifier, playerSpellSizeModifier, playerSpellSizeModifier);
-        spellPrefab.transform.localScale += scaleChange;
+        spellPrefab.transform.localScale *= playerSpellSizeModifier;
     }
     
     public override CollectibleInfo Info()

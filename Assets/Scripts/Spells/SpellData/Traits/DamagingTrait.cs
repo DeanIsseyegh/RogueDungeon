@@ -4,7 +4,6 @@ using UnityEngine;
 public class DamagingTrait : SpellTrait
 {
     public float damage;
-    public float damageFrequency = 0;
 
     public override void ApplyEffects(GameObject spell, bool isFromPlayer)
     {

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 1faf67f77db38454aa1c6dc1331139dc, type: 3}
   playerSpellSpeedModifier: 1
-  playerSpellSizeModifier: 1
+  playerSpellSizeModifier: 2
   info: {fileID: 11400000, guid: 47c06be98b12aca4ab2aa72d43fd848a, type: 2}
