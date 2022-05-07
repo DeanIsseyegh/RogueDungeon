@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: c11c6f11c37988a46974d889615458c7, type: 3}
   spellData: {fileID: 11400000, guid: 9b7c49065e9e35c48a73bd826446843c, type: 2}
-  info: {fileID: 0}
+  info: {fileID: 11400000, guid: 3573b487a201af243a29c8029b554905, type: 2}

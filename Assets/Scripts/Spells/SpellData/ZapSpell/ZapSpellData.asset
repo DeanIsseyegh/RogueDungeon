@@ -17,7 +17,7 @@ MonoBehaviour:
   animationName: BasicSpell
   spellIndicator: Line
   manaCost: 5
-  spellLifeTime: 0.5
+  spellLifeTime: 1
   spellStartUp: 0.2
   spellCooldown: 0.2
   spellTraits:

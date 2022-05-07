@@ -1,8 +1,10 @@
 ﻿using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class DamagingAttack : MonoBehaviour
 {
+    [ShowInInspector]
     public float Damage { set; private get; }
     public string TriggersOnTag { set; private get; }
     
@@ -14,4 +16,10 @@ public class DamagingAttack : MonoBehaviour
             otherHealth.TakeDamage(Damage);
         }
     }
+
+    public void ModifyDamage(Func<float, float> damageModifier)
+    {
+        Damage = damageModifier(Damage);
+    }
+
 }

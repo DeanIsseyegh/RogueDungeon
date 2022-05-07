@@ -5,7 +5,8 @@ using UnityEngine;
 public class CollectibleItem : Collectible
 {
     public float playerSpellSpeedModifier = 1;
-    public float playerSpellSizeModifier = 0;
+    public float playerSpellSizeModifier = 1;
+    public float playerSpellDamageModifier = 1;
     
     public ItemInfo info;
 
@@ -25,6 +26,9 @@ public class CollectibleItem : Collectible
         moveForward.ModifySpeed((speed) => speed * playerSpellSpeedModifier);
 
         spellPrefab.transform.localScale *= playerSpellSizeModifier;
+
+        DamagingAttack damagingAttack = spellPrefab.GetComponent<DamagingAttack>();
+        damagingAttack.ModifyDamage((damage) => damage * playerSpellDamageModifier);
     }
     
     public override CollectibleInfo Info()

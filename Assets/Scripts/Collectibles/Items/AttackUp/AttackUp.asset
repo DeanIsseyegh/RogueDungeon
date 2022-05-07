@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487ec525e9a0c9f459dc830e75bff4b3, type: 3}
+  m_Name: AttackUp
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 15ee1f3f005717c498b7ae03766ee232, type: 3}
+  playerSpellSpeedModifier: 1
+  playerSpellSizeModifier: 1
+  playerSpellDamageModifier: 1.2
+  info: {fileID: 11400000, guid: 4afbe1c47865e254fa1f210405aa63e0, type: 2}
