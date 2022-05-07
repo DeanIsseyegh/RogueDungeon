@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b27aee48896609a4699e9658bb489b0e, type: 3}
-  m_Name: NatureBallData
+  m_Name: ZapSpellData
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 4353209434063490667, guid: 64c11198346e26044817d7aff6b76c24, type: 3}
-  spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.6}
+  spellPrefab: {fileID: 5900896550996689396, guid: 9bd2c7acbb14b3a4f912902f134d2702, type: 3}
+  spellSpawnOffset: {x: 0.2, y: 1.1, z: 0.2}
   animationName: BasicSpell
   spellIndicator: Line
-  manaCost: 10
-  spellLifeTime: 3
-  spellStartUp: 0.4
-  spellCooldown: 1
+  manaCost: 5
+  spellLifeTime: 0.5
+  spellStartUp: 0.2
+  spellCooldown: 0.2
   spellTraits:
-  - {fileID: 11400000, guid: 0c76016b214d64c4eb614bb85e31e414, type: 2}
-  - {fileID: 11400000, guid: 8a789367db53ea24991eac1175003a37, type: 2}
+  - {fileID: 11400000, guid: 80dcb9573db80a4469b8f72ce84e814c, type: 2}
+  - {fileID: 11400000, guid: 10389100d057cf04796d92ebdf285c80, type: 2}
