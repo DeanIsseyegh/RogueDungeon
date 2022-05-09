@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.06386728, g: 0.041427486, b: 0.17610094, a: 1}
+  m_IndirectSpecularColor: {r: 0.028319575, g: 0.020879345, b: 0.09700265, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -300,6 +300,8 @@ MonoBehaviour:
   enemyRoomZSizes: 050000000700000009000000
   puzzleRoomXSizes: 0500000007000000
   puzzleRoomZSizes: 0300000005000000
+  bossRoomXSizes: 07000000
+  bossRoomZSizes: 07000000
   numOfMainRoomSizes: 0a000000
   initialEnemyCounter: 1
   enemyCounterIncreasePerRoom: 1
@@ -2941,6 +2943,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4222296821985314, guid: 5812f95c175b34e7a8e5a7566a43a0ef, type: 3}
   m_PrefabInstance: {fileID: 338818430}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &348448879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 348448880}
+  - component: {fileID: 348448881}
+  m_Layer: 0
+  m_Name: BossEventGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &348448880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348448879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 550668415}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &348448881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348448879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307a5abae9147d3b2cc5738dee7bffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closedEntranceTile: {fileID: 1768021477997006, guid: 234d2a5a371bded4daec77deceff0f9b, type: 3}
+  boss: {fileID: 1732173515415540, guid: 9d978afd80a17ff43bb57b0c97e4e82e, type: 3}
+  bossSpawnOffset: {x: 0, y: 4, z: 0}
 --- !u!1001 &350304812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4651,6 +4700,7 @@ MonoBehaviour:
   puzzleEventGenerator: {fileID: 945947269}
   enemyEventGenerator: {fileID: 1680093571}
   collectibleEventGenerator: {fileID: 242012869}
+  bossEventGenerator: {fileID: 348448881}
 --- !u!4 &550668415
 Transform:
   m_ObjectHideFlags: 0
@@ -4666,6 +4716,7 @@ Transform:
   - {fileID: 945947268}
   - {fileID: 1680093570}
   - {fileID: 242012868}
+  - {fileID: 348448880}
   m_Father: {fileID: 1161685704}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8800,7 +8851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.283, y: 2.515, z: -942.386}
+  m_LocalPosition: {x: 0.5, y: 1.715, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10767,7 +10818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1161685703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13791,7 +13842,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552729923}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.283, y: 2.515, z: -942.386}
+  m_LocalPosition: {x: 0.5, y: 1.715, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17689,6 +17740,8 @@ GameObject:
   - component: {fileID: 2061683400}
   - component: {fileID: 2061683407}
   - component: {fileID: 2061683406}
+  - component: {fileID: 2061683410}
+  - component: {fileID: 2061683409}
   - component: {fileID: 2061683408}
   m_Layer: 0
   m_Name: UIManager
@@ -17814,6 +17867,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstItem: {fileID: 1264348703}
   nextIconOffset: {x: 65, y: 0, z: 0}
+--- !u!114 &2061683409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061683399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c74c01b2e6a3f541bb1763c79106b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellIconPosition: 4
+--- !u!114 &2061683410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061683399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c74c01b2e6a3f541bb1763c79106b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellIconPosition: 3
 --- !u!1001 &2066385897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18100,7 +18179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2084435899
 Transform:
   m_ObjectHideFlags: 0
@@ -20259,15 +20338,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4771201582977641619, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.783
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4771201582977641619, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4771201582977641619, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -938.386
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4771201582977641619, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
       propertyPath: m_LocalRotation.w

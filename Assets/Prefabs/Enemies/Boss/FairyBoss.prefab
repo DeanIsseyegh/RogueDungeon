@@ -5808,9 +5808,10 @@ GameObject:
   - component: {fileID: 4587317890868438104}
   - component: {fileID: 7706518922307255586}
   - component: {fileID: -7323314805725207103}
+  - component: {fileID: 8368414540658626254}
   m_Layer: 0
   m_Name: FairyBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5858,7 +5859,7 @@ Animator:
   m_GameObject: {fileID: 1732173515415540}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0750d18e3be49b8478ac3aeebecd81e1, type: 3}
-  m_Controller: {fileID: 9100000, guid: 9cc68985f237765478c0893baf0f7cfc, type: 2}
+  m_Controller: {fileID: 9100000, guid: 651594049dd1b744e8faaef92e2b9e0f, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5906,7 +5907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a87ec7b8487db944ead949ec9153ba89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 75
+  maxHealth: 150
 --- !u!195 &3718275530176000093
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5925,8 +5926,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
-  m_Height: 0.5
-  m_BaseOffset: -1
+  m_Height: 1
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!65 &4587317890868438104
@@ -5969,6 +5970,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 166b26cb3074e4645bb376437df1b479, type: 2}
+--- !u!114 &8368414540658626254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732173515415540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270fc28867566a5408e264a0952f4855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1755227469980476
 GameObject:
   m_ObjectHideFlags: 0

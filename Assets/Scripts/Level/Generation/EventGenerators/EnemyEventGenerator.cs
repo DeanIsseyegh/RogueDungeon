@@ -21,8 +21,6 @@ namespace Level.RoomEvents
             roomEndEvent.IsRoomComplete = () => startEvent.HasEventFinished();
             roomEndEvent.OnRoomComplete = () =>
             {
-                startEvent.enabled = false;
-
                 if (generatedRoom.RoomData.hasExit)
                     generatedRoom.Exit.GetComponentInChildren<Open>().enabled = true;
                 if (generatedRoom.RoomData.hasLeftSideRoom || generatedRoom.RoomData.hasRightSideRoom)

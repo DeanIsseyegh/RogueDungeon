@@ -18,6 +18,10 @@ public class RandomRoomDataGenerator : MonoBehaviour
     [Title("Puzzle Room")] 
     [SerializeField] private int[] puzzleRoomXSizes = {5, 7};
     [SerializeField] private int[] puzzleRoomZSizes = {3, 5};
+    
+    [Title("Boss Room")] 
+    [SerializeField] private int[] bossRoomXSizes = {7};
+    [SerializeField] private int[] bossRoomZSizes = {7};
 
     [SerializeField] private int[] numOfMainRoomSizes = {5,6,7};
     [SerializeField] private int initialEnemyCounter = 2;
@@ -42,6 +46,9 @@ public class RandomRoomDataGenerator : MonoBehaviour
 
         Func<int> xSizePuzzleRoom = () => GenerateRandomValue(puzzleRoomXSizes);
         Func<int> zSizePuzzleRoom = () => GenerateRandomValue(puzzleRoomZSizes);
+        
+        Func<int> xSizeBossRoom = () => GenerateRandomValue(bossRoomXSizes);
+        Func<int> zSizeBossRoom = () => GenerateRandomValue(bossRoomZSizes);
 
         RoomData firstRoom = ScriptableObject.CreateInstance<RoomData>();
         firstRoom.name = "Room0";
@@ -57,53 +64,30 @@ public class RandomRoomDataGenerator : MonoBehaviour
         int numOfEnemyRooms = 0;
         for (int i = 1; i < numOfMainRooms; i++)
         {
-            // Main Rooms
             RoomData newRoom = ScriptableObject.CreateInstance<RoomData>();
             newRoom.name = $"Room{i}";
             roomData.Add(newRoom);
             newRoom.hasEntrance = true;
-            newRoom.hasExit = i != numOfMainRooms - 1;
-            if (prevRoom.hasSpell || prevRoom.hasItem)
+            bool isLastRoom = i == numOfMainRooms - 1;
+            newRoom.hasExit = !isLastRoom;
+
+            if (isLastRoom)
             {
-                newRoom.hasEnemies = true;
-                newRoom.numberOfEnemies = initialEnemyCounter + (numOfEnemyRooms++ * enemyCounterIncreasePerRoom);
-                newRoom.xSize = xSizeRangeEnemyRoom.Invoke();
-                newRoom.zSize = zSizeRangeEnemyRoom.Invoke();
+                GenerateBossRoom(newRoom, xSizeBossRoom, zSizeBossRoom);
+            }
+            else if (prevRoom.hasSpell || prevRoom.hasItem)
+            {
+                GenerateEnemyRoom(newRoom, numOfEnemyRooms, xSizeRangeEnemyRoom, zSizeRangeEnemyRoom);
+                numOfEnemyRooms++;
             }
             else
             {
-                if (prevHallwayRoom.hasItem)
-                {
-                    newRoom.hasSpell = true;
-                }
-                else
-                {
-                    newRoom.hasItem = true;
-                }
-
-                newRoom.xSize = xSizeRangeHallwayRoom.Invoke();
-                newRoom.zSize = zSizeRangeHallwayRoom.Invoke();
-                prevHallwayRoom = newRoom;
+                prevHallwayRoom = GenerateRewardsRoom(prevHallwayRoom, newRoom, xSizeRangeHallwayRoom, zSizeRangeHallwayRoom);
             }
 
-            // Side Rooms
             if (newRoom.hasEnemies)
             {
-                bool doesHaveRightSideRoom = 0 == Random.Range(0, 2);
-                bool doesHaveLeftSideRoom = 0 == Random.Range(0, 2);
-                if (doesHaveLeftSideRoom)
-                {
-                    newRoom.hasLeftSideRoom = true;
-                    newRoom.leftSideRoomData = GenerateRandomSideRoom(xSizePuzzleRoom, zSizePuzzleRoom);
-                    newRoom.leftSideRoomData.name = $"{newRoom.name}-LeftSideRoom";
-                }
-            
-                if (doesHaveRightSideRoom)
-                {
-                    newRoom.hasRightSideRoom = true;
-                    newRoom.rightSideRoomData = GenerateRandomSideRoom(xSizePuzzleRoom, zSizePuzzleRoom);
-                    newRoom.rightSideRoomData.name = $"{newRoom.name}-RightSideRoom";
-                }
+                GenerateSideRooms(newRoom, xSizePuzzleRoom, zSizePuzzleRoom);
             }
             
             prevRoom = newRoom;
@@ -111,7 +95,60 @@ public class RandomRoomDataGenerator : MonoBehaviour
 
         return roomData;
     }
-    
+
+    private static void GenerateBossRoom(RoomData newRoom, Func<int> xSizeBossRoom, Func<int> zSizeBossRoom)
+    {
+        newRoom.isBossRoom = true;
+        newRoom.xSize = xSizeBossRoom.Invoke();
+        newRoom.zSize = zSizeBossRoom.Invoke();
+    }
+
+    private void GenerateEnemyRoom(RoomData newRoom, int numOfEnemyRooms, Func<int> xSizeRangeEnemyRoom,
+        Func<int> zSizeRangeEnemyRoom)
+    {
+        newRoom.hasEnemies = true;
+        newRoom.numberOfEnemies = initialEnemyCounter + (numOfEnemyRooms * enemyCounterIncreasePerRoom);
+        newRoom.xSize = xSizeRangeEnemyRoom.Invoke();
+        newRoom.zSize = zSizeRangeEnemyRoom.Invoke();
+    }
+
+    private static RoomData GenerateRewardsRoom(RoomData prevHallwayRoom, RoomData newRoom, Func<int> xSizeRangeHallwayRoom,
+        Func<int> zSizeRangeHallwayRoom)
+    {
+        if (prevHallwayRoom.hasItem)
+        {
+            newRoom.hasSpell = true;
+        }
+        else
+        {
+            newRoom.hasItem = true;
+        }
+
+        newRoom.xSize = xSizeRangeHallwayRoom.Invoke();
+        newRoom.zSize = zSizeRangeHallwayRoom.Invoke();
+        prevHallwayRoom = newRoom;
+        return prevHallwayRoom;
+    }
+
+    private static void GenerateSideRooms(RoomData newRoom, Func<int> xSizePuzzleRoom, Func<int> zSizePuzzleRoom)
+    {
+        bool doesHaveRightSideRoom = 0 == Random.Range(0, 2);
+        bool doesHaveLeftSideRoom = 0 == Random.Range(0, 2);
+        if (doesHaveLeftSideRoom)
+        {
+            newRoom.hasLeftSideRoom = true;
+            newRoom.leftSideRoomData = GenerateRandomSideRoom(xSizePuzzleRoom, zSizePuzzleRoom);
+            newRoom.leftSideRoomData.name = $"{newRoom.name}-LeftSideRoom";
+        }
+
+        if (doesHaveRightSideRoom)
+        {
+            newRoom.hasRightSideRoom = true;
+            newRoom.rightSideRoomData = GenerateRandomSideRoom(xSizePuzzleRoom, zSizePuzzleRoom);
+            newRoom.rightSideRoomData.name = $"{newRoom.name}-RightSideRoom";
+        }
+    }
+
     private static RoomData GenerateRandomSideRoom(Func<int> xSizePuzzleRoom, Func<int> zSizePuzzleRoom)
     {
         RoomData newSideRoom = ScriptableObject.CreateInstance<RoomData>();

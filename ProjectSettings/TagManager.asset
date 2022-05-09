@@ -30,6 +30,10 @@ TagManager:
   - Floor
   - Balloon
   - Spell
+  - SpellIcon3
+  - SpellIcon3Cooldown
+  - SpellIcon4
+  - SpellIcon4Cooldown
   layers:
   - Default
   - TransparentFX

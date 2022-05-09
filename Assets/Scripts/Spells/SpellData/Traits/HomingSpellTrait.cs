@@ -11,7 +11,7 @@ public class HomingSpellTrait : SpellTrait
         HomingAttack homingAttack = spell.AddComponent<HomingAttack>();
         string target = isFromPlayer ? "Enemy" : "Player";
         homingAttack.RotationSpeed = homingRotationSpeed;
-        homingAttack.HomingTargetTag = target;
+        homingAttack.Target = GameObject.FindWithTag(target); //Can be easily optimized with Singleton pattern here
         homingAttack.TargetOffset = homingTargetOffset;
     }
 

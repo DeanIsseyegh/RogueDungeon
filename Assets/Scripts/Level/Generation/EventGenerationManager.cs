@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Level.Generation.EventGenerators;
 using Level.RoomEvents;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ namespace Level.Generation
         [SerializeField] private PuzzleEventGenerator puzzleEventGenerator;
         [SerializeField] private EnemyEventGenerator enemyEventGenerator;
         [SerializeField] private CollectibleEventGenerator collectibleEventGenerator;
+        [SerializeField] private BossEventGenerator bossEventGenerator;
 
         public void GenerateEvent(GeneratedRoom generatedRoom, GeneratedRoom previousRoom,
             List<GameObject> sideExits)
@@ -18,6 +20,8 @@ namespace Level.Generation
                 collectibleEventGenerator.GenerateCollectibleEvent(generatedRoom, previousRoom, sideExits);
             else if (roomData.hasEnemies)
                 enemyEventGenerator.GenerateEnemyEvent(generatedRoom, previousRoom, sideExits);
+            else if (roomData.isBossRoom)
+                bossEventGenerator.GenerateBossEvent(generatedRoom);
         }
 
         public void GenerateSideEvent(GeneratedRoom generatedRoom, bool isRightSideRoom)
