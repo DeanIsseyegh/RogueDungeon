@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27aee48896609a4699e9658bb489b0e, type: 3}
+  m_Name: BossSpellData
+  m_EditorClassIdentifier: 
+  spellPrefab: {fileID: 8158321999698532358, guid: 6758f4cced5648b4b831503cc04e72e7, type: 3}
+  spellSpawnOffset: {x: 0.5, y: 2.2, z: 0.4}
+  animationName: BossSpellAttack
+  spellIndicator: Line
+  manaCost: 10
+  spellLifeTime: 3
+  spellStartUp: 0.7
+  spellCooldown: 0.5
+  spellTraits:
+  - {fileID: 11400000, guid: 23e50f445153af04bbd92558810beea3, type: 2}
+  - {fileID: 11400000, guid: 49c6dd9139b792349b89e1373b8a61f6, type: 2}
+  - {fileID: 11400000, guid: 1090261c8b95fcf4797756b49cbdde41, type: 2}

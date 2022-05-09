@@ -1,15 +1,15 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1
+--- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 61
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Rider.Editor:Packages.Rider.Editor:RiderScriptEditorPersistedState
-  lastWriteTicks: -8585495083021250303
+  m_Script: {fileID: 11500000, guid: beee3a9e7a47af140ac9a11946313a4f, type: 3}
+  m_Name: Damaging
+  m_EditorClassIdentifier: 
+  damage: 15
