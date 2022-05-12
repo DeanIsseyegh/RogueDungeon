@@ -75,27 +75,12 @@ public class UIManager : MonoBehaviour
         _itemIcons.AddIcon(newIcon);
     }
 
-
-    public void ShowChoices(List<Collectible> collectibles)
-    {
-        for (int i = 0; i < collectibles.Count; i++)
-        {
-            GameObject choice = _choiceUi.transform.GetChild(i).gameObject;
-            choice.SetActive(true);
-            Collectible collectible = collectibles[i];
-            choice.GetComponentInChildren<ChoiceIcon>().SetIcon(collectible.icon);
-            choice.GetComponentInChildren<ChoiceTitle>().SetTitle(collectible.Info().name);
-            choice.GetComponentInChildren<ChoiceDescription>().SetDescription(collectible.Info().description);
-            choice.GetComponentInChildren<ChoiceStats>().SetStats(collectible.Info().stats);
-        }
-    }
-    
     public void ShowChoice(Collectible collectible)
     {
         GameObject choice = _choiceUi.transform.GetChild(0).gameObject;
         choice.SetActive(true);
         choice.GetComponentInChildren<ChoiceIcon>().SetIcon(collectible.icon);
-        choice.GetComponentInChildren<ChoiceTitle>().SetTitle(collectible.Info().name);
+        choice.GetComponentInChildren<ChoiceTitle>().SetTitle(collectible.Info().collectibleName);
         choice.GetComponentInChildren<ChoiceDescription>().SetDescription(collectible.Info().description);
         choice.GetComponentInChildren<ChoiceStats>().SetStats(collectible.Info().stats);
     }

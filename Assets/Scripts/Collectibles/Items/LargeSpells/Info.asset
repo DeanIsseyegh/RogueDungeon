@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdb4ada7a02bff4e9c2c9832a6541e7, type: 3}
   m_Name: Info
   m_EditorClassIdentifier: 
-  name: Large Spells
+  collectibleName: Large Spells
   description: Increase the size of all your spells
+  stats: 
