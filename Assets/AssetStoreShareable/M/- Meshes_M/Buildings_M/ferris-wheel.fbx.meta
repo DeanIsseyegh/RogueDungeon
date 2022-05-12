@@ -1,0 +1,431 @@
+fileFormatVersion: 2
+guid: 259c90d442d45ec45b5dafe44a9bd2a4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: alien-ufo_Rig
+    100002: boy-beach_Rig
+    100004: boy-sport_Rig
+    100006: //RootNode
+    100008: ferris-wheel-gondola1
+    100010: ferris-wheel-gondola2
+    100012: ferris-wheel-gondola3
+    100014: ferris-wheel-gondola4
+    100016: ferris-wheel-gondola5
+    100018: ferris-wheel-gondola6
+    100020: ferris-wheel-gondola7
+    100022: ferris-wheel-gondola8
+    100024: ferris-wheel-main
+    100026: ferris-wheel-stand
+    100028: giant_Rig
+    100030: girl-beach_Rig
+    100032: man-astronaut_Rig
+    100034: man-beach_Rig
+    100036: man-casual_Rig
+    100038: man-construction-worker_Rig
+    100040: man-cowboy_Rig
+    100042: man-cult_Rig
+    100044: man-EOD_Rig
+    100046: man-eskimo_Rig
+    100048: man-farm_Rig
+    100050: man-golf_Rig
+    100052: man-hazard_Rig
+    100054: man-jamaica_Rig
+    100056: man-knight_Rig
+    100058: man-mafia_Rig
+    100060: man-metalhead_Rig
+    100062: man-native-warrior_Rig
+    100064: man-native_Rig
+    100066: man-samurai-black_Rig
+    100068: man-samurai_Rig
+    100070: man-shirt.001
+    100072: man-shirt.002
+    100074: man-shirt_Rig
+    100076: man-soldier-ge_Rig
+    100078: man-soldier-special-ge_Rig
+    100080: man-soldier-us_Rig
+    100082: man-soldier_Rig
+    100084: man-swimming_Rig
+    100086: man-tie_Rig
+    100088: man-viking_Rig
+    100090: man-worker_Rig
+    100092: man-zombie_Rig
+    100094: man-zulu-uk_Rig
+    100096: man-zulu_Rig
+    100098: skeleton_Rig
+    100100: woman-casual_Rig
+    100102: woman-dress_Rig
+    100104: woman-farm_Rig
+    100106: woman-geisha_Rig
+    100108: woman-ginger_Rig
+    100110: woman-hazard_Rig
+    100112: woman-metalhead_Rig
+    100114: woman-native_Rig
+    100116: woman-swimming-guard_Rig
+    100118: woman-swimming_Rig
+    100120: woman-viking_Rig
+    100122: woman-zombie_Rig
+    400000: alien-ufo_Rig
+    400002: boy-beach_Rig
+    400004: boy-sport_Rig
+    400006: //RootNode
+    400008: ferris-wheel-gondola1
+    400010: ferris-wheel-gondola2
+    400012: ferris-wheel-gondola3
+    400014: ferris-wheel-gondola4
+    400016: ferris-wheel-gondola5
+    400018: ferris-wheel-gondola6
+    400020: ferris-wheel-gondola7
+    400022: ferris-wheel-gondola8
+    400024: ferris-wheel-main
+    400026: ferris-wheel-stand
+    400028: giant_Rig
+    400030: girl-beach_Rig
+    400032: man-astronaut_Rig
+    400034: man-beach_Rig
+    400036: man-casual_Rig
+    400038: man-construction-worker_Rig
+    400040: man-cowboy_Rig
+    400042: man-cult_Rig
+    400044: man-EOD_Rig
+    400046: man-eskimo_Rig
+    400048: man-farm_Rig
+    400050: man-golf_Rig
+    400052: man-hazard_Rig
+    400054: man-jamaica_Rig
+    400056: man-knight_Rig
+    400058: man-mafia_Rig
+    400060: man-metalhead_Rig
+    400062: man-native-warrior_Rig
+    400064: man-native_Rig
+    400066: man-samurai-black_Rig
+    400068: man-samurai_Rig
+    400070: man-shirt.001
+    400072: man-shirt.002
+    400074: man-shirt_Rig
+    400076: man-soldier-ge_Rig
+    400078: man-soldier-special-ge_Rig
+    400080: man-soldier-us_Rig
+    400082: man-soldier_Rig
+    400084: man-swimming_Rig
+    400086: man-tie_Rig
+    400088: man-viking_Rig
+    400090: man-worker_Rig
+    400092: man-zombie_Rig
+    400094: man-zulu-uk_Rig
+    400096: man-zulu_Rig
+    400098: skeleton_Rig
+    400100: woman-casual_Rig
+    400102: woman-dress_Rig
+    400104: woman-farm_Rig
+    400106: woman-geisha_Rig
+    400108: woman-ginger_Rig
+    400110: woman-hazard_Rig
+    400112: woman-metalhead_Rig
+    400114: woman-native_Rig
+    400116: woman-swimming-guard_Rig
+    400118: woman-swimming_Rig
+    400120: woman-viking_Rig
+    400122: woman-zombie_Rig
+    2100000: 17 GREY-DARKEST
+    2100002: 6 SKIN-LIGHTEST
+    2100004: 26 RED-DARK
+    2100006: 9 BROWN-DARKEST
+    2100008: 52 PINK
+    2100010: 44 BLUE
+    2100012: 10 BROWN-DARK
+    2100014: 14 BROWN-LIGHTEST
+    2100016: 11 BROWN-MEDIUM
+    2100018: 13 BROWN-LIGHT
+    2100020: 58 WHITE
+    2100022: 28 ORANGE
+    2100024: 34 GREEN-DARK
+    2100026: 15 BROWN-WHITE
+    2100028: 35 GREEN-MEDIUM
+    2100030: 33 GREEN-DARKEST
+    2100032: 29 ORANGE-LIGHT
+    2100034: 25 RED-DARKEST
+    2100036: 43 BLUE-MEDIUM
+    2100038: 20 GREY
+    2100040: 64 GLASS
+    2100042: 42 BLUE-DARK
+    2100044: 12 BROWN
+    2100046: 30 YELLOW
+    2100048: 21 GREY LIGHT
+    2100050: 23 GREY-WHITE
+    2100052: 5 SKIN-LIGHT
+    2100054: 57 BLACK
+    2100056: 31 YELLOW-LIGHT
+    2100058: 37 GREEN-LIGHT
+    2100060: 27 RED
+    2100062: 36 GREEN
+    2100064: 41 BLUE-DARKEST
+    2300000: alien-ufo_Rig
+    2300002: boy-beach_Rig
+    2300004: boy-sport_Rig
+    2300006: ferris-wheel-gondola1
+    2300008: ferris-wheel-gondola2
+    2300010: ferris-wheel-gondola3
+    2300012: ferris-wheel-gondola4
+    2300014: ferris-wheel-gondola5
+    2300016: ferris-wheel-gondola6
+    2300018: ferris-wheel-gondola7
+    2300020: ferris-wheel-gondola8
+    2300022: ferris-wheel-main
+    2300024: ferris-wheel-stand
+    2300026: giant_Rig
+    2300028: girl-beach_Rig
+    2300030: man-astronaut_Rig
+    2300032: man-beach_Rig
+    2300034: man-casual_Rig
+    2300036: man-construction-worker_Rig
+    2300038: man-cowboy_Rig
+    2300040: man-cult_Rig
+    2300042: man-EOD_Rig
+    2300044: man-eskimo_Rig
+    2300046: man-farm_Rig
+    2300048: man-golf_Rig
+    2300050: man-hazard_Rig
+    2300052: man-jamaica_Rig
+    2300054: man-knight_Rig
+    2300056: man-mafia_Rig
+    2300058: man-metalhead_Rig
+    2300060: man-native-warrior_Rig
+    2300062: man-native_Rig
+    2300064: man-samurai-black_Rig
+    2300066: man-samurai_Rig
+    2300068: man-shirt.001
+    2300070: man-shirt.002
+    2300072: man-shirt_Rig
+    2300074: man-soldier-ge_Rig
+    2300076: man-soldier-special-ge_Rig
+    2300078: man-soldier-us_Rig
+    2300080: man-soldier_Rig
+    2300082: man-swimming_Rig
+    2300084: man-tie_Rig
+    2300086: man-viking_Rig
+    2300088: man-worker_Rig
+    2300090: man-zombie_Rig
+    2300092: man-zulu-uk_Rig
+    2300094: man-zulu_Rig
+    2300096: skeleton_Rig
+    2300098: woman-casual_Rig
+    2300100: woman-dress_Rig
+    2300102: woman-farm_Rig
+    2300104: woman-geisha_Rig
+    2300106: woman-ginger_Rig
+    2300108: woman-hazard_Rig
+    2300110: woman-metalhead_Rig
+    2300112: woman-native_Rig
+    2300114: woman-swimming-guard_Rig
+    2300116: woman-swimming_Rig
+    2300118: woman-viking_Rig
+    2300120: woman-zombie_Rig
+    3300000: alien-ufo_Rig
+    3300002: boy-beach_Rig
+    3300004: boy-sport_Rig
+    3300006: ferris-wheel-gondola1
+    3300008: ferris-wheel-gondola2
+    3300010: ferris-wheel-gondola3
+    3300012: ferris-wheel-gondola4
+    3300014: ferris-wheel-gondola5
+    3300016: ferris-wheel-gondola6
+    3300018: ferris-wheel-gondola7
+    3300020: ferris-wheel-gondola8
+    3300022: ferris-wheel-main
+    3300024: ferris-wheel-stand
+    3300026: giant_Rig
+    3300028: girl-beach_Rig
+    3300030: man-astronaut_Rig
+    3300032: man-beach_Rig
+    3300034: man-casual_Rig
+    3300036: man-construction-worker_Rig
+    3300038: man-cowboy_Rig
+    3300040: man-cult_Rig
+    3300042: man-EOD_Rig
+    3300044: man-eskimo_Rig
+    3300046: man-farm_Rig
+    3300048: man-golf_Rig
+    3300050: man-hazard_Rig
+    3300052: man-jamaica_Rig
+    3300054: man-knight_Rig
+    3300056: man-mafia_Rig
+    3300058: man-metalhead_Rig
+    3300060: man-native-warrior_Rig
+    3300062: man-native_Rig
+    3300064: man-samurai-black_Rig
+    3300066: man-samurai_Rig
+    3300068: man-shirt.001
+    3300070: man-shirt.002
+    3300072: man-shirt_Rig
+    3300074: man-soldier-ge_Rig
+    3300076: man-soldier-special-ge_Rig
+    3300078: man-soldier-us_Rig
+    3300080: man-soldier_Rig
+    3300082: man-swimming_Rig
+    3300084: man-tie_Rig
+    3300086: man-viking_Rig
+    3300088: man-worker_Rig
+    3300090: man-zombie_Rig
+    3300092: man-zulu-uk_Rig
+    3300094: man-zulu_Rig
+    3300096: skeleton_Rig
+    3300098: woman-casual_Rig
+    3300100: woman-dress_Rig
+    3300102: woman-farm_Rig
+    3300104: woman-geisha_Rig
+    3300106: woman-ginger_Rig
+    3300108: woman-hazard_Rig
+    3300110: woman-metalhead_Rig
+    3300112: woman-native_Rig
+    3300114: woman-swimming-guard_Rig
+    3300116: woman-swimming_Rig
+    3300118: woman-viking_Rig
+    3300120: woman-zombie_Rig
+    4300000: boy-sport_Rig
+    4300002: girl-beach_Rig
+    4300004: boy-beach_Rig
+    4300006: giant_Rig
+    4300008: man-casual_Rig
+    4300010: man-shirt_Rig
+    4300012: woman-swimming_Rig
+    4300014: man-beach_Rig
+    4300016: woman-swimming-guard_Rig
+    4300018: man-zombie_Rig
+    4300020: man-swimming_Rig
+    4300022: man-eskimo_Rig
+    4300024: man-construction-worker_Rig
+    4300026: woman-zombie_Rig
+    4300028: man-cult_Rig
+    4300030: woman-hazard_Rig
+    4300032: man-farm_Rig
+    4300034: man-hazard_Rig
+    4300036: man-astronaut_Rig
+    4300038: woman-farm_Rig
+    4300040: man-golf_Rig
+    4300042: man-tie_Rig
+    4300044: man-native-warrior_Rig
+    4300046: woman-native_Rig
+    4300048: man-mafia_Rig
+    4300050: woman-casual_Rig
+    4300052: man-samurai_Rig
+    4300054: man-jamaica_Rig
+    4300056: man-native_Rig
+    4300058: man-soldier_Rig
+    4300060: man-cowboy_Rig
+    4300062: woman-geisha_Rig
+    4300064: man-samurai-black_Rig
+    4300066: man-worker_Rig
+    4300068: man-soldier-us_Rig
+    4300070: woman-ginger_Rig
+    4300072: man-soldier-ge_Rig
+    4300074: man-soldier-special-ge_Rig
+    4300076: woman-dress_Rig
+    4300078: man-knight_Rig
+    4300080: skeleton_Rig
+    4300082: man-metalhead_Rig
+    4300084: woman-metalhead_Rig
+    4300086: man-EOD_Rig
+    4300088: alien-ufo_Rig
+    4300090: man-zulu_Rig
+    4300092: man-zulu-uk_Rig
+    4300094: man-viking_Rig
+    4300096: woman-viking_Rig
+    4300098: man-shirt.001
+    4300100: man-shirt.002
+    4300102: ferris-wheel-main
+    4300104: ferris-wheel-stand
+    4300106: ferris-wheel-gondola1
+    4300108: ferris-wheel-gondola2
+    4300110: ferris-wheel-gondola8
+    4300112: ferris-wheel-gondola4
+    4300114: ferris-wheel-gondola6
+    4300116: ferris-wheel-gondola5
+    4300118: ferris-wheel-gondola3
+    4300120: ferris-wheel-gondola7
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,119 @@
+fileFormatVersion: 2
+guid: 14a35fbd047474f969273021c3389fab
+timeCreated: 1570220062
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: locomotive-wagon-western-base
+    100004: locomotive-wagon-wheel-base1
+    100006: locomotive-wagon-wheel-base2
+    100008: locomotive-wagon-wheel1
+    100010: locomotive-wagon-wheel2
+    100012: locomotive-wagon-wheel3
+    100014: locomotive-wagon-wheel4
+    400000: //RootNode
+    400002: locomotive-wagon-western-base
+    400004: locomotive-wagon-wheel-base1
+    400006: locomotive-wagon-wheel-base2
+    400008: locomotive-wagon-wheel1
+    400010: locomotive-wagon-wheel2
+    400012: locomotive-wagon-wheel3
+    400014: locomotive-wagon-wheel4
+    2300000: locomotive-wagon-western-base
+    2300002: locomotive-wagon-wheel-base1
+    2300004: locomotive-wagon-wheel-base2
+    2300006: locomotive-wagon-wheel1
+    2300008: locomotive-wagon-wheel2
+    2300010: locomotive-wagon-wheel3
+    2300012: locomotive-wagon-wheel4
+    3300000: locomotive-wagon-western-base
+    3300002: locomotive-wagon-wheel-base1
+    3300004: locomotive-wagon-wheel-base2
+    3300006: locomotive-wagon-wheel1
+    3300008: locomotive-wagon-wheel2
+    3300010: locomotive-wagon-wheel3
+    3300012: locomotive-wagon-wheel4
+    4300000: locomotive-wagon-wheel-base1
+    4300002: locomotive-wagon-wheel-base2
+    4300004: locomotive-wagon-wheel4
+    4300006: locomotive-wagon-wheel3
+    4300008: locomotive-wagon-wheel2
+    4300010: locomotive-wagon-wheel1
+    4300012: locomotive-wagon-western-base
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

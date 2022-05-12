@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 718f2b420a30e0045bf9bddd59e75150
+timeCreated: 1472927410
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: sunscreen_04-2
+    100004: Circle.006
+    100006: Cube.009
+    100008: Cube.010
+    100010: Cube.011
+    100012: fence-vineyard01
+    100014: fence-vineyard02.001
+    100016: fence-vineyard03
+    100018: fence-vineyard04
+    100020: grapes
+    100022: grapes|Circle.006|Dupli|0
+    100024: grapes|Cube.010|Dupli|1
+    100026: hexagonTile-land01
+    100028: hexagonTile-land01.001
+    100030: hexagonTile-land02
+    100032: house-vineyard01
+    100034: house11
+    100036: house11|house-vineyard01|Dupli|0
+    100038: Plane.038
+    100040: Plane.328
+    100042: tree17
+    100044: tree17.001
+    400000: //RootNode
+    400002: sunscreen_04-2
+    400004: Circle.006
+    400006: Cube.009
+    400008: Cube.010
+    400010: Cube.011
+    400012: fence-vineyard01
+    400014: fence-vineyard02.001
+    400016: fence-vineyard03
+    400018: fence-vineyard04
+    400020: grapes
+    400022: grapes|Circle.006|Dupli|0
+    400024: grapes|Cube.010|Dupli|1
+    400026: hexagonTile-land01
+    400028: hexagonTile-land01.001
+    400030: hexagonTile-land02
+    400032: house-vineyard01
+    400034: house11
+    400036: house11|house-vineyard01|Dupli|0
+    400038: Plane.038
+    400040: Plane.328
+    400042: tree17
+    400044: tree17.001
+    2300000: //RootNode
+    2300002: sunscreen_04-2
+    2300004: Circle.006
+    2300006: Cube.009
+    2300008: Cube.010
+    2300010: Cube.011
+    2300012: fence-vineyard01
+    2300014: fence-vineyard02.001
+    2300016: fence-vineyard03
+    2300018: fence-vineyard04
+    2300020: grapes|Circle.006|Dupli|0
+    2300022: grapes|Cube.010|Dupli|1
+    2300024: hexagonTile-land01
+    2300026: hexagonTile-land01.001
+    2300028: hexagonTile-land02
+    2300030: house-vineyard01
+    2300032: house11|house-vineyard01|Dupli|0
+    2300034: Plane.038
+    2300036: Plane.328
+    2300038: tree17
+    2300040: tree17.001
+    3300000: //RootNode
+    3300002: sunscreen_04-2
+    3300004: Circle.006
+    3300006: Cube.009
+    3300008: Cube.010
+    3300010: Cube.011
+    3300012: fence-vineyard01
+    3300014: fence-vineyard02.001
+    3300016: fence-vineyard03
+    3300018: fence-vineyard04
+    3300020: grapes|Circle.006|Dupli|0
+    3300022: grapes|Cube.010|Dupli|1
+    3300024: hexagonTile-land01
+    3300026: hexagonTile-land01.001
+    3300028: hexagonTile-land02
+    3300030: house-vineyard01
+    3300032: house11|house-vineyard01|Dupli|0
+    3300034: Plane.038
+    3300036: Plane.328
+    3300038: tree17
+    3300040: tree17.001
+    4300000: sunscreen_04
+    4300002: sunscreen_04-2
+    4300004: sunscreen04
+    4300006: fence-vineyard04
+    4300008: fence-vineyard02.001
+    4300010: fence-vineyard01
+    4300012: hexagonTile-land01
+    4300014: hexagonTile-land02
+    4300016: fence-vineyard03
+    4300018: Cube.011
+    4300020: Circle.006
+    4300022: Cube.010
+    4300024: tree17.001
+    4300026: tree17
+    4300028: Plane.328
+    4300030: house-vineyard01
+    4300032: Cube.009
+    4300034: Plane.038
+    4300036: hexagonTile-land01.001
+    4300038: sunscreen-closed
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

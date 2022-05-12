@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: 5cbcaf4a0bb264447be833dbc17a219a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: crane-crawler-arm
+    100004: crane-crawler-belt
+    100006: crane-crawler-chassis
+    100008: crane-crawler-hook
+    100010: crane-crawler-wheel_B
+    100012: crane-crawler-wheel_F
+    100014: crane-crawler-wheel_TB
+    100016: crane-crawler-wheel_TC
+    100018: crane-crawler-wheel_TF
+    100020: crane-crawler-base
+    400000: //RootNode
+    400002: crane-crawler-arm
+    400004: crane-crawler-belt
+    400006: crane-crawler-chassis
+    400008: crane-crawler-hook
+    400010: crane-crawler-wheel_B
+    400012: crane-crawler-wheel_F
+    400014: crane-crawler-wheel_TB
+    400016: crane-crawler-wheel_TC
+    400018: crane-crawler-wheel_TF
+    400020: crane-crawler-base
+    2100000: 29 ORANGE-LIGHT
+    2100002: 20 GREY
+    2100004: 17 GREY-DARKEST
+    2100006: 20 GREY.001
+    2100008: 17 GREY-DARKEST.001
+    2300000: crane-crawler-arm
+    2300002: crane-crawler-belt
+    2300004: crane-crawler-chassis
+    2300006: crane-crawler-hook
+    2300008: crane-crawler-wheel_B
+    2300010: crane-crawler-wheel_F
+    2300012: crane-crawler-wheel_TB
+    2300014: crane-crawler-wheel_TC
+    2300016: crane-crawler-wheel_TF
+    2300018: crane-crawler-base
+    3300000: crane-crawler-arm
+    3300002: crane-crawler-belt
+    3300004: crane-crawler-chassis
+    3300006: crane-crawler-hook
+    3300008: crane-crawler-wheel_B
+    3300010: crane-crawler-wheel_F
+    3300012: crane-crawler-wheel_TB
+    3300014: crane-crawler-wheel_TC
+    3300016: crane-crawler-wheel_TF
+    3300018: crane-crawler-base
+    4300000: crane-crawler-arm
+    4300002: crane-crawler-belt
+    4300004: crane-crawler-chassis
+    4300006: crane-crawler-hook
+    4300008: crane-crawler-wheel_B
+    4300010: crane-crawler-wheel_TB
+    4300012: crane-crawler-wheel_TC
+    4300014: crane-crawler-wheel_TF
+    4300016: crane-crawler-base
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

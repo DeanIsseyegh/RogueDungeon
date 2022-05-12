@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 708f2e0b3660bff4ea87e05ed9a150ba
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: car-truck-tanker-base
+    100004: car-truck-tanker-wheel_BR1
+    100006: car-truck-tanker-wheel_BR2
+    100008: car-truck-tanker-wheel_BR3
+    100010: car-truck-tanker-wheel_BRL1
+    100012: car-truck-tanker-wheel_BRL2
+    100014: car-truck-tanker-wheel_BRL3
+    100016: car-truck-tanker-wheel_FL
+    100018: car-truck-tanker-wheel_FR
+    100020: car-truck-tanker-wheel_BL1
+    100022: car-truck-tanker-wheel_BL2
+    100024: car-truck-tanker-wheel_BL3
+    400000: //RootNode
+    400002: car-truck-tanker-base
+    400004: car-truck-tanker-wheel_BR1
+    400006: car-truck-tanker-wheel_BR2
+    400008: car-truck-tanker-wheel_BR3
+    400010: car-truck-tanker-wheel_BRL1
+    400012: car-truck-tanker-wheel_BRL2
+    400014: car-truck-tanker-wheel_BRL3
+    400016: car-truck-tanker-wheel_FL
+    400018: car-truck-tanker-wheel_FR
+    400020: car-truck-tanker-wheel_BL1
+    400022: car-truck-tanker-wheel_BL2
+    400024: car-truck-tanker-wheel_BL3
+    2100000: 23 GREY-WHITE
+    2100002: 64 GLASS
+    2100004: 59 EMISSION-WHITE
+    2100006: 17 GREY-DARKEST
+    2100008: 20 GREY
+    2100010: 60 EMISSION-RED
+    2100012: 28 ORANGE
+    2300000: car-truck-tanker-base
+    2300002: car-truck-tanker-wheel_BR1
+    2300004: car-truck-tanker-wheel_BR2
+    2300006: car-truck-tanker-wheel_BR3
+    2300008: car-truck-tanker-wheel_BRL1
+    2300010: car-truck-tanker-wheel_BRL2
+    2300012: car-truck-tanker-wheel_BRL3
+    2300014: car-truck-tanker-wheel_FL
+    2300016: car-truck-tanker-wheel_FR
+    2300018: car-truck-tanker-wheel_BL1
+    2300020: car-truck-tanker-wheel_BL2
+    2300022: car-truck-tanker-wheel_BL3
+    3300000: car-truck-tanker-base
+    3300002: car-truck-tanker-wheel_BR1
+    3300004: car-truck-tanker-wheel_BR2
+    3300006: car-truck-tanker-wheel_BR3
+    3300008: car-truck-tanker-wheel_BRL1
+    3300010: car-truck-tanker-wheel_BRL2
+    3300012: car-truck-tanker-wheel_BRL3
+    3300014: car-truck-tanker-wheel_FL
+    3300016: car-truck-tanker-wheel_FR
+    3300018: car-truck-tanker-wheel_BL1
+    3300020: car-truck-tanker-wheel_BL2
+    3300022: car-truck-tanker-wheel_BL3
+    4300000: car-truck-tanker-base
+    4300002: car-truck-tanker-wheel_BRL1
+    4300004: car-truck-tanker-wheel_FL
+    4300006: car-truck-tanker-wheel_BRL2
+    4300008: car-truck-tanker-wheel_BRL3
+    4300010: car-truck-tanker-wheel_BR1
+    4300012: car-truck-tanker-wheel_BR3
+    4300014: car-truck-tanker-wheel_FR
+    4300016: car-truck-tanker-wheel_BR2
+    4300018: car-truck-tanker-wheel_BL1
+    4300020: car-truck-tanker-wheel_BL2
+    4300022: car-truck-tanker-wheel_BL3
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

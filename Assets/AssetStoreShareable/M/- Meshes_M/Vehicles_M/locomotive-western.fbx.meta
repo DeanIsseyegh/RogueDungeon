@@ -1,0 +1,459 @@
+fileFormatVersion: 2
+guid: 7a07f5700ce484dc690d088f8aecbaec
+timeCreated: 1500239385
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: bell
+    100002: bell_end
+    100004: CarMain
+    100006: ConRod.001.L
+    100008: ConRod.001.L_end
+    100010: ConRod.001.R
+    100012: ConRod.001.R_end
+    100014: ConRod.L
+    100016: ConRod.R
+    100018: ConRod.Target.001.L
+    100020: ConRod.Target.001.L_end
+    100022: ConRod.Target.001.R
+    100024: ConRod.Target.001.R_end
+    100026: DriveRod.001.L
+    100028: DriveRod.001.L 1
+    100030: DriveRod.001.R
+    100032: DriveRod.001.R 1
+    100034: DriveRod.002.L
+    100036: DriveRod.002.L 1
+    100038: DriveRod.002.R
+    100040: DriveRod.002.R 1
+    100042: DriveRod.003.L
+    100044: DriveRod.003.L_end
+    100046: DriveRod.003.R
+    100048: DriveRod.003.R_end
+    100050: DriveRod.Target.001.L
+    100052: DriveRod.Target.001.L_end
+    100054: DriveRod.Target.001.R
+    100056: DriveRod.Target.001.R_end
+    100058: DriveWheel
+    100060: EngineMain
+    100062: EngineMain.001
+    100064: EngineMain.002
+    100066: EngineMain.003
+    100068: locomotive-bell
+    100070: locomotive-wagon--wheel1
+    100072: locomotive-wagon--wheel2
+    100074: locomotive-wagon--wheel3
+    100076: locomotive-wagon--wheel4
+    100078: locomotive-wagon--wheels1
+    100080: locomotive-wagon--wheels2
+    100082: locomotive-wagon-western
+    100084: //RootNode
+    100086: locomotive-western
+    100088: locomotive-wheel1
+    100090: locomotive-wheel2
+    100092: locomotive-wheel3
+    100094: locomotive-wheel4
+    100096: Root
+    100098: Root.001
+    100100: Root.001_end
+    100102: Root.002
+    100104: Root.002_end
+    100106: Root.003
+    100108: Root.003_end
+    100110: Root.004
+    100112: Root.004_end
+    100114: wheel1
+    100116: wheel1_end
+    100118: wheel2
+    100120: wheel2_end
+    100122: wheel3
+    100124: con-rod_L
+    100126: con-rod_R
+    100128: drive-rod_BL
+    100130: drive-rod_BR
+    100132: drive-rod_FL
+    100134: drive-rod_FR
+    100136: locomotive-bell-western
+    100138: locomotive-western-base
+    400000: bell
+    400002: bell_end
+    400004: CarMain
+    400006: ConRod.001.L
+    400008: ConRod.001.L_end
+    400010: ConRod.001.R
+    400012: ConRod.001.R_end
+    400014: ConRod.L
+    400016: ConRod.R
+    400018: ConRod.Target.001.L
+    400020: ConRod.Target.001.L_end
+    400022: ConRod.Target.001.R
+    400024: ConRod.Target.001.R_end
+    400026: DriveRod.001.L
+    400028: DriveRod.001.L 1
+    400030: DriveRod.001.R
+    400032: DriveRod.001.R 1
+    400034: DriveRod.002.L
+    400036: DriveRod.002.L 1
+    400038: DriveRod.002.R
+    400040: DriveRod.002.R 1
+    400042: DriveRod.003.L
+    400044: DriveRod.003.L_end
+    400046: DriveRod.003.R
+    400048: DriveRod.003.R_end
+    400050: DriveRod.Target.001.L
+    400052: DriveRod.Target.001.L_end
+    400054: DriveRod.Target.001.R
+    400056: DriveRod.Target.001.R_end
+    400058: DriveWheel
+    400060: EngineMain
+    400062: EngineMain.001
+    400064: EngineMain.002
+    400066: EngineMain.003
+    400068: locomotive-bell
+    400070: locomotive-wagon--wheel1
+    400072: locomotive-wagon--wheel2
+    400074: locomotive-wagon--wheel3
+    400076: locomotive-wagon--wheel4
+    400078: locomotive-wagon--wheels1
+    400080: locomotive-wagon--wheels2
+    400082: locomotive-wagon-western
+    400084: locomotive-western
+    400086: //RootNode
+    400088: locomotive-wheel1
+    400090: locomotive-wheel2
+    400092: locomotive-wheel3
+    400094: locomotive-wheel4
+    400096: Root
+    400098: Root.001
+    400100: Root.001_end
+    400102: Root.002
+    400104: Root.002_end
+    400106: Root.003
+    400108: Root.003_end
+    400110: Root.004
+    400112: Root.004_end
+    400114: wheel1
+    400116: wheel1_end
+    400118: wheel2
+    400120: wheel2_end
+    400122: wheel3
+    400124: con-rod_L
+    400126: con-rod_R
+    400128: drive-rod_BL
+    400130: drive-rod_BR
+    400132: drive-rod_FL
+    400134: drive-rod_FR
+    400136: locomotive-bell-western
+    400138: locomotive-western-base
+    2300000: ConRod.L
+    2300002: ConRod.R
+    2300004: DriveRod.001.L 1
+    2300006: DriveRod.001.R 1
+    2300008: DriveRod.002.L 1
+    2300010: DriveRod.002.R 1
+    2300012: locomotive-bell
+    2300014: locomotive-wagon--wheel1
+    2300016: locomotive-wagon--wheel2
+    2300018: locomotive-wagon--wheel3
+    2300020: locomotive-wagon--wheel4
+    2300022: locomotive-wagon--wheels1
+    2300024: locomotive-wagon--wheels2
+    2300026: locomotive-wagon-western
+    2300028: locomotive-western
+    2300030: locomotive-wheel1
+    2300032: locomotive-wheel2
+    2300034: locomotive-wheel3
+    2300036: locomotive-wheel4
+    2300038: con-rod_L
+    2300040: con-rod_R
+    2300042: drive-rod_BL
+    2300044: drive-rod_BR
+    2300046: drive-rod_FL
+    2300048: drive-rod_FR
+    2300050: locomotive-bell-western
+    2300052: locomotive-western-base
+    3300000: ConRod.L
+    3300002: ConRod.R
+    3300004: DriveRod.001.L 1
+    3300006: DriveRod.001.R 1
+    3300008: DriveRod.002.L 1
+    3300010: DriveRod.002.R 1
+    3300012: locomotive-bell
+    3300014: locomotive-wagon--wheel1
+    3300016: locomotive-wagon--wheel2
+    3300018: locomotive-wagon--wheel3
+    3300020: locomotive-wagon--wheel4
+    3300022: locomotive-wagon--wheels1
+    3300024: locomotive-wagon--wheels2
+    3300026: locomotive-wagon-western
+    3300028: locomotive-western
+    3300030: locomotive-wheel1
+    3300032: locomotive-wheel2
+    3300034: locomotive-wheel3
+    3300036: locomotive-wheel4
+    3300038: con-rod_L
+    3300040: con-rod_R
+    3300042: drive-rod_BL
+    3300044: drive-rod_BR
+    3300046: drive-rod_FL
+    3300048: drive-rod_FR
+    3300050: locomotive-bell-western
+    3300052: locomotive-western-base
+    4300000: locomotive-western
+    4300002: locomotive-wagon-western
+    4300004: locomotive-wagon--wheels1
+    4300006: locomotive-wagon--wheel2
+    4300008: locomotive-wagon--wheel1
+    4300010: locomotive-wagon--wheels2
+    4300012: locomotive-wagon--wheel4
+    4300014: locomotive-wagon--wheel3
+    4300016: locomotive-wheel4
+    4300018: ConRod.L
+    4300020: ConRod.R
+    4300022: locomotive-wheel3
+    4300024: locomotive-wheel2
+    4300026: locomotive-wheel1
+    4300028: DriveRod.001.L
+    4300030: DriveRod.002.L
+    4300032: DriveRod.001.R
+    4300034: DriveRod.002.R
+    4300036: locomotive-bell
+    4300038: locomotive-bell-western
+    4300040: locomotive-western-base
+    4300042: drive-rod_BL
+    4300044: con-rod_L
+    4300046: drive-rod_FL
+    4300048: con-rod_R
+    4300050: drive-rod_BR
+    4300052: drive-rod_FR
+    7400000: TrainRig|Drive Wheel
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: TrainRig|Drive Wheel
+      takeName: TrainRig|Drive Wheel
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/EngineMain
+        weight: 1
+      - path: Root/EngineMain/bell
+        weight: 1
+      - path: Root/EngineMain/bell/bell_end
+        weight: 1
+      - path: Root/EngineMain/bell/locomotive-bell
+        weight: 1
+      - path: Root/EngineMain/CarMain
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.002
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.002/locomotive-wagon--wheels1
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.002/Root.003
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.002/Root.003/locomotive-wagon--wheel2
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.002/Root.003/Root.003_end
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.002/Root.004
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.002/Root.004/locomotive-wagon--wheel1
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.002/Root.004/Root.004_end
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.003
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.003/locomotive-wagon--wheels2
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.003/Root.001
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.003/Root.001/locomotive-wagon--wheel4
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.003/Root.001/Root.001_end
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.003/Root.002
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.003/Root.002/locomotive-wagon--wheel3
+        weight: 1
+      - path: Root/EngineMain/CarMain/EngineMain.003/Root.002/Root.002_end
+        weight: 1
+      - path: Root/EngineMain/CarMain/locomotive-wagon-western
+        weight: 1
+      - path: Root/EngineMain/DriveRod.001.L
+        weight: 1
+      - path: Root/EngineMain/DriveRod.001.L/DriveRod.002.L
+        weight: 1
+      - path: Root/EngineMain/DriveRod.001.L/DriveRod.002.L/DriveRod.001.L 1
+        weight: 1
+      - path: Root/EngineMain/DriveRod.001.L/DriveRod.002.L/DriveRod.003.L
+        weight: 1
+      - path: Root/EngineMain/DriveRod.001.L/DriveRod.002.L/DriveRod.003.L/DriveRod.002.L
+          1
+        weight: 1
+      - path: Root/EngineMain/DriveRod.001.L/DriveRod.002.L/DriveRod.003.L/DriveRod.003.L_end
+        weight: 1
+      - path: Root/EngineMain/DriveRod.001.R
+        weight: 1
+      - path: Root/EngineMain/DriveRod.001.R/DriveRod.002.R
+        weight: 1
+      - path: Root/EngineMain/DriveRod.001.R/DriveRod.002.R/DriveRod.001.R 1
+        weight: 1
+      - path: Root/EngineMain/DriveRod.001.R/DriveRod.002.R/DriveRod.003.R
+        weight: 1
+      - path: Root/EngineMain/DriveRod.001.R/DriveRod.002.R/DriveRod.003.R/DriveRod.002.R
+          1
+        weight: 1
+      - path: Root/EngineMain/DriveRod.001.R/DriveRod.002.R/DriveRod.003.R/DriveRod.003.R_end
+        weight: 1
+      - path: Root/EngineMain/DriveWheel
+        weight: 1
+      - path: Root/EngineMain/DriveWheel/ConRod.001.L
+        weight: 1
+      - path: Root/EngineMain/DriveWheel/ConRod.001.L/ConRod.001.L_end
+        weight: 1
+      - path: Root/EngineMain/DriveWheel/ConRod.001.L/ConRod.L
+        weight: 1
+      - path: Root/EngineMain/DriveWheel/ConRod.001.R
+        weight: 1
+      - path: Root/EngineMain/DriveWheel/ConRod.001.R/ConRod.001.R_end
+        weight: 1
+      - path: Root/EngineMain/DriveWheel/ConRod.001.R/ConRod.R
+        weight: 1
+      - path: Root/EngineMain/DriveWheel/locomotive-wheel4
+        weight: 1
+      - path: Root/EngineMain/EngineMain.001
+        weight: 1
+      - path: Root/EngineMain/EngineMain.001/wheel1
+        weight: 1
+      - path: Root/EngineMain/EngineMain.001/wheel1/locomotive-wheel1
+        weight: 1
+      - path: Root/EngineMain/EngineMain.001/wheel1/wheel1_end
+        weight: 1
+      - path: Root/EngineMain/locomotive-western
+        weight: 1
+      - path: Root/EngineMain/wheel2
+        weight: 1
+      - path: Root/EngineMain/wheel2/locomotive-wheel2
+        weight: 1
+      - path: Root/EngineMain/wheel2/wheel2_end
+        weight: 1
+      - path: Root/EngineMain/wheel3
+        weight: 1
+      - path: Root/EngineMain/wheel3/ConRod.Target.001.L
+        weight: 1
+      - path: Root/EngineMain/wheel3/ConRod.Target.001.L/ConRod.Target.001.L_end
+        weight: 1
+      - path: Root/EngineMain/wheel3/ConRod.Target.001.R
+        weight: 1
+      - path: Root/EngineMain/wheel3/ConRod.Target.001.R/ConRod.Target.001.R_end
+        weight: 1
+      - path: Root/EngineMain/wheel3/DriveRod.Target.001.L
+        weight: 1
+      - path: Root/EngineMain/wheel3/DriveRod.Target.001.L/DriveRod.Target.001.L_end
+        weight: 1
+      - path: Root/EngineMain/wheel3/DriveRod.Target.001.R
+        weight: 1
+      - path: Root/EngineMain/wheel3/DriveRod.Target.001.R/DriveRod.Target.001.R_end
+        weight: 1
+      - path: Root/EngineMain/wheel3/locomotive-wheel3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

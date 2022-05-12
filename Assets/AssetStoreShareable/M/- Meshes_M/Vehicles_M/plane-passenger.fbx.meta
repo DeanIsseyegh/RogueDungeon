@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 0f6168dd5d5154a47b22196c9502c82c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: plane-passenger-base
+    100004: plane-passenger-wheels_BL-1
+    100006: plane-passenger-wheels_BL-2
+    100008: plane-passenger-wheels_BL-3
+    100010: plane-passenger-wheels_BR-1
+    100012: plane-passenger-wheels_BR-2
+    100014: plane-passenger-wheels_BR-3
+    100016: plane-passenger-wheels_F
+    100018: plane-passenger-wheels_BL1
+    100020: plane-passenger-wheels_BL2
+    100022: plane-passenger-wheels_BL3
+    100024: plane-passenger-wheels_BR1
+    100026: plane-passenger-wheels_BR2
+    100028: plane-passenger-wheels_BR3
+    400000: //RootNode
+    400002: plane-passenger-base
+    400004: plane-passenger-wheels_BL-1
+    400006: plane-passenger-wheels_BL-2
+    400008: plane-passenger-wheels_BL-3
+    400010: plane-passenger-wheels_BR-1
+    400012: plane-passenger-wheels_BR-2
+    400014: plane-passenger-wheels_BR-3
+    400016: plane-passenger-wheels_F
+    400018: plane-passenger-wheels_BL1
+    400020: plane-passenger-wheels_BL2
+    400022: plane-passenger-wheels_BL3
+    400024: plane-passenger-wheels_BR1
+    400026: plane-passenger-wheels_BR2
+    400028: plane-passenger-wheels_BR3
+    2100000: 58 WHITE
+    2100002: 42 BLUE-DARK
+    2100004: 20 GREY
+    2100006: 64 GLASS
+    2100008: 17 GREY-DARKEST
+    2300000: plane-passenger-base
+    2300002: plane-passenger-wheels_BL-1
+    2300004: plane-passenger-wheels_BL-2
+    2300006: plane-passenger-wheels_BL-3
+    2300008: plane-passenger-wheels_BR-1
+    2300010: plane-passenger-wheels_BR-2
+    2300012: plane-passenger-wheels_BR-3
+    2300014: plane-passenger-wheels_F
+    2300016: plane-passenger-wheels_BL1
+    2300018: plane-passenger-wheels_BL2
+    2300020: plane-passenger-wheels_BL3
+    2300022: plane-passenger-wheels_BR1
+    2300024: plane-passenger-wheels_BR2
+    2300026: plane-passenger-wheels_BR3
+    3300000: plane-passenger-base
+    3300002: plane-passenger-wheels_BL-1
+    3300004: plane-passenger-wheels_BL-2
+    3300006: plane-passenger-wheels_BL-3
+    3300008: plane-passenger-wheels_BR-1
+    3300010: plane-passenger-wheels_BR-2
+    3300012: plane-passenger-wheels_BR-3
+    3300014: plane-passenger-wheels_F
+    3300016: plane-passenger-wheels_BL1
+    3300018: plane-passenger-wheels_BL2
+    3300020: plane-passenger-wheels_BL3
+    3300022: plane-passenger-wheels_BR1
+    3300024: plane-passenger-wheels_BR2
+    3300026: plane-passenger-wheels_BR3
+    4300000: plane-passenger-base
+    4300002: plane-passenger-wheels_F
+    4300004: plane-passenger-wheels_BR-3
+    4300006: plane-passenger-wheels_BR-2
+    4300008: plane-passenger-wheels_BR-1
+    4300010: plane-passenger-wheels_BL-3
+    4300012: plane-passenger-wheels_BL-2
+    4300014: plane-passenger-wheels_BL-1
+    4300016: plane-passenger-wheels_BR3
+    4300018: plane-passenger-wheels_BR2
+    4300020: plane-passenger-wheels_BR1
+    4300022: plane-passenger-wheels_BL3
+    4300024: plane-passenger-wheels_BL2
+    4300026: plane-passenger-wheels_BL1
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

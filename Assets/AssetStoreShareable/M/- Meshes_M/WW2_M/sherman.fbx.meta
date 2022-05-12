@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: 6352cb4c06ba44108a0068f253ea4d43
+timeCreated: 1570225041
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: man-soldier-ge
+    100002: man-soldier-special-ge
+    100004: man-soldier-us
+    100006: sherman
+    100008: //RootNode
+    100010: sherman-belt
+    100012: sherman-body
+    100014: sherman-gun
+    100016: sherman-head
+    100018: sherman-wheel-top1
+    100020: sherman-wheel-top2
+    100022: sherman-wheel-top3
+    100024: sherman-wheel1
+    100026: sherman-wheel2
+    100028: sherman-wheel3
+    100030: sherman-wheel4
+    100032: sherman-wheel5
+    100034: sherman-wheel6
+    100036: sherman-wheel7
+    100038: sherman-wheel8
+    400000: man-soldier-ge
+    400002: man-soldier-special-ge
+    400004: man-soldier-us
+    400006: sherman
+    400008: //RootNode
+    400010: sherman-belt
+    400012: sherman-body
+    400014: sherman-gun
+    400016: sherman-head
+    400018: sherman-wheel-top1
+    400020: sherman-wheel-top2
+    400022: sherman-wheel-top3
+    400024: sherman-wheel1
+    400026: sherman-wheel2
+    400028: sherman-wheel3
+    400030: sherman-wheel4
+    400032: sherman-wheel5
+    400034: sherman-wheel6
+    400036: sherman-wheel7
+    400038: sherman-wheel8
+    2300000: man-soldier-ge
+    2300002: man-soldier-special-ge
+    2300004: man-soldier-us
+    2300006: sherman-belt
+    2300008: sherman-body
+    2300010: sherman-gun
+    2300012: sherman-head
+    2300014: sherman-wheel-top1
+    2300016: sherman-wheel-top2
+    2300018: sherman-wheel-top3
+    2300020: sherman-wheel1
+    2300022: sherman-wheel2
+    2300024: sherman-wheel3
+    2300026: sherman-wheel4
+    2300028: sherman-wheel5
+    2300030: sherman-wheel6
+    2300032: sherman-wheel7
+    2300034: sherman-wheel8
+    3300000: man-soldier-ge
+    3300002: man-soldier-special-ge
+    3300004: man-soldier-us
+    3300006: sherman-belt
+    3300008: sherman-body
+    3300010: sherman-gun
+    3300012: sherman-head
+    3300014: sherman-wheel-top1
+    3300016: sherman-wheel-top2
+    3300018: sherman-wheel-top3
+    3300020: sherman-wheel1
+    3300022: sherman-wheel2
+    3300024: sherman-wheel3
+    3300026: sherman-wheel4
+    3300028: sherman-wheel5
+    3300030: sherman-wheel6
+    3300032: sherman-wheel7
+    3300034: sherman-wheel8
+    4300000: sherman-body
+    4300002: sherman-wheel-top3
+    4300004: sherman-head
+    4300006: sherman-gun
+    4300008: sherman-wheel1
+    4300010: sherman-wheel2
+    4300012: sherman-wheel3
+    4300014: sherman-wheel4
+    4300016: sherman-wheel5
+    4300018: sherman-wheel6
+    4300020: sherman-wheel7
+    4300022: sherman-wheel8
+    4300024: sherman-wheel-top1
+    4300026: sherman-wheel-top2
+    4300028: sherman-belt
+    4300030: man-soldier-us
+    4300032: man-soldier-special-ge
+    4300034: man-soldier-ge
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

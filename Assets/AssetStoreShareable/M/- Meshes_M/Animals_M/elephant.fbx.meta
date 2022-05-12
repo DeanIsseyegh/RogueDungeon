@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: cdf41627a7890bb4999c353e3e00d913
+timeCreated: 1475342148
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: cannonballs_01
+    100004: carriage_01
+    100006: carriage_01-2
+    100008: carriage_01.002
+    100010: carriage_01.003
+    100012: carriage_01.004
+    100014: castle-flag_01
+    100016: castle-flag_02
+    100018: castle-gate_01
+    100020: castle-gate_01-02
+    100022: castle-tower_01
+    100024: castle_gibbet_01
+    100026: castle_ladder_01
+    100028: castle_stairs_01
+    100030: castle_wall_01
+    100032: castle_well_01
+    100034: Circle.005
+    100036: deer
+    100038: elephant
+    100040: Logo
+    100042: pigeon_01
+    100044: Pyramid.001
+    100046: stakes_01
+    100048: Text.001
+    100050: tree_11
+    400000: //RootNode
+    400002: cannonballs_01
+    400004: carriage_01
+    400006: carriage_01-2
+    400008: carriage_01.002
+    400010: carriage_01.003
+    400012: carriage_01.004
+    400014: castle-flag_01
+    400016: castle-flag_02
+    400018: castle-gate_01
+    400020: castle-gate_01-02
+    400022: castle-tower_01
+    400024: castle_gibbet_01
+    400026: castle_ladder_01
+    400028: castle_stairs_01
+    400030: castle_wall_01
+    400032: castle_well_01
+    400034: Circle.005
+    400036: deer
+    400038: elephant
+    400040: Logo
+    400042: pigeon_01
+    400044: Pyramid.001
+    400046: stakes_01
+    400048: Text.001
+    400050: tree_11
+    2300000: //RootNode
+    2300002: cannonballs_01
+    2300004: carriage_01
+    2300006: carriage_01-2
+    2300008: carriage_01.002
+    2300010: carriage_01.003
+    2300012: carriage_01.004
+    2300014: castle-flag_01
+    2300016: castle-flag_02
+    2300018: castle-gate_01
+    2300020: castle-gate_01-02
+    2300022: castle-tower_01
+    2300024: castle_gibbet_01
+    2300026: castle_ladder_01
+    2300028: castle_stairs_01
+    2300030: castle_wall_01
+    2300032: castle_well_01
+    2300034: Circle.005
+    2300036: deer
+    2300038: elephant
+    2300040: Logo
+    2300042: pigeon_01
+    2300044: Pyramid.001
+    2300046: stakes_01
+    2300048: Text.001
+    2300050: tree_11
+    3300000: //RootNode
+    3300002: cannonballs_01
+    3300004: carriage_01
+    3300006: carriage_01-2
+    3300008: carriage_01.002
+    3300010: carriage_01.003
+    3300012: carriage_01.004
+    3300014: castle-flag_01
+    3300016: castle-flag_02
+    3300018: castle-gate_01
+    3300020: castle-gate_01-02
+    3300022: castle-tower_01
+    3300024: castle_gibbet_01
+    3300026: castle_ladder_01
+    3300028: castle_stairs_01
+    3300030: castle_wall_01
+    3300032: castle_well_01
+    3300034: Circle.005
+    3300036: deer
+    3300038: elephant
+    3300040: Logo
+    3300042: pigeon_01
+    3300044: Pyramid.001
+    3300046: stakes_01
+    3300048: Text.001
+    3300050: tree_11
+    4300000: elephant
+    4300002: deer
+    4300004: castle_gibbet_01
+    4300006: carriage_01.004
+    4300008: carriage_01.003
+    4300010: carriage_01.002
+    4300012: carriage_01
+    4300014: carriage_01-2
+    4300016: castle_ladder_01
+    4300018: tree_11
+    4300020: Circle.005
+    4300022: castle_well_01
+    4300024: Text.001
+    4300026: Logo
+    4300028: stakes_01
+    4300030: castle_stairs_01
+    4300032: Pyramid.001
+    4300034: castle-flag_02
+    4300036: castle-flag_01
+    4300038: castle-gate_01
+    4300040: castle-gate_01-02
+    4300042: cannonballs_01
+    4300044: pigeon_01
+    4300046: castle_wall_01
+    4300048: castle-tower_01
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

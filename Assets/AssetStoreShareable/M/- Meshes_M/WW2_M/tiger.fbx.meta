@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: b25d451fc0bb04350a27ae6d523ae8c1
+timeCreated: 1570225142
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: tiger-belt
+    100004: tiger-body
+    100006: tiger-cannon
+    100008: tiger-head
+    100010: tiger-wheel1
+    100012: tiger-wheel10
+    100014: tiger-wheel2
+    100016: tiger-wheel3
+    100018: tiger-wheel4
+    100020: tiger-wheel5
+    100022: tiger-wheel6
+    100024: tiger-wheel7
+    100026: tiger-wheel8
+    100028: tiger-wheel9
+    400000: //RootNode
+    400002: tiger-belt
+    400004: tiger-body
+    400006: tiger-cannon
+    400008: tiger-head
+    400010: tiger-wheel1
+    400012: tiger-wheel10
+    400014: tiger-wheel2
+    400016: tiger-wheel3
+    400018: tiger-wheel4
+    400020: tiger-wheel5
+    400022: tiger-wheel6
+    400024: tiger-wheel7
+    400026: tiger-wheel8
+    400028: tiger-wheel9
+    2300000: tiger-belt
+    2300002: tiger-body
+    2300004: tiger-cannon
+    2300006: tiger-head
+    2300008: tiger-wheel1
+    2300010: tiger-wheel10
+    2300012: tiger-wheel2
+    2300014: tiger-wheel3
+    2300016: tiger-wheel4
+    2300018: tiger-wheel5
+    2300020: tiger-wheel6
+    2300022: tiger-wheel7
+    2300024: tiger-wheel8
+    2300026: tiger-wheel9
+    3300000: tiger-belt
+    3300002: tiger-body
+    3300004: tiger-cannon
+    3300006: tiger-head
+    3300008: tiger-wheel1
+    3300010: tiger-wheel10
+    3300012: tiger-wheel2
+    3300014: tiger-wheel3
+    3300016: tiger-wheel4
+    3300018: tiger-wheel5
+    3300020: tiger-wheel6
+    3300022: tiger-wheel7
+    3300024: tiger-wheel8
+    3300026: tiger-wheel9
+    4300000: tiger-body
+    4300002: tiger-wheel10
+    4300004: tiger-wheel1
+    4300006: tiger-wheel2
+    4300008: tiger-wheel3
+    4300010: tiger-wheel4
+    4300012: tiger-wheel5
+    4300014: tiger-wheel6
+    4300016: tiger-wheel7
+    4300018: tiger-wheel8
+    4300020: tiger-wheel9
+    4300022: tiger-belt
+    4300024: tiger-head
+    4300026: tiger-cannon
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

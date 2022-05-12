@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: 21afbc3e55fb86b48b46caaf6e6410a3
+timeCreated: 1461945170
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Camera
+    100004: cow
+    100006: cow.001
+    100008: Cube
+    100010: elephant
+    100012: elephant.001
+    100014: fish-small_01
+    100016: giraffe
+    100018: giraffe.001
+    100020: horse
+    100022: horse.001
+    100024: Pyramid.001
+    100026: seagull
+    100028: shark
+    100030: shark.001
+    100032: shark.002
+    100034: SharkMain
+    100036: SharkMain.002
+    100038: snake
+    100040: snake.001
+    100042: spider
+    100044: spider.001
+    100046: tree-dead
+    400000: //RootNode
+    400002: Camera
+    400004: cow
+    400006: cow.001
+    400008: Cube
+    400010: elephant
+    400012: elephant.001
+    400014: fish-small_01
+    400016: giraffe
+    400018: giraffe.001
+    400020: horse
+    400022: horse.001
+    400024: Pyramid.001
+    400026: seagull
+    400028: shark
+    400030: shark.001
+    400032: shark.002
+    400034: SharkMain
+    400036: SharkMain.002
+    400038: snake
+    400040: snake.001
+    400042: spider
+    400044: spider.001
+    400046: tree-dead
+    2300000: //RootNode
+    2300002: cow
+    2300004: cow.001
+    2300006: Cube
+    2300008: elephant
+    2300010: elephant.001
+    2300012: fish-small_01
+    2300014: giraffe
+    2300016: giraffe.001
+    2300018: horse
+    2300020: horse.001
+    2300022: Pyramid.001
+    2300024: seagull
+    2300026: shark
+    2300028: shark.001
+    2300030: shark.002
+    2300032: SharkMain
+    2300034: SharkMain.002
+    2300036: snake
+    2300038: snake.001
+    2300040: spider
+    2300042: spider.001
+    2300044: tree-dead
+    3300000: //RootNode
+    3300002: cow
+    3300004: cow.001
+    3300006: Cube
+    3300008: elephant
+    3300010: elephant.001
+    3300012: fish-small_01
+    3300014: giraffe
+    3300016: giraffe.001
+    3300018: horse
+    3300020: horse.001
+    3300022: Pyramid.001
+    3300024: seagull
+    3300026: shark
+    3300028: shark.001
+    3300030: shark.002
+    3300032: SharkMain
+    3300034: SharkMain.002
+    3300036: snake
+    3300038: snake.001
+    3300040: spider
+    3300042: spider.001
+    3300044: tree-dead
+    4300000: seagull_01
+    4300002: seagull
+    4300004: tree-dead
+    4300006: spider.001
+    4300008: spider
+    4300010: fish-small_01
+    4300012: elephant.001
+    4300014: Pyramid.001
+    4300016: elephant
+    4300018: horse.001
+    4300020: horse
+    4300022: shark.002
+    4300024: shark
+    4300026: SharkMain.002
+    4300028: SharkMain
+    4300030: giraffe.001
+    4300032: cow.001
+    4300034: cow
+    4300036: giraffe
+    4300038: snake.001
+    4300040: Cube
+    4300042: snake
+    4300044: shark.001
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

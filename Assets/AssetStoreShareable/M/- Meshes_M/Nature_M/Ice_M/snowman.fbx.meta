@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 9a749ad1ca73f314189d62a6334a3c74
+timeCreated: 1457280265
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Cube.471
+    100002: floe_01
+    100004: floe_02
+    100006: floe_03
+    100008: flowers_01
+    100010: Icebreaker_01
+    100012: igloo_01
+    100014: PENGUIN_01
+    100016: Plane.006
+    100018: Plane.011_cell
+    100020: Plane.011_cell.001
+    100022: Plane.011_cell.002
+    100024: Plane.011_cell.003
+    100026: Plane.011_cell.004
+    100028: Plane.011_cell.005
+    100030: Plane.011_cell.006
+    100032: Plane.011_cell.007
+    100034: Plane.011_cell.008
+    100036: Plane.011_cell.009
+    100038: Plane.011_cell.010
+    100040: Plane.011_cell.011
+    100042: Plane.327
+    100044: //RootNode
+    100046: snowman_01
+    400000: Cube.471
+    400002: floe_01
+    400004: floe_02
+    400006: floe_03
+    400008: flowers_01
+    400010: Icebreaker_01
+    400012: igloo_01
+    400014: PENGUIN_01
+    400016: Plane.006
+    400018: Plane.011_cell
+    400020: Plane.011_cell.001
+    400022: Plane.011_cell.002
+    400024: Plane.011_cell.003
+    400026: Plane.011_cell.004
+    400028: Plane.011_cell.005
+    400030: Plane.011_cell.006
+    400032: Plane.011_cell.007
+    400034: Plane.011_cell.008
+    400036: Plane.011_cell.009
+    400038: Plane.011_cell.010
+    400040: Plane.011_cell.011
+    400042: Plane.327
+    400044: //RootNode
+    400046: snowman_01
+    2300000: Cube.471
+    2300002: floe_01
+    2300004: floe_02
+    2300006: floe_03
+    2300008: flowers_01
+    2300010: Icebreaker_01
+    2300012: igloo_01
+    2300014: PENGUIN_01
+    2300016: Plane.006
+    2300018: Plane.011_cell
+    2300020: Plane.011_cell.001
+    2300022: Plane.011_cell.002
+    2300024: Plane.011_cell.003
+    2300026: Plane.011_cell.004
+    2300028: Plane.011_cell.005
+    2300030: Plane.011_cell.006
+    2300032: Plane.011_cell.007
+    2300034: Plane.011_cell.008
+    2300036: Plane.011_cell.009
+    2300038: Plane.011_cell.010
+    2300040: Plane.011_cell.011
+    2300042: Plane.327
+    2300044: snowman_01
+    2300046: //RootNode
+    3300000: Cube.471
+    3300002: floe_01
+    3300004: floe_02
+    3300006: floe_03
+    3300008: flowers_01
+    3300010: Icebreaker_01
+    3300012: igloo_01
+    3300014: PENGUIN_01
+    3300016: Plane.006
+    3300018: Plane.011_cell
+    3300020: Plane.011_cell.001
+    3300022: Plane.011_cell.002
+    3300024: Plane.011_cell.003
+    3300026: Plane.011_cell.004
+    3300028: Plane.011_cell.005
+    3300030: Plane.011_cell.006
+    3300032: Plane.011_cell.007
+    3300034: Plane.011_cell.008
+    3300036: Plane.011_cell.009
+    3300038: Plane.011_cell.010
+    3300040: Plane.011_cell.011
+    3300042: Plane.327
+    3300044: snowman_01
+    3300046: //RootNode
+    4300000: snowman_01
+    4300002: Plane.327
+    4300004: Plane.011_cell.011
+    4300006: Plane.011_cell.010
+    4300008: Plane.011_cell.009
+    4300010: Plane.011_cell.008
+    4300012: Plane.011_cell.007
+    4300014: Plane.011_cell.006
+    4300016: Plane.011_cell.005
+    4300018: Plane.011_cell.004
+    4300020: Plane.011_cell.003
+    4300022: Plane.011_cell.002
+    4300024: Plane.011_cell.001
+    4300026: Plane.011_cell
+    4300028: floe_03
+    4300030: Icebreaker_01
+    4300032: Plane.006
+    4300034: igloo_01
+    4300036: floe_02
+    4300038: floe_01
+    4300040: PENGUIN_01
+    4300042: flowers_01
+    4300044: Cube.471
+    4300046: snowman
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

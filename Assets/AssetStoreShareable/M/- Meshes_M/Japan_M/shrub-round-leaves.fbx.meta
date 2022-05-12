@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 8a2a6ae3bbd784053a77670d2f04e462
+timeCreated: 1539985386
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: building-japan
+    100004: building-japan_large
+    100006: building-japan_large_T
+    100008: building-japan_T
+    100010: castle-japan
+    100012: castle-japan_T
+    100014: Cube.005
+    100016: gate-japan
+    100018: gate-japan_T
+    100020: gate-red-japan
+    100022: gate-red-japan_T
+    100024: japan
+    100026: lantern-long
+    100028: lantern-long_T
+    100030: lantern-sphere
+    100032: lantern-sphere_T
+    100034: shrub-leaves
+    100036: shrub01_red_T
+    100038: tower-japan_medium
+    100040: tower-japan_medium_T
+    100042: tower-japan_medium_T.001
+    100044: tower-japan_small
+    100046: tower-japan_small_T
+    400000: //RootNode
+    400002: building-japan
+    400004: building-japan_large
+    400006: building-japan_large_T
+    400008: building-japan_T
+    400010: castle-japan
+    400012: castle-japan_T
+    400014: Cube.005
+    400016: gate-japan
+    400018: gate-japan_T
+    400020: gate-red-japan
+    400022: gate-red-japan_T
+    400024: japan
+    400026: lantern-long
+    400028: lantern-long_T
+    400030: lantern-sphere
+    400032: lantern-sphere_T
+    400034: shrub-leaves
+    400036: shrub01_red_T
+    400038: tower-japan_medium
+    400040: tower-japan_medium_T
+    400042: tower-japan_medium_T.001
+    400044: tower-japan_small
+    400046: tower-japan_small_T
+    2300000: //RootNode
+    2300002: building-japan
+    2300004: building-japan_large
+    2300006: building-japan_large_T
+    2300008: building-japan_T
+    2300010: castle-japan
+    2300012: castle-japan_T
+    2300014: Cube.005
+    2300016: gate-japan
+    2300018: gate-japan_T
+    2300020: gate-red-japan
+    2300022: gate-red-japan_T
+    2300024: japan
+    2300026: lantern-long
+    2300028: lantern-long_T
+    2300030: lantern-sphere
+    2300032: lantern-sphere_T
+    2300034: shrub-leaves
+    2300036: shrub01_red_T
+    2300038: tower-japan_medium
+    2300040: tower-japan_medium_T
+    2300042: tower-japan_medium_T.001
+    2300044: tower-japan_small
+    2300046: tower-japan_small_T
+    3300000: //RootNode
+    3300002: building-japan
+    3300004: building-japan_large
+    3300006: building-japan_large_T
+    3300008: building-japan_T
+    3300010: castle-japan
+    3300012: castle-japan_T
+    3300014: Cube.005
+    3300016: gate-japan
+    3300018: gate-japan_T
+    3300020: gate-red-japan
+    3300022: gate-red-japan_T
+    3300024: japan
+    3300026: lantern-long
+    3300028: lantern-long_T
+    3300030: lantern-sphere
+    3300032: lantern-sphere_T
+    3300034: shrub-leaves
+    3300036: shrub01_red_T
+    3300038: tower-japan_medium
+    3300040: tower-japan_medium_T
+    3300042: tower-japan_medium_T.001
+    3300044: tower-japan_small
+    3300046: tower-japan_small_T
+    4300000: shrub-leaves
+    4300002: lantern-sphere_T
+    4300004: lantern-long_T
+    4300006: building-japan_large_T
+    4300008: building-japan_T
+    4300010: gate-japan_T
+    4300012: tower-japan_medium_T.001
+    4300014: tower-japan_medium_T
+    4300016: castle-japan
+    4300018: castle-japan_T
+    4300020: shrub01_red_T
+    4300022: building-japan_large
+    4300024: gate-red-japan_T
+    4300026: tower-japan_small_T
+    4300028: tower-japan_medium
+    4300030: building-japan
+    4300032: lantern-long
+    4300034: lantern-sphere
+    4300036: gate-red-japan
+    4300038: tower-japan_small
+    4300040: gate-japan
+    4300042: Cube.005
+    4300044: japan
+    4300046: shrub-round-leaves
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

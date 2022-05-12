@@ -1,0 +1,134 @@
+fileFormatVersion: 2
+guid: 39350d260a506574c91414ef42ccb61f
+timeCreated: 1473007219
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: car-baywatch
+    100004: car-baywatch-wheelBackLeft
+    100006: car-baywatch-wheelBackRight
+    100008: car-baywatch-wheelFrontLeft
+    100010: car-baywatch-wheelFrontRight
+    100012: car-baywatch-base
+    100014: car-baywatch-wheel_BL
+    100016: car-baywatch-wheel_BR
+    100018: car-baywatch-wheel_FL
+    100020: car-baywatch-wheel_FR
+    400000: //RootNode
+    400002: car-baywatch
+    400004: car-baywatch-wheelBackLeft
+    400006: car-baywatch-wheelBackRight
+    400008: car-baywatch-wheelFrontLeft
+    400010: car-baywatch-wheelFrontRight
+    400012: car-baywatch-base
+    400014: car-baywatch-wheel_BL
+    400016: car-baywatch-wheel_BR
+    400018: car-baywatch-wheel_FL
+    400020: car-baywatch-wheel_FR
+    2300000: car-baywatch
+    2300002: car-baywatch-wheelBackLeft
+    2300004: car-baywatch-wheelBackRight
+    2300006: car-baywatch-wheelFrontLeft
+    2300008: car-baywatch-wheelFrontRight
+    2300010: car-baywatch-base
+    2300012: car-baywatch-wheel_BL
+    2300014: car-baywatch-wheel_BR
+    2300016: car-baywatch-wheel_FL
+    2300018: car-baywatch-wheel_FR
+    3300000: car-baywatch
+    3300002: car-baywatch-wheelBackLeft
+    3300004: car-baywatch-wheelBackRight
+    3300006: car-baywatch-wheelFrontLeft
+    3300008: car-baywatch-wheelFrontRight
+    3300010: car-baywatch-base
+    3300012: car-baywatch-wheel_BL
+    3300014: car-baywatch-wheel_BR
+    3300016: car-baywatch-wheel_FL
+    3300018: car-baywatch-wheel_FR
+    4300000: car-baywatch-wheelFrontRight
+    4300002: car-baywatch-wheelBackLeft
+    4300004: car-baywatch-wheelFrontLeft
+    4300006: car-baywatch-wheelBackRight
+    4300008: car-baywatch
+    4300010: car-baywatch-base
+    4300012: car-baywatch-wheel_BR
+    4300014: car-baywatch-wheel_FL
+    4300016: car-baywatch-wheel_BL
+    4300018: car-baywatch-wheel_FR
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
