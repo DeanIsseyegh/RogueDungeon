@@ -38,11 +38,11 @@ public abstract class CollectibleRoomStartEvent : RoomStartEvent
             CloseEntrance();
             SpawnCollectibles();
             _isCollectiblesSpawned = true;
-            List<Collectible> collectibles = _createdCollectibles
-                .Select(it => it.GetComponent<OnPickUp>())
-                .Select(it => it.Collectible)
-                .ToList();
-            _uiManager.ShowChoices(collectibles);
+            // List<Collectible> collectibles = _createdCollectibles
+            //     .Select(it => it.GetComponent<OnPickUp>())
+            //     .Select(it => it.Collectible)
+            //     .ToList();
+            // _uiManager.ShowChoices(collectibles);
             GetComponent<BoxCollider>().enabled = false;
         }
     }
