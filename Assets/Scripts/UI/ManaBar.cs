@@ -1,24 +1,23 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class ManaBar : MonoBehaviour
 {
-    private Image _manaBarImage;
+    private Slider _manaBarSlider;
 
     private void Awake()
     {
-        _manaBarImage = GameObject.FindWithTag("ManaBar").GetComponent<Image>();
+        _manaBarSlider = GameObject.FindWithTag("ManaBar").GetComponent<Slider>();
     }
 
-    public Image ManaBarImage
+    public Slider ManaBarImage
     {
-        set => _manaBarImage = value;
+        set => _manaBarSlider = value;
     }
     public float MaxMana { private get; set; }
 
     public float CurrentMana
     {
-        set => _manaBarImage.fillAmount = value / MaxMana;
+        set => _manaBarSlider.value = value / MaxMana;
     }
 }

@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private Image healthBarImage;
+    [SerializeField] private Slider healthBarSlider;
 
-    public Image HealthBarImage
+    public Slider HealthBarImage
     {
-        set => healthBarImage = value;
-        get => healthBarImage;
+        set => healthBarSlider = value;
+        get => healthBarSlider;
     }
     public float MaxHealth { private get; set; }
 
     public float CurrentHealth
     {
-        set => healthBarImage.fillAmount = value / MaxHealth;
+        set => healthBarSlider.value = value / MaxHealth;
     }
 }

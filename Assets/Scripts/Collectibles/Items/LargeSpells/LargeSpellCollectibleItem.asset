@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487ec525e9a0c9f459dc830e75bff4b3, type: 3}
   m_Name: LargeSpellCollectibleItem
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 1faf67f77db38454aa1c6dc1331139dc, type: 3}
+  icon: {fileID: 21300000, guid: 31b2042a762a1db4abb70e234ae37067, type: 3}
   playerSpellSpeedModifier: 1
   playerSpellSizeModifier: 2
+  playerSpellDamageModifier: 1
   info: {fileID: 11400000, guid: 47c06be98b12aca4ab2aa72d43fd848a, type: 2}

@@ -3378,7 +3378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d06cf3b8c805a84fb51c92bcb43c05f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarImage: {fileID: 7925870111646711603}
+  healthBarSlider: {fileID: 847967557571029417}
 --- !u!114 &-1079250989017897255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4019,25 +4019,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8880261331215005910, guid: 018417232f0a8a7469f9b10ab90c2c7a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8880261331215005910, guid: 018417232f0a8a7469f9b10ab90c2c7a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8880261331215005910, guid: 018417232f0a8a7469f9b10ab90c2c7a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0125
+      objectReference: {fileID: 0}
     - target: {fileID: 8972323793407113120, guid: 018417232f0a8a7469f9b10ab90c2c7a, type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 018417232f0a8a7469f9b10ab90c2c7a, type: 3}
---- !u!224 &2005258883108332942 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7722983923260126462, guid: 018417232f0a8a7469f9b10ab90c2c7a, type: 3}
-  m_PrefabInstance: {fileID: 8140696825660608880}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7925870111646711603 stripped
+--- !u!114 &847967557571029417 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2091860996119391811, guid: 018417232f0a8a7469f9b10ab90c2c7a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8880261331215005913, guid: 018417232f0a8a7469f9b10ab90c2c7a, type: 3}
   m_PrefabInstance: {fileID: 8140696825660608880}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &2005258883108332942 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7722983923260126462, guid: 018417232f0a8a7469f9b10ab90c2c7a, type: 3}
+  m_PrefabInstance: {fileID: 8140696825660608880}
+  m_PrefabAsset: {fileID: 0}

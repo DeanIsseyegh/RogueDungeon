@@ -17,7 +17,7 @@ public class ItemIcons : MonoBehaviour
         }
         else
         {
-            GameObject nextItem = Instantiate(firstItem, firstItem.transform.position + nextIconOffset,
+            GameObject nextItem = Instantiate(firstItem, _prevItem.transform.position + nextIconOffset,
                 Quaternion.identity, firstItem.transform.parent);
             Add(nextItem, sprite);
         }
@@ -26,7 +26,7 @@ public class ItemIcons : MonoBehaviour
     private void Add(GameObject iconObj, Sprite sprite)
     {
         iconObj.name = sprite.name;
-        GameObject itemIcon = iconObj.transform.GetChild(0).gameObject;
+        GameObject itemIcon = iconObj.transform.GetChild(0).GetChild(1).gameObject;
         Image image = itemIcon.GetComponent<Image>();
         image.sprite = sprite;
         _prevItem = itemIcon;
