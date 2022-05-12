@@ -5,8 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/ThirdPersonScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Scenes/StartScreenScene.unity
+    guid: 8dab0341d67101a4799aec60226c8e88
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: a6dec4c0aa51f5b45a3f88113d2db45f, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
