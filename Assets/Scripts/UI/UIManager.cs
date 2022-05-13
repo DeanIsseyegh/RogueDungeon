@@ -78,6 +78,7 @@ public class UIManager : MonoBehaviour
     public void ShowChoice(Collectible collectible)
     {
         GameObject choice = _choiceUi.transform.GetChild(0).gameObject;
+        Debug.Log("Showing Choice");
         choice.SetActive(true);
         choice.GetComponentInChildren<ChoiceIcon>().SetIcon(collectible.icon);
         choice.GetComponentInChildren<ChoiceTitle>().SetTitle(collectible.Info().collectibleName);
@@ -87,9 +88,8 @@ public class UIManager : MonoBehaviour
 
     public void HideChoices()
     {
-        foreach (Transform child in _choiceUi.transform)
-        {
-            child.gameObject.SetActive(false);
-        }
+        GameObject choice = _choiceUi.transform.GetChild(0).gameObject;
+        Debug.Log("Hiding Choice");
+        choice.SetActive(false);
     }
 }

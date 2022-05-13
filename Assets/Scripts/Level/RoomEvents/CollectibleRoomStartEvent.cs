@@ -18,6 +18,7 @@ public abstract class CollectibleRoomStartEvent : RoomStartEvent
     private UIManager _uiManager;
 
     private int numOfCollectibles = 2;
+    private PlayerInventory _playerInventory;
 
     protected abstract string GetCollectibleGeneratorTag();
 
@@ -29,6 +30,8 @@ public abstract class CollectibleRoomStartEvent : RoomStartEvent
         _collectibleYOffset = Vector3.up * 1.5f;
         _collectibleXOffset = Vector3.right * 1.5f;
         _createdCollectibles = new List<GameObject>();
+        GameObject player = GameObject.FindWithTag("Player");
+        _playerInventory = player.GetComponent<PlayerInventory>();
     }
 
     protected virtual void OnTriggerEnter(Collider other)
@@ -38,11 +41,6 @@ public abstract class CollectibleRoomStartEvent : RoomStartEvent
             CloseEntrance();
             SpawnCollectibles();
             _isCollectiblesSpawned = true;
-            // List<Collectible> collectibles = _createdCollectibles
-            //     .Select(it => it.GetComponent<OnPickUp>())
-            //     .Select(it => it.Collectible)
-            //     .ToList();
-            // _uiManager.ShowChoices(collectibles);
             GetComponent<BoxCollider>().enabled = false;
         }
     }
@@ -54,7 +52,7 @@ public abstract class CollectibleRoomStartEvent : RoomStartEvent
         for (int i = 0; i < numOfCollectibles; i++)
         {
             if (CollectibleGenerator.ObjectsLeft() == 0) break;
-            GameObject createdCollectible = CollectibleGenerator.Generate(spawnPos, lastCreatedObj);
+            GameObject createdCollectible = CollectibleGenerator.Generate(spawnPos, _playerInventory.Items, lastCreatedObj);
             spawnPos -= _collectibleXOffset * 2;
             _createdCollectibles.Add(createdCollectible);
             lastCreatedObj = createdCollectible;

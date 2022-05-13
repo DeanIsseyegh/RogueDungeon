@@ -23,7 +23,8 @@ public class RandomGameObjGenerator : MonoBehaviour
         return createdObj;
     }
 
-    public GameObject Generate(Vector3 posToGenerate, GameObject toNotSpawn)
+    public GameObject Generate(Vector3 posToGenerate, List<Collectible> collectiblesToNotSpawn,
+        GameObject collectibleToNotSpawn)
     {
         if (objectPool.Count == 0)
         {
@@ -32,13 +33,18 @@ public class RandomGameObjGenerator : MonoBehaviour
         }
 
         List<GameObject> newObjectPool = new List<GameObject>(objectPool);
-        if (toNotSpawn != null)
+        if (collectibleToNotSpawn != null)
         {
             newObjectPool = newObjectPool
                 .Where(it =>
-                    it.GetComponent<OnPickUp>().Collectible != toNotSpawn.GetComponent<OnPickUp>().Collectible)
+                    it.GetComponent<OnPickUp>().Collectible !=
+                    collectibleToNotSpawn.GetComponent<OnPickUp>().Collectible)
                 .ToList();
         }
+
+        newObjectPool = newObjectPool
+            .Where(it => !collectiblesToNotSpawn.Contains(it.GetComponent<OnPickUp>().Collectible))
+            .ToList();
 
         int randomIndex = Random.Range(0, newObjectPool.Count);
         GameObject objToCreate = newObjectPool[randomIndex];
@@ -47,7 +53,7 @@ public class RandomGameObjGenerator : MonoBehaviour
             objectPool.RemoveAt(randomIndex);
         return createdObj;
     }
-    
+
     protected virtual GameObject CreateObj(Vector3 posToGenerate, GameObject objToCreate, Quaternion quaternion)
     {
         return Instantiate(objToCreate, posToGenerate, quaternion);

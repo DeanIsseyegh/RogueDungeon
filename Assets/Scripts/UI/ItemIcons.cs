@@ -1,26 +1,20 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ItemIcons : MonoBehaviour
 {
-    [SerializeField] private GameObject firstItem;
-    [SerializeField] private Vector3 nextIconOffset = new Vector3(65, 0, 0);
+    [SerializeField] private GameObject[] items;
+    private int itemIndex;
 
     private GameObject _prevItem;
 
     public void AddIcon(Sprite sprite)
     {
-        if (_prevItem == null)
-        {
-            firstItem.SetActive(true);
-            Add(firstItem, sprite);
-        }
-        else
-        {
-            GameObject nextItem = Instantiate(firstItem, _prevItem.transform.position + nextIconOffset,
-                Quaternion.identity, firstItem.transform.parent);
-            Add(nextItem, sprite);
-        }
+        GameObject item = items[itemIndex];
+        item.SetActive(true);
+        Add(item, sprite);
+        itemIndex++;
     }
 
     private void Add(GameObject iconObj, Sprite sprite)
