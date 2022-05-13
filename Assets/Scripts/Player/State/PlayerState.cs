@@ -18,7 +18,8 @@ namespace Player.State
             IDLE,
             RUNNING,
             ATTACKING,
-            DYING
+            DYING,
+            VICTORY
         }
 
         public enum EVENT
@@ -45,6 +46,10 @@ namespace Player.State
             if (Ctx.Health.IsDepleted())
             {
                 NextState = new Dying(Ctx);
+                Stage = EVENT.EXIT;
+            } else if (Ctx.GameSuccessManager.IsVictory())
+            {
+                NextState = new Victory(Ctx);
                 Stage = EVENT.EXIT;
             }
         }

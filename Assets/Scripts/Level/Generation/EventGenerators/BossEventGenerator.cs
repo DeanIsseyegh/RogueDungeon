@@ -7,6 +7,7 @@ namespace Level.Generation.EventGenerators
     {
         [SerializeField] private GameObject boss;
         [SerializeField] private Vector3 bossSpawnOffset;
+        [SerializeField] private GameSuccessManager _gameSuccessManager;
         public void GenerateBossEvent(GeneratedRoom generatedRoom)
         {
             var emptyGameObj = CreateTriggerInRoom(generatedRoom);
@@ -18,7 +19,7 @@ namespace Level.Generation.EventGenerators
             roomEndEvent.IsRoomComplete = () => startEvent.HasEventFinished();
             roomEndEvent.OnRoomComplete = () =>
             {
-                //Any end events/cutscenes etc. can happen here
+                _gameSuccessManager.StartGameComplete();
                 roomEndEvent.enabled = false;
             };
         }

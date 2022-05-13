@@ -22,7 +22,6 @@ public class RotateCameraAroundTarget : MonoBehaviour
         if (shouldSetInitialCameraRotation)
         {
             initialStartRotation = cinemachineCameraTarget.transform.rotation;
-            // initialTargetRotation = Quaternion.LookRotation(initialCameraRotationTarget);
             initialTargetRotation = Quaternion.Euler(initialCameraRotationTarget);
         }
         else
@@ -35,12 +34,9 @@ public class RotateCameraAroundTarget : MonoBehaviour
     {
         if (lerpT < 1)
         {
-            Debug.Log("Lerping");   
-            Quaternion lerpRotation = Quaternion.Lerp(initialStartRotation,
-                initialTargetRotation, lerpT);
+            Quaternion lerpRotation = Quaternion.Lerp(initialStartRotation, initialTargetRotation, lerpT);
             cinemachineCameraTarget.transform.rotation = lerpRotation;
             lerpT +=  Time.deltaTime * initialCameraRotationSpeed;
-            Debug.Log("Lerp T is: " + lerpT);
         }
         else
         {

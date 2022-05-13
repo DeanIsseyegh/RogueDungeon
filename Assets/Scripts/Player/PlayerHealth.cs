@@ -1,7 +1,6 @@
 using System.Collections;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour, Health
 {
@@ -25,7 +24,7 @@ public class PlayerHealth : MonoBehaviour, Health
     {
         if (!_isInvincible)
         {
-            _currentHealth -= damage;
+            _currentHealth = Mathf.Clamp(_currentHealth - damage, 0, maxHealth);
             _uiManager.SetCurrentHealth(_currentHealth);
             _isInvincible = true;
             StartCoroutine(HitFlashEffect(5));

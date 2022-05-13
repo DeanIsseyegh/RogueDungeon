@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using Scene;
+using Sirenix.Utilities;
+using StarterAssets;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
-    [SerializeField] private SceneLoader sceneLoader;
     [SerializeField] private GameObject playerDeathCam;
+    [SerializeField] private GameObject deathScreen;
 
     public void StartGameOver(GameObject player)
     {
+        player.GetComponent<InputsController>().cursorInputForLook = false;
         playerDeathCam.SetActive(true);
-        // sceneLoader.LoadStartScreenScene();    
+        EnemyAI[] allEnemies = FindObjectsOfType<EnemyAI>();
+        allEnemies.ForEach(enemy => enemy.enabled = false);
+        deathScreen.SetActive(true);
     }
     
 }

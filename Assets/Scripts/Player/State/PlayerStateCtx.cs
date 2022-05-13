@@ -7,6 +7,7 @@ namespace Player.State
     public class PlayerStateCtx
     {
         public GameOverManager GameOverManager { get; }
+        public GameSuccessManager GameSuccessManager { get; }
         public Animator Animator { get; }
         public GameObject Player { get; }
         public Camera MainCamera { get; }
@@ -19,7 +20,8 @@ namespace Player.State
         public PlayerHealth Health { get; }
         public PlayerInput PlayerInput { get; }
 
-        public PlayerStateCtx(GameObject player, Animator animator, Camera mainCamera, InputsController inputsController, GameOverManager gameOverManager)
+        public PlayerStateCtx(GameObject player, Animator animator, Camera mainCamera,
+            InputsController inputsController, GameOverManager gameOverManager, GameSuccessManager gameSuccessManager)
         {
             MainCamera = mainCamera;
             Animator = animator;
@@ -33,6 +35,7 @@ namespace Player.State
             PlayerInput = player.GetComponent<PlayerInput>();
             InputsController = inputsController;
             GameOverManager = gameOverManager;
+            GameSuccessManager = gameSuccessManager;
         }
     }
 }
