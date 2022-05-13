@@ -13,7 +13,9 @@ namespace Scene
     public class SceneLoader : MonoBehaviour
     {
         [SerializeField] private AssetReference inGameScene;
+        [SerializeField] private string inGameSceneName;
         [SerializeField] private AssetReference startScreenScene;
+        [SerializeField] private string startScreenSceneName;
         [SerializeField] private GameObject loadingText;
         [SerializeField] private GameObject startButton;
         private AsyncOperationHandle<SceneInstance> _handle;
@@ -22,57 +24,63 @@ namespace Scene
 
         private void Awake()
         {
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
 
         public void LoadMainGameScene()
         {
-            // StartCoroutine(LoadMainGameSceneAsync());
-            AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync("ThirdPersonScene");
+            Debug.Log("Loading Main Game Scene");
+            AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(inGameSceneName);
             startButton.SetActive(false);
             loadingText.SetActive(true);
-            // loadSceneAsync.allowSceneActivation = true;
         }
 
-        private IEnumerator LoadMainGameSceneAsync()
+        public void LoadStartScreenScene()
         {
-            AsyncOperationHandle<SceneInstance> asyncOperationHandle = Addressables.LoadSceneAsync(inGameScene);
-            asyncOperationHandle.Completed += SceneLoadCompleted;
-            yield return StartCoroutine(ShowLoadProgress(asyncOperationHandle));
-        }
-
-        public IEnumerator ShowLoadProgress(AsyncOperationHandle<SceneInstance> handle)
-        {
-            startButton.SetActive(false);
-            loadingText.SetActive(true);
-            while (!handle.IsDone)
-            {
-                yield return new WaitForEndOfFrame();
-            }
+            AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(startScreenSceneName);
         }
         
-        public void LoadMainGameSceneStandard()
-        {
-            SceneManager.LoadScene("ThirdPersonScene");
-        }
+        // public IEnumerator ShowLoadProgress(AsyncOperationHandle<SceneInstance> handle)
+        // {
+        //     startButton.SetActive(false);
+        //     loadingText.SetActive(true);
+        //     while (!handle.IsDone)
+        //     {
+        //         yield return new WaitForEndOfFrame();
+        //     }
+        // }
 
-        private void SceneLoadCompleted(AsyncOperationHandle<SceneInstance> obj)
-        {
-            if (obj.Status == AsyncOperationStatus.Succeeded)
-            {
-                Debug.Log("Successfully loaded scene");
-                _handle = obj;
-                loaded = true;
-            }
-        }
+        // private IEnumerator LoadMainGameSceneAsync()
+        // {
+        //     AsyncOperationHandle<SceneInstance> asyncOperationHandle = Addressables.LoadSceneAsync(inGameScene);
+        //     asyncOperationHandle.Completed += SceneLoadCompleted;
+        //     yield return StartCoroutine(ShowLoadProgress(asyncOperationHandle));
+        // }
+        //
+        // public void LoadMainGameSceneStandard()
+        // {
+        //     SceneManager.LoadScene("ThirdPersonScene");
+        // }
+        //
+        // private void SceneLoadCompleted(AsyncOperationHandle<SceneInstance> obj)
+        // {
+        //     if (obj.Status == AsyncOperationStatus.Succeeded)
+        //     {
+        //         Debug.Log("Successfully loaded scene");
+        //         _handle = obj;
+        //         loaded = true;
+        //     }
+        // }
+        //
+        // void UnloadScene()
+        // {
+        //     Addressables.UnloadSceneAsync(_handle, true).Completed += op =>
+        //     {
+        //         if (op.Status == AsyncOperationStatus.Succeeded)
+        //             Debug.Log("Successfully unloaded scene");
+        //     };
+        // }
 
-        void UnloadScene()
-        {
-            Addressables.UnloadSceneAsync(_handle, true).Completed += op =>
-            {
-                if (op.Status == AsyncOperationStatus.Succeeded)
-                    Debug.Log("Successfully unloaded scene");
-            };
-        }
+
     }
 }

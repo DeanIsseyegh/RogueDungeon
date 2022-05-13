@@ -23,6 +23,7 @@ namespace Player.State
 
         public override void Update()
         {
+            base.Update();
             if (_currentSpell.IsCastingSpell) return;
             Ctx.ThirdPersonController.CanMove = true;
             Vector3 velocity = Ctx.CharController.velocity;

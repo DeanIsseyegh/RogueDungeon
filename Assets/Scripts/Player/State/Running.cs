@@ -18,6 +18,7 @@ namespace Player.State
 
         public override void Update()
         {
+            base.Update();
             Vector3 velocity = Ctx.CharController.velocity;
             if (Ctx.InputsController.AnyAttack())
             {

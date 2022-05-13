@@ -2,15 +2,16 @@ using Player.State;
 using StarterAssets;
 using UnityEngine;
 
-public class PlayerControl : MonoBehaviour
+public class PlayerStateControl : MonoBehaviour
 {
+    [SerializeField] private GameOverManager gameOverManager;
     private PlayerState _currentState;
 
     private void Start()
     {
         var animator = GetComponent<Animator>();
         var inputs = GetComponent<InputsController>();
-        var playerStateCtx = new PlayerStateCtx(gameObject, animator, Camera.main, inputs);
+        var playerStateCtx = new PlayerStateCtx(gameObject, animator, Camera.main, inputs, gameOverManager);
         _currentState = new Player.State.Idle(playerStateCtx);
     }
 
@@ -18,6 +19,5 @@ public class PlayerControl : MonoBehaviour
     {
         _currentState = _currentState.Process();
     }
-
 
 }

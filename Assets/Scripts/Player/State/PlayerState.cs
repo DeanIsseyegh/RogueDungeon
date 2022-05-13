@@ -17,7 +17,8 @@ namespace Player.State
         {
             IDLE,
             RUNNING,
-            ATTACKING
+            ATTACKING,
+            DYING
         }
 
         public enum EVENT
@@ -41,6 +42,11 @@ namespace Player.State
         public virtual void Update()
         {
             Stage = EVENT.UPDATE;
+            if (Ctx.Health.IsDepleted())
+            {
+                NextState = new Dying(Ctx);
+                Stage = EVENT.EXIT;
+            }
         }
 
         public virtual void Exit()

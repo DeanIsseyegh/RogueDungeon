@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-namespace Enemy.State
+namespace Player.State
 {
-    public class Dying : EnemyState
+    public class Dying : PlayerState
     {
-        private bool _hasStartedDeathAnim;
         private const string DeathAnimName = "Death";
+        private bool _hasStartedDeathAnim;
 
-        public Dying(EnemyStateCtx ctx) : base(ctx)
+        public Dying(PlayerStateCtx ctx) : base(ctx)
         {
             Name = STATE.DYING;
         }
@@ -15,25 +15,27 @@ namespace Enemy.State
         public override void Enter()
         {
             Ctx.Animator.SetTrigger(DeathAnimName);
-            Ctx.MeshAgent.enabled = false;
             Ctx.Animator.applyRootMotion = true;
+            Ctx.CharController.enabled = false;
+            Ctx.ThirdPersonController.enabled = false;
             base.Enter();
         }
+        
         public override void Update()
         {
             AnimatorStateInfo currentAnimatorStateInfo = Ctx.Animator.GetCurrentAnimatorStateInfo(0);
-            if (currentAnimatorStateInfo.IsName(DeathAnimName))
+            if (!_hasStartedDeathAnim && currentAnimatorStateInfo.IsName(DeathAnimName))
             {
                 _hasStartedDeathAnim = true;
-            } else if (_hasStartedDeathAnim && !currentAnimatorStateInfo.IsName(DeathAnimName))
+            } else if (_hasStartedDeathAnim && currentAnimatorStateInfo.normalizedTime >= 0.99f)
             {
-                Ctx.Despawner.Despawn();
+                Ctx.GameOverManager.StartGameOver(Ctx.Player);
             }
         }
 
         public override void Exit()
         {
             base.Exit();
-        }
+        }       
     }
 }
