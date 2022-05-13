@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Xml.Resolvers;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -11,7 +14,10 @@ namespace Scene
     {
         [SerializeField] private AssetReference inGameScene;
         [SerializeField] private AssetReference startScreenScene;
+        [SerializeField] private GameObject loadingText;
+        [SerializeField] private GameObject startButton;
         private AsyncOperationHandle<SceneInstance> _handle;
+        private bool loaded;
         private bool unloaded;
 
         private void Awake()
@@ -21,8 +27,28 @@ namespace Scene
 
         public void LoadMainGameScene()
         {
-            Addressables.LoadSceneAsync(inGameScene, LoadSceneMode.Single)
-                .Completed += SceneLoadCompleted;
+            // StartCoroutine(LoadMainGameSceneAsync());
+            AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync("ThirdPersonScene");
+            startButton.SetActive(false);
+            loadingText.SetActive(true);
+            // loadSceneAsync.allowSceneActivation = true;
+        }
+
+        private IEnumerator LoadMainGameSceneAsync()
+        {
+            AsyncOperationHandle<SceneInstance> asyncOperationHandle = Addressables.LoadSceneAsync(inGameScene);
+            asyncOperationHandle.Completed += SceneLoadCompleted;
+            yield return StartCoroutine(ShowLoadProgress(asyncOperationHandle));
+        }
+
+        public IEnumerator ShowLoadProgress(AsyncOperationHandle<SceneInstance> handle)
+        {
+            startButton.SetActive(false);
+            loadingText.SetActive(true);
+            while (!handle.IsDone)
+            {
+                yield return new WaitForEndOfFrame();
+            }
         }
         
         public void LoadMainGameSceneStandard()
@@ -36,6 +62,7 @@ namespace Scene
             {
                 Debug.Log("Successfully loaded scene");
                 _handle = obj;
+                loaded = true;
             }
         }
 
