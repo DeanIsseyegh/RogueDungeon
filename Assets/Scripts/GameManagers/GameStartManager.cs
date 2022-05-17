@@ -13,7 +13,7 @@ public class GameStartManager : MonoBehaviour
 
     private void Start()
     {
-        _animator = player.GetComponent<Animator>();
+        _animator = player.GetComponent<Animator>();    
         _thirdPersonController = player.GetComponent<ThirdPersonController>();
 
         playerStartCam.SetActive(true);
