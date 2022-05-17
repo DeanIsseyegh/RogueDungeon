@@ -1,0 +1,868 @@
+fileFormatVersion: 2
+guid: f000ecb3e2f790d45bb3459ad897cb3e
+timeCreated: 1485651326
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: GoatRig
+    100004: GoatRig_Head_JawEndSHJnt
+    100006: GoatRig_Head_JawSHJnt
+    100008: GoatRig_Head_TopSHJnt
+    100010: GoatRig_l_Clavicle_01_01SHJnt
+    100012: GoatRig_l_Eye_01SHJnt
+    100014: GoatRig_l_FrontLeg_AnkleSHJnt
+    100016: GoatRig_l_FrontLeg_BallSHJnt
+    100018: GoatRig_l_FrontLeg_HipSHJnt
+    100020: GoatRig_l_FrontLeg_Knee1SHJnt
+    100022: GoatRig_l_FrontLeg_Knee2SHJnt
+    100024: GoatRig_l_FrontLeg_ToeSHJnt
+    100026: GoatRig_l_HindLeg_AnkleSHJnt
+    100028: GoatRig_l_HindLeg_BallSHJnt
+    100030: GoatRig_l_HindLeg_HipSHJnt
+    100032: GoatRig_l_HindLeg_Knee1SHJnt
+    100034: GoatRig_l_HindLeg_Knee2SHJnt
+    100036: GoatRig_l_HindLeg_ToeSHJnt
+    100038: GoatRig_Neck_01SHJnt
+    100040: GoatRig_Neck_02SHJnt
+    100042: GoatRig_Neck_TopSHJnt
+    100044: GoatRig_r_Clavicle_01_01SHJnt
+    100046: GoatRig_r_Eye_01SHJnt
+    100048: GoatRig_r_FrontLeg_AnkleSHJnt
+    100050: GoatRig_r_FrontLeg_BallSHJnt
+    100052: GoatRig_r_FrontLeg_HipSHJnt
+    100054: GoatRig_r_FrontLeg_Knee1SHJnt
+    100056: GoatRig_r_FrontLeg_Knee2SHJnt
+    100058: GoatRig_r_FrontLeg_ToeSHJnt
+    100060: GoatRig_r_HindLeg_AnkleSHJnt
+    100062: GoatRig_r_HindLeg_BallSHJnt
+    100064: GoatRig_r_HindLeg_HipSHJnt
+    100066: GoatRig_r_HindLeg_Knee1SHJnt
+    100068: GoatRig_r_HindLeg_Knee2SHJnt
+    100070: GoatRig_r_HindLeg_ToeSHJnt
+    100072: GoatRig_ROOTSHJnt
+    100074: GoatRig_SHJntGrp
+    100076: GoatRig_Spine_01SHJnt
+    100078: GoatRig_Spine_02SHJnt
+    100080: GoatRig_Spine_TopSHJnt
+    100082: GoatRig_Tail_01
+    100084: GoatRig_Tail_01SHJnt
+    100086: GoatRig_Tail_02
+    100088: GoatRig_Tail_02SHJnt
+    100090: GoatRig_Tail_03
+    100092: GoatRig_Tail_04
+    100094: GoatRig_Tail_05
+    100096: GoatRig_Tail_TopSHJnt
+    100098: SkunkTail_01
+    100100: SkunkTail_02
+    100102: SkunkTail_03
+    100104: SkunkTail_04
+    100106: SkunkTail_05
+    100108: SkunkTail_06
+    100110: SM_Fox_01
+    100112: SM_Fox_02
+    100114: SM_Fox_03
+    100116: SM_Raccoon_01
+    100118: SM_Raccoon_02
+    100120: SM_Raccoon_03
+    100122: SM_Skunk_01
+    100124: SM_Skunk_02
+    100126: SM_Skunk_03
+    100128: SM_Wolf_01
+    100130: SM_Wolf_02
+    100132: SM_Wolf_03
+    400000: //RootNode
+    400002: GoatRig
+    400004: GoatRig_Head_JawEndSHJnt
+    400006: GoatRig_Head_JawSHJnt
+    400008: GoatRig_Head_TopSHJnt
+    400010: GoatRig_l_Clavicle_01_01SHJnt
+    400012: GoatRig_l_Eye_01SHJnt
+    400014: GoatRig_l_FrontLeg_AnkleSHJnt
+    400016: GoatRig_l_FrontLeg_BallSHJnt
+    400018: GoatRig_l_FrontLeg_HipSHJnt
+    400020: GoatRig_l_FrontLeg_Knee1SHJnt
+    400022: GoatRig_l_FrontLeg_Knee2SHJnt
+    400024: GoatRig_l_FrontLeg_ToeSHJnt
+    400026: GoatRig_l_HindLeg_AnkleSHJnt
+    400028: GoatRig_l_HindLeg_BallSHJnt
+    400030: GoatRig_l_HindLeg_HipSHJnt
+    400032: GoatRig_l_HindLeg_Knee1SHJnt
+    400034: GoatRig_l_HindLeg_Knee2SHJnt
+    400036: GoatRig_l_HindLeg_ToeSHJnt
+    400038: GoatRig_Neck_01SHJnt
+    400040: GoatRig_Neck_02SHJnt
+    400042: GoatRig_Neck_TopSHJnt
+    400044: GoatRig_r_Clavicle_01_01SHJnt
+    400046: GoatRig_r_Eye_01SHJnt
+    400048: GoatRig_r_FrontLeg_AnkleSHJnt
+    400050: GoatRig_r_FrontLeg_BallSHJnt
+    400052: GoatRig_r_FrontLeg_HipSHJnt
+    400054: GoatRig_r_FrontLeg_Knee1SHJnt
+    400056: GoatRig_r_FrontLeg_Knee2SHJnt
+    400058: GoatRig_r_FrontLeg_ToeSHJnt
+    400060: GoatRig_r_HindLeg_AnkleSHJnt
+    400062: GoatRig_r_HindLeg_BallSHJnt
+    400064: GoatRig_r_HindLeg_HipSHJnt
+    400066: GoatRig_r_HindLeg_Knee1SHJnt
+    400068: GoatRig_r_HindLeg_Knee2SHJnt
+    400070: GoatRig_r_HindLeg_ToeSHJnt
+    400072: GoatRig_ROOTSHJnt
+    400074: GoatRig_SHJntGrp
+    400076: GoatRig_Spine_01SHJnt
+    400078: GoatRig_Spine_02SHJnt
+    400080: GoatRig_Spine_TopSHJnt
+    400082: GoatRig_Tail_01
+    400084: GoatRig_Tail_01SHJnt
+    400086: GoatRig_Tail_02
+    400088: GoatRig_Tail_02SHJnt
+    400090: GoatRig_Tail_03
+    400092: GoatRig_Tail_04
+    400094: GoatRig_Tail_05
+    400096: GoatRig_Tail_TopSHJnt
+    400098: SkunkTail_01
+    400100: SkunkTail_02
+    400102: SkunkTail_03
+    400104: SkunkTail_04
+    400106: SkunkTail_05
+    400108: SkunkTail_06
+    400110: SM_Fox_01
+    400112: SM_Fox_02
+    400114: SM_Fox_03
+    400116: SM_Raccoon_01
+    400118: SM_Raccoon_02
+    400120: SM_Raccoon_03
+    400122: SM_Skunk_01
+    400124: SM_Skunk_02
+    400126: SM_Skunk_03
+    400128: SM_Wolf_01
+    400130: SM_Wolf_02
+    400132: SM_Wolf_03
+    4300000: SM_Fox_01
+    4300002: SM_Wolf_02
+    4300004: SM_Raccoon_01
+    4300006: SM_Skunk_01
+    4300008: SM_Fox_02
+    4300010: SM_Fox_03
+    4300012: SM_Raccoon_02
+    4300014: SM_Raccoon_03
+    4300016: SM_Skunk_02
+    4300018: SM_Skunk_03
+    4300020: SM_Wolf_01
+    4300022: SM_Wolf_03
+    7400000: Fox_Idle
+    7400002: Fox_Walk
+    7400004: Fox_Run
+    7400006: Fox_Eat
+    9500000: //RootNode
+    13700000: SM_Fox_01
+    13700002: SM_Fox_02
+    13700004: SM_Fox_03
+    13700006: SM_Raccoon_01
+    13700008: SM_Raccoon_02
+    13700010: SM_Raccoon_03
+    13700012: SM_Skunk_01
+    13700014: SM_Skunk_02
+    13700016: SM_Skunk_03
+    13700018: SM_Wolf_01
+    13700020: SM_Wolf_02
+    13700022: SM_Wolf_03
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 1
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Fox_Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoatRig
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt/GoatRig_l_FrontLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt/GoatRig_l_FrontLeg_AnkleSHJnt/GoatRig_l_FrontLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt/GoatRig_l_FrontLeg_AnkleSHJnt/GoatRig_l_FrontLeg_BallSHJnt/GoatRig_l_FrontLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt/GoatRig_r_FrontLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt/GoatRig_r_FrontLeg_AnkleSHJnt/GoatRig_r_FrontLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt/GoatRig_r_FrontLeg_AnkleSHJnt/GoatRig_r_FrontLeg_BallSHJnt/GoatRig_r_FrontLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_JawSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_JawSHJnt/GoatRig_Head_JawEndSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_TopSHJnt/GoatRig_l_Eye_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_TopSHJnt/GoatRig_r_Eye_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt/GoatRig_l_HindLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt/GoatRig_l_HindLeg_AnkleSHJnt/GoatRig_l_HindLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt/GoatRig_l_HindLeg_AnkleSHJnt/GoatRig_l_HindLeg_BallSHJnt/GoatRig_l_HindLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt/GoatRig_r_HindLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt/GoatRig_r_HindLeg_AnkleSHJnt/GoatRig_r_HindLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt/GoatRig_r_HindLeg_AnkleSHJnt/GoatRig_r_HindLeg_BallSHJnt/GoatRig_r_HindLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01SHJnt/GoatRig_Tail_02SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01SHJnt/GoatRig_Tail_02SHJnt/GoatRig_Tail_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02/GoatRig_Tail_03
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02/GoatRig_Tail_03/GoatRig_Tail_04
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02/GoatRig_Tail_03/GoatRig_Tail_04/GoatRig_Tail_05
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03/SkunkTail_04
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03/SkunkTail_04/SkunkTail_05
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03/SkunkTail_04/SkunkTail_05/SkunkTail_06
+        weight: 1
+      - path: SM_Fox_01
+        weight: 1
+      - path: SM_Wolf_02
+        weight: 1
+      - path: SM_Raccoon_01
+        weight: 1
+      - path: SM_Skunk_01
+        weight: 1
+      - path: SM_Fox_02
+        weight: 1
+      - path: SM_Fox_03
+        weight: 1
+      - path: SM_Raccoon_02
+        weight: 1
+      - path: SM_Raccoon_03
+        weight: 1
+      - path: SM_Skunk_02
+        weight: 1
+      - path: SM_Skunk_03
+        weight: 1
+      - path: SM_Wolf_01
+        weight: 1
+      - path: SM_Wolf_03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Fox_Walk
+      takeName: Take 001
+      firstFrame: 130
+      lastFrame: 165
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoatRig
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt/GoatRig_l_FrontLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt/GoatRig_l_FrontLeg_AnkleSHJnt/GoatRig_l_FrontLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt/GoatRig_l_FrontLeg_AnkleSHJnt/GoatRig_l_FrontLeg_BallSHJnt/GoatRig_l_FrontLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt/GoatRig_r_FrontLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt/GoatRig_r_FrontLeg_AnkleSHJnt/GoatRig_r_FrontLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt/GoatRig_r_FrontLeg_AnkleSHJnt/GoatRig_r_FrontLeg_BallSHJnt/GoatRig_r_FrontLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_JawSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_JawSHJnt/GoatRig_Head_JawEndSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_TopSHJnt/GoatRig_l_Eye_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_TopSHJnt/GoatRig_r_Eye_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt/GoatRig_l_HindLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt/GoatRig_l_HindLeg_AnkleSHJnt/GoatRig_l_HindLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt/GoatRig_l_HindLeg_AnkleSHJnt/GoatRig_l_HindLeg_BallSHJnt/GoatRig_l_HindLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt/GoatRig_r_HindLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt/GoatRig_r_HindLeg_AnkleSHJnt/GoatRig_r_HindLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt/GoatRig_r_HindLeg_AnkleSHJnt/GoatRig_r_HindLeg_BallSHJnt/GoatRig_r_HindLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01SHJnt/GoatRig_Tail_02SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01SHJnt/GoatRig_Tail_02SHJnt/GoatRig_Tail_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02/GoatRig_Tail_03
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02/GoatRig_Tail_03/GoatRig_Tail_04
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02/GoatRig_Tail_03/GoatRig_Tail_04/GoatRig_Tail_05
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03/SkunkTail_04
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03/SkunkTail_04/SkunkTail_05
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03/SkunkTail_04/SkunkTail_05/SkunkTail_06
+        weight: 1
+      - path: SM_Fox_01
+        weight: 1
+      - path: SM_Wolf_02
+        weight: 1
+      - path: SM_Raccoon_01
+        weight: 1
+      - path: SM_Skunk_01
+        weight: 1
+      - path: SM_Fox_02
+        weight: 1
+      - path: SM_Fox_03
+        weight: 1
+      - path: SM_Raccoon_02
+        weight: 1
+      - path: SM_Raccoon_03
+        weight: 1
+      - path: SM_Skunk_02
+        weight: 1
+      - path: SM_Skunk_03
+        weight: 1
+      - path: SM_Wolf_01
+        weight: 1
+      - path: SM_Wolf_03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Fox_Run
+      takeName: Take 001
+      firstFrame: 180
+      lastFrame: 195
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoatRig
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt/GoatRig_l_FrontLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt/GoatRig_l_FrontLeg_AnkleSHJnt/GoatRig_l_FrontLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt/GoatRig_l_FrontLeg_AnkleSHJnt/GoatRig_l_FrontLeg_BallSHJnt/GoatRig_l_FrontLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt/GoatRig_r_FrontLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt/GoatRig_r_FrontLeg_AnkleSHJnt/GoatRig_r_FrontLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt/GoatRig_r_FrontLeg_AnkleSHJnt/GoatRig_r_FrontLeg_BallSHJnt/GoatRig_r_FrontLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_JawSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_JawSHJnt/GoatRig_Head_JawEndSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_TopSHJnt/GoatRig_l_Eye_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_TopSHJnt/GoatRig_r_Eye_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt/GoatRig_l_HindLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt/GoatRig_l_HindLeg_AnkleSHJnt/GoatRig_l_HindLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt/GoatRig_l_HindLeg_AnkleSHJnt/GoatRig_l_HindLeg_BallSHJnt/GoatRig_l_HindLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt/GoatRig_r_HindLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt/GoatRig_r_HindLeg_AnkleSHJnt/GoatRig_r_HindLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt/GoatRig_r_HindLeg_AnkleSHJnt/GoatRig_r_HindLeg_BallSHJnt/GoatRig_r_HindLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01SHJnt/GoatRig_Tail_02SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01SHJnt/GoatRig_Tail_02SHJnt/GoatRig_Tail_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02/GoatRig_Tail_03
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02/GoatRig_Tail_03/GoatRig_Tail_04
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02/GoatRig_Tail_03/GoatRig_Tail_04/GoatRig_Tail_05
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03/SkunkTail_04
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03/SkunkTail_04/SkunkTail_05
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03/SkunkTail_04/SkunkTail_05/SkunkTail_06
+        weight: 1
+      - path: SM_Fox_01
+        weight: 1
+      - path: SM_Wolf_02
+        weight: 1
+      - path: SM_Raccoon_01
+        weight: 1
+      - path: SM_Skunk_01
+        weight: 1
+      - path: SM_Fox_02
+        weight: 1
+      - path: SM_Fox_03
+        weight: 1
+      - path: SM_Raccoon_02
+        weight: 1
+      - path: SM_Raccoon_03
+        weight: 1
+      - path: SM_Skunk_02
+        weight: 1
+      - path: SM_Skunk_03
+        weight: 1
+      - path: SM_Wolf_01
+        weight: 1
+      - path: SM_Wolf_03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Fox_Eat
+      takeName: Take 001
+      firstFrame: 210
+      lastFrame: 330
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoatRig
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt/GoatRig_l_FrontLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt/GoatRig_l_FrontLeg_AnkleSHJnt/GoatRig_l_FrontLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_l_Clavicle_01_01SHJnt/GoatRig_l_FrontLeg_HipSHJnt/GoatRig_l_FrontLeg_Knee1SHJnt/GoatRig_l_FrontLeg_Knee2SHJnt/GoatRig_l_FrontLeg_AnkleSHJnt/GoatRig_l_FrontLeg_BallSHJnt/GoatRig_l_FrontLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt/GoatRig_r_FrontLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt/GoatRig_r_FrontLeg_AnkleSHJnt/GoatRig_r_FrontLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_r_Clavicle_01_01SHJnt/GoatRig_r_FrontLeg_HipSHJnt/GoatRig_r_FrontLeg_Knee1SHJnt/GoatRig_r_FrontLeg_Knee2SHJnt/GoatRig_r_FrontLeg_AnkleSHJnt/GoatRig_r_FrontLeg_BallSHJnt/GoatRig_r_FrontLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_JawSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_JawSHJnt/GoatRig_Head_JawEndSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_TopSHJnt/GoatRig_l_Eye_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Spine_01SHJnt/GoatRig_Spine_02SHJnt/GoatRig_Spine_TopSHJnt/GoatRig_Neck_01SHJnt/GoatRig_Neck_02SHJnt/GoatRig_Neck_TopSHJnt/GoatRig_Head_TopSHJnt/GoatRig_r_Eye_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt/GoatRig_l_HindLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt/GoatRig_l_HindLeg_AnkleSHJnt/GoatRig_l_HindLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_l_HindLeg_HipSHJnt/GoatRig_l_HindLeg_Knee1SHJnt/GoatRig_l_HindLeg_Knee2SHJnt/GoatRig_l_HindLeg_AnkleSHJnt/GoatRig_l_HindLeg_BallSHJnt/GoatRig_l_HindLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt/GoatRig_r_HindLeg_AnkleSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt/GoatRig_r_HindLeg_AnkleSHJnt/GoatRig_r_HindLeg_BallSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_r_HindLeg_HipSHJnt/GoatRig_r_HindLeg_Knee1SHJnt/GoatRig_r_HindLeg_Knee2SHJnt/GoatRig_r_HindLeg_AnkleSHJnt/GoatRig_r_HindLeg_BallSHJnt/GoatRig_r_HindLeg_ToeSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01SHJnt/GoatRig_Tail_02SHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01SHJnt/GoatRig_Tail_02SHJnt/GoatRig_Tail_TopSHJnt
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02/GoatRig_Tail_03
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02/GoatRig_Tail_03/GoatRig_Tail_04
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/GoatRig_Tail_01/GoatRig_Tail_02/GoatRig_Tail_03/GoatRig_Tail_04/GoatRig_Tail_05
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03/SkunkTail_04
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03/SkunkTail_04/SkunkTail_05
+        weight: 1
+      - path: GoatRig/GoatRig_SHJntGrp/GoatRig_ROOTSHJnt/SkunkTail_01/SkunkTail_02/SkunkTail_03/SkunkTail_04/SkunkTail_05/SkunkTail_06
+        weight: 1
+      - path: SM_Fox_01
+        weight: 1
+      - path: SM_Wolf_02
+        weight: 1
+      - path: SM_Raccoon_01
+        weight: 1
+      - path: SM_Skunk_01
+        weight: 1
+      - path: SM_Fox_02
+        weight: 1
+      - path: SM_Fox_03
+        weight: 1
+      - path: SM_Raccoon_02
+        weight: 1
+      - path: SM_Raccoon_03
+        weight: 1
+      - path: SM_Skunk_02
+        weight: 1
+      - path: SM_Skunk_03
+        weight: 1
+      - path: SM_Wolf_01
+        weight: 1
+      - path: SM_Wolf_03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    splitTangentsAcrossUV: 0
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: GoatRig
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

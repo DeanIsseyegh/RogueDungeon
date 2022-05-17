@@ -1,0 +1,86 @@
+fileFormatVersion: 2
+guid: fe91a57686d83354cbccae3e9a0ba9f2
+timeCreated: 1495167402
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: SK_Veh_Drone_Front_Wheel
+    100004: SK_Veh_Drone_Prop
+    100006: SK_Veh_Drone_Rear_Wheels
+    400000: //RootNode
+    400002: SK_Veh_Drone_Front_Wheel
+    400004: SK_Veh_Drone_Prop
+    400006: SK_Veh_Drone_Rear_Wheels
+    2300000: //RootNode
+    2300002: SK_Veh_Drone_Front_Wheel
+    2300004: SK_Veh_Drone_Prop
+    2300006: SK_Veh_Drone_Rear_Wheels
+    3300000: //RootNode
+    3300002: SK_Veh_Drone_Front_Wheel
+    3300004: SK_Veh_Drone_Prop
+    3300006: SK_Veh_Drone_Rear_Wheels
+    4300000: SK_Veh_Drone_01
+    4300002: SK_Veh_Drone_Rear_Wheels
+    4300004: SK_Veh_Drone_Front_Wheel
+    4300006: SK_Veh_Drone_Prop
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 5
+    splitTangentsAcrossUV: 0
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

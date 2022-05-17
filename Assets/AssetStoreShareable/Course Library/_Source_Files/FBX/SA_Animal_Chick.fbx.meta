@@ -1,0 +1,276 @@
+fileFormatVersion: 2
+guid: 5cffd02f329556b48a122caf2426df2f
+timeCreated: 1480209347
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: ChickRig_FootL_AuxSHJnt
+    100002: ChickRig_FootR_AuxSHJnt
+    100004: ChickRig_Head_AuxSHJnt
+    100006: ChickRig_l_Leg_AuxSHJnt
+    100008: ChickRig_r_Leg_AuxSHJnt
+    100010: ChickRig_ROOTSHJnt
+    100012: ChickRig_SHJntGrp
+    100014: ChickRig_Tail_AuxSHJnt
+    100016: SA_Animal_Chick
+    100018: //RootNode
+    400000: ChickRig_FootL_AuxSHJnt
+    400002: ChickRig_FootR_AuxSHJnt
+    400004: ChickRig_Head_AuxSHJnt
+    400006: ChickRig_l_Leg_AuxSHJnt
+    400008: ChickRig_r_Leg_AuxSHJnt
+    400010: ChickRig_ROOTSHJnt
+    400012: ChickRig_SHJntGrp
+    400014: ChickRig_Tail_AuxSHJnt
+    400016: SA_Animal_Chick
+    400018: //RootNode
+    4300000: SA_Animal_Chick
+    7400000: Chick_Idle
+    7400002: Chick_Walk
+    7400004: Chick_Run
+    7400006: Chick_Eat
+    9500000: //RootNode
+    13700000: SA_Animal_Chick
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Chick_Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ChickRig_SHJntGrp
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_Head_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_l_Leg_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_l_Leg_AuxSHJnt/ChickRig_FootL_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_r_Leg_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_r_Leg_AuxSHJnt/ChickRig_FootR_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_Tail_AuxSHJnt
+        weight: 1
+      - path: SA_Animal_Chick
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Chick_Walk
+      takeName: Take 001
+      firstFrame: 130
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ChickRig_SHJntGrp
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_Head_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_l_Leg_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_l_Leg_AuxSHJnt/ChickRig_FootL_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_r_Leg_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_r_Leg_AuxSHJnt/ChickRig_FootR_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_Tail_AuxSHJnt
+        weight: 1
+      - path: SA_Animal_Chick
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Chick_Run
+      takeName: Take 001
+      firstFrame: 130
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ChickRig_SHJntGrp
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_Head_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_l_Leg_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_l_Leg_AuxSHJnt/ChickRig_FootL_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_r_Leg_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_r_Leg_AuxSHJnt/ChickRig_FootR_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_Tail_AuxSHJnt
+        weight: 1
+      - path: SA_Animal_Chick
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Chick_Eat
+      takeName: Take 001
+      firstFrame: 150
+      lastFrame: 270
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ChickRig_SHJntGrp
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_Head_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_l_Leg_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_l_Leg_AuxSHJnt/ChickRig_FootL_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_r_Leg_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_r_Leg_AuxSHJnt/ChickRig_FootR_AuxSHJnt
+        weight: 1
+      - path: ChickRig_SHJntGrp/ChickRig_ROOTSHJnt/ChickRig_Tail_AuxSHJnt
+        weight: 1
+      - path: SA_Animal_Chick
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 20
+    splitTangentsAcrossUV: 0
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
