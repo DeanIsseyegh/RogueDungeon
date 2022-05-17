@@ -24,7 +24,7 @@ public class ShowCollectibleInfo : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _uiManager.HideChoices();
+            _uiManager.HideChoice();
         }
     }
 }

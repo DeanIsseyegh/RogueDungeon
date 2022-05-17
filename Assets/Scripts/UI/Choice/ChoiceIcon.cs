@@ -7,7 +7,6 @@ public class ChoiceIcon : MonoBehaviour
 {
     private Image _image;
 
-    // Start is called before the first frame update
     void Awake()
     {
         _image = GetComponent<Image>();

@@ -12,5 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782ff3a0da7d0934f96db58b23b22428, type: 3}
   m_Name: Info
   m_EditorClassIdentifier: 
-  name: Fire Ball
+  collectibleName: Fire Ball
   description: Cast a damaging fire ball
+  stats: 'Mana Cost: 10
+
+    Cooldown: 1
+
+    Movement Speed: 15
+
+    Damage: 25
+
+    Damage
+    Over Time: 5/s
+
+'

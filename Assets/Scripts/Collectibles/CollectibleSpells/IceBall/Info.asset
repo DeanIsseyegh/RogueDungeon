@@ -12,5 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782ff3a0da7d0934f96db58b23b22428, type: 3}
   m_Name: Info
   m_EditorClassIdentifier: 
-  name: Ice Ball
+  collectibleName: Ice Ball
   description: Cast a damaging ice ball
+  stats: 'Mana Cost: 10
+
+    Cooldown: 1
+
+    Movement Speed: 15
+
+    Damage: 35
+
+    Freeze
+    Duration: 5s
+
+'

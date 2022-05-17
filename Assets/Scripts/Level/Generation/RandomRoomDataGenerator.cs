@@ -7,6 +7,10 @@ using Random = UnityEngine.Random;
 public class RandomRoomDataGenerator : MonoBehaviour
 {
 
+    [Title("First Room")] 
+    [SerializeField] private int[] startRoomXSizes = {3};
+    [SerializeField] private int[] startRoomZSizes = {7};
+    
     [Title("Hallway")] 
     [SerializeField] private int[] hallWayXSizes = {3, 5};
     [SerializeField] private int[] hallWayZSizes = {3, 5};
@@ -27,6 +31,35 @@ public class RandomRoomDataGenerator : MonoBehaviour
     [SerializeField] private int initialEnemyCounter = 2;
     [SerializeField] private int enemyCounterIncreasePerRoom = 2;
 
+    private Func<int> _xSizeRangeFirstRoom;
+    private Func<int> _zSizeRangeFirstRoom;
+    private Func<int> _xSizeRangeHallwayRoom;
+    private Func<int> _zSizeRangeHallwayRoom;
+    private Func<int> _xSizeRangeEnemyRoom;
+    private Func<int> _zSizeRangeEnemyRoom;
+    private Func<int> _xSizePuzzleRoom;
+    private Func<int> _zSizePuzzleRoom;
+    private Func<int> _xSizeBossRoom;
+    private Func<int> _zSizeBossRoom;
+
+    private void Start()
+    {
+        _xSizeRangeFirstRoom = () => GenerateRandomValue(startRoomXSizes);
+        _zSizeRangeFirstRoom = () => GenerateRandomValue(startRoomZSizes);
+        
+        _xSizeRangeHallwayRoom = () => GenerateRandomValue(hallWayXSizes);
+        _zSizeRangeHallwayRoom = () => GenerateRandomValue(hallWayZSizes);
+
+        _xSizeRangeEnemyRoom = () => GenerateRandomValue(enemyRoomXSizes);
+        _zSizeRangeEnemyRoom = () => GenerateRandomValue(enemyRoomZSizes);
+
+        _xSizePuzzleRoom = () => GenerateRandomValue(puzzleRoomXSizes);
+        _zSizePuzzleRoom = () => GenerateRandomValue(puzzleRoomZSizes);
+        
+        _xSizeBossRoom = () => GenerateRandomValue(bossRoomXSizes);
+        _zSizeBossRoom = () => GenerateRandomValue(bossRoomZSizes);
+    }
+
     private static int GenerateRandomValue(int[] possibleValues)
     {
         int randomIndex = Random.Range(0, possibleValues.Length);
@@ -38,25 +71,13 @@ public class RandomRoomDataGenerator : MonoBehaviour
         int numOfMainRooms = GenerateRandomValue(numOfMainRoomSizes);
         List<RoomData> roomData = new List<RoomData>();
 
-        Func<int> xSizeRangeHallwayRoom = () => GenerateRandomValue(hallWayXSizes);
-        Func<int> zSizeRangeHallwayRoom = () => GenerateRandomValue(hallWayZSizes);
-
-        Func<int> xSizeRangeEnemyRoom = () => GenerateRandomValue(enemyRoomXSizes);
-        Func<int> zSizeRangeEnemyRoom = () => GenerateRandomValue(enemyRoomZSizes);
-
-        Func<int> xSizePuzzleRoom = () => GenerateRandomValue(puzzleRoomXSizes);
-        Func<int> zSizePuzzleRoom = () => GenerateRandomValue(puzzleRoomZSizes);
-        
-        Func<int> xSizeBossRoom = () => GenerateRandomValue(bossRoomXSizes);
-        Func<int> zSizeBossRoom = () => GenerateRandomValue(bossRoomZSizes);
-
         RoomData firstRoom = ScriptableObject.CreateInstance<RoomData>();
         firstRoom.name = "Room0";
         firstRoom.hasEntrance = false;
         firstRoom.hasExit = true;
         firstRoom.hasSpell = true;
-        firstRoom.xSize = xSizeRangeHallwayRoom.Invoke();
-        firstRoom.zSize = zSizeRangeHallwayRoom.Invoke();
+        firstRoom.xSize = _xSizeRangeFirstRoom.Invoke();
+        firstRoom.zSize = _zSizeRangeFirstRoom.Invoke();
         roomData.Add(firstRoom);
 
         RoomData prevRoom = firstRoom;
@@ -73,21 +94,21 @@ public class RandomRoomDataGenerator : MonoBehaviour
 
             if (isLastRoom)
             {
-                GenerateBossRoom(newRoom, xSizeBossRoom, zSizeBossRoom);
+                GenerateBossRoom(newRoom, _xSizeBossRoom, _zSizeBossRoom);
             }
             else if (prevRoom.hasSpell || prevRoom.hasItem)
             {
-                GenerateEnemyRoom(newRoom, numOfEnemyRooms, xSizeRangeEnemyRoom, zSizeRangeEnemyRoom);
+                GenerateEnemyRoom(newRoom, numOfEnemyRooms, _xSizeRangeEnemyRoom, _zSizeRangeEnemyRoom);
                 numOfEnemyRooms++;
             }
             else
             {
-                prevHallwayRoom = GenerateRewardsRoom(prevHallwayRoom, newRoom, xSizeRangeHallwayRoom, zSizeRangeHallwayRoom);
+                prevHallwayRoom = GenerateRewardsRoom(prevHallwayRoom, newRoom, _xSizeRangeHallwayRoom, _zSizeRangeHallwayRoom);
             }
 
             if (newRoom.hasEnemies)
             {
-                GenerateSideRooms(newRoom, xSizePuzzleRoom, zSizePuzzleRoom);
+                GenerateSideRooms(newRoom, _xSizePuzzleRoom, _zSizePuzzleRoom);
             }
             
             prevRoom = newRoom;

@@ -67,7 +67,7 @@ public abstract class CollectibleRoomStartEvent : RoomStartEvent
 
     public void HideChoiceUi()
     {
-        _uiManager.HideChoices();
+        _uiManager.HideChoice();
     }
 
     public void RemoveCollectibles()

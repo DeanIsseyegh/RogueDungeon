@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa820ea7-7c6e-4f7b-aa29-446255766944" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagers/GameStartManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagers/GameStartManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Windows/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Windows/addressables_content_state.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/PlayerAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/PlayerAnimator.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Free Skyboxes - Space/SBS Space 2/Medium/Skybox_Space 2 Medium.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Free Skyboxes - Space/SBS Space 2/Medium/Skybox_Space 2 Medium.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdPersonScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ThirdPersonScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectibles/CollectibleSpells/FireBall/Info.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Collectibles/CollectibleSpells/FireBall/Info.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectibles/CollectibleSpells/IceBall/Info.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Collectibles/CollectibleSpells/IceBall/Info.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectibles/ShowCollectibleInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Collectibles/ShowCollectibleInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOverManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagers/GameOverManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOverManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagers/GameOverManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSuccessManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagers/GameSuccessManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSuccessManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagers/GameSuccessManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/Generation/RandomRoomDataGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/Generation/RandomRoomDataGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/RoomEvents/CollectibleRoomStartEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/RoomEvents/CollectibleRoomStartEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Choice/ChoiceIcon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Choice/ChoiceIcon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.connect.share/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.connect.share/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>

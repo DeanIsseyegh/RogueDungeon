@@ -6,7 +6,8 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private Sprite defaultSpellIcon;
-    
+    [SerializeField] private ChoiceManager choiceManager;
+
     private HealthBar _healthBar;
     private HealthBarText _healthBarText;
     private ManaBar _manaBar;
@@ -27,7 +28,6 @@ public class UIManager : MonoBehaviour
         _spellIcons = spellIcons.OrderBy(it => it.SpellIconPosition).ToList();
         
         _itemIcons = GetComponent<ItemIcons>();
-        _choiceUi = GameObject.FindWithTag("SpellChoiceUI");
     }
 
 
@@ -77,19 +77,18 @@ public class UIManager : MonoBehaviour
 
     public void ShowChoice(Collectible collectible)
     {
-        GameObject choice = _choiceUi.transform.GetChild(0).gameObject;
-        Debug.Log("Showing Choice");
-        choice.SetActive(true);
-        choice.GetComponentInChildren<ChoiceIcon>().SetIcon(collectible.icon);
-        choice.GetComponentInChildren<ChoiceTitle>().SetTitle(collectible.Info().collectibleName);
-        choice.GetComponentInChildren<ChoiceDescription>().SetDescription(collectible.Info().description);
-        choice.GetComponentInChildren<ChoiceStats>().SetStats(collectible.Info().stats);
+        choiceManager.gameObject.SetActive(true);
+        if (collectible)
+        {
+            choiceManager.Icon.SetIcon(collectible.icon);
+            choiceManager.Title.SetTitle(collectible.Info().collectibleName);
+            choiceManager.Description.SetDescription(collectible.Info().description);
+            choiceManager.Stats.SetStats(collectible.Info().stats);
+        }
     }
 
-    public void HideChoices()
+    public void HideChoice()
     {
-        GameObject choice = _choiceUi.transform.GetChild(0).gameObject;
-        Debug.Log("Hiding Choice");
-        choice.SetActive(false);
+        choiceManager.gameObject.SetActive(false);
     }
 }
