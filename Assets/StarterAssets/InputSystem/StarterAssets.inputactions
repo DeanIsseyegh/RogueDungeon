@@ -76,15 +76,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Restart",
-                    "type": "Button",
-                    "id": "37d99aa4-e942-4e15-b080-ab3956ab549a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -307,10 +298,27 @@
                     "action": "Attack4",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "GameOver",
+            "id": "5ea329e3-7980-4b1d-b969-00ca15c7d13a",
+            "actions": [
+                {
+                    "name": "Restart",
+                    "type": "Button",
+                    "id": "691d0b32-ee0c-4801-90a5-3d220638805d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
                 {
                     "name": "",
-                    "id": "f97a2627-4c1a-4b07-9c58-df918ce1e8b3",
+                    "id": "31ee1d66-e065-48e2-a94f-cf3a4cc67080",
                     "path": "<Keyboard>/anyKey",
                     "interactions": "",
                     "processors": "",

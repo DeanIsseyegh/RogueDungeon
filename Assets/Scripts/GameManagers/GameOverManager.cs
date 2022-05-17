@@ -3,7 +3,6 @@ using Scene;
 using Sirenix.Utilities;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Utilities;
 
 public class GameOverManager : MonoBehaviour
 {
@@ -12,10 +11,12 @@ public class GameOverManager : MonoBehaviour
     [SerializeField] private GameObject restartInstructions;
     [SerializeField] private SceneLoader sceneLoader;
     [SerializeField] private float timeForRestartToAppear;
+    [SerializeField] private PlayerInput playerInput;
     private bool _canPlayerRestart;
 
     public void StartGameOver(GameObject player)
     {
+        playerInput.SwitchCurrentActionMap("GameOver");
         playerDeathCam.SetActive(true);
         EnemyAI[] allEnemies = FindObjectsOfType<EnemyAI>();
         allEnemies.ForEach(enemy => enemy.enabled = false);

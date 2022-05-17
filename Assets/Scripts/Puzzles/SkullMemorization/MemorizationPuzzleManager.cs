@@ -168,7 +168,6 @@ public class MemorizationPuzzleManager : MonoBehaviour
             skull.LightUp();
             yield return new WaitForSeconds(timeBetweenSkullLighting);
         }
-        yield return new WaitForSeconds(timeBetweenSkullLighting);
         skulls.ForEach(it => it.HasLitUp = true);
     }
     

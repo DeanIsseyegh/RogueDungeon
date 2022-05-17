@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.05189739, g: 0.033707842, b: 0.15069515, a: 1}
+  m_IndirectSpecularColor: {r: 0.053141944, g: 0.034377467, b: 0.15290612, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2835,7 +2835,7 @@ MonoBehaviour:
   closedEntranceTile: {fileID: 1768021477997006, guid: 234d2a5a371bded4daec77deceff0f9b, type: 3}
   boss: {fileID: 1732173515415540, guid: 9d978afd80a17ff43bb57b0c97e4e82e, type: 3}
   bossSpawnOffset: {x: 0, y: 4, z: 0}
-  _gameSuccessManager: {fileID: 0}
+  _gameSuccessManager: {fileID: 2322320037186382942}
 --- !u!1001 &350304812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9192,6 +9192,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SpellIcon4Cooldown
       objectReference: {fileID: 0}
+    - target: {fileID: 6297006411106313889, guid: e17cf27bd5f9f0749a5f71457df45d16, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 90ef21589078a9d4aaa982eb1258d332, type: 3}
+    - target: {fileID: 6297006411106313889, guid: e17cf27bd5f9f0749a5f71457df45d16, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297006411106313889, guid: e17cf27bd5f9f0749a5f71457df45d16, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297006411106313889, guid: e17cf27bd5f9f0749a5f71457df45d16, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297006411106313889, guid: e17cf27bd5f9f0749a5f71457df45d16, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6297006411106313895, guid: e17cf27bd5f9f0749a5f71457df45d16, type: 3}
       propertyPath: m_TagString
       value: SpellIcon4
@@ -12995,7 +13015,7 @@ Animator:
   m_GameObject: {fileID: 1507024921}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: edcbdfe51b2ee684ea90efab24327054, type: 2}
+  m_Controller: {fileID: 9100000, guid: cc8e9b05d840a2742a62fb524493b2bf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -16763,6 +16783,10 @@ PrefabInstance:
       value: SpellIcon2Cooldown
       objectReference: {fileID: 0}
     - target: {fileID: 6297006411106313895, guid: e17cf27bd5f9f0749a5f71457df45d16, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297006411106313895, guid: e17cf27bd5f9f0749a5f71457df45d16, type: 3}
       propertyPath: m_TagString
       value: SpellIcon2
       objectReference: {fileID: 0}
@@ -17358,7 +17382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 026ab9169384e1440812d2577fc04dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpellIcon: {fileID: 21300050, guid: 34ecf51bcd3f4424eafda7dafd885bd0, type: 3}
+  defaultSpellIcon: {fileID: 21300000, guid: 7cc2b650caf1b8d44bff3109820f4535, type: 3}
   choiceManager: {fileID: 224685545101908822}
 --- !u!114 &2061683406
 MonoBehaviour:
@@ -19127,6 +19151,7 @@ MonoBehaviour:
   restartInstructions: {fileID: 1626784946}
   sceneLoader: {fileID: 1571526894}
   timeForRestartToAppear: 2
+  playerInput: {fileID: 2322320037186382947}
 --- !u!114 &2322320037186382942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19140,11 +19165,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victoryScreen: {fileID: 1241362176}
-  player: {fileID: 2322320037186382925}
   playerVictoryCame: {fileID: 453752297}
   restartInstructions: {fileID: 1462107056}
   sceneLoader: {fileID: 1571526894}
   timeForRestartToAppear: 2
+  playerInput: {fileID: 2322320037186382947}
 --- !u!114 &2322320037186382943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19160,6 +19185,17 @@ MonoBehaviour:
   playerStartCam: {fileID: 1703502423}
   player: {fileID: 2322320037186382925}
   playerIntroAnimationName: Intro
+--- !u!114 &2322320037186382947 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2322320037186382928, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
+  m_PrefabInstance: {fileID: 7065091505021148412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322320037186382925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2330555345334456474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20107,7 +20143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2322320037186382932, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2322320037186382932, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
       propertyPath: gameOverManager

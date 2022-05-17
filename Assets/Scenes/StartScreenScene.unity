@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.055455297, g: 0.03565102, b: 0.15687346, a: 1}
+  m_IndirectSpecularColor: {r: 0.068890885, g: 0.044303223, b: 0.18628764, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1119,10 +1119,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 37d99aa4-e942-4e15-b080-ab3956ab549a
-    m_ActionName: Player/Restart[/Keyboard/anyKey]
+    m_ActionId: 691d0b32-ee0c-4801-90a5-3d220638805d
+    m_ActionName: GameOver/Restart[/Keyboard/anyKey]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: GameOver
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

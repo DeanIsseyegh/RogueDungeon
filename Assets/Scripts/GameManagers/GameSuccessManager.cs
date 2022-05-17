@@ -2,6 +2,7 @@ using System.Collections;
 using Scene;
 using StarterAssets;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameSuccessManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameSuccessManager : MonoBehaviour
     [SerializeField] private GameObject restartInstructions;
     [SerializeField] private SceneLoader sceneLoader;
     [SerializeField] private float timeForRestartToAppear;
+    [SerializeField] private PlayerInput playerInput;
 
     private Animator _animator;
     private CharacterController _characterController;
@@ -19,6 +21,7 @@ public class GameSuccessManager : MonoBehaviour
 
     public void StartGameComplete()
     {
+        playerInput.SwitchCurrentActionMap("GameOver");
         _isVictory = true;
         victoryScreen.SetActive(true);
         playerVictoryCame.SetActive(true);
