@@ -17,4 +17,4 @@ Instructions to play the game be found on [DeanIss.itch.io/Dungeon-Rogue](https:
 
 # Gameplay Video
 
-A short video of the game can be watched ![here on vimeo](https://vimeo.com/711697968)
+A short video of the game can be watched [here on vimeo](https://vimeo.com/711697968)
