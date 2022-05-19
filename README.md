@@ -14,3 +14,7 @@ Instructions to play the game be found on [DeanIss.itch.io/Dungeon-Rogue](https:
 ![BalloonPuzzle](https://user-images.githubusercontent.com/5103412/168877033-1778ef67-7a89-4dc2-b090-945ca5da88c9.png)
 
 ![DungeonRogueScreenShotGameplahy1](https://user-images.githubusercontent.com/5103412/168877052-403c4b87-f054-4acc-bcdf-fc49b67ecb10.png)
+
+# Gameplay Video
+
+A short video of the game can be watched ![here on vimeo](https://vimeo.com/711697968)
