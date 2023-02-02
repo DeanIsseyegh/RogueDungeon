@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1F588FF8-CD44-437B-A24B-BB143E4801CD}" SchemaVersion="110" RootDocumentID="{F2E4A414-BC99-4059-9515-ACBD22AE56EF}" ParentDocumentID="{F2E4A414-BC99-4059-9515-ACBD22AE56EF}">
+	<AudioObjects>
+		<WorkUnit Name="Enemies" ID="{1F588FF8-CD44-437B-A24B-BB143E4801CD}" OwnerID="{C19DA38A-A22B-4D6F-BB92-35177F2511EF}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="9"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ActorMixer Name="Enemies" ID="{6C38CAC9-4C93-423E-BC4B-FCFDC742D82C}" ShortID="219097716">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B65DB7E-AE43-4D66-BBF3-CAF433A0D79E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0B6D260C-CA8E-4DCE-830E-5FDD785D44A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<WorkUnit Name="Enemies_Beetle" ID="{49C9FDFE-2E0D-441B-BD47-0A1BB01777B9}" PersistMode="Reference"/>
+						<WorkUnit Name="Enemies_Cult" ID="{EE6C5662-66C0-4220-8473-02692D1C15FF}" PersistMode="Reference"/>
+						<WorkUnit Name="Enemies_Ogre" ID="{8CD8EF7C-D5D1-4CF7-9795-D24326CBEBF6}" PersistMode="Reference"/>
+						<WorkUnit Name="Enemies_FairyBoss" ID="{479F274C-7281-4B22-9966-511B296BF7BB}" PersistMode="Reference"/>
+						<WorkUnit Name="Enemies_SkeletonMage" ID="{965F61CF-7EFD-44DE-97A3-CFF63AA4D7CB}" PersistMode="Reference"/>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

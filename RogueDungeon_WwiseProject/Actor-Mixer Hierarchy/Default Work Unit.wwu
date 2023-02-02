@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F2E4A414-BC99-4059-9515-ACBD22AE56EF}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{F2E4A414-BC99-4059-9515-ACBD22AE56EF}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="World" ID="{C19DA38A-A22B-4D6F-BB92-35177F2511EF}" ShortID="870674902">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B65DB7E-AE43-4D66-BBF3-CAF433A0D79E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0B6D260C-CA8E-4DCE-830E-5FDD785D44A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<WorkUnit Name="Ambient" ID="{E663F14E-6387-4FDE-BCFA-C30F48F6DB3E}" PersistMode="Reference"/>
+						<WorkUnit Name="Enemies" ID="{1F588FF8-CD44-437B-A24B-BB143E4801CD}" PersistMode="Reference"/>
+						<WorkUnit Name="Player" ID="{2E366E57-4CB7-4AA3-8DE7-9B61C48A48C4}" PersistMode="Reference"/>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="Non_World" ID="{97C73115-E19A-4F88-96EE-5B099B7A553B}" ShortID="176803069">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B65DB7E-AE43-4D66-BBF3-CAF433A0D79E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0B6D260C-CA8E-4DCE-830E-5FDD785D44A4}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

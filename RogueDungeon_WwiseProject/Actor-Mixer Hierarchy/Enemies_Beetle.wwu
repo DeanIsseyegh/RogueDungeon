@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{49C9FDFE-2E0D-441B-BD47-0A1BB01777B9}" SchemaVersion="110" RootDocumentID="{F2E4A414-BC99-4059-9515-ACBD22AE56EF}" ParentDocumentID="{1F588FF8-CD44-437B-A24B-BB143E4801CD}">
+	<AudioObjects>
+		<WorkUnit Name="Enemies_Beetle" ID="{49C9FDFE-2E0D-441B-BD47-0A1BB01777B9}" OwnerID="{6C38CAC9-4C93-423E-BC4B-FCFDC742D82C}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="Beetle" ID="{FB7AEC07-6ACA-4269-89D6-B52A10CC4D43}" ShortID="717214507">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B65DB7E-AE43-4D66-BBF3-CAF433A0D79E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0B6D260C-CA8E-4DCE-830E-5FDD785D44A4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Movement" ID="{94B96C41-CEE8-4085-9AC1-CB3778519E8B}" ShortID="226587899">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B65DB7E-AE43-4D66-BBF3-CAF433A0D79E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0B6D260C-CA8E-4DCE-830E-5FDD785D44A4}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+						<ActorMixer Name="Attack" ID="{3FC6E672-DE4A-45E8-B063-27AF2D9EE4DD}" ShortID="130454960">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B65DB7E-AE43-4D66-BBF3-CAF433A0D79E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0B6D260C-CA8E-4DCE-830E-5FDD785D44A4}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
