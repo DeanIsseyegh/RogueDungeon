@@ -29,12 +29,13 @@
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon_WwiseIntegrationTemp\RogueDungeon_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1670075551" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1670075552" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1670075552" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1670075551" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Switches\General.wwu" DateLow="1675356708" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1675356255" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\States\Default Work Unit.wwu" DateLow="1670075552" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1670075552" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1670075552" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\RogueDungeon_WwiseProject.wproj" DateLow="1670075626" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\RogueDungeon_WwiseProject.olive.wsettings" DateLow="1674752849" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\RogueDungeon_WwiseProject.olive.wsettings" DateLow="1675366073" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Queries\Factory Queries.wwu" DateLow="1670075104" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1670075552" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1670075104" DateHigh="0"/>
@@ -45,7 +46,8 @@
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1670075552" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1670075552" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1670075552" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Events\Default Work Unit.wwu" DateLow="1670075552" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Events\Player.wwu" DateLow="1675366069" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Events\Default Work Unit.wwu" DateLow="1675365983" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Effects\Factory Effects.wwu" DateLow="1670075104" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1670075552" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Unity\Projects\DungeonRogue\RogueDungeon\RogueDungeon_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1670075551" DateHigh="0"/>

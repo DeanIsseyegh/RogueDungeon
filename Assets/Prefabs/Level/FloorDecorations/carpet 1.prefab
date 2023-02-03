@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8232516309390598202}
   - component: {fileID: 8234379291091148634}
   - component: {fileID: 8242834629364233860}
+  - component: {fileID: -2945490309972214129}
   m_Layer: 0
   m_Name: carpet 1
   m_TagString: Untagged
@@ -84,3 +85,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-2945490309972214129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8229263361911069864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c2cb2b2f4e27543b0639658cddc894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 66df1c0b3cf2cdb489213c4969fcc2b4, type: 2}

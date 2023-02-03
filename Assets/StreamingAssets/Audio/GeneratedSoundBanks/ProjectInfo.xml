@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="RogueDungeon_WwiseProject" GUID="{FE6D1D7B-ADCC-4400-BF5D-8BD7F09FCB0D}" Generator="2022.1.0.8070"/>
+	<CacheRoot>../../../../RogueDungeon_WwiseProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Mac" GUID="{6B4EFCFF-6872-4437-9117-8BC36D6E70D9}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../RogueDungeon_WwiseProject/GeneratedSoundBanks/Mac"/>
+		<Platform Name="Windows" GUID="{A5FEC74F-F3D5-44A7-B758-73E4683D6A34}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../RogueDungeon_WwiseProject/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{07A2FACA-29B4-4D0A-B9B9-3D425A9100BB}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{F4408B88-F413-F4F4-E01D-6905D441AC1C}</FileHash>
+</ProjectInfo>

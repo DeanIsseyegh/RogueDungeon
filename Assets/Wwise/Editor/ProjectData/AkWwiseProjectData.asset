@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 5a2b8a7499ad4b41bcb74324db4dd6f0
     GuidInternal: 
-    m_lastTime: -8585315313333660172
-    List: []
+    m_lastTime: -8585261842218340044
+    List:
+    - name: Main
+      guid: cf0136ecd256ce4b84f132801b1379d3
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a2b8a7499ad4b41bcb74324db4dd6f0
+      - ElementName: Main
+        ObjectType: 7
+        guid: cf0136ecd256ce4b84f132801b1379d3
+      Path: SoundBanks\Default Work Unit\Main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,90 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 4693425ca5fd7f4ea993d0fcaab3fa27
     GuidInternal: 
-    m_lastTime: -8585315313333987769
+    m_lastTime: -8585262409014779194
     List: []
+  - PhysicalPath: Events\Player.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 4693425ca5fd7f4ea993d0fcaab3fa27
+    - ElementName: Player
+      ObjectType: 12
+      guid: fcf425a1c40b474398cbc7e8ba2d8794
+    ParentPath: Events\Default Work Unit\Player
+    guid: fcf425a1c40b474398cbc7e8ba2d8794
+    GuidInternal: 
+    m_lastTime: -8585261858707893685
+    List:
+    - name: General
+      guid: 9ce408b701df594ea514eb4f4080ed0c
+      id: 133642231
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4693425ca5fd7f4ea993d0fcaab3fa27
+      - ElementName: Player
+        ObjectType: 12
+        guid: fcf425a1c40b474398cbc7e8ba2d8794
+      - ElementName: General
+        ObjectType: 4
+        guid: 9ce408b701df594ea514eb4f4080ed0c
+      Path: Events\Default Work Unit\Player\General
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Footstep
+      guid: f846d3659956064facbd16f2056beef6
+      id: 2453392179
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4693425ca5fd7f4ea993d0fcaab3fa27
+      - ElementName: Player
+        ObjectType: 12
+        guid: fcf425a1c40b474398cbc7e8ba2d8794
+      - ElementName: General
+        ObjectType: 4
+        guid: 9ce408b701df594ea514eb4f4080ed0c
+      - ElementName: Player_Footstep
+        ObjectType: 3
+        guid: f846d3659956064facbd16f2056beef6
+      Path: Events\Default Work Unit\Player\General\Player_Footstep
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Spell_Cast
+      guid: c746dcdfed2b5342984e982d86461d08
+      id: 2343401509
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4693425ca5fd7f4ea993d0fcaab3fa27
+      - ElementName: Player
+        ObjectType: 12
+        guid: fcf425a1c40b474398cbc7e8ba2d8794
+      - ElementName: General
+        ObjectType: 4
+        guid: 9ce408b701df594ea514eb4f4080ed0c
+      - ElementName: Player_Spell_Cast
+        ObjectType: 3
+        guid: c746dcdfed2b5342984e982d86461d08
+      Path: Events\Default Work Unit\Player\General\Player_Spell_Cast
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -122,8 +218,102 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 0c23418c31fd744e85e71396612f524c
     GuidInternal: 
-    m_lastTime: -8585315313334818526
+    m_lastTime: -8585262506302831857
     List: []
+  - PhysicalPath: Switches\General.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 0c23418c31fd744e85e71396612f524c
+    - ElementName: General
+      ObjectType: 12
+      guid: 71d25b01edeef84587998e474f0a150d
+    ParentPath: Switches\Default Work Unit\General
+    guid: 71d25b01edeef84587998e474f0a150d
+    GuidInternal: 
+    m_lastTime: -8585262501771027240
+    List:
+    - name: Surface_Type
+      guid: 00ab589225c116479df2ac6f27f69f97
+      id: 4064446173
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0c23418c31fd744e85e71396612f524c
+      - ElementName: General
+        ObjectType: 12
+        guid: 71d25b01edeef84587998e474f0a150d
+      - ElementName: Surface_Type
+        ObjectType: 11
+        guid: 00ab589225c116479df2ac6f27f69f97
+      Path: Switches\Default Work Unit\General\Surface_Type
+      values:
+      - name: Carpet
+        guid: 40cdc6d0a488d644807b0ffb41e70006
+        id: 2412606308
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 0c23418c31fd744e85e71396612f524c
+        - ElementName: General
+          ObjectType: 12
+          guid: 71d25b01edeef84587998e474f0a150d
+        - ElementName: Surface_Type
+          ObjectType: 11
+          guid: 00ab589225c116479df2ac6f27f69f97
+        - ElementName: Carpet
+          ObjectType: 10
+          guid: 40cdc6d0a488d644807b0ffb41e70006
+      - name: Dirt
+        guid: 72961f9ab1d69443aed715d5d23df84f
+        id: 2195636714
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 0c23418c31fd744e85e71396612f524c
+        - ElementName: General
+          ObjectType: 12
+          guid: 71d25b01edeef84587998e474f0a150d
+        - ElementName: Surface_Type
+          ObjectType: 11
+          guid: 00ab589225c116479df2ac6f27f69f97
+        - ElementName: Dirt
+          ObjectType: 10
+          guid: 72961f9ab1d69443aed715d5d23df84f
+      - name: Stone
+        guid: 884b9cd4bf768c459f6c540a06607a4e
+        id: 1216965916
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 0c23418c31fd744e85e71396612f524c
+        - ElementName: General
+          ObjectType: 12
+          guid: 71d25b01edeef84587998e474f0a150d
+        - ElementName: Surface_Type
+          ObjectType: 11
+          guid: 00ab589225c116479df2ac6f27f69f97
+        - ElementName: Stone
+          ObjectType: 10
+          guid: 884b9cd4bf768c459f6c540a06607a4e
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +329,7 @@ MonoBehaviour:
     m_lastTime: -8585315313333747554
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000070000000b0000000c0000000d00000012000000130000001400000015000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

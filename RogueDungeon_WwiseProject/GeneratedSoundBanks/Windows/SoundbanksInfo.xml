@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{986487A9-2683-E47A-8688-3D0FE6FDB954}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<SwitchGroups>
+				<SwitchGroup Id="4064446173" Name="Surface_Type">
+					<Switches>
+						<Switch Id="1216965916" Name="Stone"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+						<Switch Id="2412606308" Name="Carpet"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8AEC33FC-6739-438E-5300-619C2A1F839D}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{539CAA03-8BAE-15C5-80A5-A25C2BCC5537}</FileHash>
+</SoundBanksInfo>

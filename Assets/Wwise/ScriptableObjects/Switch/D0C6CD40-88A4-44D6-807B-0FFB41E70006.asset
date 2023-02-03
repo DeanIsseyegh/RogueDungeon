@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e187004c26fb90848bdaadd1b98dbc3c, type: 3}
+  m_Name: D0C6CD40-88A4-44D6-807B-0FFB41E70006
+  m_EditorClassIdentifier: 
+  objectName: Carpet
+  id: 2412606308
+  guid: D0C6CD40-88A4-44D6-807B-0FFB41E70006
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 9dd5d2f0b72572d4c9dd546f3f7eda73, type: 2}

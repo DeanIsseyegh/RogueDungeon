@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5218934210887264887}
   - component: {fileID: 5246820870554381189}
   - component: {fileID: -5918745262598369669}
+  - component: {fileID: 1765818830158303002}
   m_Layer: 6
   m_Name: dungeon-floor-hole 1
   m_TagString: Floor
@@ -128,3 +129,21 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &1765818830158303002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5205777709270450631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c2cb2b2f4e27543b0639658cddc894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 66e38d042679610459a28252e84d5e59, type: 2}

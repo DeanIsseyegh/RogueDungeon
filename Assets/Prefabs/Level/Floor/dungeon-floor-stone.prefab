@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23419333972036708}
   - component: {fileID: 65302006526725106}
   - component: {fileID: -6675083507318145710}
+  - component: {fileID: 3927410927170671971}
   m_Layer: 6
   m_Name: dungeon-floor-stone
   m_TagString: Floor
@@ -127,3 +128,21 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &3927410927170671971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112197981072686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c2cb2b2f4e27543b0639658cddc894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 66e38d042679610459a28252e84d5e59, type: 2}

@@ -3,6 +3,9 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{6616059C-7F50-48D9-8ACA-40B063C825B8}">
 			<PropertyList>
+				<Property Name="Event Action List\{65D346F8-5699-4F06-ACBD-16F2056BEEF6}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{B3282531-C550-42E9-9292-651D09003FD2}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{DFDC46C7-2BED-4253-984E-982D86461D08}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="EventView\FilterMode2" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
@@ -20,8 +23,11 @@
 				<Property Name="Game Profiler\Voice Monitor\LastBus" Type="string" Value="{00000000-0000-0000-0000-000000000000}"/>
 				<Property Name="General\LatestLanguage" Type="int32" Value="684519430"/>
 				<Property Name="General\LatestPlatform" Type="string" Value="Windows"/>
+				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value=""/>
+				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value=""/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value=""/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups_v2" Type="string" Value="aXjshcLnc0SKHKJXSR9KSwEA0f00AAAAwKTuIP1/AABodX4mlwEAAAAAAACXAQAAwKTuIP1/AAAEkXAh/X8AAICrWDiXAQAAAAAAAJcBAAAIAAAAAAAAAGjo0f00AAAAcP6EIf1/AACP/4Qh/X8AAHD+hCH9fwAAwKTuIP1/AADApO4g/X8AAGh1fiaXAQAAAQAAANsGh2oBMjREoa/Jo3iILd0BANH9NAAAAMCk7iD9fwAAaHV+JpcBAAAAAAAAlwEAAMCk7iD9fwAABJFwIf1/AACAq1g4lwEAAAAAAACXAQAACAAAAAAAAABo6NH9NAAAAHD+hCH9fwAAj/+EIf1/AABw/oQh/X8AAMCk7iD9fwAAwKTuIP1/AABodX4mlwEAAAEAAAA="/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups_v2" Type="string" Value="2waHagEyNEShr8mjeIgt3QEAnA6AAAAAwKRqCv5/AADIeBrRSQIAAAAAAABJAgAAwKRqCv5/AAAEkZv4/X8AAAC9gN1JAgAAAAAAAEkCAAAIAAAAAAAAANjhnA6AAAAAcP6v+P1/AACP/6/4/X8AAHD+r/j9fwAAwKRqCv5/AADApGoK/n8AAMh4GtFJAgAAAQAAAGl47IXC53NEihyiV0kfSksBAJwOgAAAAMCkagr+fwAAyHga0UkCAAAAAAAASQIAAMCkagr+fwAABJGb+P1/AAAAvYDdSQIAAAAAAABJAgAACAAAAAAAAADY4ZwOgAAAAHD+r/j9fwAAj/+v+P1/AABw/q/4/X8AAMCkagr+fwAAwKRqCv5/AADIeBrRSQIAAAEAAAA="/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>
@@ -33,55 +39,71 @@
 				<Property Name="MonitoringManager\GameObjectFilter\GameObjectFiltersEnable" Type="bool" Value="True"/>
 				<Property Name="MonitoringManager\GameObjectFilter\x64_GameObjectFilters" Type="string" Value=""/>
 				<Property Name="ObjectTabPanel\x64_CurrentObjects_{031E1E2C-DC25-4332-80C3-FFCC371AC803}" Type="string" Value=""/>
-				<Property Name="ObjectTabPanel\x64_CurrentObjects_{D5805147-985E-4C5B-B817-369AF1B7184D}" Type="string" Value="ewAxADMAQgA3ADUARAA2ADIALQBBADkAQQAwAC0ANAAxADIAMgAtAEIAQwA4ADMALQAzADQARgAyADIANQAxAEEANwA4ADQAQwB9AAAAAAE="/>
+				<Property Name="ObjectTabPanel\x64_CurrentObjects_{D5805147-985E-4C5B-B817-369AF1B7184D}" Type="string" Value="ewA2ADUARAAzADQANgBGADgALQA1ADYAOQA5AC0ANABGADAANgAtAEEAQwBCAEQALQAxADYARgAyADAANQA2AEIARQBFAEYANgB9AAAAAAE="/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\AudioSelectionChannel0" Type="string" Value="iC8JJ1oiVBFnJcijTz1EguraiCN1l8ZGou3FIio5d1b4u6dewGRQSoghoH6L4h1oFKTk8pm8WUCVFay9Iq5W74qjncErom9Nu5I1F38lEe9O8WPmh2PeT7z6ww9I9ts+eQ+zwkkfM06uZmyAwuKdr/iPWB9EzXtDoku7FD5IAc3Jyjhsk0w+QrxL/P3HQtgsV242LrdMo0qN55thxIpIxEfK9S2FzPJIn+Z2LLn39VVm0/5JMLWoQpk7kkhzqrcH"/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\AudioSelectionChannel1" Type="string" Value="iC8JJ1oiVBFnJcijTz1EguraiCN1l8ZGou3FIio5d1b4u6dewGRQSoghoH6L4h1oFKTk8pm8WUCVFay9Iq5W74qjncErom9Nu5I1F38lEe9O8WPmh2PeT7z6ww9I9ts+eQ+zwkkfM06uZmyAwuKdr/iPWB9EzXtDoku7FD5IAc3Jyjhsk0w+QrxL/P3HQtgsV242LrdMo0qN55thxIpIxEfK9S2FzPJIn+Z2LLn39VVm0/5JMLWoQpk7kkhzqrcH"/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\AudioSelectionChannel2" Type="string" Value="iC8JJ1oiVBFnJcijTz1EguraiCN1l8ZGou3FIio5d1b4u6dewGRQSoghoH6L4h1oZtP+STC1qEKZO5JIc6q3Bw=="/>
-				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\EventsSelectionChannel0" Type="string" Value="/PCbpkrYfEir3Vb3HLKhJt71mjAfA+BMm5vApTYnU0M="/>
-				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\EventsSelectionChannel1" Type="string" Value="/PCbpkrYfEir3Vb3HLKhJt71mjAfA+BMm5vApTYnU0M="/>
-				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\EventsSelectionChannel2" Type="string" Value="/PCbpkrYfEir3Vb3HLKhJt71mjAfA+BMm5vApTYnU0M="/>
-				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\Game SyncsSelectionChannel0" Type="string" Value="8XVhy4BgI0qS7wgH4wTQwbnnqVnJYRpGqW9Jl7VBpZyOgSVAfwlySraSuKLiZj3L/Fd2bFhHQU29TGiwn5HbKQ=="/>
-				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\Game SyncsSelectionChannel1" Type="string" Value="8XVhy4BgI0qS7wgH4wTQwbnnqVnJYRpGqW9Jl7VBpZyOgSVAfwlySraSuKLiZj3L/Fd2bFhHQU29TGiwn5HbKQ=="/>
+				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\AudioSelectionChannel3" Type="string" Value="iC8JJ1oiVBFnJcijTz1EguraiCN1l8ZGou3FIio5d1b4u6dewGRQSoghoH6L4h1oZtP+STC1qEKZO5JIc6q3Bw=="/>
+				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\EventsSelectionChannel0" Type="string" Value="/PCbpkrYfEir3Vb3HLKhJkaTQlyl/X9OqZPQ/Kqz+if89CWhxAtHQ5jLx+i6LYeUnOQItwHfWU6lFOtPQIDtDN71mjAfA+BMm5vApTYnU0M="/>
+				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\EventsSelectionChannel1" Type="string" Value="/PCbpkrYfEir3Vb3HLKhJkaTQlyl/X9OqZPQ/Kqz+if89CWhxAtHQ5jLx+i6LYeUnOQItwHfWU6lFOtPQIDtDN71mjAfA+BMm5vApTYnU0M="/>
+				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\EventsSelectionChannel2" Type="string" Value="/PCbpkrYfEir3Vb3HLKhJkaTQlyl/X9OqZPQ/Kqz+if89CWhxAtHQ5jLx+i6LYeUnOQItwHfWU6lFOtPQIDtDN71mjAfA+BMm5vApTYnU0M="/>
+				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\EventsSelectionChannel3" Type="string" Value="/PCbpkrYfEir3Vb3HLKhJkaTQlyl/X9OqZPQ/Kqz+if89CWhxAtHQ5jLx+i6LYeUnOQItwHfWU6lFOtPQIDtDN71mjAfA+BMm5vApTYnU0M="/>
+				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\Game SyncsSelectionChannel0" Type="string" Value="8XVhy4BgI0qS7wgH4wTQwQwjQYwx/XROhecTlmEvUkxx0lsB7e74RYeZjkdPChUNAKtYkiXBFked8qxvJ/afl7nnqVnJYRpGqW9Jl7VBpZyOgSVAfwlySraSuKLiZj3L/Fd2bFhHQU29TGiwn5HbKQ=="/>
+				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\Game SyncsSelectionChannel1" Type="string" Value="8XVhy4BgI0qS7wgH4wTQwQwjQYwx/XROhecTlmEvUkxx0lsB7e74RYeZjkdPChUNAKtYkiXBFked8qxvJ/afl7nnqVnJYRpGqW9Jl7VBpZyOgSVAfwlySraSuKLiZj3L/Fd2bFhHQU29TGiwn5HbKQ=="/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\Game SyncsSelectionChannel2" Type="string" Value="8XVhy4BgI0qS7wgH4wTQwbnnqVnJYRpGqW9Jl7VBpZyOgSVAfwlySraSuKLiZj3L/Fd2bFhHQU29TGiwn5HbKQ=="/>
+				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\Game SyncsSelectionChannel3" Type="string" Value="8XVhy4BgI0qS7wgH4wTQwbnnqVnJYRpGqW9Jl7VBpZyOgSVAfwlySraSuKLiZj3L/Fd2bFhHQU29TGiwn5HbKQ=="/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\QueriesSelectionChannel0" Type="string" Value="4y3sI9g+gkusmZLiXy5Maw=="/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\QueriesSelectionChannel1" Type="string" Value="4y3sI9g+gkusmZLiXy5Maw=="/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\QueriesSelectionChannel2" Type="string" Value="4y3sI9g+gkusmZLiXy5Maw=="/>
+				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\QueriesSelectionChannel3" Type="string" Value="4y3sI9g+gkusmZLiXy5Maw=="/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\SessionsSelectionChannel0" Type="string" Value="i7OWTLQ9x0CRyWZVEOOJk/eqd2Rl45BJo5Llm4JLZBjN5FEXGIAsTpqKx3dk0dZT"/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\SessionsSelectionChannel1" Type="string" Value="i7OWTLQ9x0CRyWZVEOOJk/eqd2Rl45BJo5Llm4JLZBjN5FEXGIAsTpqKx3dk0dZT"/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\SessionsSelectionChannel2" Type="string" Value="i7OWTLQ9x0CRyWZVEOOJk/eqd2Rl45BJo5Llm4JLZBjN5FEXGIAsTpqKx3dk0dZT"/>
+				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\SessionsSelectionChannel3" Type="string" Value="i7OWTLQ9x0CRyWZVEOOJk/eqd2Rl45BJo5Llm4JLZBjN5FEXGIAsTpqKx3dk0dZT"/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\ShareSetsSelectionChannel0" Type="string" Value="dz8JQZ+CiE2GAeiyXz1HgaDdewGxG+FMgHd5WU7EWFxAIKFKnAQPQKvNbu0ZLsHXQnPDFEc4/0mgXFAHmRvtUEeFzTJGqUdFu7Fp9E55YTkupvS2m0+mRbKAyAaF5lKW"/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\ShareSetsSelectionChannel1" Type="string" Value="dz8JQZ+CiE2GAeiyXz1HgaDdewGxG+FMgHd5WU7EWFxAIKFKnAQPQKvNbu0ZLsHXQnPDFEc4/0mgXFAHmRvtUEeFzTJGqUdFu7Fp9E55YTkupvS2m0+mRbKAyAaF5lKW"/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\ShareSetsSelectionChannel2" Type="string" Value="dz8JQZ+CiE2GAeiyXz1HgaDdewGxG+FMgHd5WU7EWFxAIKFKnAQPQKvNbu0ZLsHXQnPDFEc4/0mgXFAHmRvtUEeFzTJGqUdFu7Fp9E55YTkupvS2m0+mRbKAyAaF5lKW"/>
+				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\ShareSetsSelectionChannel3" Type="string" Value="dz8JQZ+CiE2GAeiyXz1HgaDdewGxG+FMgHd5WU7EWFxAIKFKnAQPQKvNbu0ZLsHXQnPDFEc4/0mgXFAHmRvtUEeFzTJGqUdFu7Fp9E55YTkupvS2m0+mRbKAyAaF5lKW"/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\SoundBanksSelectionChannel0" Type="string" Value="P2eOyUyiqEiWDxBWX/5woA=="/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\SoundBanksSelectionChannel1" Type="string" Value="P2eOyUyiqEiWDxBWX/5woA=="/>
 				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\SoundBanksSelectionChannel2" Type="string" Value="P2eOyUyiqEiWDxBWX/5woA=="/>
+				<Property Name="ProjectExplorer2LastExpandedState\x64_ProjectExplorer\SoundBanksSelectionChannel3" Type="string" Value="P2eOyUyiqEiWDxBWX/5woA=="/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\AudioSelectionChannel0" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\AudioSelectionChannel1" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\AudioSelectionChannel2" Type="int32" Value="0"/>
+				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\AudioSelectionChannel3" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\EventsSelectionChannel0" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\EventsSelectionChannel1" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\EventsSelectionChannel2" Type="int32" Value="0"/>
+				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\EventsSelectionChannel3" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\Game SyncsSelectionChannel0" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\Game SyncsSelectionChannel1" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\Game SyncsSelectionChannel2" Type="int32" Value="0"/>
+				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\Game SyncsSelectionChannel3" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\QueriesSelectionChannel0" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\QueriesSelectionChannel1" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\QueriesSelectionChannel2" Type="int32" Value="0"/>
+				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\QueriesSelectionChannel3" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\SessionsSelectionChannel0" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\SessionsSelectionChannel1" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\SessionsSelectionChannel2" Type="int32" Value="0"/>
+				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\SessionsSelectionChannel3" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\ShareSetsSelectionChannel0" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\ShareSetsSelectionChannel1" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\ShareSetsSelectionChannel2" Type="int32" Value="0"/>
+				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\ShareSetsSelectionChannel3" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\SoundBanksSelectionChannel0" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\SoundBanksSelectionChannel1" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\SoundBanksSelectionChannel2" Type="int32" Value="0"/>
+				<Property Name="ProjectExplorer2LastScrollState\ProjectExplorer\SoundBanksSelectionChannel3" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer\SelectionChannel0\CurrentSearch" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\SelectionChannel0\CurrentTab" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer\SelectionChannel1\CurrentSearch" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\SelectionChannel1\CurrentTab" Type="int32" Value="0"/>
+				<Property Name="ProjectExplorer\SelectionChannel1\CurrentTab" Type="int32" Value="1"/>
 				<Property Name="ProjectExplorer\SelectionChannel2\CurrentSearch" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\SelectionChannel2\CurrentTab" Type="int32" Value="0"/>
+				<Property Name="ProjectExplorer\SelectionChannel2\CurrentTab" Type="int32" Value="1"/>
+				<Property Name="ProjectExplorer\SelectionChannel3\CurrentSearch" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\SelectionChannel3\CurrentTab" Type="int32" Value="0"/>
 				<Property Name="SchematicView\SearchText" Type="string" Value=""/>
 				<Property Name="SoundBank Manager\x64_Expand Folders Auto" Type="string" Value=""/>
 				<Property Name="SoundBank Manager\x64_Expand Folders User" Type="string" Value="BwAAAA=="/>

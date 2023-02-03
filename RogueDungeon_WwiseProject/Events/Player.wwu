@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A125F4FC-0BC4-4347-98CB-C7E8BA2D8794}" SchemaVersion="110" RootDocumentID="{5C429346-FDA5-4E7F-A993-D0FCAAB3FA27}" ParentDocumentID="{5C429346-FDA5-4E7F-A993-D0FCAAB3FA27}">
+	<Events>
+		<WorkUnit Name="Player" ID="{A125F4FC-0BC4-4347-98CB-C7E8BA2D8794}" OwnerID="{5C429346-FDA5-4E7F-A993-D0FCAAB3FA27}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="General" ID="{B708E49C-DF01-4E59-A514-EB4F4080ED0C}" ShortID="542643354">
+					<ChildrenList>
+						<Event Name="Player_Footstep" ID="{65D346F8-5699-4F06-ACBD-16F2056BEEF6}"/>
+						<Event Name="Player_Spell_Cast" ID="{DFDC46C7-2BED-4253-984E-982D86461D08}"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

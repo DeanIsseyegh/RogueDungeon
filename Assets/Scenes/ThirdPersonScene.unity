@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.049676687, g: 0.032488555, b: 0.1464515, a: 1}
+  m_IndirectSpecularColor: {r: 0.029515482, g: 0.021688253, b: 0.09876109, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13514,7 +13514,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7771204, y: 1}
+    m_SensorSize: {x: 2.1213872, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -14704,7 +14704,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7771204, y: 1}
+    m_SensorSize: {x: 2.1213872, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -20429,6 +20429,28 @@ PrefabInstance:
     - {fileID: 7065091505709721364, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
     - {fileID: 7065091505709721370, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
+--- !u!1 &7065091505021148413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4771201582977937629, guid: 67bed8cb488e3da419427f92a9656bd9, type: 3}
+  m_PrefabInstance: {fileID: 7065091505021148412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7065091505021148414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7065091505021148413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6577f0a000db26241b8724670f3e1fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialChecker: {fileID: 0}
+  footstepSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &7737740929181093532
 PrefabInstance:
   m_ObjectHideFlags: 0

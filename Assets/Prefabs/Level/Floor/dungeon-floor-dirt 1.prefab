@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4620578226794409985}
   - component: {fileID: 4629354485039324985}
   - component: {fileID: 4647985475404581277}
+  - component: {fileID: 8605816271979597775}
   m_Layer: 0
   m_Name: dungeon-floor-dirt 1
   m_TagString: Untagged
@@ -97,3 +98,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 0.10019629, z: 4}
   m_Center: {x: 0, y: 0.01834336, z: 0.000015258789}
+--- !u!114 &8605816271979597775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4642785277013814103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c2cb2b2f4e27543b0639658cddc894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ba2428cbf08501f43ba9cf67d337fb31, type: 2}
